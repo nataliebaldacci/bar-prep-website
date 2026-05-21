@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Natalie's Bar Multiple Choice Practice Questions</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper: #f4efe6;
+    --paper-2: #ebe4d6;
+    --ink: #1a1a1a;
+    --ink-soft: #4a4a4a;
+    --ink-faint: #7a7a7a;
+    --rule: #d4cab3;
+    --burgundy: #6b1f24;
+    --burgundy-dark: #4a1418;
+    --forest: #2d4a3a;
+    --gold: #a98748;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    -webkit-font-smoothing: antialiased;
+    -webkit-tap-highlight-color: transparent;
+    overflow-x: hidden;
+  }
+  body {
+    min-height: 100vh;
+    padding: 40px 20px 60px;
+    background-image:
+      radial-gradient(circle at 20% 10%, rgba(169, 135, 72, 0.06) 0%, transparent 50%),
+      radial-gradient(circle at 80% 80%, rgba(107, 31, 36, 0.04) 0%, transparent 50%);
+  }
+  .container { max-width: 760px; margin: 0 auto; }
+
+  header {
+    text-align: center;
+    margin-bottom: 40px;
+    padding-bottom: 32px;
+    border-bottom: 1px solid var(--rule);
+  }
+  .eyebrow {
+    font-family: 'Inter', sans-serif;
+    font-size: 11px; font-weight: 500;
+    letter-spacing: 0.22em; text-transform: uppercase;
+    color: var(--burgundy); margin-bottom: 16px;
+  }
+  h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 500; font-size: 48px;
+    letter-spacing: -0.01em; line-height: 1.05;
+    color: var(--ink); margin-bottom: 14px;
+  }
+  h1 em { font-style: italic; color: var(--burgundy); font-weight: 600; }
+  .lede {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 19px; font-style: italic;
+    color: var(--ink-soft);
+    max-width: 540px; margin: 0 auto;
+    line-height: 1.5;
+  }
+  .exam-date {
+    margin-top: 22px;
+    font-family: 'Inter', sans-serif;
+    font-size: 11px; font-weight: 500;
+    color: var(--gold); letter-spacing: 0.2em;
+    text-transform: uppercase;
+  }
+
+  .quiz-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 40px;
+  }
+
+  .quiz-card {
+    display: block;
+    background: #fbf7ee;
+    border: 1px solid var(--rule);
+    border-radius: 4px;
+    padding: 32px 30px;
+    box-shadow: 0 1px 0 rgba(0,0,0,0.02), 0 8px 24px -12px rgba(74, 20, 24, 0.12);
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.2s ease;
+    position: relative;
+    overflow: hidden;
+  }
+  .quiz-card:hover {
+    border-color: var(--burgundy);
+    transform: translateY(-2px);
+    box-shadow: 0 1px 0 rgba(0,0,0,0.02), 0 16px 32px -12px rgba(74, 20, 24, 0.2);
+  }
+  .quiz-card::before {
+    content: '';
+    position: absolute;
+    left: 0; top: 0; bottom: 0;
+    width: 4px;
+    background: var(--burgundy);
+  }
+
+  .quiz-label {
+    font-family: 'Inter', sans-serif;
+    font-size: 10px; font-weight: 600;
+    color: var(--gold);
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+  .quiz-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 30px; font-weight: 500;
+    color: var(--ink);
+    margin-bottom: 10px;
+    line-height: 1.15;
+  }
+  .quiz-title em { font-style: italic; color: var(--burgundy); }
+  .quiz-desc {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 17px;
+    color: var(--ink-soft);
+    line-height: 1.5;
+    margin-bottom: 18px;
+  }
+  .quiz-meta {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    align-items: center;
+    font-family: 'Inter', sans-serif;
+    font-size: 11px;
+    color: var(--ink-faint);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+  .quiz-meta-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .quiz-meta-item::before {
+    content: '';
+    width: 4px; height: 4px;
+    background: var(--gold);
+    border-radius: 50%;
+    display: inline-block;
+  }
+  .quiz-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 18px;
+    font-family: 'Inter', sans-serif;
+    font-size: 12px; font-weight: 600;
+    color: var(--burgundy);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+  .quiz-cta-arrow {
+    transition: transform 0.2s ease;
+    display: inline-block;
+  }
+  .quiz-card:hover .quiz-cta-arrow {
+    transform: translateX(4px);
+  }
+
+  /* External link variant */
+  .quiz-card.external::before {
+    background: var(--forest);
+  }
+  .quiz-card.external .quiz-cta {
+    color: var(--forest);
+  }
+  .quiz-card.external .quiz-label {
+    color: var(--forest);
+  }
+
+  /* Coming soon variant */
+  .quiz-card.coming-soon {
+    opacity: 0.55;
+    cursor: default;
+    pointer-events: none;
+  }
+  .quiz-card.coming-soon::before {
+    background: var(--ink-faint);
+  }
+  .quiz-card.coming-soon .quiz-label {
+    color: var(--ink-faint);
+  }
+
+  footer {
+    text-align: center;
+    padding-top: 32px;
+    border-top: 1px solid var(--rule);
+    font-family: 'Inter', sans-serif;
+    font-size: 11px;
+    color: var(--ink-faint);
+    letter-spacing: 0.1em;
+  }
+  footer em {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 14px;
+    color: var(--burgundy);
+    letter-spacing: 0;
+  }
+
+  @media (min-width: 768px) {
+    body { padding: 70px 40px; }
+    h1 { font-size: 60px; }
+    .quiz-card { padding: 40px 38px; }
+    .quiz-title { font-size: 34px; }
+  }
+  @media (max-width: 480px) {
+    body { padding: 28px 16px; }
+    h1 { font-size: 36px; }
+    .lede { font-size: 17px; }
+    .quiz-card { padding: 26px 22px; }
+    .quiz-title { font-size: 26px; }
+    .quiz-desc { font-size: 16px; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <header>
+    <div class="eyebrow">Vanderbilt Law · Class of 2026</div>
+    <h1>Natalie's Bar <em>Multiple Choice</em> Practice Questions</h1>
+    <p class="lede">A working library of MBE and NY-specific drills, written in proper exam format with explanations that walk through every answer.</p>
+    <div class="exam-date">NY UBE · July 28–29, 2026</div>
+  </header>
+
+  <div class="quiz-grid">
+
+    <a class="quiz-card" href="mbe-quiz.html">
+      <div class="quiz-label">Multistate Bar Exam</div>
+      <div class="quiz-title">MBE <em>Practice Set</em></div>
+      <div class="quiz-desc">114 questions across four MBE subjects — Torts, Civil Procedure, Contracts, and Real Property. Construction- and real-estate-themed Contracts questions. Subject filter and randomized order.</div>
+      <div class="quiz-meta">
+        <span class="quiz-meta-item">40 Torts</span>
+        <span class="quiz-meta-item">24 Civ Pro</span>
+        <span class="quiz-meta-item">25 Contracts</span>
+        <span class="quiz-meta-item">25 Property</span>
+      </div>
+      <div class="quiz-cta">
+        Begin Practice
+        <span class="quiz-cta-arrow">→</span>
+      </div>
+    </a>
+
+    <div class="quiz-card coming-soon">
+      <div class="quiz-label">Coming Soon</div>
+      <div class="quiz-title">Remaining MBE <em>Subjects</em></div>
+      <div class="quiz-desc">Constitutional Law, Criminal Law &amp; Procedure, and Evidence drills — to complete coverage of all seven MBE subjects.</div>
+      <div class="quiz-meta">
+        <span class="quiz-meta-item">Con Law</span>
+        <span class="quiz-meta-item">Crim Law / Pro</span>
+        <span class="quiz-meta-item">Evidence</span>
+      </div>
+    </div>
+
+  </div>
+
+  <footer>
+    Built for <em>Natalie</em> · For practice purposes only · Not a substitute for licensed bar prep
+  </footer>
+
+</div>
+</body>
+</html>

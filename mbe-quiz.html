@@ -1,0 +1,2209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>MBE Practice · Natalie's Bar Prep</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper: #f4efe6;
+    --paper-2: #ebe4d6;
+    --ink: #1a1a1a;
+    --ink-soft: #4a4a4a;
+    --rule: #d4cab3;
+    --burgundy: #6b1f24;
+    --burgundy-dark: #4a1418;
+    --forest: #2d4a3a;
+    --gold: #a98748;
+    --correct: #2d4a3a;
+    --incorrect: #8b2a1f;
+    --correct-bg: #e3ead8;
+    --incorrect-bg: #f0d8d3;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    -webkit-font-smoothing: antialiased;
+    -webkit-tap-highlight-color: transparent;
+    overflow-x: hidden;
+  }
+  body {
+    min-height: 100vh;
+    padding: 32px 20px 60px;
+    background-image:
+      radial-gradient(circle at 20% 10%, rgba(169, 135, 72, 0.06) 0%, transparent 50%),
+      radial-gradient(circle at 80% 80%, rgba(107, 31, 36, 0.04) 0%, transparent 50%);
+  }
+  .container { max-width: 720px; margin: 0 auto; }
+
+  .home-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #fbf7ee;
+    border: 1px solid var(--rule);
+    border-radius: 3px;
+    padding: 10px 18px;
+    margin-bottom: 28px;
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--burgundy);
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.15s ease;
+    min-height: 44px;
+  }
+  .home-btn:hover {
+    background: var(--burgundy);
+    color: var(--paper);
+    border-color: var(--burgundy);
+  }
+  .home-icon {
+    font-size: 18px;
+    line-height: 1;
+    font-weight: 400;
+  }
+
+  header { text-align: center; margin-bottom: 36px; padding-bottom: 24px; border-bottom: 1px solid var(--rule); }
+  .eyebrow {
+    font-family: 'Inter', sans-serif;
+    font-size: 11px; font-weight: 500;
+    letter-spacing: 0.22em; text-transform: uppercase;
+    color: var(--burgundy); margin-bottom: 14px;
+  }
+  h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 500; font-size: 44px;
+    letter-spacing: -0.01em; line-height: 1.05;
+    color: var(--ink); margin-bottom: 8px;
+  }
+  h1 em { font-style: italic; color: var(--burgundy); font-weight: 600; }
+  .subtitle {
+    font-family: 'Inter', sans-serif;
+    font-size: 13px; color: var(--ink-soft); letter-spacing: 0.04em;
+  }
+
+  /* ===== START SCREEN ===== */
+  .start-screen { display: block; }
+  .start-screen.hidden { display: none; }
+  .start-card {
+    background: #fbf7ee;
+    border: 1px solid var(--rule);
+    border-radius: 4px;
+    padding: 36px 32px;
+    box-shadow: 0 1px 0 rgba(0,0,0,0.02), 0 8px 24px -12px rgba(74, 20, 24, 0.15);
+    margin-bottom: 24px;
+  }
+  .section-label {
+    font-family: 'Inter', sans-serif;
+    font-size: 11px; font-weight: 600;
+    color: var(--gold);
+    letter-spacing: 0.18em; text-transform: uppercase;
+    margin-bottom: 16px;
+  }
+  .subject-grid { display: flex; flex-direction: column; gap: 10px; margin-bottom: 24px; }
+  .subject-option {
+    display: flex; align-items: center; gap: 14px;
+    background: var(--paper); border: 1px solid var(--rule);
+    border-radius: 3px; padding: 16px 18px;
+    cursor: pointer; transition: all 0.15s ease;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 18px; color: var(--ink);
+  }
+  .subject-option:hover { border-color: var(--burgundy); background: #fff; }
+  .subject-option.selected { border-color: var(--burgundy); background: var(--paper-2); }
+  .subject-checkbox {
+    width: 22px; height: 22px; border: 2px solid var(--rule);
+    border-radius: 3px; display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0; background: #fff; transition: all 0.15s ease;
+  }
+  .subject-option.selected .subject-checkbox {
+    background: var(--burgundy); border-color: var(--burgundy);
+  }
+  .subject-option.selected .subject-checkbox::after {
+    content: '✓'; color: #fff; font-family: 'Inter', sans-serif;
+    font-size: 14px; font-weight: 600;
+  }
+  .subject-name { flex: 1; }
+  .subject-count {
+    font-family: 'Inter', sans-serif; font-size: 12px;
+    color: var(--ink-soft); letter-spacing: 0.05em;
+  }
+  .count-options { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 24px; }
+  .count-option {
+    flex: 1; min-width: 80px;
+    background: var(--paper); border: 1px solid var(--rule);
+    border-radius: 3px; padding: 12px 14px;
+    cursor: pointer; transition: all 0.15s ease;
+    font-family: 'Inter', sans-serif;
+    font-size: 13px; font-weight: 500;
+    text-align: center; color: var(--ink);
+  }
+  .count-option:hover { border-color: var(--burgundy); }
+  .count-option.selected {
+    background: var(--burgundy); color: var(--paper);
+    border-color: var(--burgundy);
+  }
+  .start-btn {
+    width: 100%; background: var(--burgundy); color: var(--paper);
+    border: none; padding: 18px;
+    font-family: 'Inter', sans-serif;
+    font-size: 13px; font-weight: 500;
+    letter-spacing: 0.18em; text-transform: uppercase;
+    cursor: pointer; border-radius: 3px;
+    transition: background 0.2s ease; min-height: 56px;
+  }
+  .start-btn:hover { background: var(--burgundy-dark); }
+  .start-btn:disabled { background: var(--rule); cursor: not-allowed; }
+
+  /* ===== PROGRESS ===== */
+  .progress-wrap {
+    margin-bottom: 28px; display: flex; align-items: center; gap: 14px;
+  }
+  .progress-label {
+    font-family: 'Inter', sans-serif; font-size: 12px;
+    color: var(--ink-soft); letter-spacing: 0.05em; white-space: nowrap;
+  }
+  .progress-bar {
+    flex: 1; height: 3px; background: var(--paper-2);
+    border-radius: 2px; overflow: hidden;
+  }
+  .progress-fill {
+    height: 100%; background: var(--burgundy); width: 0%;
+    transition: width 0.4s ease;
+  }
+
+  /* ===== QUESTION CARD ===== */
+  .card {
+    background: #fbf7ee; border: 1px solid var(--rule);
+    border-radius: 4px; padding: 36px 32px;
+    box-shadow: 0 1px 0 rgba(0,0,0,0.02), 0 8px 24px -12px rgba(74, 20, 24, 0.15);
+  }
+  .question-num {
+    font-family: 'Inter', sans-serif; font-size: 11px; font-weight: 600;
+    color: var(--gold); letter-spacing: 0.18em;
+    text-transform: uppercase; margin-bottom: 16px;
+  }
+  .question-topic {
+    display: inline-block;
+    font-family: 'Inter', sans-serif; font-size: 10px; font-weight: 500;
+    color: var(--ink-soft); background: var(--paper-2);
+    padding: 4px 10px; border-radius: 2px;
+    letter-spacing: 0.1em; text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+  .fact-pattern {
+    font-size: 19px; line-height: 1.55; color: var(--ink); margin-bottom: 24px;
+  }
+  .call {
+    font-style: italic; font-size: 18px;
+    color: var(--ink-soft); margin-bottom: 28px;
+    padding-left: 16px; border-left: 2px solid var(--gold);
+  }
+  .choices { display: flex; flex-direction: column; gap: 10px; }
+  .choice {
+    display: flex; align-items: flex-start; gap: 14px;
+    width: 100%; text-align: left;
+    background: var(--paper); border: 1px solid var(--rule);
+    border-radius: 3px; padding: 16px 18px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 17px; line-height: 1.45; color: var(--ink);
+    cursor: pointer; transition: all 0.15s ease; min-height: 60px;
+  }
+  .choice:hover:not(.locked) { border-color: var(--burgundy); background: #fff; }
+  .choice:active:not(.locked) { transform: scale(0.995); }
+  .choice-letter {
+    font-family: 'Inter', sans-serif;
+    font-size: 13px; font-weight: 600;
+    color: var(--burgundy); background: var(--paper-2);
+    width: 26px; height: 26px; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0; margin-top: 1px;
+  }
+  .choice-text { flex: 1; }
+  .choice.correct { border-color: var(--correct); background: var(--correct-bg); }
+  .choice.correct .choice-letter { background: var(--correct); color: #fff; }
+  .choice.incorrect { border-color: var(--incorrect); background: var(--incorrect-bg); }
+  .choice.incorrect .choice-letter { background: var(--incorrect); color: #fff; }
+  .choice.locked { cursor: default; }
+  .choice.locked:not(.correct):not(.incorrect) { opacity: 0.5; }
+
+  /* ===== EXPLANATION ===== */
+  .explanation {
+    margin-top: 24px; padding: 22px 24px;
+    background: var(--paper-2);
+    border-left: 3px solid var(--gold);
+    border-radius: 2px; display: none;
+  }
+  .explanation.show { display: block; animation: fadeIn 0.3s ease; }
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(4px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .explanation-label {
+    font-family: 'Inter', sans-serif;
+    font-size: 11px; font-weight: 600; color: var(--burgundy);
+    letter-spacing: 0.18em; text-transform: uppercase; margin-bottom: 10px;
+  }
+  .explanation-text { font-size: 17px; line-height: 1.55; color: var(--ink); }
+  .explanation-text strong { font-weight: 600; color: var(--burgundy-dark); }
+  .explanation-text em { font-style: italic; }
+
+  .btn-row {
+    display: flex; justify-content: space-between; align-items: center;
+    margin-top: 24px; gap: 12px; flex-wrap: wrap;
+  }
+  .next-btn {
+    display: none;
+    background: var(--burgundy); color: var(--paper); border: none;
+    padding: 14px 28px;
+    font-family: 'Inter', sans-serif;
+    font-size: 13px; font-weight: 500;
+    letter-spacing: 0.15em; text-transform: uppercase;
+    cursor: pointer; border-radius: 3px;
+    transition: background 0.2s ease; min-height: 48px; margin-left: auto;
+  }
+  .next-btn.show { display: block; animation: fadeIn 0.3s ease; }
+  .next-btn:hover { background: var(--burgundy-dark); }
+  .quit-btn {
+    background: transparent; color: var(--ink-soft);
+    border: 1px solid var(--rule);
+    padding: 12px 20px;
+    font-family: 'Inter', sans-serif;
+    font-size: 11px; font-weight: 500;
+    letter-spacing: 0.15em; text-transform: uppercase;
+    cursor: pointer; border-radius: 3px; min-height: 48px;
+  }
+  .quit-btn:hover { color: var(--burgundy); border-color: var(--burgundy); }
+
+  /* ===== RESULTS ===== */
+  .results { display: none; text-align: center; padding: 50px 20px 20px; }
+  .results.show { display: block; animation: fadeIn 0.4s ease; }
+  .results-eyebrow {
+    font-family: 'Inter', sans-serif;
+    font-size: 11px; font-weight: 500;
+    letter-spacing: 0.22em; text-transform: uppercase;
+    color: var(--burgundy); margin-bottom: 18px;
+  }
+  .results-score {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 96px; line-height: 1; font-weight: 500;
+    color: var(--ink); margin-bottom: 8px;
+  }
+  .results-score em { font-style: italic; color: var(--burgundy); }
+  .results-total {
+    font-family: 'Inter', sans-serif; font-size: 14px;
+    color: var(--ink-soft); letter-spacing: 0.08em; margin-bottom: 32px;
+  }
+  .results-message {
+    font-size: 22px; font-style: italic; color: var(--ink-soft);
+    margin-bottom: 36px; max-width: 480px;
+    margin-left: auto; margin-right: auto; line-height: 1.4;
+  }
+  .subject-breakdown {
+    max-width: 480px; margin: 0 auto 36px;
+    text-align: left;
+    background: #fbf7ee;
+    border: 1px solid var(--rule);
+    border-radius: 4px; padding: 24px 28px;
+  }
+  .breakdown-row {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 10px 0; border-bottom: 1px solid var(--rule);
+    font-family: 'Inter', sans-serif; font-size: 14px;
+  }
+  .breakdown-row:last-child { border-bottom: none; }
+  .breakdown-subject { color: var(--ink); font-weight: 500; }
+  .breakdown-score { color: var(--burgundy); font-weight: 600; }
+  .restart-btn {
+    background: var(--burgundy); color: var(--paper);
+    border: none; padding: 16px 36px;
+    font-family: 'Inter', sans-serif;
+    font-size: 13px; font-weight: 500;
+    letter-spacing: 0.15em; text-transform: uppercase;
+    cursor: pointer; border-radius: 3px;
+    transition: background 0.2s ease; min-height: 52px;
+  }
+  .restart-btn:hover { background: var(--burgundy-dark); }
+
+  @media (min-width: 768px) {
+    body { padding: 60px 40px; }
+    h1 { font-size: 56px; }
+    .card, .start-card { padding: 48px 44px; }
+    .fact-pattern { font-size: 20px; }
+    .choice { font-size: 18px; padding: 18px 22px; }
+  }
+  @media (max-width: 480px) {
+    body { padding: 24px 14px 40px; }
+    h1 { font-size: 34px; }
+    .card, .start-card { padding: 26px 22px; }
+    .fact-pattern { font-size: 17px; }
+    .choice { font-size: 16px; padding: 14px 14px; }
+    .results-score { font-size: 76px; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <a href="index.html" class="home-btn" aria-label="Return to home">
+    <span class="home-icon" aria-hidden="true">⌂</span>
+    <span>Home</span>
+  </a>
+
+  <header>
+    <div class="eyebrow">Bar Prep Practice — MBE</div>
+    <h1>Multistate <em>Bar Exam</em></h1>
+    <div class="subtitle">Four subjects · 114 questions · Tap to select your set</div>
+  </header>
+
+  <!-- START SCREEN -->
+  <div class="start-screen" id="startScreen">
+    <div class="start-card">
+      <div class="section-label">Choose Subject(s)</div>
+      <div class="subject-grid" id="subjectGrid"></div>
+
+      <div class="section-label">Number of Questions</div>
+      <div class="count-options" id="countOptions">
+        <div class="count-option" data-count="10">10</div>
+        <div class="count-option selected" data-count="25">25</div>
+        <div class="count-option" data-count="50">50</div>
+        <div class="count-option" data-count="all">All</div>
+      </div>
+
+      <button class="start-btn" id="startBtn" onclick="startQuiz()">Begin Quiz</button>
+    </div>
+  </div>
+
+  <!-- QUIZ SCREEN -->
+  <div class="progress-wrap" id="progressWrap" style="display:none;">
+    <div class="progress-label" id="progressLabel">Question 1 of 25</div>
+    <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
+  </div>
+
+  <div id="quizArea"></div>
+
+  <!-- RESULTS SCREEN -->
+  <div class="results" id="resultsArea">
+    <div class="results-eyebrow">Session Complete</div>
+    <div class="results-score"><span id="finalScore">0</span><em>/<span id="finalTotal">0</span></em></div>
+    <div class="results-total" id="finalPercent">0%</div>
+    <div class="results-message" id="finalMessage"></div>
+    <div class="subject-breakdown" id="subjectBreakdown"></div>
+    <button class="restart-btn" onclick="restart()">New Quiz</button>
+  </div>
+
+</div>
+
+<script>
+const SUBJECTS = {
+  torts: { name: "Torts", color: "burgundy" },
+  civpro: { name: "Civil Procedure", color: "forest" },
+  contracts: { name: "Contracts", color: "gold" },
+  property: { name: "Real Property", color: "burgundy" }
+};
+
+const questions = [
+  // ============ TORTS (40) ============
+  {
+    subject: "torts",
+    topic: "Negligence · Duty to Rescue",
+    fact: "A pedestrian sees a small child drowning in a shallow public fountain. The pedestrian is a strong swimmer and could easily save the child without any risk to himself. He is a stranger to the child and did nothing to cause the child to fall in. The pedestrian chooses to do nothing, and the child drowns. The child's parents bring a wrongful death action against the pedestrian.",
+    call: "Will the parents prevail?",
+    choices: [
+      "Yes, because the pedestrian could have rescued the child safely.",
+      "Yes, because a reasonable person would have intervened.",
+      "No, because the pedestrian owed no duty to rescue the child.",
+      "No, because the pedestrian's failure to act was not the cause of the drowning."
+    ],
+    correct: 2,
+    explanation: "The case turns on <strong>duty</strong>. At common law, there is no general duty to rescue a stranger, even when rescue could be performed safely. A duty arises only in narrow circumstances: a special relationship, a statutory duty, when the defendant created the peril, or when he voluntarily began a rescue. None applies here. (A) and (B) are wrong because ease and reasonableness are irrelevant without a duty. (D) is wrong because the failure to act was a but-for cause of the drowning; the case fails on duty, not causation."
+  },
+  {
+    subject: "torts",
+    topic: "Negligence · Causation",
+    fact: "Two separate forest fires, each negligently started by a different defendant, merge and burn down the plaintiff's house. Either fire alone would have been sufficient to destroy the house. The plaintiff sues both defendants for negligence.",
+    call: "Will the plaintiff recover from both defendants?",
+    choices: [
+      "Yes, because each defendant's conduct was a substantial factor in causing the harm.",
+      "Yes, because the defendants were acting in concert.",
+      "No, because the plaintiff cannot prove but-for causation against either defendant.",
+      "No, because the house would have burned regardless of either defendant's conduct."
+    ],
+    correct: 0,
+    explanation: "When two independent forces, either of which alone would have caused the harm, combine to produce it, courts apply the <strong>substantial factor test</strong> in place of but-for causation. Each defendant whose conduct was a substantial factor is a cause-in-fact. (C) correctly identifies the but-for problem but ignores the substantial factor exception. (B) is wrong because the defendants acted independently, not in concert. (D) reaches the wrong conclusion from the but-for problem."
+  },
+  {
+    subject: "torts",
+    topic: "Intentional Torts · Transferred Intent",
+    fact: "Daniel throws a rock at Adam, intending to strike Adam in the head. The rock misses Adam and instead strikes Brett, who was standing behind a tree and whom Daniel did not see and did not know was there. Brett suffers a serious head injury and sues Daniel for battery.",
+    call: "Will Brett prevail?",
+    choices: [
+      "Yes, because Daniel's intent to commit battery against Adam transfers to Brett.",
+      "Yes, because throwing rocks is an abnormally dangerous activity.",
+      "No, because Daniel did not intend to strike Brett.",
+      "No, because Daniel did not know Brett was there."
+    ],
+    correct: 0,
+    explanation: "Under <strong>transferred intent</strong>, when a defendant intends to commit one of the five trespassory torts (battery, assault, false imprisonment, trespass to land, trespass to chattels) against one person but instead commits the tort against another, the intent transfers to the actual victim. (C) and (D) sound right but ignore transferred intent. (B) is wrong because throwing rocks is not an abnormally dangerous activity in the strict liability sense."
+  },
+  {
+    subject: "torts",
+    topic: "Intentional Torts · Assault",
+    fact: "Standing fifty feet from Paula in an open park, Dale shakes his fist and shouts, \"I'm going to break your nose tomorrow!\" Paula has no reason to doubt that Dale means what he says, and she is genuinely frightened. Dale makes no move toward her.",
+    call: "Has Dale committed assault against Paula?",
+    choices: [
+      "Yes, because Paula reasonably feared that Dale would harm her.",
+      "Yes, because Dale's threat coupled with his gesture created apprehension of contact.",
+      "No, because the threatened harm was not imminent.",
+      "No, because Dale was too far from Paula to reach her with his fist."
+    ],
+    correct: 2,
+    explanation: "Assault requires reasonable apprehension of <strong>imminent</strong> harmful or offensive contact. A threat of future harm (\"tomorrow\") is not imminent. (A) captures Paula's fear but ignores imminence. (B) is wrong because a future-tense threat does not create apprehension of immediate contact. (D) reaches the right outcome for the wrong reason: distance alone is not dispositive — a person 50 feet away with a gun can commit assault. The defect is imminence in time."
+  },
+  {
+    subject: "torts",
+    topic: "Strict Liability · Products",
+    fact: "A manufacturer designs and sells power saws to the general public. A latent design defect causes the blade guard to retract unexpectedly during normal use. A consumer, using the saw as intended and following the manual, suffers a severed hand when the guard retracts. The consumer sues the manufacturer in strict products liability.",
+    call: "Will the consumer prevail?",
+    choices: [
+      "Yes, because the product was defective and unreasonably dangerous when sold.",
+      "Yes, but only if the consumer proves the manufacturer was negligent.",
+      "No, unless the consumer proves the manufacturer knew of the defect.",
+      "No, because the consumer assumed the risk of using a power saw."
+    ],
+    correct: 0,
+    explanation: "In <strong>strict products liability</strong>, the plaintiff must show (1) the product was defective when it left the defendant's control, (2) the defect made it unreasonably dangerous, (3) the product reached the user without substantial change, and (4) the defect caused the injury. Fault is not required. (B) and (C) wrongly import a fault element. (D) misapplies assumption of the risk, which requires knowledge of the <em>specific</em> defect."
+  },
+  {
+    subject: "torts",
+    topic: "Negligence · Res Ipsa Loquitur",
+    fact: "A pedestrian walks past a flour warehouse owned and operated by the defendant when a barrel of flour falls from a third-story window and injures her. No one witnessed how the barrel came to fall. The pedestrian sues for negligence but cannot identify any specific negligent act by the defendant or its employees.",
+    call: "Can the pedestrian survive a motion for directed verdict?",
+    choices: [
+      "Yes, because the doctrine of res ipsa loquitur permits an inference of negligence.",
+      "Yes, because property owners are strictly liable for objects falling from their premises.",
+      "No, because the pedestrian cannot identify a specific negligent act.",
+      "No, because res ipsa loquitur requires the plaintiff to eliminate all other possible causes."
+    ],
+    correct: 0,
+    explanation: "<strong>Res ipsa loquitur</strong> allows the jury to infer negligence when (1) the harm ordinarily does not occur without negligence, (2) the instrumentality was under the defendant's exclusive control, and (3) the plaintiff did not contribute. This is the classic <em>Byrne v. Boadle</em> pattern. (B) is wrong because there is no strict liability for falling objects. (C) misses res ipsa. (D) overstates the doctrine."
+  },
+  {
+    subject: "torts",
+    topic: "Defamation · Public Figure",
+    fact: "A national magazine publishes an article falsely claiming that a U.S. Senator embezzled campaign funds. The reporter relied on a single anonymous source and made no effort to verify the claim. The Senator sues the magazine for defamation and proves the statement was false and damaged his reputation.",
+    call: "Will the Senator prevail?",
+    choices: [
+      "Yes, because the statement was false and damaging.",
+      "Yes, because the reporter was negligent in failing to verify.",
+      "No, unless the Senator proves the reporter acted with knowledge of falsity or reckless disregard for the truth.",
+      "No, because public officials cannot recover for statements about their official conduct."
+    ],
+    correct: 2,
+    explanation: "Under <em>New York Times v. Sullivan</em>, a public official suing for defamation must prove <strong>actual malice</strong>: knowledge of falsity or reckless disregard for the truth. Negligence is not enough. (A) states the common-law elements but misses the constitutional overlay. (B) applies the wrong standard. (D) overstates the rule: public officials can recover, they just face a higher burden."
+  },
+  {
+    subject: "torts",
+    topic: "Vicarious Liability · Respondeat Superior",
+    fact: "A pizza delivery driver, while driving his employer's vehicle to deliver a pizza, runs a red light and strikes a pedestrian. The driver was speeding because the delivery was running late. The pedestrian sues the pizza company. There is no evidence the company was negligent in hiring or supervising the driver.",
+    call: "Is the pizza company liable?",
+    choices: [
+      "Yes, because the driver was acting within the scope of employment.",
+      "Yes, because the company is strictly liable for harm caused by its delivery operations.",
+      "No, because the driver's decision to run a red light was an unauthorized act.",
+      "No, because the company itself was not negligent."
+    ],
+    correct: 0,
+    explanation: "Under <strong>respondeat superior</strong>, an employer is vicariously liable for an employee's negligent acts within the scope of employment. Delivering a pizza is plainly within scope, even though running the red light was unauthorized. (C) is the classic trap: the act need not be authorized, only related to employment. (D) confuses vicarious liability with direct liability — the whole point is liability without the employer's own fault."
+  },
+  {
+    subject: "torts",
+    topic: "Negligence · Comparative Fault",
+    fact: "In a pure comparative negligence jurisdiction, a plaintiff is injured in a car accident. A jury finds the plaintiff 40% at fault and the defendant 60% at fault. The jury also finds the plaintiff's total damages to be $100,000.",
+    call: "How much may the plaintiff recover from the defendant?",
+    choices: [
+      "$100,000, because the defendant was the majority cause.",
+      "$60,000, representing the defendant's share of fault.",
+      "$40,000, representing the plaintiff's share of fault.",
+      "Nothing, because the plaintiff was substantially at fault."
+    ],
+    correct: 1,
+    explanation: "In a <strong>pure comparative negligence</strong> jurisdiction, the plaintiff's recovery is reduced by her percentage of fault. $100,000 reduced by 40% leaves $60,000. (A) ignores the reduction. (C) inverts the formula. (D) is the contributory negligence rule, which applies in only a handful of jurisdictions."
+  },
+  {
+    subject: "torts",
+    topic: "Intentional Torts · Private Necessity",
+    fact: "A boat captain ties his boat to the plaintiff's private dock during a sudden, violent storm to avoid the boat's certain destruction. The plaintiff is not present. The wind drives the boat repeatedly into the dock, causing $5,000 in damage. The plaintiff later sues for trespass to land.",
+    call: "Will the plaintiff recover?",
+    choices: [
+      "Yes, recovering full compensatory and punitive damages for the trespass.",
+      "Yes, recovering $5,000 for the actual damage to the dock.",
+      "No, because the captain had a complete privilege of private necessity.",
+      "No, because the captain's actions were objectively reasonable."
+    ],
+    correct: 1,
+    explanation: "<strong>Private necessity</strong> is a qualified privilege. The captain may use the dock to save his property, but he must compensate for actual damage. This is <em>Vincent v. Lake Erie Transportation Co.</em> (A) wrongly treats him as a willful trespasser. (C) overstates the privilege as absolute. (D) treats reasonableness as a complete defense — it justifies entry but not damages."
+  },
+  {
+    subject: "torts",
+    topic: "Intentional Torts · Battery",
+    fact: "A waiter at a fine restaurant becomes angry when a patron complains about the food. The waiter snatches the plate from the patron's hands, splashing food on the patron's shirt but causing no physical injury. The patron sues for battery.",
+    call: "Will the patron prevail?",
+    choices: [
+      "Yes, because offensive contact with an object closely connected to the plaintiff's person satisfies battery's contact element.",
+      "Yes, because the waiter intended to humiliate the patron.",
+      "No, because the patron suffered no physical injury.",
+      "No, because the waiter touched only the plate, not the patron."
+    ],
+    correct: 0,
+    explanation: "Battery requires intentional harmful or offensive contact with the plaintiff's person. <strong>Contact with objects closely connected to the plaintiff</strong> — clothing, a plate held in hand, a cane being used — counts as contact with the person. Physical injury is not required; offensive contact suffices. (B) is incomplete — humiliation alone isn't the element. (C) imports a wrong injury requirement. (D) misunderstands the contact rule."
+  },
+  {
+    subject: "torts",
+    topic: "Intentional Torts · False Imprisonment",
+    fact: "A store security guard, suspecting a customer of shoplifting, locks the customer in a windowless back room. There is a fire exit on the far side of the room, unobstructed and clearly marked. The customer does not notice the exit and remains in the room for two hours until released. She sues for false imprisonment.",
+    call: "Will the customer prevail?",
+    choices: [
+      "Yes, because the customer was confined against her will.",
+      "Yes, because the security guard lacked probable cause.",
+      "No, because a reasonable means of escape was available.",
+      "No, because the customer must have known of the escape route."
+    ],
+    correct: 0,
+    explanation: "False imprisonment requires (1) intent to confine, (2) actual confinement, and (3) awareness of confinement. A means of escape defeats the claim only if the plaintiff <strong>knew or should reasonably have known</strong> of it. An unobserved fire exit doesn't qualify if the plaintiff was unaware. (C) misstates the rule. (B) addresses a different issue (the shopkeeper's privilege defense). (D) reverses the standard."
+  },
+  {
+    subject: "torts",
+    topic: "Intentional Torts · IIED",
+    fact: "The defendant, knowing it is false, calls the plaintiff and falsely tells her that her son has been killed in a car crash. The defendant does so as a cruel prank. The plaintiff suffers severe emotional distress and is hospitalized for anxiety attacks. She sues for intentional infliction of emotional distress.",
+    call: "Will the plaintiff prevail?",
+    choices: [
+      "Yes, because the defendant's conduct was extreme and outrageous and intentionally caused severe emotional distress.",
+      "Yes, because the defendant committed fraud.",
+      "No, because emotional distress alone is not actionable.",
+      "No, because the plaintiff suffered no physical impact."
+    ],
+    correct: 0,
+    explanation: "IIED requires (1) extreme and outrageous conduct, (2) intent or recklessness, (3) causation, and (4) severe emotional distress. Knowingly telling a parent her child is dead is paradigmatic <strong>extreme and outrageous</strong> conduct. Physical impact is not required for IIED. (B) is wrong — fraud has different elements (reliance, pecuniary harm). (C) and (D) state the negligence-era rule, not IIED."
+  },
+  {
+    subject: "torts",
+    topic: "Negligence · Premises Liability",
+    fact: "A customer enters a grocery store during business hours to buy milk. She slips on a puddle of cooking oil that had been on the floor for approximately one hour. The store's manager admits employees walked past the spill several times without cleaning it up or posting a warning. The customer suffers a fractured wrist and sues the store.",
+    call: "Will the customer prevail?",
+    choices: [
+      "Yes, because the store breached the duty of reasonable care owed to invitees.",
+      "Yes, because store owners are strictly liable for injuries to customers.",
+      "No, because the customer should have watched where she was walking.",
+      "No, unless the customer proves an employee created the spill."
+    ],
+    correct: 0,
+    explanation: "A business customer is an <strong>invitee</strong>, owed the duty of reasonable care: to inspect, discover, and warn of (or remedy) known and discoverable dangers. The store had constructive notice (one hour, employees walked by) and did nothing. (B) overstates — premises liability is not strict. (C) raises comparative fault but is not a complete bar. (D) is wrong: notice can be actual <em>or</em> constructive."
+  },
+  {
+    subject: "torts",
+    topic: "Negligence · Premises Liability — Trespasser",
+    fact: "A landowner, frustrated by repeated trespassing on his rural property, sets a spring gun behind a barn door. The gun is rigged to fire when the door is opened. A trespasser, unaware of the device, opens the door and is shot in the leg.",
+    call: "Is the landowner liable to the trespasser?",
+    choices: [
+      "Yes, because a landowner may not use deadly force against a mere trespasser.",
+      "Yes, because the landowner owed the trespasser a duty of ordinary care.",
+      "No, because the trespasser had no right to be on the property.",
+      "No, because the landowner did not personally inflict the injury."
+    ],
+    correct: 0,
+    explanation: "A landowner generally owes trespassers only the duty to refrain from willful or wanton harm, but a landowner <strong>may not use force — particularly deadly or serious bodily force — that he could not lawfully use in person</strong>. Spring guns are uniformly held actionable. <em>Katko v. Briney</em>. (B) overstates the duty owed to trespassers. (C) is wrong because the trespasser's status doesn't license deadly traps. (D) ignores that the landowner set the trap."
+  },
+  {
+    subject: "torts",
+    topic: "Defenses · Self-Defense",
+    fact: "During a verbal argument, the victim punches the defendant once in the chest with a closed fist. The blow is painful but not seriously injurious. The defendant draws a pistol and shoots the victim in the abdomen, gravely wounding him. The victim sues for battery; the defendant claims self-defense.",
+    call: "Will the self-defense claim succeed?",
+    choices: [
+      "Yes, because the defendant was responding to an unprovoked attack.",
+      "Yes, because the defendant reasonably feared bodily harm.",
+      "No, because the force used was disproportionate to the threat.",
+      "No, because self-defense is not available outside the home."
+    ],
+    correct: 2,
+    explanation: "Self-defense requires that the force used be <strong>proportional</strong> to the threat. Deadly force is justified only when the defender reasonably believes he faces deadly force or serious bodily harm. A single punch does not warrant a gunshot. (A) and (B) point to predicates for self-defense but ignore proportionality. (D) is wrong — self-defense is available wherever a person is lawfully present."
+  },
+  {
+    subject: "torts",
+    topic: "Negligence · Negligence Per Se",
+    fact: "A statute prohibits driving over 35 mph in school zones during school hours and is designed to protect children from being struck by vehicles. The defendant drives 50 mph through a school zone at dismissal and strikes a child crossing the street, causing serious injuries. The child sues.",
+    call: "What is the effect of the statutory violation?",
+    choices: [
+      "It establishes negligence per se because the plaintiff is in the protected class and the harm is the type the statute was designed to prevent.",
+      "It is admissible as evidence of negligence but not conclusive.",
+      "It is irrelevant because tort liability requires a common-law breach.",
+      "It establishes strict liability for the defendant."
+    ],
+    correct: 0,
+    explanation: "<strong>Negligence per se</strong> applies when (1) the plaintiff is in the class the statute was designed to protect and (2) the harm is the type the statute was designed to prevent. Both apply — child, school zone, vehicle strike. Violation conclusively establishes breach (in most jurisdictions). (B) describes a minority approach. (C) is wrong. (D) confuses negligence per se with strict liability."
+  },
+  {
+    subject: "torts",
+    topic: "Negligence · Eggshell Plaintiff",
+    fact: "The defendant negligently rear-ends the plaintiff's car at low speed. A driver of ordinary health would suffer only minor whiplash. The plaintiff, unbeknownst to the defendant, has a rare bone condition. The minor collision triggers a cascade of medical complications resulting in $300,000 in damages.",
+    call: "How much is the defendant liable for?",
+    choices: [
+      "The full $300,000, because the defendant takes the plaintiff as he finds her.",
+      "Only the damages a person of ordinary health would have suffered.",
+      "The full $300,000, but only if the bone condition was foreseeable.",
+      "Nothing, because the bone condition was a superseding cause."
+    ],
+    correct: 0,
+    explanation: "Under the <strong>eggshell plaintiff rule</strong> (sometimes called the thin-skull rule), the defendant takes the plaintiff as he finds her and is liable for the full extent of harm even if the plaintiff's preexisting condition made the harm unforeseeably severe. Foreseeability of the <em>extent</em> of harm is not required; foreseeability of <em>some</em> harm of that type is. (B) and (C) misapply the rule. (D) is wrong: a preexisting condition is not a superseding cause."
+  },
+  {
+    subject: "torts",
+    topic: "Strict Liability · Abnormally Dangerous Activities",
+    fact: "The defendant operates a quarry and uses dynamite to blast rock. The blasting is conducted with all reasonable safety precautions. Vibrations from a blast nonetheless crack the foundation of a neighbor's house a quarter mile away. The neighbor sues.",
+    call: "Will the neighbor recover?",
+    choices: [
+      "Yes, because blasting is an abnormally dangerous activity subject to strict liability.",
+      "Yes, because the defendant was negligent in using dynamite.",
+      "No, because the defendant exercised reasonable care.",
+      "No, because the neighbor assumed the risk by living near a quarry."
+    ],
+    correct: 0,
+    explanation: "Blasting is the paradigm <strong>abnormally dangerous activity</strong> subject to strict liability. The factors (high risk, severity, inability to eliminate by reasonable care, uncommon use, inappropriate location, low community value) are all satisfied. Reasonable care is no defense. (B) is wrong because the facts say care was used; the basis is strict liability. (C) misses that fault is irrelevant. (D) misapplies assumption of risk."
+  },
+  {
+    subject: "torts",
+    topic: "Strict Liability · Wild Animals",
+    fact: "The defendant lawfully keeps a Bengal tiger in a reinforced enclosure on his property. The defendant takes every reasonable precaution. A lightning strike damages the enclosure, the tiger escapes, and it mauls a passing hiker. The hiker sues.",
+    call: "Is the defendant liable?",
+    choices: [
+      "Yes, because keepers of wild animals are strictly liable for harm caused by the animal's dangerous propensities.",
+      "Yes, because keeping a tiger is negligent.",
+      "No, because the defendant exercised reasonable care.",
+      "No, because the lightning strike was an act of God."
+    ],
+    correct: 0,
+    explanation: "Owners of <strong>wild animals</strong> (non-domesticated species) are strictly liable for harm caused by the animal's dangerous propensities, regardless of care taken. (B) confuses strict liability with negligence. (C) misses that fault is irrelevant. (D) is the trickiest wrong answer: an act of God can sometimes break causation, but courts generally hold that the strict liability extends to harms that occur once the animal is at large, regardless of how it escaped."
+  },
+  {
+    subject: "torts",
+    topic: "Defamation · Private Figure",
+    fact: "A local newspaper publishes a story falsely reporting that a private citizen — a kindergarten teacher with no public role — was arrested for embezzlement. The reporter relied on a confused police scanner transcript and failed to call the police department for confirmation, which is standard newsroom practice. The teacher sues for defamation.",
+    call: "What must the teacher prove on the issue of fault?",
+    choices: [
+      "Nothing, because defamation is strict liability for private figures.",
+      "Negligence — that the reporter failed to exercise reasonable care.",
+      "Actual malice — knowledge of falsity or reckless disregard for the truth.",
+      "Intent to harm the plaintiff."
+    ],
+    correct: 1,
+    explanation: "Under <em>Gertz v. Robert Welch, Inc.</em>, a <strong>private-figure plaintiff</strong> need only prove negligence (in most jurisdictions) on the issue of fault, not actual malice. (A) is the pre-<em>Gertz</em> rule and is wrong post-1974. (C) is the public-figure standard. (D) is too high — even public figures don't need intent to harm."
+  },
+  {
+    subject: "torts",
+    topic: "Negligence · NIED Bystander",
+    fact: "A mother is standing on the sidewalk when she sees the defendant's truck negligently strike and seriously injure her young daughter just twenty feet away. The mother is not herself in any zone of physical danger. She suffers severe emotional shock and develops a diagnosed anxiety disorder. She sues for negligent infliction of emotional distress.",
+    call: "Under the modern (Dillon/Thing) approach, will she prevail?",
+    choices: [
+      "Yes, because she was a close family member who contemporaneously perceived the injury at the scene and suffered serious emotional distress.",
+      "Yes, because the defendant was negligent and harm to the mother was foreseeable.",
+      "No, because she was not in the zone of physical danger.",
+      "No, because emotional distress without physical impact is not actionable."
+    ],
+    correct: 0,
+    explanation: "Modern bystander NIED (the <em>Dillon v. Legg</em> / <em>Thing v. La Chusa</em> approach) requires (1) close family relationship, (2) contemporaneous sensory perception at the scene, and (3) serious emotional distress. All three are satisfied. (C) states the older zone-of-danger rule, which is now minority. (D) is the oldest impact rule, abandoned in most jurisdictions. (B) is too broad — bare foreseeability isn't enough."
+  },
+  {
+    subject: "torts",
+    topic: "Intentional Torts · Trespass to Land",
+    fact: "A hiker, reading her map incorrectly, walks across a portion of the defendant's posted private land believing in good faith that she is on a public trail. She causes no actual damage. The landowner sues for trespass.",
+    call: "Will the landowner prevail?",
+    choices: [
+      "Yes, because trespass to land requires only intent to enter the land, not intent to trespass.",
+      "Yes, because trespassers are strictly liable for entering land.",
+      "No, because the hiker's mistake was reasonable.",
+      "No, because no actual damage occurred."
+    ],
+    correct: 0,
+    explanation: "Trespass to land requires only the <strong>intent to enter</strong> the land in question, not knowledge that the land belongs to another. A reasonable mistake of fact is no defense. Actual damage is not required; nominal damages are available. (B) confuses intent-based liability with strict liability. (C) and (D) state defenses that don't apply."
+  },
+  {
+    subject: "torts",
+    topic: "Joint and Several Liability",
+    fact: "Two defendants negligently combine to injure the plaintiff, who suffers $100,000 in damages. The defendants are jointly and severally liable. The plaintiff collects the full $100,000 from Defendant A, who has deep pockets. Defendant B is also solvent.",
+    call: "May Defendant A seek contribution from Defendant B?",
+    choices: [
+      "Yes, A may seek contribution from B for B's proportionate share of fault.",
+      "Yes, A may seek full reimbursement from B.",
+      "No, because the plaintiff has been fully compensated.",
+      "No, because joint and several liability bars contribution."
+    ],
+    correct: 0,
+    explanation: "Joint and several liability lets the plaintiff collect the full amount from any one defendant, but the paying defendant may seek <strong>contribution</strong> from co-tortfeasors for their proportionate share of fault. (B) describes full indemnity, available only in narrow circumstances (e.g., vicarious liability). (C) confuses the plaintiff's recovery with rights between defendants. (D) inverts the rule — joint and several liability is the predicate for contribution."
+  },
+  {
+    subject: "torts",
+    topic: "Defenses · Consent (Sports)",
+    fact: "During a recreational tackle football game played under standard rules, a player is tackled hard by the defendant. The tackle is within the rules of the game but the impact breaks the plaintiff's collarbone. The plaintiff sues the defendant for battery.",
+    call: "What is the defendant's best defense?",
+    choices: [
+      "Implied consent to contact within the ordinary risks of the sport.",
+      "Self-defense, because the tackle was defensive.",
+      "Necessity, because the contact occurred during the game.",
+      "Assumption of the risk is unavailable as a defense to intentional torts."
+    ],
+    correct: 0,
+    explanation: "Participants in contact sports give <strong>implied consent</strong> to contact within the customary scope of the game. A tackle within the rules of football is consented to. Consent defeats the intentional tort. (B) and (C) are inapplicable. (D) is partially true but misses that consent is the relevant defense here, not assumption of risk."
+  },
+
+  {
+    subject: "torts",
+    topic: "Negligence · Professional Standard of Care",
+    fact: "A surgeon performs an operation using a technique endorsed by a respectable minority of surgeons in her specialty but rejected by the majority. The patient suffers complications that would have been avoided under the majority technique. The patient sues for malpractice.",
+    call: "Has the surgeon necessarily breached the standard of care?",
+    choices: [
+      "Yes, because she failed to follow the practice of the majority of her peers.",
+      "Yes, because surgeons are strictly liable for known adverse outcomes.",
+      "No, because following a technique endorsed by a respectable minority of practitioners generally satisfies the professional standard.",
+      "No, because doctors are held only to the ordinary reasonable-person standard."
+    ],
+    correct: 2,
+    explanation: "Professionals are held to the standard of a <strong>reasonably competent practitioner in good standing</strong> in the same specialty. A doctor who follows a technique endorsed by a respectable minority generally satisfies the standard of care, even if most peers would use a different approach (the \"two schools of thought\" doctrine). (A) misstates the rule. (B) overstates — medical practice is negligence, not strict liability. (D) wrongly imposes the ordinary, not the professional, standard."
+  },
+  {
+    subject: "torts",
+    topic: "Negligence · Children's Standard of Care",
+    fact: "A 14-year-old operates a motorboat on a public lake and negligently strikes another vessel, injuring an occupant. The plaintiff sues the child.",
+    call: "By what standard is the child's conduct judged?",
+    choices: [
+      "An adult standard of care, because operating a motorboat is an inherently adult activity.",
+      "The standard of a reasonable 14-year-old of similar intelligence and experience.",
+      "Strict liability, because minors cannot be held to any negligence standard.",
+      "No standard, because children are immune from negligence suits."
+    ],
+    correct: 0,
+    explanation: "Children are normally judged by the standard of a child of similar age, intelligence, and experience. <strong>Exception</strong>: when the child engages in an inherently dangerous adult activity — operating a motor vehicle, motorboat, snowmobile — she is held to the <em>adult</em> standard. (B) states the general rule but misses the adult-activity exception. (C) and (D) are simply wrong."
+  },
+  {
+    subject: "torts",
+    topic: "Negligence · Foreseeable Plaintiff",
+    fact: "A railroad conductor negligently shoves a passenger trying to board a moving train. A package the passenger is carrying — which turns out to contain fireworks — falls and explodes. The shockwave knocks over a heavy scale at the far end of the platform, which falls on the plaintiff, who is standing nowhere near the train. The plaintiff sues the railroad.",
+    call: "Under the majority Cardozo approach, will she recover?",
+    choices: [
+      "Yes, because the conductor's negligence was a but-for cause of her injuries.",
+      "Yes, because the railroad owes a duty to all of its passengers.",
+      "No, because the plaintiff was outside the foreseeable zone of danger.",
+      "No, because the fireworks operated as a superseding cause."
+    ],
+    correct: 2,
+    explanation: "Under <em>Palsgraf v. Long Island R.R.</em> (Cardozo's majority opinion), a defendant owes a duty only to <strong>foreseeable plaintiffs</strong> — those within the zone of foreseeable danger created by the negligent act. The plaintiff standing far away was not foreseeable from a careless shove on the boarding platform. (A) confuses but-for cause with duty. (B) overstates: passenger duty doesn't cover unforeseeable harm. (D) is the minority Andrews view (proximate cause / superseding cause), but the majority decides on duty/foreseeability."
+  },
+  {
+    subject: "torts",
+    topic: "Negligence · Superseding Cause",
+    fact: "A driver negligently leaves his keys in the ignition and his car unlocked on a city street. A car thief steals the car, drives intoxicated at high speed, and strikes the plaintiff several miles away. The plaintiff sues the original driver.",
+    call: "Is the original driver liable?",
+    choices: [
+      "Yes, because leaving keys in an unlocked car foreseeably leads to theft.",
+      "Yes, because his negligence was a but-for cause of the plaintiff's injuries.",
+      "No, generally because the thief's intentional criminal act and reckless intoxicated driving operate as a superseding cause.",
+      "No, because the driver had no duty to lock his car."
+    ],
+    correct: 2,
+    explanation: "Even when conduct is negligent and a but-for cause, <strong>intentional criminal acts and grossly negligent intervening conduct by third parties</strong> typically operate as <em>superseding causes</em> that cut off the original defendant's liability — unless the very risk that made the conduct negligent was the risk that the criminal/grossly negligent act would occur. The risk of theft might be foreseeable, but the reckless intoxicated driving is generally beyond it. (A) and (B) miss superseding cause. (D) overstates: there often is a duty to take reasonable precautions, but proximate cause still cuts off."
+  },
+  {
+    subject: "torts",
+    topic: "Negligence · Alternative Liability",
+    fact: "Two hunters carelessly fire their shotguns simultaneously in the direction of a third companion. One shot strikes the companion in the eye. It is impossible to determine which hunter fired the injuring shot. The companion sues both hunters.",
+    call: "What is the result?",
+    choices: [
+      "The burden shifts to each defendant to prove he was not the cause; if neither can, both are jointly and severally liable.",
+      "The plaintiff loses because she cannot prove which defendant caused her injury.",
+      "Each defendant is liable for exactly 50% of damages as a matter of law.",
+      "Each defendant is strictly liable because hunting is abnormally dangerous."
+    ],
+    correct: 0,
+    explanation: "Under <em>Summers v. Tice</em>'s <strong>alternative liability</strong> doctrine, when two or more defendants act tortiously and only one caused the harm but the plaintiff cannot identify which, the burden of proof on causation shifts to the defendants. If neither can exculpate himself, both are jointly and severally liable. (B) applies the traditional but-for rule the doctrine was designed to overcome. (C) misstates the rule. (D) wrongly invokes strict liability."
+  },
+  {
+    subject: "torts",
+    topic: "Products Liability · Failure to Warn",
+    fact: "A pharmaceutical manufacturer markets a prescription drug. The drug is known to cause a rare but severe allergic reaction in patients with a specific genetic marker. The risk is non-obvious and the manufacturer has known about it for years, but the warning label says nothing about it. The plaintiff, who has the marker, takes the drug and suffers severe injury.",
+    call: "Will the plaintiff recover under strict products liability?",
+    choices: [
+      "Yes, because failure to warn of a known, non-obvious risk renders the product defective.",
+      "Yes, because pharmaceutical manufacturers are strictly liable for any adverse reaction.",
+      "No, unless the plaintiff proves the manufacturer was negligent in failing to warn.",
+      "No, because the reaction resulted from the plaintiff's own genetic susceptibility."
+    ],
+    correct: 0,
+    explanation: "Strict products liability covers three types of defect: manufacturing, design, and <strong>inadequate warnings</strong>. A failure to warn of a known, non-obvious risk associated with foreseeable use renders the product defective. (B) overstates: not all adverse reactions trigger strict liability. (C) imports a negligence requirement that strict liability doesn't have. (D) treats susceptibility as a defense — the eggshell plaintiff rule applies here too."
+  },
+  {
+    subject: "torts",
+    topic: "Products Liability · Design Defect",
+    fact: "A manufacturer produces a riding lawn mower with a known propensity to flip on slopes, sometimes crushing the operator. A safer alternative design, adding a roll bar, is technologically feasible at moderate additional cost. The plaintiff is injured when his mower flips. He sues for design defect.",
+    call: "Under the prevailing risk-utility test, will he prevail?",
+    choices: [
+      "Yes, if the risks of the existing design outweigh its utility, considering the availability of a safer alternative design.",
+      "Yes, because all products causing operator injury are strictly liable.",
+      "No, unless the plaintiff used the mower exactly as the manual specified.",
+      "No, because the manufacturer followed the industry-standard design."
+    ],
+    correct: 0,
+    explanation: "Most jurisdictions evaluate design defect under the <strong>risk-utility test</strong>, asking whether the risks of the chosen design outweigh its benefits — a key factor being whether a reasonable alternative design was available at the time of manufacture. The availability of a roll bar is highly relevant. (B) overstates. (C) imports an extreme misuse defense that doesn't apply to foreseeable use. (D) misstates: industry custom is evidence but not dispositive (<em>The T.J. Hooper</em>)."
+  },
+  {
+    subject: "torts",
+    topic: "Economic Torts · Tortious Interference with Contract",
+    fact: "Knowing that the plaintiff has a profitable, valid five-year exclusive supply contract with a third party, the defendant approaches the third party and persuades him to breach the contract by offering better terms. The third party breaches; the plaintiff sues the defendant.",
+    call: "Will the plaintiff recover?",
+    choices: [
+      "Yes, because the defendant intentionally and improperly induced the breach of a known existing contract.",
+      "Yes, because all commercial competition that causes harm is actionable.",
+      "No, because the defendant did not breach any contract herself.",
+      "No, because free competition is absolutely privileged."
+    ],
+    correct: 0,
+    explanation: "<strong>Tortious interference with contract</strong> requires (1) a valid contract between the plaintiff and a third party, (2) the defendant's knowledge of it, (3) intentional and improper inducement of breach, (4) actual breach, and (5) damages. Offering better terms with knowledge of an exclusive contract is improper interference. (B) overstates. (C) misses that the tort lies for inducing another's breach, not breaching oneself. (D) wrongly absolutizes the competition privilege, which is qualified."
+  },
+  {
+    subject: "torts",
+    topic: "Intentional Torts · Conversion",
+    fact: "Without permission, the defendant takes the plaintiff's car for a five-day road trip totaling 2,000 miles. The defendant returns the car in essentially its prior condition; the plaintiff suffered loss of use during the period. The plaintiff sues.",
+    call: "What is the proper claim?",
+    choices: [
+      "Conversion, because the defendant's interference was so substantial in extent and duration as to seriously deprive the plaintiff of her property.",
+      "Trespass to chattels only, because the car was returned in essentially the same condition.",
+      "Theft, but no tort claim because the car was returned.",
+      "No tort, because there was no permanent loss."
+    ],
+    correct: 0,
+    explanation: "The line between <strong>trespass to chattels</strong> and <strong>conversion</strong> turns on the seriousness of the interference. Conversion exists when the deprivation is so substantial in extent and duration that the defendant should pay full value of the chattel. A five-day, 2,000-mile unauthorized use is far beyond trespass to chattels — it's conversion, and the plaintiff may recover the full value (with the defendant in effect \"buying\" the car). (B) understates. (C) and (D) miss the doctrine."
+  },
+  {
+    subject: "torts",
+    topic: "Nuisance · Private",
+    fact: "The defendant operates a small chemical plant adjacent to the plaintiff's residential property. The plant emits a strong unpleasant odor that drifts onto the plaintiff's land daily, interfering with her enjoyment of her home and reducing its value. The emissions comply with all regulations but are nonetheless objectionable.",
+    call: "What must the plaintiff prove for private nuisance?",
+    choices: [
+      "That the defendant's conduct constitutes a substantial and unreasonable interference with her use and enjoyment of her land.",
+      "That the defendant violated a statute or zoning ordinance.",
+      "That the defendant intended to cause her personal harm.",
+      "That she suffered physical injury or damage to the structure of her home."
+    ],
+    correct: 0,
+    explanation: "<strong>Private nuisance</strong> is a substantial and unreasonable interference with the plaintiff's use and enjoyment of land. The interference must be substantial (more than minor annoyance) and unreasonable (judged by gravity of harm vs. utility of conduct). Regulatory compliance is relevant but not dispositive. (B) wrongly equates nuisance with regulatory violation. (C) imports intent that isn't required. (D) misstates: nuisance can be entirely intangible (smells, sounds, light)."
+  },
+  {
+    subject: "torts",
+    topic: "Nuisance · Public",
+    fact: "The defendant illegally blocks a public roadway used by the entire community. A retail business along the road suffers significantly reduced foot traffic and lost sales. The business sues for public nuisance.",
+    call: "Does the business have standing?",
+    choices: [
+      "Yes, because its economic injury is different in kind from the injury suffered by the general public.",
+      "Yes, because any member of the affected public may sue.",
+      "No, because only the government may sue for public nuisance.",
+      "No, because economic losses are not recoverable in nuisance."
+    ],
+    correct: 0,
+    explanation: "<strong>Public nuisance</strong> is an unreasonable interference with a right common to the general public. A private plaintiff may sue for public nuisance only if she suffered a <strong>special injury</strong> different in kind (not just degree) from the public's. A business uniquely harmed by reduced access — beyond the inconvenience suffered by passersby — has special injury. (B) misses the special-injury requirement. (C) overstates. (D) wrongly excludes economic damages."
+  },
+  {
+    subject: "torts",
+    topic: "Defamation · Slander Per Se",
+    fact: "The defendant tells the plaintiff's coworkers, falsely, that the plaintiff has an active sexually transmitted disease. The plaintiff cannot prove any specific lost business or income, but she suffers humiliation and damage to her reputation among colleagues.",
+    call: "Will the plaintiff recover?",
+    choices: [
+      "Yes, because imputing a loathsome disease is slander per se, and damages are presumed.",
+      "Yes, but only nominal damages.",
+      "No, because slander requires proof of special damages.",
+      "No, unless the plaintiff proves the defendant acted with actual malice."
+    ],
+    correct: 0,
+    explanation: "Slander generally requires proof of <strong>special damages</strong> (specific economic loss), but four categories of <strong>slander per se</strong> presume damages: (1) imputing a crime of moral turpitude, (2) imputing a loathsome disease (traditionally including STDs), (3) imputing conduct adversely affecting the plaintiff's trade or profession, and (4) imputing unchastity (historically of a woman). (B) understates. (C) misses slander per se. (D) wrongly imports the public-figure standard."
+  },
+  {
+    subject: "torts",
+    topic: "Defamation · Opinion",
+    fact: "A restaurant critic publishes a review of the plaintiff's restaurant calling it \"the worst in the city — the service is terrible, the food is inedible, and the décor looks like a thrift store accident.\" The plaintiff sues for defamation.",
+    call: "Will the plaintiff recover?",
+    choices: [
+      "Yes, because the statements damaged the restaurant's reputation.",
+      "Yes, because the statements were published to a wide audience.",
+      "No, because pure statements of opinion that do not imply false underlying facts are protected.",
+      "No, because critics are absolutely privileged from suit."
+    ],
+    correct: 2,
+    explanation: "Defamation requires a false statement of <strong>fact</strong>. Statements of pure opinion that cannot reasonably be interpreted as stating actual facts, or that disclose the facts on which the opinion rests, are protected. Calling food \"inedible\" or décor a \"thrift store accident\" is non-actionable hyperbole/opinion. (A) and (B) miss the opinion privilege. (D) overstates — critics aren't absolutely privileged, but their opinions are typically protected as opinion."
+  },
+  {
+    subject: "torts",
+    topic: "Negligence · Special Relationship Duty (Tarasoff)",
+    fact: "During a therapy session, a psychiatrist's patient describes a specific, credible plan to kill his ex-girlfriend, naming her. The psychiatrist takes no action — no warning to the ex-girlfriend, no call to the police, no commitment proceedings. Two weeks later, the patient kills the ex-girlfriend. Her estate sues the psychiatrist.",
+    call: "Does the psychiatrist owe a duty to the ex-girlfriend?",
+    choices: [
+      "Yes, mental health professionals owe a duty to take reasonable steps to protect identifiable third parties from credible threats of violence by their patients.",
+      "Yes, because all professionals owe duties to all foreseeable victims.",
+      "No, because the patient — not the psychiatrist — committed the killing.",
+      "No, because therapist-patient communications are absolutely privileged."
+    ],
+    correct: 0,
+    explanation: "Under <em>Tarasoff v. Regents</em> and its progeny, the <strong>special relationship</strong> between a mental health professional and a patient creates a duty to take reasonable protective steps when the therapist knows or reasonably should know of a serious, credible threat of violence against an identifiable victim. (B) overstates. (C) misses that the special relationship creates an affirmative duty notwithstanding third-party action. (D) overstates the privilege, which yields to safety obligations."
+  },
+  {
+    subject: "torts",
+    topic: "Negligence · Voluntary Undertaking",
+    fact: "A bystander sees an unconscious swimmer on a beach. He had no prior duty to help. He begins CPR but, after only a minute, gives up because he is tired and walks away. He does not call for help or alert anyone else, although other people are visibly nearby. The swimmer dies. Medical evidence shows that completed CPR or summoned help would have saved his life. The estate sues the bystander.",
+    call: "Will the estate prevail?",
+    choices: [
+      "Yes, because by voluntarily undertaking to rescue, the bystander assumed a duty to exercise reasonable care and not leave the victim in a worse position.",
+      "Yes, because all rescuers must complete what they begin.",
+      "No, because there is no duty to rescue a stranger.",
+      "No, because Good Samaritan statutes immunize all voluntary rescuers."
+    ],
+    correct: 0,
+    explanation: "A person who <strong>voluntarily undertakes</strong> to render aid assumes a duty to exercise reasonable care, even though no duty existed before. He may not abandon the victim in a worse position than he found her. Stopping CPR mid-rescue without summoning available help worsens the victim's situation. (B) overstates — the duty is reasonable care, not necessarily completion. (C) ignores the voluntary undertaking exception. (D) misstates Good Samaritan statutes, which generally protect against ordinary negligence in good-faith aid but do not cover gross negligence, reckless conduct, or worsening the victim's position."
+  },
+  // ============ CIVIL PROCEDURE (24) ============
+  {
+    subject: "civpro",
+    topic: "Personal Jurisdiction · General",
+    fact: "WidgetCo is incorporated in Delaware and has its principal place of business in New York. It sells products nationwide. A plaintiff sues WidgetCo in California state court on a claim entirely unrelated to any California activity.",
+    call: "Does California have general personal jurisdiction over WidgetCo?",
+    choices: [
+      "Yes, because WidgetCo sells products in California.",
+      "Yes, because WidgetCo has minimum contacts with California.",
+      "No, because general jurisdiction over a corporation exists only where it is incorporated or has its principal place of business.",
+      "No, because the claim does not arise from California activity."
+    ],
+    correct: 2,
+    explanation: "Under <em>Daimler v. Bauman</em>, general (all-purpose) personal jurisdiction over a corporation exists only where the corporation is <strong>essentially at home</strong>: its state of incorporation and its principal place of business. WidgetCo is at home in Delaware and New York, not California. (A) and (B) describe specific jurisdiction predicates. (D) reaches the right outcome but states the test for specific jurisdiction, not general."
+  },
+  {
+    subject: "civpro",
+    topic: "Personal Jurisdiction · Specific",
+    fact: "A New York seller advertises a product on a website accessible nationwide. A California buyer purchases the product online; it is shipped to California and injures her. She sues the seller in California federal court. The seller has no other California contacts.",
+    call: "Does California have specific personal jurisdiction over the seller?",
+    choices: [
+      "Yes, because the seller purposefully directed the sale to California and the claim arises from that contact.",
+      "Yes, because the website was accessible in California.",
+      "No, because a single sale does not constitute minimum contacts.",
+      "No, because the seller did not maintain a physical presence in California."
+    ],
+    correct: 0,
+    explanation: "Specific jurisdiction requires (1) purposeful availment / direction toward the forum, (2) the claim arises out of or relates to the contact, and (3) reasonableness. Shipping a product to a known California buyer is <strong>purposeful direction</strong> — and the claim arises from that very transaction. (B) is wrong: mere accessibility of a website is not enough (<em>Walden v. Fiore</em>). (C) overstates — even a single contact may suffice if related to the claim. (D) wrongly requires physical presence."
+  },
+  {
+    subject: "civpro",
+    topic: "Subject Matter Jurisdiction · Federal Question",
+    fact: "A plaintiff sues a defendant in federal court alleging only state-law breach of contract. The plaintiff anticipates the defendant will raise a defense based on federal preemption.",
+    call: "Does the federal court have subject matter jurisdiction?",
+    choices: [
+      "Yes, because the case necessarily involves a federal preemption issue.",
+      "Yes, because the parties anticipate litigating federal law.",
+      "No, because under the well-pleaded complaint rule the federal issue must appear on the face of the plaintiff's complaint.",
+      "No, because federal courts cannot hear contract cases."
+    ],
+    correct: 2,
+    explanation: "Under the <strong>well-pleaded complaint rule</strong>, federal question jurisdiction requires the federal issue to appear on the face of the plaintiff's properly pleaded complaint. Anticipated federal defenses — including preemption — do not create jurisdiction. (A) and (B) miss this rule. (D) is plainly wrong."
+  },
+  {
+    subject: "civpro",
+    topic: "Subject Matter Jurisdiction · Diversity",
+    fact: "A New York plaintiff sues two defendants in federal court: D1 is a California citizen; D2 is a New York citizen. The claim alleges $100,000 in damages against each defendant.",
+    call: "Does the federal court have diversity jurisdiction?",
+    choices: [
+      "Yes, because there is diversity between the plaintiff and at least one defendant.",
+      "Yes, because the amount in controversy exceeds $75,000.",
+      "No, because complete diversity requires that no plaintiff share citizenship with any defendant.",
+      "No, because the plaintiff cannot aggregate claims against multiple defendants."
+    ],
+    correct: 2,
+    explanation: "<em>Strawbridge v. Curtiss</em> requires <strong>complete diversity</strong>: no plaintiff may share citizenship with any defendant. The NY plaintiff shares citizenship with D2, destroying complete diversity. (A) describes minimal diversity, which is insufficient for §1332. (B) addresses a different requirement. (D) raises aggregation, which isn't the issue here."
+  },
+  {
+    subject: "civpro",
+    topic: "Diversity · Amount in Controversy",
+    fact: "A New York plaintiff sues a California defendant in federal court asserting two unrelated state-law claims: a $50,000 breach of contract claim and a $40,000 tort claim.",
+    call: "May the plaintiff aggregate the claims to satisfy the amount-in-controversy requirement?",
+    choices: [
+      "Yes, a single plaintiff may aggregate all of her claims against a single defendant, related or not.",
+      "Yes, but only if the claims arise from the same transaction.",
+      "No, claims must be related to be aggregated.",
+      "No, because neither claim individually exceeds $75,000."
+    ],
+    correct: 0,
+    explanation: "A single plaintiff may <strong>aggregate all claims</strong> against a single defendant for amount-in-controversy purposes, whether or not the claims are related. $50k + $40k = $90k, which exceeds $75,000. (B) and (C) state the rule for joining plaintiffs or defendants, not for a single plaintiff against a single defendant. (D) ignores aggregation."
+  },
+  {
+    subject: "civpro",
+    topic: "Supplemental Jurisdiction",
+    fact: "A plaintiff brings a federal-question claim against a defendant in federal court. The plaintiff also brings a state-law claim against the same defendant arising from the same series of events. The state-law claim, if standalone, would not satisfy diversity or federal question.",
+    call: "May the federal court hear the state-law claim?",
+    choices: [
+      "Yes, under supplemental jurisdiction because it shares a common nucleus of operative fact with the federal claim.",
+      "Yes, because parties may consent to federal jurisdiction.",
+      "No, because each claim must independently satisfy subject matter jurisdiction.",
+      "No, because federal courts cannot hear state-law claims."
+    ],
+    correct: 0,
+    explanation: "Under <strong>28 U.S.C. §1367</strong>, federal courts have supplemental jurisdiction over claims that form part of the same case or controversy — meaning they share a common nucleus of operative fact. (B) is wrong: subject matter jurisdiction cannot be conferred by consent. (C) is wrong: §1367 is the exception. (D) ignores diversity jurisdiction and supplemental jurisdiction."
+  },
+  {
+    subject: "civpro",
+    topic: "Removal Jurisdiction",
+    fact: "A New York plaintiff sues a California defendant in California state court asserting a federal copyright claim. The defendant timely removes to federal court.",
+    call: "Is removal proper?",
+    choices: [
+      "Yes, because the case could have been filed originally in federal court.",
+      "Yes, because the defendant is a non-resident of the forum state.",
+      "No, because federal-question cases may not be removed from state court.",
+      "No, because a defendant cannot remove a case from a court in its own home state."
+    ],
+    correct: 0,
+    explanation: "Under <strong>28 U.S.C. §1441</strong>, a defendant may remove a case that could have been originally filed in federal court. The copyright claim provides federal question jurisdiction. (D) describes the in-state defendant rule, which applies only to <em>diversity</em> removal (§1441(b)(2)), not federal question removal. (B) and (C) are simply wrong."
+  },
+  {
+    subject: "civpro",
+    topic: "Venue",
+    fact: "A plaintiff sues two individual defendants in federal court. D1 resides in the Southern District of New York; D2 resides in the District of New Jersey. The events giving rise to the claim occurred entirely in the District of Connecticut.",
+    call: "In which district is venue proper?",
+    choices: [
+      "Only the District of Connecticut, where the events occurred.",
+      "Either the District of Connecticut or any district where a defendant resides, if both defendants reside in the same state.",
+      "Only the Southern District of New York, where D1 resides.",
+      "Any district that has personal jurisdiction over either defendant."
+    ],
+    correct: 0,
+    explanation: "Under <strong>28 U.S.C. §1391(b)</strong>, venue is proper in (1) any district where a defendant resides, if all defendants reside in the same state, or (2) a district where a substantial part of the events occurred, or (3) (fallback) any district with personal jurisdiction over any defendant. The defendants are in different states (NY and NJ), so the residence option fails. Connecticut (events) is proper. (B) misstates the residence rule. (C) ignores other options. (D) describes the fallback, which applies only when no other district qualifies."
+  },
+  {
+    subject: "civpro",
+    topic: "Service of Process",
+    fact: "In a federal action, the plaintiff serves the defendant by leaving a copy of the summons and complaint with the defendant's adult neighbor at the neighbor's home.",
+    call: "Is service proper under Rule 4?",
+    choices: [
+      "Yes, if the neighbor is at least 18 and the defendant later receives actual notice.",
+      "Yes, because substitute service is permissible.",
+      "No, because service must be made at the defendant's dwelling or usual place of abode.",
+      "No, because personal service is required."
+    ],
+    correct: 2,
+    explanation: "Under <strong>Rule 4(e)(2)(B)</strong>, substitute service on an individual must be made by leaving copies at the defendant's <em>own</em> dwelling or usual place of abode with someone of suitable age and discretion who resides there. Leaving with a neighbor at the neighbor's house does not satisfy the rule. (A) and (B) misstate the rule. (D) is wrong: substitute service is allowed at the defendant's home."
+  },
+  {
+    subject: "civpro",
+    topic: "Erie Doctrine",
+    fact: "In a federal diversity action, the applicable state law would require expert testimony to support the plaintiff's claim. Federal Rule of Evidence 702 governs admissibility of expert testimony but does not impose a substantive requirement.",
+    call: "Which rule applies?",
+    choices: [
+      "Federal Rule 702 governs because federal procedural rules trump conflicting state rules.",
+      "State law applies because requiring expert testimony is substantive.",
+      "The court must apply whichever rule favors the plaintiff.",
+      "The federal court must abstain in favor of state court."
+    ],
+    correct: 1,
+    explanation: "Under <em>Erie</em>, federal diversity courts apply <strong>state substantive law</strong> and federal procedural law. A requirement that the plaintiff produce expert testimony to make her case is a <em>substantive</em> rule about what proof is needed. FRE 702 addresses admissibility (procedure), not whether such proof is required (substance). No conflict, and state law governs the substantive requirement. (A) misapplies Erie. (C) is not the test. (D) misuses abstention."
+  },
+  {
+    subject: "civpro",
+    topic: "Pleadings · 12(b)(6)",
+    fact: "A plaintiff's complaint alleges only that \"the defendant was negligent and caused the plaintiff harm.\" The complaint contains no facts about what the defendant did, when, or how the harm occurred. The defendant moves to dismiss for failure to state a claim.",
+    call: "Should the court grant the motion?",
+    choices: [
+      "Yes, because under Twombly/Iqbal a complaint must contain factual allegations sufficient to state a plausible claim.",
+      "Yes, because complaints must allege facts with particularity.",
+      "No, because notice pleading requires only a short and plain statement.",
+      "No, because the truth of allegations is presumed at this stage."
+    ],
+    correct: 0,
+    explanation: "Under <em>Bell Atlantic v. Twombly</em> and <em>Ashcroft v. Iqbal</em>, a complaint must contain <strong>factual allegations</strong> sufficient to state a claim that is plausible on its face. Mere legal conclusions or threadbare recitals of the elements are insufficient. (B) overstates: particularity is required only for fraud (Rule 9). (C) describes pre-Twombly notice pleading. (D) is true but insufficient — factual allegations are still required."
+  },
+  {
+    subject: "civpro",
+    topic: "Rule 12 · Waiver",
+    fact: "A defendant files a Rule 12 motion to dismiss for failure to state a claim. The motion does not raise lack of personal jurisdiction. After the motion is denied, the defendant answers and then moves to dismiss for lack of personal jurisdiction.",
+    call: "What is the result of the second motion?",
+    choices: [
+      "Granted, if the court lacks personal jurisdiction.",
+      "Denied, because lack of personal jurisdiction was waived by failing to raise it in the first Rule 12 motion.",
+      "Denied, because the defendant answered before raising it.",
+      "Held in abeyance pending discovery."
+    ],
+    correct: 1,
+    explanation: "Under <strong>Rule 12(h)(1)</strong>, the disfavored defenses — lack of personal jurisdiction, improper venue, insufficient process, and insufficient service of process — are <em>waived</em> if not raised in the first Rule 12 motion or, if no motion is made, in the answer. The defendant raised 12(b)(6) without raising 12(b)(2), so PJ is waived. (A) misses the waiver. (C) is technically true but the better explanation is the omission from the first motion. (D) is invented."
+  },
+  {
+    subject: "civpro",
+    topic: "Compulsory Counterclaims",
+    fact: "P sues D for damages arising from a car accident. D had her own injuries from the same accident but does not assert a counterclaim. After judgment for P, D files a separate suit against P for her own injuries from the same accident.",
+    call: "Will D's separate suit succeed?",
+    choices: [
+      "Yes, because every party has the right to choose her own forum.",
+      "Yes, because counterclaims are permissive under Rule 13.",
+      "No, because the claim was a compulsory counterclaim under Rule 13(a) and is now barred.",
+      "No, because the issue was precluded by the prior judgment."
+    ],
+    correct: 2,
+    explanation: "Under <strong>Rule 13(a)</strong>, a counterclaim is compulsory if it arises out of the transaction or occurrence that is the subject matter of the opposing party's claim. D's claim arises from the same accident — it was compulsory and must have been raised in the first action. Failure to assert bars the later suit. (A) and (B) miss the compulsory rule. (D) raises issue preclusion, but the better answer is claim-based waiver under Rule 13(a)."
+  },
+  {
+    subject: "civpro",
+    topic: "Joinder · Indispensable Parties",
+    fact: "P sues a partnership to enforce a contract. P joins two of the three partners as defendants but, for tactical reasons, does not join the third partner. The third partner is subject to personal jurisdiction in the forum and his joinder would not destroy diversity.",
+    call: "What should the court do?",
+    choices: [
+      "Order joinder of the third partner under Rule 19, because he is a required party whose absence may prejudice the parties.",
+      "Dismiss the action because all partners must be joined.",
+      "Allow the action to proceed without him because joinder is at the plaintiff's discretion.",
+      "Transfer the case to a court where all partners may be joined."
+    ],
+    correct: 0,
+    explanation: "Under <strong>Rule 19</strong>, a party is required (formerly \"necessary\") if (a) complete relief cannot be granted without him, or (b) his absence may impair his interests or expose existing parties to inconsistent obligations. If joinder is feasible, the court orders it. Here, all conditions are met and joinder is feasible. (B) overstates — dismissal is reserved for cases where the absent party cannot be joined. (C) misses Rule 19. (D) is unnecessary if joinder is feasible in the current forum."
+  },
+  {
+    subject: "civpro",
+    topic: "Intervention",
+    fact: "A federal court action will determine whether a city ordinance is constitutional. A nonparty civic organization has lobbied for the ordinance and believes the existing defendant city attorney will not adequately defend it. The organization moves to intervene.",
+    call: "Does the organization have a right to intervene under Rule 24(a)?",
+    choices: [
+      "Yes, if it claims an interest in the subject matter, disposition may impair that interest, and existing parties may not adequately represent it.",
+      "Yes, because anyone with a public interest may intervene.",
+      "No, because intervention is permitted only to existing parties' co-defendants.",
+      "No, because political organizations may not be parties to constitutional challenges."
+    ],
+    correct: 0,
+    explanation: "<strong>Rule 24(a)(2)</strong> permits intervention as of right when the movant (1) claims an interest in the subject matter, (2) shows disposition may impair that interest, and (3) shows existing parties may not adequately represent it. (B) is too loose. (C) and (D) misstate the rule entirely."
+  },
+  {
+    subject: "civpro",
+    topic: "Class Actions · Rule 23(a)",
+    fact: "A plaintiff seeks to certify a class of 18 consumers in a federal class action. The members are easily identifiable and live in the same city. The plaintiff argues that joinder of all 18 individuals would be cumbersome.",
+    call: "Has the plaintiff satisfied the numerosity requirement of Rule 23(a)?",
+    choices: [
+      "Yes, because joinder of even 18 parties is impracticable.",
+      "Yes, because there is no minimum number for class certification.",
+      "No, because numerosity generally requires a class so large that joinder is impracticable — usually 40 or more.",
+      "No, because the class members are all in the same city."
+    ],
+    correct: 2,
+    explanation: "<strong>Rule 23(a)(1)</strong> requires the class to be \"so numerous that joinder of all members is impracticable.\" There is no firm threshold, but courts generally find 40+ presumptively sufficient and under 20–25 presumptively insufficient. A class of 18 in one city, easily identifiable, fails numerosity. (A) and (B) misapply the rule. (D) is true but the conclusion (failure on numerosity) is the right answer for the wrong-stated reason."
+  },
+  {
+    subject: "civpro",
+    topic: "Class Actions · Rule 23(b)(3)",
+    fact: "Plaintiffs seek to certify a class of consumers who purchased a defective product. The defective design issue is common to all class members. However, each class member's damages depend on individualized factual showings — how the product was used, what injuries resulted, and the value of those injuries. Plaintiffs satisfy Rule 23(a) and seek 23(b)(3) certification.",
+    call: "Will the court likely certify?",
+    choices: [
+      "Yes, because common questions of liability predominate even if damages are individualized.",
+      "Yes, because Rule 23(b)(3) requires only commonality, not predominance.",
+      "No, because individualized damages always defeat Rule 23(b)(3) predominance.",
+      "No, because all class members must have suffered identical harm."
+    ],
+    correct: 0,
+    explanation: "Rule 23(b)(3) requires that common questions <strong>predominate</strong> over individual questions, not that <em>all</em> questions be common. Courts routinely certify classes where liability (defect, breach) is common even when damages require individualized proof. (B) misstates the rule — predominance is required. (C) overstates: individualized damages do not automatically defeat predominance. (D) is wrong: identical harm is not required."
+  },
+  {
+    subject: "civpro",
+    topic: "Discovery · Scope",
+    fact: "In federal court, a party requests documents that are clearly relevant to a claim or defense but would themselves be inadmissible hearsay at trial.",
+    call: "Are the documents discoverable?",
+    choices: [
+      "Yes, because Rule 26(b)(1) permits discovery of relevant matter even if inadmissible, provided it is proportional to the needs of the case.",
+      "Yes, because discovery is unlimited.",
+      "No, because inadmissible evidence is not discoverable.",
+      "No, because hearsay is privileged."
+    ],
+    correct: 0,
+    explanation: "<strong>Rule 26(b)(1)</strong> allows discovery of any nonprivileged matter that is relevant to any party's claim or defense and proportional to the needs of the case. Discoverable material need not be admissible. (B) overstates — proportionality limits discovery. (C) misstates the rule. (D) confuses inadmissibility with privilege; hearsay is not a privilege."
+  },
+  {
+    subject: "civpro",
+    topic: "Discovery · Work Product",
+    fact: "An attorney for the defendant interviews a key witness and prepares a written analysis of the witness's likely testimony, the attorney's strategy, and impressions of the case. The plaintiff's attorney subpoenas the document.",
+    call: "Is the document discoverable?",
+    choices: [
+      "Yes, because all documents prepared by parties are discoverable.",
+      "Yes, but only if the witness is now unavailable.",
+      "No, because the document is opinion work product, which receives near-absolute protection from discovery.",
+      "No, because it is protected by attorney-client privilege."
+    ],
+    correct: 2,
+    explanation: "Under <strong>Rule 26(b)(3)</strong> and <em>Hickman v. Taylor</em>, attorney work product prepared in anticipation of litigation is protected. <em>Ordinary</em> work product (facts, witness statements) is discoverable on a showing of substantial need and undue hardship. <em>Opinion</em> work product (the attorney's mental impressions, strategies, opinions) receives near-absolute protection. (A) and (B) misstate the rule. (D) invokes the wrong doctrine — attorney-client privilege protects communications, not the attorney's analysis."
+  },
+  {
+    subject: "civpro",
+    topic: "Summary Judgment",
+    fact: "The defendant moves for summary judgment, supporting the motion with deposition testimony establishing every element in its favor. The plaintiff responds with no evidence beyond her own conclusory affidavit restating the complaint's allegations.",
+    call: "Should the court grant summary judgment?",
+    choices: [
+      "Yes, because the plaintiff must produce specific facts showing a genuine dispute for trial.",
+      "Yes, because the defendant bears the burden of production.",
+      "No, because the plaintiff's allegations are presumed true.",
+      "No, because summary judgment is disfavored."
+    ],
+    correct: 0,
+    explanation: "On summary judgment, once the movant carries its initial burden by showing the absence of a genuine dispute of material fact, the non-movant must come forward with <strong>specific facts</strong> — not mere allegations or conclusory affidavits — showing a genuine dispute. <em>Celotex</em>. (B) inverts the burden. (C) is the standard for 12(b)(6), not Rule 56. (D) is a slogan, not the standard."
+  },
+  {
+    subject: "civpro",
+    topic: "JMOL · Rule 50",
+    fact: "At the close of the plaintiff's case-in-chief, the defendant moves for judgment as a matter of law. The evidence, taken in the light most favorable to the plaintiff, would not permit a reasonable jury to find for her on an essential element.",
+    call: "Should the court grant the motion?",
+    choices: [
+      "Yes, because no reasonable jury could find for the plaintiff on the record.",
+      "Yes, but only after the defendant rests.",
+      "No, because the plaintiff is entitled to have her case go to the jury.",
+      "No, because credibility determinations are for the jury."
+    ],
+    correct: 0,
+    explanation: "Under <strong>Rule 50(a)</strong>, a court may grant JMOL after the non-movant has been fully heard on an issue if no reasonable jury would have a legally sufficient evidentiary basis to find for that party. The standard is whether a reasonable jury could find for the non-movant on the evidence presented. (B) is wrong — Rule 50(a) allows JMOL at the close of the opposing party's case. (C) and (D) misapply the rule."
+  },
+  {
+    subject: "civpro",
+    topic: "Preclusion · Claim Preclusion",
+    fact: "P sues D for breach of contract arising from a single failed transaction. P loses on the merits and judgment is entered for D. P then sues D for fraud arising from the same transaction.",
+    call: "Is the second suit barred?",
+    choices: [
+      "Yes, under claim preclusion, because both claims arise from the same transaction and could have been litigated in the first action.",
+      "Yes, under issue preclusion, because the same issue was decided.",
+      "No, because fraud and breach of contract are distinct legal theories.",
+      "No, because P never had a chance to litigate fraud."
+    ],
+    correct: 0,
+    explanation: "<strong>Claim preclusion</strong> (res judicata) bars relitigation of any claim that was or could have been brought arising out of the same transaction or occurrence as a prior action that ended in a final judgment on the merits. Under the modern transactional approach, fraud and contract claims from the same transaction are the same \"claim.\" (B) misuses issue preclusion — no specific issue was litigated. (C) and (D) ignore the transactional rule."
+  },
+  {
+    subject: "civpro",
+    topic: "Preclusion · Non-Mutual Offensive Issue Preclusion",
+    fact: "In Action 1, P1 sued D for design defect and the jury specifically found the product was defective. D had full opportunity to litigate. Now P2, an entirely different plaintiff, sues D on the same design defect and seeks to use the prior finding to establish defect.",
+    call: "May P2 use non-mutual offensive issue preclusion?",
+    choices: [
+      "Yes, if the court finds it was foreseeable D would be sued by others and the use is otherwise fair.",
+      "Yes, because the issue was previously decided against D.",
+      "No, because mutuality of parties is required for issue preclusion.",
+      "No, because offensive use of issue preclusion is never permitted."
+    ],
+    correct: 0,
+    explanation: "Under <em>Parklane Hosiery v. Shore</em>, <strong>non-mutual offensive issue preclusion</strong> is permitted at the court's discretion. Courts consider whether the plaintiff could have joined the earlier action, whether the defendant had full incentive to litigate, whether the prior judgment is consistent with others, and whether use would be unfair. (B) ignores these limits. (C) is the old mutuality rule, abandoned. (D) is wrong — offensive use is permitted, just discretionary."
+  },
+  {
+    subject: "civpro",
+    topic: "Appellate Jurisdiction · Final Judgment Rule",
+    fact: "A federal district court denies the defendant's motion for summary judgment. The defendant wishes to appeal immediately.",
+    call: "May the defendant appeal?",
+    choices: [
+      "Yes, because summary judgment rulings are immediately appealable.",
+      "Yes, if the district court certifies the question.",
+      "No, because the final judgment rule generally limits appellate jurisdiction to final decisions.",
+      "No, because only plaintiffs may appeal interlocutory orders."
+    ],
+    correct: 2,
+    explanation: "Under <strong>28 U.S.C. §1291</strong>, federal courts of appeals have jurisdiction over <em>final decisions</em> of district courts. Denial of summary judgment is interlocutory and generally not appealable. (B) describes §1292(b) certification, which requires more than just certification — a controlling question of law, substantial ground for difference of opinion, material advancement. The general rule is no immediate appeal. (A) and (D) are wrong."
+  },
+
+  // ============ CONTRACTS (25) — CONSTRUCTION & REAL ESTATE THEMED ============
+  {
+    subject: "contracts",
+    topic: "Formation · Offer",
+    fact: "At a community fundraiser, a homeowner mentions to a contractor, \"I'd consider hiring you to redo the kitchen for around $50,000 sometime this year.\" The contractor replies, \"Sounds great — you've got a deal. I'll start Monday.\" The homeowner refuses to let the contractor begin.",
+    call: "Is there a contract?",
+    choices: [
+      "Yes, because the contractor clearly accepted the homeowner's offer.",
+      "Yes, because remodeling work is a routine subject of contract.",
+      "No, because the homeowner's statement lacked the definite terms required for an offer.",
+      "No, because home improvement contracts must be in writing."
+    ],
+    correct: 2,
+    explanation: "An offer requires <strong>manifestation of present intent to be bound</strong> on definite terms. \"I'd consider hiring you,\" \"around $50,000,\" and \"sometime this year\" are tentative, vague, and open-ended — there is no offer for the contractor to accept. (A) and (B) treat preliminary discussion as more than it is. (D) overstates — home improvement contracts usually fall outside the Statute of Frauds (unless they involve land sales or take more than a year)."
+  },
+  {
+    subject: "contracts",
+    topic: "Acceptance · Mirror Image (Common Law)",
+    fact: "A landowner sends a written offer to sell a vacant lot to a developer for $500,000, with closing in 30 days. The developer responds in writing: \"I accept your offer. Please close in 45 days instead.\" The landowner remains silent. A week later, the developer demands the lot at the original 30-day closing.",
+    call: "Is there a contract?",
+    choices: [
+      "Yes, on the landowner's original terms; the closing date is a minor variation.",
+      "Yes, on the developer's terms, because the landowner's silence operated as assent.",
+      "No, because the developer's response was a counter-offer that rejected the original offer.",
+      "No, because real estate contracts require formal acceptance by both parties."
+    ],
+    correct: 2,
+    explanation: "Real estate is governed by the common law, which requires acceptance to <strong>mirror</strong> the offer. Any variation — including the closing date — makes the response a counter-offer that <em>rejects</em> the original. Neither party is bound on either set of terms unless the landowner now accepts the counter. (A) ignores the mirror image rule. (B) confuses silence with acceptance. (D) invents a formality."
+  },
+  {
+    subject: "contracts",
+    topic: "Acceptance · UCC §2-207",
+    fact: "A general contractor faxes a steel supplier an order: \"500 tons of rebar at $800 per ton, delivery by April 15.\" The supplier responds: \"Confirmed: 500 tons at $800/ton, delivery April 15. Any disputes shall be arbitrated in supplier's home county.\" Neither side objects further; the supplier delivers and the contractor accepts the rebar. A dispute later arises over alleged quality defects.",
+    call: "Is the arbitration term part of the contract?",
+    choices: [
+      "Yes, because the contractor accepted the goods without objection.",
+      "Yes, because the supplier's confirmation operated as acceptance with the new terms automatically included.",
+      "No, between merchants, additional terms become part of the contract unless they materially alter it — and arbitration clauses generally do materially alter.",
+      "No, because the supplier's confirmation was a counter-offer that the contractor never accepted."
+    ],
+    correct: 2,
+    explanation: "Under <strong>UCC §2-207</strong>, a definite acceptance with additional terms operates as an acceptance (unless made expressly conditional on the new terms). Between merchants, additional terms become part of the contract <em>unless</em> they materially alter it, the offer expressly limits acceptance to its terms, or the offeror objects within a reasonable time. Arbitration clauses are generally held to materially alter, so the term drops out. (A) and (B) ignore the material-alteration filter. (D) applies common-law mirror image, which UCC §2-207 rejects."
+  },
+  {
+    subject: "contracts",
+    topic: "Acceptance · Mailbox Rule",
+    fact: "On Monday, a real estate broker mails a contractor a written offer to sell a development parcel. On Wednesday, the contractor mails his acceptance. Thursday morning, the contractor has second thoughts and mails a rejection. The broker receives the rejection Friday morning and the acceptance Friday afternoon, and that day sells the parcel to a third party.",
+    call: "Is there a contract between the broker and the contractor?",
+    choices: [
+      "Yes, because the contractor's acceptance was effective on dispatch under the mailbox rule.",
+      "Yes, because the broker received the acceptance before the rejection could lawfully take effect.",
+      "No, because the rejection arrived first and revoked the acceptance.",
+      "No, because the contractor's vacillation showed no intent to be bound."
+    ],
+    correct: 0,
+    explanation: "Under the <strong>mailbox rule</strong>, acceptance is effective upon dispatch (when mailed), while rejections and revocations are effective upon receipt. The contractor's acceptance became effective Wednesday on mailing. The later-mailed rejection arriving first does not undo the contract. (B) reaches the right outcome by the wrong reasoning. (C) inverts the rule. (D) introduces a non-element."
+  },
+  {
+    subject: "contracts",
+    topic: "Consideration · Past Consideration",
+    fact: "A contractor completes a difficult deck rebuild for a homeowner on schedule and on budget. A week after final payment, the grateful homeowner says, \"For doing such great work, I'm going to send you a $2,000 bonus.\" Months pass and the homeowner never pays. The contractor sues.",
+    call: "Will the contractor recover?",
+    choices: [
+      "Yes, because the homeowner's promise was supported by the contractor's quality work.",
+      "Yes, because moral obligation alone supports a contract.",
+      "No, because past consideration — work already completed — is not consideration for a new promise.",
+      "No, because oral promises to pay bonuses are unenforceable."
+    ],
+    correct: 2,
+    explanation: "Consideration requires a <strong>bargained-for exchange</strong>. A promise made in recognition of work already done is not bargained for; the past work was not given <em>in exchange</em> for the promise. Past consideration is no consideration. (A) ignores the bargain element. (B) overstates: most jurisdictions reject moral obligation as a substitute. (D) is invented."
+  },
+  {
+    subject: "contracts",
+    topic: "Consideration · Preexisting Duty",
+    fact: "A contractor agrees in writing to build a home addition for $100,000. Halfway through construction, the contractor tells the homeowner that rising lumber costs require an additional $20,000 to finish. The homeowner reluctantly agrees in writing. After completion, the homeowner refuses to pay the extra $20,000.",
+    call: "Is the modification enforceable at common law?",
+    choices: [
+      "Yes, because the parties mutually agreed to the modification in writing.",
+      "Yes, because rising material costs supply consideration.",
+      "No, because the contractor was already obligated to complete the work — no new consideration supports the modification.",
+      "No, because contract modifications must be supported by additional formal documentation."
+    ],
+    correct: 2,
+    explanation: "At common law, a contract modification requires <strong>new consideration</strong>. Performance of a preexisting duty cannot serve as consideration. The contractor was already bound to build for $100,000. (A) ignores consideration. (B) is wrong — cost changes alone do not supply consideration. (D) invents a formality. Note: UCC §2-209 abolishes this rule for sales of goods, allowing good-faith modification without new consideration."
+  },
+  {
+    subject: "contracts",
+    topic: "Promissory Estoppel · Construction Bids",
+    fact: "A general contractor is preparing a bid on a public works construction project. A subcontractor calls and quotes $75,000 for the masonry portion. The GC relies on that quote in calculating and submitting his own bid, which is awarded the project. The next morning, before the GC has formally accepted the sub's quote, the sub tries to withdraw, citing a clerical error.",
+    call: "May the GC enforce the sub's quote?",
+    choices: [
+      "Yes, under promissory estoppel, because the GC reasonably and detrimentally relied on the sub's quote in calculating his own bid.",
+      "Yes, because the sub made a firm offer under the UCC.",
+      "No, because the GC never formally accepted before the sub withdrew.",
+      "No, because clerical errors automatically excuse performance."
+    ],
+    correct: 0,
+    explanation: "This is the classic <em>Drennan v. Star Paving</em> fact pattern. A GC's <strong>reasonable, detrimental reliance</strong> on a subcontractor's bid — using it to calculate the GC's own committed bid to the owner — gives rise to a promissory estoppel claim that prevents the sub from revoking. (B) is wrong: UCC firm offers apply to sales of goods, not services. (C) misses promissory estoppel. (D) overstates: clerical mistake provides a defense only in narrow circumstances, not automatically."
+  },
+  {
+    subject: "contracts",
+    topic: "UCC vs. Common Law · Predominant Purpose",
+    fact: "A homeowner hires a contractor to fabricate and install custom kitchen cabinets. The contract price is $20,000, allocated $15,000 for the cabinets themselves and $5,000 for installation labor. The cabinets prove defective.",
+    call: "Does the UCC govern the dispute?",
+    choices: [
+      "Yes, because the contract involves the sale of goods.",
+      "Yes, because under the predominant purpose test the main thrust of the contract was the cabinets (goods), not installation (services).",
+      "No, because installation labor is a service.",
+      "No, because the contractor is not a merchant of cabinets."
+    ],
+    correct: 1,
+    explanation: "When a contract mixes goods and services, courts apply the <strong>predominant purpose test</strong>: UCC governs if goods predominate; common law if services do. Here, $15,000 of $20,000 is for the cabinets themselves. Goods predominate. (A) reaches the right outcome through too-simple reasoning. (C) and (D) miss the predominant purpose test."
+  },
+  {
+    subject: "contracts",
+    topic: "Statute of Frauds · One-Year Provision",
+    fact: "A homeowner orally agrees to retain a contractor as her exclusive on-call handyman for 18 months at $5,000 per month. The contractor performs for two weeks. The homeowner then hires a different handyman and refuses to pay the contractor further. The contractor sues for breach.",
+    call: "Is the oral agreement enforceable for its full term?",
+    choices: [
+      "Yes, because the contractor began performing.",
+      "Yes, because oral service agreements are generally enforceable.",
+      "No, because the Statute of Frauds requires a writing for contracts that cannot be performed within one year.",
+      "No, because handyman agreements are personal and unenforceable."
+    ],
+    correct: 2,
+    explanation: "The Statute of Frauds requires a writing for any contract that, <strong>by its terms, cannot be performed within one year</strong> of formation. An 18-month service agreement falls within the statute. Part performance generally does not satisfy the one-year provision (unlike the sale-of-goods provision). (A) overstates part performance. (B) is wrong as a generalization. (D) is invented."
+  },
+  {
+    subject: "contracts",
+    topic: "Statute of Frauds · UCC Part-Performance",
+    fact: "A contractor orally orders $50,000 worth of custom-cut structural beams from a steel fabricator for a residential project. The fabricator delivers $20,000 worth, which the contractor accepts and incorporates into the project. The contractor then refuses to accept further deliveries and refuses to pay for the rest. The fabricator sues to enforce the entire oral contract.",
+    call: "What is the fabricator's enforceable claim?",
+    choices: [
+      "The full $50,000, because part performance ratifies the entire oral contract.",
+      "$20,000, because under UCC §2-201(3)(c) an oral contract for goods is enforceable to the extent of goods received and accepted.",
+      "Nothing, because the contract exceeds $500 and is unwritten.",
+      "Nothing, because part performance never satisfies the Statute of Frauds for goods."
+    ],
+    correct: 1,
+    explanation: "Under <strong>UCC §2-201(3)(c)</strong>, an oral contract for goods otherwise within the Statute of Frauds is enforceable to the extent of goods received and accepted by the buyer (or payments received and accepted by the seller). The fabricator may enforce as to the $20,000 worth of accepted beams, but not the remainder. (A) overstates. (C) ignores the part-performance exception. (D) misstates the rule."
+  },
+  {
+    subject: "contracts",
+    topic: "Parol Evidence Rule",
+    fact: "A buyer and seller sign a fully integrated written real estate purchase contract for a residential property. The contract contains a merger clause stating it represents the parties' entire agreement. The contract is silent about appliances. The buyer claims the parties orally agreed before signing that the refrigerator and washer/dryer would be included. The seller denies it. The buyer offers testimony of the alleged oral agreement.",
+    call: "Is the testimony admissible?",
+    choices: [
+      "Yes, because parol evidence is always admissible to clarify ambiguous contracts.",
+      "Yes, to show a separate collateral agreement.",
+      "No, because the parol evidence rule excludes prior or contemporaneous oral agreements that contradict or vary a fully integrated written contract.",
+      "No, because oral evidence is never admissible in real estate cases."
+    ],
+    correct: 2,
+    explanation: "The <strong>parol evidence rule</strong> excludes evidence of prior or contemporaneous oral agreements offered to contradict or vary the terms of a fully integrated written contract. A merger clause strongly indicates full integration. Whether appliances are included is exactly the kind of term that would naturally have been written into a comprehensive purchase agreement. (A) overstates — clarifying ambiguity is one exception, but the contract here is not ambiguous about appliances. (B) raises the collateral agreement exception, which doesn't apply where the side deal would naturally have been included. (D) overstates."
+  },
+  {
+    subject: "contracts",
+    topic: "Mutual Mistake",
+    fact: "Buyer and Seller contract for the sale of a vacant parcel of land at $250,000. Both parties believe the parcel is zoned for single-family residential use; the buyer intends to build a home. After closing, the buyer discovers the parcel is actually zoned for industrial use only and cannot be used for residential construction. The buyer sues to rescind.",
+    call: "May the buyer rescind?",
+    choices: [
+      "Yes, because both parties were mistaken about a basic assumption with a material effect on the exchange.",
+      "Yes, because zoning restrictions render any land sale voidable.",
+      "No, because the buyer should have investigated zoning before closing.",
+      "No, because zoning is a matter of public record and notice is imputed."
+    ],
+    correct: 0,
+    explanation: "<strong>Mutual mistake</strong> (Restatement §152) allows rescission when (1) both parties shared a mistaken belief, (2) about a basic assumption, (3) with a material effect on the agreed exchange, and (4) the adversely affected party did not bear the risk of the mistake. Zoning is plainly basic, and the effect is material. (B) overstates. (C) imposes a diligence duty that doesn't defeat mutual mistake. (D) confuses constructive notice in property law with risk-bearing in contracts."
+  },
+  {
+    subject: "contracts",
+    topic: "Unilateral Mistake",
+    fact: "A contractor submits a sealed bid of $50,000 to build an extension. Due to a clerical error, the contractor intended to bid $75,000 — a transposition of digits. The homeowner, upon opening the bids, immediately notices that this bid is dramatically lower than the next-lowest bid ($72,000) and the average ($78,000). Without comment, she accepts the $50,000 bid.",
+    call: "Is the contract enforceable at $50,000?",
+    choices: [
+      "Yes, because the bid was accepted as written.",
+      "Yes, because contractors bear the risk of their own clerical errors.",
+      "No, because where one party knows or has reason to know of the other's mistake, the contract may be rescinded.",
+      "No, because all unilateral mistakes are grounds for rescission."
+    ],
+    correct: 2,
+    explanation: "<strong>Unilateral mistake</strong> normally does not permit rescission. Exception: when the non-mistaken party <strong>knew or had reason to know</strong> of the mistake, or when enforcement would be unconscionable. The dramatic disparity from the next bids gave the homeowner reason to know. (A) ignores the exception. (B) overstates the general rule. (D) is wrong — most unilateral mistakes do not permit rescission."
+  },
+  {
+    subject: "contracts",
+    topic: "Fraudulent Misrepresentation",
+    fact: "A homeowner sells her property and represents to the buyer that there are no liens or encumbrances on the title. The homeowner knows this is false — she is aware of a recorded utility easement that runs across the middle of the lot and significantly restricts where any structure may be built. The buyer relies on the statement and closes; he discovers the easement only after construction begins.",
+    call: "May the buyer rescind?",
+    choices: [
+      "Yes, because the seller's fraudulent misrepresentation of a material fact, relied upon by the buyer, makes the contract voidable.",
+      "Yes, but only after returning the property in its exact original condition.",
+      "No, because the easement was a matter of public record and the buyer could have discovered it.",
+      "No, because the buyer should have ordered a title search before closing."
+    ],
+    correct: 0,
+    explanation: "A contract is voidable when one party made a <strong>fraudulent or material misrepresentation</strong> on which the other reasonably relied. A known existing encumbrance affecting buildability is plainly material. The buyer's failure to independently search the record does not excuse the seller's affirmative lie. (B) overstates restoration; reasonable use of the property pending discovery generally does not bar rescission. (C) and (D) excuse fraud through the victim's diligence — courts reject that."
+  },
+  {
+    subject: "contracts",
+    topic: "Duress · Economic Duress",
+    fact: "A contractor is two weeks into a custom home build when she informs the homeowner she will walk off the job permanently unless he agrees to pay an additional $30,000. The contractor knows the homeowner has already sold his previous house and has no realistic option to start over with another builder before winter. Under pressure, the homeowner signs a modification. After completion, the homeowner refuses to pay the extra $30,000.",
+    call: "Is the modification enforceable?",
+    choices: [
+      "Yes, because the homeowner signed the modification in writing.",
+      "Yes, because contractors may renegotiate when conditions change.",
+      "No, because the modification was procured by economic duress.",
+      "No, because all mid-project modifications are unconscionable as a matter of law."
+    ],
+    correct: 2,
+    explanation: "<strong>Economic duress</strong> renders a contract voidable when (1) one party makes an improper threat, (2) leaving the other no reasonable alternative, (3) inducing assent. The contractor's wrongful threat to abandon (combined with the homeowner's lack of alternatives) is paradigmatic economic duress. (A) treats form over substance. (B) is too generous. (D) overstates: not all mid-project modifications are duress."
+  },
+  {
+    subject: "contracts",
+    topic: "Conditions Precedent · Good Faith",
+    fact: "A real estate purchase contract provides that the buyer's obligation to close is \"conditioned on the buyer obtaining a mortgage at 6% interest or below within 30 days.\" The buyer makes no effort to apply for a mortgage and tells the seller two weeks later that he won't be closing.",
+    call: "May the buyer claim the condition was unsatisfied?",
+    choices: [
+      "Yes, because the condition is express and was not met.",
+      "Yes, because conditions precedent must be strictly satisfied.",
+      "No, because a party cannot frustrate the occurrence of a condition through her own failure to act in good faith.",
+      "No, because financing contingencies are unenforceable in real estate."
+    ],
+    correct: 2,
+    explanation: "Every contract carries an <strong>implied duty of good faith</strong>, and a party may not frustrate her own condition by failing to take the steps required to bring it about. The buyer's refusal to apply for financing waives or excuses the condition. (A) and (B) read the condition mechanically without the good faith overlay. (D) is wrong — financing contingencies are routinely enforceable when properly invoked."
+  },
+  {
+    subject: "contracts",
+    topic: "Anticipatory Repudiation",
+    fact: "A homeowner and a contractor sign a contract for an $80,000 kitchen remodel, with work to begin in two months. One month before the start date, the homeowner emails: \"I'm canceling the project. Don't come.\" The contractor must decide how to proceed.",
+    call: "What are the contractor's options?",
+    choices: [
+      "She may treat the email as an anticipatory breach and sue immediately, or wait until the start date and sue then.",
+      "She must wait until the start date; suit before then is premature.",
+      "She may force the homeowner to allow her to perform on the start date.",
+      "She must accept the cancellation without recourse."
+    ],
+    correct: 0,
+    explanation: "<strong>Anticipatory repudiation</strong> (Restatement §253; UCC §2-610) gives the non-repudiating party the choice to (1) treat the contract as breached immediately and sue, (2) wait a commercially reasonable time and then sue, or (3) suspend her own performance and urge retraction. (B), (C), and (D) misstate the options."
+  },
+  {
+    subject: "contracts",
+    topic: "Impossibility · Personal Services",
+    fact: "A renowned custom-home architect contracts with a wealthy client to design and personally oversee the construction of a luxury residence. The contract specifies the architect herself will manage every phase. Two weeks before construction is to begin, the architect dies. The client sues her estate for breach.",
+    call: "Will the client prevail?",
+    choices: [
+      "Yes, because the estate steps into the architect's contractual shoes.",
+      "Yes, unless the architect's death was due to natural causes.",
+      "No, because the architect's death renders performance impossible and discharges the contract.",
+      "No, because personal services contracts are unenforceable as a matter of public policy."
+    ],
+    correct: 2,
+    explanation: "Death or incapacity of a person essential to performance of a <strong>personal services contract</strong> renders performance impossible and discharges both parties' obligations. (A) misses impossibility — personal services don't survive the person. (B) is irrelevant. (D) overstates: personal services contracts are generally enforceable; they just terminate on death."
+  },
+  {
+    subject: "contracts",
+    topic: "Frustration of Purpose",
+    fact: "A developer purchases a roadside parcel for $400,000 — a price reflecting substantial premium because both parties understood the developer was buying specifically to construct a billboard. The contract is silent about the billboard. After the contract is signed but before closing, the local government rezones the parcel and outlaws all advertising signs in the area. The developer refuses to close.",
+    call: "Is the developer excused from closing?",
+    choices: [
+      "Yes, because the principal purpose of the contract was substantially frustrated by an unforeseen event.",
+      "Yes, because zoning changes always render real estate contracts void.",
+      "No, because the developer assumed the risk of zoning changes.",
+      "No, because the contract did not expressly mention the billboard."
+    ],
+    correct: 0,
+    explanation: "<strong>Frustration of purpose</strong> (Restatement §265) excuses performance when (1) the principal purpose of the contract is substantially frustrated, (2) by an event whose non-occurrence was a basic assumption, (3) without the fault of the party seeking excuse, and (4) the risk wasn't allocated to that party. The billboard purpose was mutually understood; the rezoning eliminated it. (B) overstates. (C) misapplies risk-bearing — both parties shared the basic assumption. (D) is wrong because mutual understanding suffices."
+  },
+  {
+    subject: "contracts",
+    topic: "Third-Party Beneficiaries",
+    fact: "A general contractor and a homeowner enter a written remodel contract. The contract names a specific masonry subcontractor and provides that the GC \"shall pay the subcontractor directly upon completion of the masonry phase.\" After the masonry phase is complete, the GC and homeowner agree to modify the contract — paying the sub later and at a 20% lower rate. The sub objects and threatens suit.",
+    call: "May the sub challenge the modification?",
+    choices: [
+      "Yes, if his rights as an intended beneficiary have vested through reliance, assent, or commencement of suit.",
+      "Yes, because intended beneficiaries' rights are always vested at execution.",
+      "No, because beneficiaries have no enforceable rights against the contracting parties.",
+      "No, because contracting parties may always modify their own contract."
+    ],
+    correct: 0,
+    explanation: "An <strong>intended third-party beneficiary</strong> has enforceable rights once vested. Under Restatement §311, vesting typically occurs when the beneficiary materially relies on the promise, manifests assent at a party's request, or brings suit. The contracting parties may freely modify before vesting; after, the beneficiary's consent is required. (B) overstates. (C) misstates beneficiary rights. (D) ignores the vesting limitation."
+  },
+  {
+    subject: "contracts",
+    topic: "Assignment of Rights",
+    fact: "A contractor has a contract entitling her to monthly progress payments from a homeowner. Needing cash, she assigns her right to those payments to a factoring company and gives the homeowner clear written notice of the assignment. Despite the notice, the homeowner continues making payments directly to the contractor. The contractor spends the money.",
+    call: "What is the factoring company's remedy?",
+    choices: [
+      "It may recover the payments from the homeowner, who was obligated to pay the assignee after notice.",
+      "It may recover only from the contractor for breach of the assignment.",
+      "It has no remedy, because the homeowner performed under the original contract.",
+      "It may force the homeowner to make duplicate payments to it."
+    ],
+    correct: 0,
+    explanation: "An <strong>effective assignment</strong> transfers the assignor's contract rights to the assignee. After notice, the obligor (homeowner) must perform to the assignee; payment to the assignor does not discharge the obligation. The factoring company can recover from the homeowner. (B) is too limited — the homeowner is liable too. (C) misses the effect of notice. (D) is the wrong remedy — damages, not duplicative payment to the original payee."
+  },
+  {
+    subject: "contracts",
+    topic: "Delegation of Duties",
+    fact: "A homeowner hires a celebrated architectural firm specifically because of the lead architect's reputation for distinctive design. The contract names the lead architect personally and emphasizes her unique aesthetic judgment. Without consent, the lead architect delegates the design work to a junior associate at the firm — a competent designer but without the lead's distinctive style.",
+    call: "May the homeowner refuse the delegated performance?",
+    choices: [
+      "Yes, because contracts for personal services involving unique skill or judgment cannot be delegated without consent.",
+      "Yes, because all contract duties are personal and non-delegable.",
+      "No, because the associate is competent.",
+      "No, because the lead architect remains liable on the contract."
+    ],
+    correct: 0,
+    explanation: "Duties involving <strong>personal services with unique skill, judgment, or aesthetic discretion</strong> — bespoke architectural design by a specific named architect — may not be delegated without consent. (B) overstates: most duties are delegable. (C) misses that competence is irrelevant where the duty is personal. (D) is true (delegation does not relieve the delegator of liability) but irrelevant — the homeowner is entitled to the named architect's performance, not a competent substitute."
+  },
+  {
+    subject: "contracts",
+    topic: "Remedies · Expectation Damages",
+    fact: "A homeowner contracts with a contractor to build a deck for $20,000. After the contractor has spent $5,000 on materials and labor and the deck is roughly one-quarter done, the homeowner repudiates and tells the contractor to stop. The contractor would have earned $8,000 in profit on the job had it been completed. The unused materials are custom-cut and have no resale value.",
+    call: "What is the contractor's expectation recovery?",
+    choices: [
+      "$13,000 — the $5,000 expended plus the $8,000 anticipated profit.",
+      "$20,000 — the full contract price.",
+      "$8,000 — just the lost profit.",
+      "$5,000 — just the costs already incurred."
+    ],
+    correct: 0,
+    explanation: "<strong>Expectation damages</strong> put the non-breaching party in the position she would have occupied had the contract been performed. For a contractor whose performance is cut short, that generally equals: <em>costs incurred + lost profit</em>, less any value salvaged. Here: $5,000 (sunk, unsalvageable) + $8,000 profit = $13,000. (B) gives the gross contract price, ignoring saved costs. (C) and (D) recover only part of the loss."
+  },
+  {
+    subject: "contracts",
+    topic: "Liquidated Damages · Construction Delay",
+    fact: "A commercial construction contract requires the contractor to deliver a finished retail building by a specific date. The contract provides $2,500 per day in liquidated damages for late completion, with no cap. Actual delay damages — chiefly lost rent — are difficult to estimate at contracting but typical comparable projects show $2,000–$3,000 per day. The contractor finishes 30 days late. The owner withholds $75,000 in liquidated damages; the contractor sues to recover it, arguing the clause is a penalty.",
+    call: "Is the liquidated damages clause enforceable?",
+    choices: [
+      "Yes, because the stipulated amount falls within a reasonable range of anticipated actual damages, and actual damages were difficult to estimate at contracting.",
+      "Yes, because parties may freely contract for any damage measure.",
+      "No, because liquidated damages clauses are unenforceable in construction contracts.",
+      "No, because the absence of a cap renders the clause penal as a matter of law."
+    ],
+    correct: 0,
+    explanation: "<strong>Liquidated damages</strong> clauses are enforceable when (1) actual damages were difficult to estimate at the time of contracting, and (2) the stipulated amount is a reasonable forecast of anticipated harm. The $2,500/day estimate falls squarely within the projected $2,000–$3,000 range and meets both prongs. (B) overstates — penalty clauses are unenforceable regardless of the parties' agreement. (C) is wrong: construction LDs are routinely enforced. (D) overstates: a cap is not strictly required so long as the per-day amount is reasonable."
+  },
+  {
+    subject: "contracts",
+    topic: "Specific Performance · Real Estate",
+    fact: "A buyer contracts to purchase a specific oceanfront lot for $1.2 million. Months later, citing rapidly rising market values, the seller refuses to close. The buyer wants the lot itself — not just damages — and sues for specific performance.",
+    call: "Will specific performance be granted?",
+    choices: [
+      "Yes, because each parcel of real estate is considered unique, making money damages inadequate.",
+      "Yes, because the contract is supported by consideration.",
+      "No, because specific performance is generally unavailable in real estate transactions.",
+      "No, because money damages are always adequate."
+    ],
+    correct: 0,
+    explanation: "<strong>Specific performance</strong> requires that money damages be inadequate. <em>Real estate is considered unique as a matter of law</em>, so damages are presumed inadequate and specific performance is routinely available to buyers (and to sellers in some jurisdictions). (B) is true but irrelevant. (C) inverts the rule. (D) is wrong."
+  },
+  // ============ REAL PROPERTY (25) ============
+  {
+    subject: "property",
+    topic: "Estates · Fee Simple Absolute",
+    fact: "Owner conveys Blackacre \"to Adam and his heirs.\"",
+    call: "What estate does Adam take?",
+    choices: [
+      "Fee simple absolute.",
+      "Life estate, with remainder to Adam's heirs.",
+      "Fee simple determinable.",
+      "Fee tail, descending to Adam's heirs."
+    ],
+    correct: 0,
+    explanation: "\"To A and his heirs\" is the classic <strong>fee simple absolute</strong> language. The words \"and his heirs\" are <em>words of limitation</em> — they describe the duration of A's estate (forever, descending to heirs) — not <em>words of purchase</em> creating an interest in the heirs themselves. Adam takes the entire estate. (B) misreads the language. (C) requires durational/conditional words like \"so long as.\" (D) is the abolished fee tail (\"to A and the heirs of his body\")."
+  },
+  {
+    subject: "property",
+    topic: "Estates · Fee Simple Determinable",
+    fact: "Owner conveys \"to School District so long as the land is used for school purposes.\" Twenty years later, the School District begins using the land for a shopping center.",
+    call: "What happens to the title?",
+    choices: [
+      "Title automatically reverts to Owner (or her heirs).",
+      "Owner may sue to reenter and reclaim the property.",
+      "Title remains in the School District; Owner has no remedy.",
+      "The court may award damages but cannot order reverter."
+    ],
+    correct: 0,
+    explanation: "\"So long as\" creates a <strong>fee simple determinable</strong>, which terminates <em>automatically</em> upon the stated event. The grantor retains a possibility of reverter. No court action is needed; title reverts on the use change. (B) describes the fee simple subject to condition subsequent (\"but if . . .; right of reentry\") — close, but the language here triggers automatic reverter. (C) and (D) miss the doctrine."
+  },
+  {
+    subject: "property",
+    topic: "Life Estates · Waste",
+    fact: "Life tenant cuts down a mature stand of timber on the property and sells it for $50,000. The land's primary use has always been residential, and the cutting substantially reduces the property's value to the remainderman.",
+    call: "Is the life tenant liable to the remainderman?",
+    choices: [
+      "Yes, for committing voluntary (affirmative) waste.",
+      "Yes, for committing permissive waste.",
+      "No, because life tenants may exploit the natural resources of the property.",
+      "No, because the remainderman has no rights until the life tenant dies."
+    ],
+    correct: 0,
+    explanation: "A life tenant must not commit <strong>waste</strong>. <em>Voluntary (affirmative) waste</em> is intentional destruction or exploitation that reduces the property's value. Cutting timber on residential land is voluntary waste, unless covered by the \"open mines\" doctrine or the prior reasonable use. (B) confuses voluntary (affirmative) waste with permissive (failure to maintain) waste. (C) overstates. (D) is wrong: a remainderman has standing to sue during the life estate."
+  },
+  {
+    subject: "property",
+    topic: "Future Interests · Remainders",
+    fact: "Grantor conveys \"to Adam for life, then to Barbara if Barbara graduates from law school.\" Barbara is currently enrolled in law school.",
+    call: "What is Barbara's interest?",
+    choices: [
+      "A vested remainder subject to divestment.",
+      "A contingent remainder, subject to the condition precedent of graduating.",
+      "An executory interest.",
+      "A reversion."
+    ],
+    correct: 1,
+    explanation: "A <strong>contingent remainder</strong> exists when the remainder is subject to a condition precedent (Barbara must graduate) or held by an unascertained person. Barbara is ascertained but the condition precedent (graduation) is unmet. (A) misses the condition precedent. (C) executory interests cut short a prior estate or follow a gap; this remainder simply follows the life estate. (D) reversions are retained by the grantor."
+  },
+  {
+    subject: "property",
+    topic: "Future Interests · Executory Interest",
+    fact: "Grantor conveys \"to Adam, but if Adam ever stops farming the land, then to Barbara.\"",
+    call: "What is Barbara's interest?",
+    choices: [
+      "A vested remainder.",
+      "A possibility of reverter.",
+      "A shifting executory interest.",
+      "A right of reentry."
+    ],
+    correct: 2,
+    explanation: "Barbara's interest cuts short Adam's preceding estate upon a condition, and it passes from one grantee to another grantee — that is a <strong>shifting executory interest</strong>. (A) is wrong: a remainder follows the natural end of a prior estate; this divests Adam. (B) and (D) are interests retained by the <em>grantor</em>, but here Barbara is a third party."
+  },
+  {
+    subject: "property",
+    topic: "Rule Against Perpetuities",
+    fact: "Grantor conveys \"to Adam for life, then to such of Adam's children as reach age 25.\" Adam is alive and has two children, ages 3 and 5.",
+    call: "Is the gift to Adam's children valid under the common law Rule Against Perpetuities?",
+    choices: [
+      "Yes, because the gift will vest within Adam's children's lifetimes.",
+      "Yes, because Adam's children are ascertained.",
+      "No, because Adam could have additional children, who might reach 25 more than 21 years after Adam's death.",
+      "No, because life estates cannot precede contingent remainders."
+    ],
+    correct: 2,
+    explanation: "The common law <strong>Rule Against Perpetuities</strong> invalidates an interest unless it must vest, if at all, within 21 years after a life in being at the creation of the interest. Adam might have a child the day before he dies; that child wouldn't reach 25 within 21 years of any life in being. The interest is void at common law. (A) wrongly uses the children themselves as measuring lives. (B) misses the age contingency. (D) is invented."
+  },
+  {
+    subject: "property",
+    topic: "Concurrent Estates · Joint Tenancy Severance",
+    fact: "Adam and Barbara hold Blackacre as joint tenants with right of survivorship. Without telling Barbara, Adam conveys his interest to Carl. Adam later dies.",
+    call: "Who owns Blackacre?",
+    choices: [
+      "Barbara, by right of survivorship.",
+      "Barbara and Carl, each as tenants in common of an undivided one-half.",
+      "Carl alone, because Adam's conveyance gave Carl Adam's full interest.",
+      "Adam's estate, because the conveyance to Carl was void without Barbara's consent."
+    ],
+    correct: 1,
+    explanation: "A joint tenant's <strong>conveyance to a third party severs</strong> the joint tenancy as to that interest. The conveyance destroys the four unities (here, time and title). Carl takes Adam's interest as a tenant in common; Barbara retains her undivided one-half. When Adam later dies, there is no joint tenancy to trigger survivorship. (A) ignores the severance. (C) is wrong: Adam couldn't convey more than his half. (D) is wrong: joint tenants can unilaterally convey their own interests."
+  },
+  {
+    subject: "property",
+    topic: "Concurrent Estates · Tenancy by the Entirety",
+    fact: "Husband and Wife hold a home as tenants by the entirety in a state that recognizes this estate. Husband's individual creditor obtains a judgment against him and attempts to levy on his interest in the home.",
+    call: "May the creditor reach the home?",
+    choices: [
+      "Yes, the creditor may force a sale of the property.",
+      "Yes, but only as to Husband's one-half interest.",
+      "No, in most states a tenancy by the entirety is not reachable by one spouse's individual creditors.",
+      "No, because the home is exempt under the homestead exemption."
+    ],
+    correct: 2,
+    explanation: "A <strong>tenancy by the entirety</strong> is a marital concurrent estate that exists in some states. Its hallmark protections include indivisibility — neither spouse can unilaterally convey or encumber, and most states protect the property from one spouse's individual creditors. (A) and (B) treat it like a tenancy in common or joint tenancy. (D) raises a separate (and inconsistently available) homestead doctrine, not the entirety protection."
+  },
+  {
+    subject: "property",
+    topic: "Landlord-Tenant · Implied Warranty of Habitability",
+    fact: "A residential tenant's apartment loses heat in mid-January. The landlord refuses to fix it for three weeks despite repeated complaints. The tenant withholds rent. The landlord sues for the unpaid rent.",
+    call: "What is the tenant's best defense?",
+    choices: [
+      "Breach of the implied warranty of habitability.",
+      "Constructive eviction, but only if the tenant first vacated.",
+      "Frustration of purpose.",
+      "There is no defense — rent obligations are independent of landlord conduct."
+    ],
+    correct: 0,
+    explanation: "The <strong>implied warranty of habitability</strong> requires a residential landlord to maintain the premises in a condition fit for human habitation. Lack of heat in winter is a paradigmatic violation. The tenant need not vacate; remedies include withholding rent, repair-and-deduct, or damages. (B) describes a related but different doctrine — constructive eviction requires the tenant to leave. (C) misapplies frustration. (D) reflects the abandoned common-law rule of independent covenants."
+  },
+  {
+    subject: "property",
+    topic: "Landlord-Tenant · Constructive Eviction",
+    fact: "A residential tenant's apartment is rendered nearly unusable by a persistent, severe noise problem from an adjacent unit that the landlord refuses to address despite repeated complaints. After two months, the tenant moves out and stops paying rent.",
+    call: "Does the tenant have a constructive eviction defense?",
+    choices: [
+      "Yes, if the landlord's actions (or failure to act) substantially interfered with the tenant's use and enjoyment and the tenant vacated within a reasonable time.",
+      "Yes, but only if the noise constitutes a code violation.",
+      "No, because the noise came from another tenant, not the landlord.",
+      "No, because the tenant did not give the landlord enough time to fix the problem."
+    ],
+    correct: 0,
+    explanation: "<strong>Constructive eviction</strong> requires (1) the landlord's act or failure to act, (2) that substantially interferes with the tenant's use and enjoyment, (3) of which the tenant gave notice and the landlord failed to remedy, and (4) the tenant vacates within a reasonable time. Landlord's failure to address persistent noise from another tenant can qualify. (B) misses the broader test. (C) ignores the landlord's obligation to control common areas / address nuisances. (D) requires factual determination but two months is generally reasonable."
+  },
+  {
+    subject: "property",
+    topic: "Easements · Appurtenant vs. In Gross",
+    fact: "Adam, the owner of Blackacre, grants Barbara, the owner of adjacent Whiteacre, the right \"to cross Blackacre to reach the public road.\" Barbara later sells Whiteacre to Carl.",
+    call: "Does Carl take the easement with Whiteacre?",
+    choices: [
+      "Yes, because the easement is appurtenant and runs with the dominant estate.",
+      "Yes, because all easements automatically transfer.",
+      "No, because the easement was personal to Barbara.",
+      "No, unless the grant expressly says the easement is transferable."
+    ],
+    correct: 0,
+    explanation: "An <strong>easement appurtenant</strong> benefits the holder in her capacity as owner of a particular parcel (the dominant estate). It runs with the dominant estate to subsequent owners automatically. The easement here benefits Whiteacre (access). (B) overstates: in-gross easements may have different rules. (C) treats it as an easement in gross without basis. (D) overstates the formalities."
+  },
+  {
+    subject: "property",
+    topic: "Easements · By Necessity",
+    fact: "Owner subdivides a large parcel into two lots. After subdivision, one lot is completely landlocked, with no access to any public road except across the other lot. The owner of the landlocked parcel seeks access.",
+    call: "Is there an easement by necessity?",
+    choices: [
+      "Yes, an easement by necessity arises when subdivision leaves a parcel without access and the parcels share a common grantor.",
+      "Yes, but only if the grantor expressly reserved one.",
+      "No, the landlocked owner must negotiate or buy access.",
+      "No, easements by necessity require 20 years of prior use."
+    ],
+    correct: 0,
+    explanation: "<strong>Easement by necessity</strong> arises when (1) a single owner subdivides a parcel and (2) the resulting subdivision leaves one parcel without access to a public road, requiring crossing of the other parcel. No express grant is needed; necessity creates the easement. (B) describes an express easement. (C) ignores the doctrine. (D) describes prescriptive easements."
+  },
+  {
+    subject: "property",
+    topic: "Easements · By Prescription",
+    fact: "For 25 years, a neighbor has openly used a path across the landowner's property to reach a fishing pond. The landowner knew of the use but never objected. The statutory adverse possession period in the jurisdiction is 20 years.",
+    call: "Has the neighbor acquired a prescriptive easement?",
+    choices: [
+      "Yes, the use was open, continuous, and adverse for the statutory period.",
+      "Yes, because the landowner knew of the use.",
+      "No, because the use was not exclusive.",
+      "No, because the landowner consented by not objecting."
+    ],
+    correct: 0,
+    explanation: "A <strong>prescriptive easement</strong> requires use that is (1) open and notorious, (2) continuous for the statutory period, (3) hostile/adverse (without permission), and (4) sometimes exclusive (less strictly than adverse possession). The facts satisfy all elements. (B) overstates: knowledge alone isn't enough, but it is consistent with open and notorious. (C) misapplies exclusivity. (D) is the trickiest wrong answer: silence is <em>not</em> consent for these purposes; only express permission defeats hostility."
+  },
+  {
+    subject: "property",
+    topic: "Covenants Running with the Land",
+    fact: "Developer sells Lot 1 to Buyer, with a deed restriction stating \"no commercial use of Lot 1.\" Buyer later sells Lot 1 to Subsequent Owner. The deed restriction is not in Subsequent Owner's deed, but it is recorded in the chain of title. Subsequent Owner opens a small store.",
+    call: "Is Subsequent Owner bound by the restriction?",
+    choices: [
+      "Yes, if the elements of a real covenant or equitable servitude are met, including notice.",
+      "Yes, automatically, because deed restrictions are personal to grantees forever.",
+      "No, because the restriction wasn't in Subsequent Owner's deed.",
+      "No, because no privity exists between Developer and Subsequent Owner."
+    ],
+    correct: 0,
+    explanation: "A <strong>real covenant</strong> binds a successor if (1) the original parties intended it to run, (2) the covenant touches and concerns the land, (3) there is privity (horizontal and vertical for benefits to run with the burden), and (4) the successor had notice. An <strong>equitable servitude</strong> requires intent, touch and concern, and notice (no strict privity). Notice can be actual, inquiry, or record. Recording in the chain provides record notice. (B) overstates. (C) misses constructive/record notice. (D) ignores equitable servitudes."
+  },
+  {
+    subject: "property",
+    topic: "Equitable Servitudes · Common Scheme",
+    fact: "A developer plats a 50-lot residential subdivision and includes in every deed (except the last few sold) a restriction limiting use to single-family residential. The developer markets the subdivision as a uniform residential community. Buyer of one of the unrestricted lots opens a commercial business. Neighbors sue to enjoin.",
+    call: "Will the neighbors prevail?",
+    choices: [
+      "Yes, under the common scheme / implied reciprocal servitude doctrine, where uniform restrictions across most of a development can be implied as to unrestricted parcels.",
+      "Yes, because zoning regulations control all subdivisions.",
+      "No, because the restriction wasn't in the Buyer's deed.",
+      "No, because equitable servitudes require strict privity."
+    ],
+    correct: 0,
+    explanation: "Under the <strong>common scheme / implied reciprocal servitude</strong> doctrine, when a developer creates a substantially uniform set of restrictions across most lots of a development, those restrictions may be implied as mutual and binding on the remaining lots if buyers had notice (often inquiry notice from the visible uniformity). <em>Sanborn v. McLean</em>. (B) confuses private servitudes with public zoning. (C) misses the implied doctrine. (D) misstates equitable servitude requirements."
+  },
+  {
+    subject: "property",
+    topic: "Adverse Possession",
+    fact: "For 25 years (the statutory period is 20), an occupant has lived on, fenced, and improved a strip of land. She believed in good faith that the land was hers, but it actually belongs to a neighbor. She paid taxes on her own land but never on the disputed strip.",
+    call: "Has she acquired title by adverse possession?",
+    choices: [
+      "Yes, if her possession was actual, open and notorious, exclusive, continuous, and hostile for the statutory period.",
+      "Yes, because she paid taxes on the land.",
+      "No, because adverse possession requires bad-faith (knowing) possession.",
+      "No, because she did not pay taxes on the disputed strip."
+    ],
+    correct: 0,
+    explanation: "<strong>Adverse possession</strong> requires possession that is (1) actual, (2) open and notorious, (3) exclusive, (4) continuous for the statutory period, and (5) hostile / under claim of right. Most states do not require bad faith — good-faith mistaken possession qualifies under the objective approach. Tax payment is required only in some states. (B) overstates payment as a sufficient condition. (C) inverts the rule (under the minority \"Maine\" approach bad faith is required, but the majority objective rule prevails). (D) overstates the tax-payment requirement."
+  },
+  {
+    subject: "property",
+    topic: "Recording Acts · Race Statute",
+    fact: "Owner conveys Blackacre to Adam, who fails to record. Owner then conveys the same parcel to Barbara, who has actual knowledge of the prior conveyance to Adam. Barbara promptly records. The jurisdiction has a pure race statute.",
+    call: "Who has title?",
+    choices: [
+      "Barbara, because she recorded first.",
+      "Adam, because Barbara had notice of the prior conveyance.",
+      "Adam, because he received the deed first.",
+      "Owner, because Adam never recorded."
+    ],
+    correct: 0,
+    explanation: "Under a <strong>pure race statute</strong>, the first subsequent purchaser to record wins, <em>regardless of notice</em>. Barbara's actual knowledge of Adam's prior unrecorded deed is irrelevant. (B) imports a notice element absent from pure-race statutes. (C) misses the recording act. (D) treats non-recording as voiding the deed; it does not, but it leaves Adam vulnerable to a later recorded conveyance."
+  },
+  {
+    subject: "property",
+    topic: "Recording Acts · Notice Statute",
+    fact: "Owner conveys to Adam, who does not record. Owner then conveys the same property to Barbara, who has no notice of Adam's interest and pays full value. Barbara does not record. Adam then records. Barbara never records. The jurisdiction has a notice statute.",
+    call: "Who has title?",
+    choices: [
+      "Barbara, because she was a bona fide purchaser without notice at the time of her purchase.",
+      "Adam, because he recorded first.",
+      "Adam, because he received the deed first.",
+      "Owner, because neither party properly recorded."
+    ],
+    correct: 0,
+    explanation: "Under a <strong>notice statute</strong>, a subsequent bona fide purchaser without notice prevails over a prior unrecorded interest. Barbara was a BFP without notice at the moment of her purchase; she wins immediately. Subsequent recording by Adam doesn't divest her. (B) confuses race with notice statutes. (C) ignores the recording act. (D) misstates the rule."
+  },
+  {
+    subject: "property",
+    topic: "Recording Acts · Race-Notice",
+    fact: "Owner conveys to Adam, who records. Owner then conveys the same property to Barbara, who searched the records but did not see Adam's deed because the recorder filed it incorrectly. Barbara pays full value and records. The jurisdiction has a race-notice statute.",
+    call: "Who has title?",
+    choices: [
+      "Adam, because his deed was recorded first.",
+      "Barbara, because she was a BFP without notice who recorded first as between her and Adam.",
+      "Barbara, because the misfiling defeated Adam's record notice.",
+      "Owner, because both deeds have defects."
+    ],
+    correct: 2,
+    explanation: "Under a <strong>race-notice statute</strong>, a subsequent purchaser wins if she (1) takes without notice and (2) records first. A deed recorded outside the chain of title or misfiled by the recorder generally does <em>not</em> provide constructive (record) notice to subsequent searchers. Barbara had no actual notice and the misrecording denied her record notice. She also recorded properly first as between them (Adam's effective recording is essentially nullified). (A) ignores the notice problem. (B) is partially right but the better articulation is the misfiling rationale. (D) is invented."
+  },
+  {
+    subject: "property",
+    topic: "Mortgages · Foreclosure Priority",
+    fact: "Owner takes a first mortgage from Bank A for $200,000, then a second mortgage from Bank B for $50,000. Owner defaults. Bank A forecloses. The foreclosure sale generates $230,000. After foreclosure costs of $5,000, the net is $225,000.",
+    call: "How is the $225,000 distributed?",
+    choices: [
+      "Bank A receives $200,000, Bank B receives $25,000, Owner receives nothing.",
+      "Bank A receives $200,000, Bank B receives $50,000, Owner receives nothing.",
+      "Bank A receives $112,500 and Bank B receives $112,500, pro rata.",
+      "Owner receives $225,000 because foreclosure extinguishes the mortgages."
+    ],
+    correct: 0,
+    explanation: "Foreclosure by a senior mortgagee distributes proceeds <strong>in order of priority</strong>: senior mortgage first, junior mortgages next, surplus to the owner. Bank A (senior) takes $200,000 to satisfy its debt. The remaining $25,000 partially satisfies Bank B's $50,000 debt; Bank B retains a deficiency claim against Owner personally. No surplus to Owner. (B) miscalculates. (C) wrongly applies pro-rata distribution. (D) confuses extinguishment of liens with payment of debts."
+  },
+  {
+    subject: "property",
+    topic: "Deeds · Delivery",
+    fact: "Grantor signs a deed conveying Blackacre to Grantee. Grantor places the signed deed in a desk drawer in his home and never gives it to Grantee or anyone else. Grantor dies. The deed is found in his desk.",
+    call: "Has Blackacre been conveyed to Grantee?",
+    choices: [
+      "Yes, because the deed was properly executed.",
+      "Yes, because the deed evidences Grantor's intent to convey.",
+      "No, because the deed was never delivered.",
+      "No, because the conveyance is testamentary and lacks witnesses."
+    ],
+    correct: 2,
+    explanation: "A deed is effective only upon <strong>delivery</strong>, which requires the grantor's present intent to pass title. Mere execution does not transfer title. Retaining a signed deed in a desk drawer without giving it to the grantee shows no intent to presently convey. (A) and (B) miss the delivery requirement. (D) is a tempting parallel rationale but the better answer is no delivery; the issue isn't really testamentary formality."
+  },
+  {
+    subject: "property",
+    topic: "Marketable Title",
+    fact: "Buyer and Seller contract for the sale of Blackacre. The contract is silent on title. Before closing, Buyer's title search reveals an undisclosed easement across the property in favor of a neighbor. Buyer refuses to close and demands return of his deposit.",
+    call: "Is Buyer entitled to refuse the closing?",
+    choices: [
+      "Yes, because every land sale contract carries an implied warranty of marketable title at closing.",
+      "Yes, because easements always render title unmarketable.",
+      "No, because Buyer should have discovered the easement earlier.",
+      "No, because easements are minor encumbrances."
+    ],
+    correct: 0,
+    explanation: "Every contract for the sale of land carries an <strong>implied warranty of marketable title</strong>, meaning title reasonably free of encumbrances, defects, and reasonable doubt as of closing. An undisclosed easement materially impairs marketability and the buyer may rescind or seek damages. (B) is too broad — open and obvious easements known to the buyer might not impair marketability. (C) and (D) miss the rule."
+  },
+  {
+    subject: "property",
+    topic: "Fixtures",
+    fact: "A commercial tenant installs custom shelving bolted to the walls of the leased space. The shelving was specifically built for her bookstore business. At the end of the lease, the tenant wishes to remove the shelving; the landlord refuses, claiming the shelving has become part of the building.",
+    call: "May the tenant remove the shelving?",
+    choices: [
+      "Yes, because trade fixtures installed by a commercial tenant for her business may generally be removed before the end of the lease.",
+      "Yes, because tenants may always remove anything they install.",
+      "No, because anything bolted to the wall becomes a permanent part of the building.",
+      "No, because the shelving is not personal property."
+    ],
+    correct: 0,
+    explanation: "The <strong>trade fixtures doctrine</strong> allows a commercial tenant to remove items installed for her trade or business, provided removal is done before the end of the lease and damage is repaired. The default fixture rule (annexation, adaptation, intent) is modified for trade fixtures. (B) overstates. (C) confuses the general fixture rule with trade fixtures. (D) misclassifies."
+  },
+  {
+    subject: "property",
+    topic: "Deeds · General Warranty Deed",
+    fact: "Grantor conveys Blackacre to Buyer by general warranty deed. Three years after the conveyance, a third party appears with superior title from a pre-existing chain. Buyer is dispossessed.",
+    call: "What is Buyer's remedy against Grantor?",
+    choices: [
+      "Buyer may sue Grantor for breach of the covenants in the deed, including warranty of title and quiet enjoyment.",
+      "Buyer has no remedy because the dispossession occurred after the conveyance.",
+      "Buyer may sue only for breach of the present covenants (seisin, right to convey, against encumbrances).",
+      "Buyer may sue only for breach of the future covenants (warranty, quiet enjoyment, further assurances)."
+    ],
+    correct: 0,
+    explanation: "A <strong>general warranty deed</strong> contains six covenants: three present (seisin, right to convey, against encumbrances — breached at delivery if at all) and three future (general warranty, quiet enjoyment, further assurances — breached on disturbance). Dispossession by a third party with superior title breaches the future covenants. Buyer may sue. (B) misses the future covenants. (C) and (D) artificially limit to one set."
+  },
+  {
+    subject: "property",
+    topic: "Eminent Domain",
+    fact: "A city government takes private land to build a public road, paying the owner an amount the city's appraiser estimates as fair market value. The owner believes the property is worth substantially more.",
+    call: "What is the owner's remedy?",
+    choices: [
+      "She is entitled to just compensation determined by a court if she disputes the city's valuation.",
+      "She has no remedy; eminent domain is absolute.",
+      "She may force the city to abandon the taking.",
+      "She is entitled to punitive damages."
+    ],
+    correct: 0,
+    explanation: "The Fifth Amendment (and Fourteenth) requires <strong>just compensation</strong> for takings of private property for public use. \"Just compensation\" is fair market value, which the owner may challenge in court if she disputes the government's offer. (B) overstates. (C) is wrong: the owner cannot enjoin a legitimate public-use taking. (D) is wrong: punitive damages are not available for takings."
+  }
+];
+
+// ============ APP LOGIC ============
+
+let selectedSubjects = new Set(["torts", "civpro", "contracts", "property"]);
+let selectedCount = 25;
+let currentQuestions = [];
+let currentQ = 0;
+let score = 0;
+let answered = false;
+let subjectScores = {};
+
+function renderSubjectGrid() {
+  const grid = document.getElementById('subjectGrid');
+  grid.innerHTML = '';
+  Object.entries(SUBJECTS).forEach(([key, info]) => {
+    const count = questions.filter(q => q.subject === key).length;
+    const div = document.createElement('div');
+    div.className = 'subject-option' + (selectedSubjects.has(key) ? ' selected' : '');
+    div.innerHTML = `
+      <div class="subject-checkbox"></div>
+      <div class="subject-name">${info.name}</div>
+      <div class="subject-count">${count} questions</div>
+    `;
+    div.onclick = () => toggleSubject(key, div);
+    grid.appendChild(div);
+  });
+}
+
+function toggleSubject(key, el) {
+  if (selectedSubjects.has(key)) {
+    if (selectedSubjects.size > 1) {
+      selectedSubjects.delete(key);
+      el.classList.remove('selected');
+    }
+  } else {
+    selectedSubjects.add(key);
+    el.classList.add('selected');
+  }
+}
+
+document.querySelectorAll('.count-option').forEach(opt => {
+  opt.onclick = () => {
+    document.querySelectorAll('.count-option').forEach(o => o.classList.remove('selected'));
+    opt.classList.add('selected');
+    selectedCount = opt.dataset.count === 'all' ? 'all' : parseInt(opt.dataset.count);
+  };
+});
+
+function shuffle(arr) {
+  const a = arr.slice();
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+}
+
+function startQuiz() {
+  const pool = questions.filter(q => selectedSubjects.has(q.subject));
+  const shuffled = shuffle(pool);
+  const limit = selectedCount === 'all' ? shuffled.length : Math.min(selectedCount, shuffled.length);
+  currentQuestions = shuffled.slice(0, limit);
+  currentQ = 0;
+  score = 0;
+  subjectScores = {};
+  Object.keys(SUBJECTS).forEach(k => { subjectScores[k] = { correct: 0, total: 0 }; });
+
+  document.getElementById('startScreen').classList.add('hidden');
+  document.getElementById('progressWrap').style.display = 'flex';
+  document.getElementById('resultsArea').classList.remove('show');
+  renderQuestion();
+}
+
+function renderQuestion() {
+  const q = currentQuestions[currentQ];
+  answered = false;
+
+  document.getElementById('progressLabel').textContent = `Question ${currentQ + 1} of ${currentQuestions.length}`;
+  document.getElementById('progressFill').style.width = `${(currentQ / currentQuestions.length) * 100}%`;
+
+  const letters = ['A', 'B', 'C', 'D'];
+  const choicesHTML = q.choices.map((choice, i) => `
+    <button class="choice" data-index="${i}" onclick="selectAnswer(${i})">
+      <span class="choice-letter">${letters[i]}</span>
+      <span class="choice-text">${choice}</span>
+    </button>
+  `).join('');
+
+  document.getElementById('quizArea').innerHTML = `
+    <div class="card">
+      <div class="question-num">Question ${currentQ + 1}</div>
+      <div class="question-topic">${q.topic}</div>
+      <div class="fact-pattern">${q.fact}</div>
+      <div class="call">${q.call}</div>
+      <div class="choices">${choicesHTML}</div>
+      <div class="explanation" id="explanation">
+        <div class="explanation-label">Explanation</div>
+        <div class="explanation-text">${q.explanation}</div>
+      </div>
+      <div class="btn-row">
+        <button class="quit-btn" onclick="quitToStart()">End Quiz</button>
+        <button class="next-btn" id="nextBtn" onclick="nextQuestion()">${currentQ === currentQuestions.length - 1 ? 'See Results' : 'Next Question'}</button>
+      </div>
+    </div>
+  `;
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function selectAnswer(index) {
+  if (answered) return;
+  answered = true;
+  const q = currentQuestions[currentQ];
+  const buttons = document.querySelectorAll('.choice');
+
+  buttons.forEach((btn, i) => {
+    btn.classList.add('locked');
+    if (i === q.correct) btn.classList.add('correct');
+    else if (i === index) btn.classList.add('incorrect');
+  });
+
+  subjectScores[q.subject].total++;
+  if (index === q.correct) {
+    score++;
+    subjectScores[q.subject].correct++;
+  }
+  document.getElementById('explanation').classList.add('show');
+  document.getElementById('nextBtn').classList.add('show');
+}
+
+function nextQuestion() {
+  currentQ++;
+  if (currentQ >= currentQuestions.length) {
+    showResults();
+  } else {
+    renderQuestion();
+  }
+}
+
+function showResults() {
+  document.getElementById('quizArea').innerHTML = '';
+  document.getElementById('progressWrap').style.display = 'none';
+  const pct = Math.round((score / currentQuestions.length) * 100);
+  document.getElementById('finalScore').textContent = score;
+  document.getElementById('finalTotal').textContent = currentQuestions.length;
+  document.getElementById('finalPercent').textContent = `${pct}%`;
+
+  let msg = '';
+  if (pct === 100) msg = 'Flawless. Onto the next subject.';
+  else if (pct >= 80) msg = 'Strong session. Review the missed rules and move on.';
+  else if (pct >= 60) msg = 'Solid foundation. Worth a second pass through the explanations.';
+  else if (pct >= 40) msg = 'A few rules to revisit. The explanations cover what you need.';
+  else msg = 'This is what practice is for. Read the explanations carefully and try again.';
+  document.getElementById('finalMessage').textContent = msg;
+
+  // Subject breakdown
+  const breakdown = document.getElementById('subjectBreakdown');
+  breakdown.innerHTML = '';
+  Object.entries(SUBJECTS).forEach(([key, info]) => {
+    const s = subjectScores[key];
+    if (s.total === 0) return;
+    const row = document.createElement('div');
+    row.className = 'breakdown-row';
+    const subjPct = Math.round((s.correct / s.total) * 100);
+    row.innerHTML = `
+      <div class="breakdown-subject">${info.name}</div>
+      <div class="breakdown-score">${s.correct}/${s.total} · ${subjPct}%</div>
+    `;
+    breakdown.appendChild(row);
+  });
+
+  document.getElementById('resultsArea').classList.add('show');
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function quitToStart() {
+  if (confirm('End the quiz and return to the start screen?')) {
+    restart();
+  }
+}
+
+function restart() {
+  document.getElementById('quizArea').innerHTML = '';
+  document.getElementById('progressWrap').style.display = 'none';
+  document.getElementById('resultsArea').classList.remove('show');
+  document.getElementById('startScreen').classList.remove('hidden');
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+renderSubjectGrid();
+</script>
+</body>
+</html>
