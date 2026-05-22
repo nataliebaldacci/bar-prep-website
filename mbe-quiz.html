@@ -362,7 +362,7 @@
   <header>
     <div class="eyebrow">Bar Prep Practice — MBE</div>
     <h1>Multistate <em>Bar Exam</em></h1>
-    <div class="subtitle">Four subjects · 194 questions · Tap to select your set</div>
+    <div class="subtitle">Four subjects · 204 questions · Tap to select your set</div>
   </header>
 
   <!-- START SCREEN -->
@@ -3134,6 +3134,147 @@ const questions = [
     ],
     correct: 0,
     explanation: "False imprisonment confinement may be effected by physical barriers or by <strong>threats or an assertion of legal authority</strong> that a reasonable person would not feel free to defy. (B) is wrong because confinement need not be physical. (C) fails because the shopkeeper's privilege requires a reasonable belief that theft occurred and a reasonable manner of detention, neither present here. (D) is wrong: any appreciable confinement suffices."
+  },
+  // ============ CIVIL PROCEDURE GAP-FILL QUESTIONS (10) ============
+  {
+    subject: "civpro",
+    topic: "Impleader · Rule 14",
+    fact: "A plaintiff sues a general contractor for damages caused by defective construction work. The general contractor believes that if it is held liable to the plaintiff, a subcontractor who performed the actual defective work must reimburse the contractor for that liability. The contractor wants to bring the subcontractor into the existing lawsuit.",
+    call: "What is the contractor's proper procedural device?",
+    choices: [
+      "Impleader, because a defending party may bring in a nonparty who may be liable to it for the plaintiff's claim.",
+      "A compulsory counterclaim asserted against the subcontractor.",
+      "A cross-claim asserted against the subcontractor.",
+      "Intervention, because the subcontractor has an interest in the lawsuit."
+    ],
+    correct: 0,
+    explanation: "<strong>Impleader</strong> (Rule 14 third-party practice) lets a defending party bring in a nonparty who is or may be liable to it for all or part of the plaintiff's claim against it. (B) is wrong because a counterclaim is asserted against an opposing party. (C) is wrong because a cross-claim is asserted against an existing co-party. (D) is wrong: intervention is initiated by the outsider, not by the defendant who wants to add it."
+  },
+  {
+    subject: "civpro",
+    topic: "Contribution",
+    fact: "A plaintiff is injured by the combined negligence of two defendants and obtains a $100,000 judgment against both. The jurisdiction permits contribution, and the two defendants were found equally at fault. The plaintiff collects the entire $100,000 from Defendant A.",
+    call: "What may Defendant A recover from Defendant B?",
+    choices: [
+      "Contribution of $50,000, reflecting Defendant B's proportional share of the common liability.",
+      "Nothing, because the plaintiff chose to collect the judgment from Defendant A.",
+      "Full indemnity of the entire $100,000 from Defendant B.",
+      "$100,000, because Defendant B was also found liable on the judgment."
+    ],
+    correct: 0,
+    explanation: "<strong>Contribution</strong> allows a tortfeasor who has paid more than its fair share of a common liability to recover the excess from co-tortfeasors, apportioned by relative fault (or pro rata). With equal fault, Defendant B owes Defendant A $50,000. (B) ignores the contribution right. (C) describes indemnity, which shifts the entire loss rather than apportioning it. (D) is simply incorrect."
+  },
+  {
+    subject: "civpro",
+    topic: "Indemnity",
+    fact: "A retailer sells a sealed product manufactured by another company. The product is defective, injures a customer, and the customer recovers a judgment against the retailer, even though the retailer did nothing wrong and merely passed along the sealed product. The retailer seeks to recover its loss from the manufacturer.",
+    call: "What is the retailer's best theory of recovery against the manufacturer?",
+    choices: [
+      "Indemnity, because the entire loss should shift to the party actually responsible for the defect.",
+      "Contribution, so that the loss is divided evenly between the retailer and the manufacturer.",
+      "Nothing, because the retailer was the party held liable to the customer.",
+      "A compulsory counterclaim asserted against the manufacturer."
+    ],
+    correct: 0,
+    explanation: "<strong>Indemnity</strong> shifts the entire loss from a party who is only passively or vicariously liable to the party actively responsible for the harm. A retailer of a defective sealed product is the classic indemnitee against the manufacturer. (B) is wrong because contribution merely apportions a shared loss rather than shifting all of it. (C) ignores the indemnity right. (D) is wrong: a counterclaim lies against an opposing party, not a nonparty manufacturer."
+  },
+  {
+    subject: "civpro",
+    topic: "Interlocutory Appeals · Collateral Order Doctrine",
+    fact: "During litigation, a federal district court enters an order denying a defendant's claim of absolute immunity from suit. The order does not end the case. The defendant wants to appeal the immunity ruling immediately rather than wait for a final judgment.",
+    call: "May the defendant appeal the immunity ruling now?",
+    choices: [
+      "Yes, under the collateral order doctrine, because the ruling conclusively decides an important issue separate from the merits that would be unreviewable later.",
+      "No, because only a final judgment ending the entire case may ever be appealed.",
+      "Yes, because any ruling rejecting a defense may be appealed immediately.",
+      "No, because the question of immunity must be decided by the jury at trial."
+    ],
+    correct: 0,
+    explanation: "The <strong>collateral order doctrine</strong> permits immediate appeal of a narrow class of orders that conclusively determine a disputed question, resolve an important issue completely separate from the merits, and would be effectively unreviewable on appeal from a final judgment. A denial of immunity from suit is the paradigm example, because the immunity is lost if the case proceeds to trial. (B) ignores this recognized exception. (C) overstates it. (D) is wrong: immunity is a legal question."
+  },
+  {
+    subject: "civpro",
+    topic: "Interlocutory Appeals · §1292(b) Certification",
+    fact: "In the middle of a complex case, a federal district court issues an order that resolves a controlling question of law on which there is substantial ground for difference of opinion. The court believes an immediate appeal could materially advance the ultimate termination of the litigation. A party wants that order reviewed now.",
+    call: "What must happen for the court of appeals to hear an immediate appeal of the order?",
+    choices: [
+      "The district court must certify the order, and the court of appeals must agree in its discretion to hear the appeal.",
+      "Nothing further, because the order is automatically appealable as a final judgment.",
+      "Nothing can be done, because no appeal is possible until the entire case ends.",
+      "The party may simply appeal as of right, without any approval from either court."
+    ],
+    correct: 0,
+    explanation: "Under <strong>28 U.S.C. §1292(b)</strong>, an interlocutory appeal of a controlling legal question requires two steps: the district court must certify that the order involves a controlling question of law with substantial ground for difference of opinion whose immediate appeal may materially advance the litigation, and the court of appeals must then exercise its discretion to accept the appeal. (B) is wrong because the order is not a final judgment. (C) ignores §1292(b). (D) is wrong: there is no appeal as of right here."
+  },
+  {
+    subject: "civpro",
+    topic: "Interlocutory Appeals · Injunctions",
+    fact: "Early in a case, a federal district court grants the plaintiff a preliminary injunction ordering the defendant to halt a particular activity. The litigation is far from over. The defendant wants to appeal the injunction immediately.",
+    call: "May the defendant appeal the grant of the preliminary injunction now?",
+    choices: [
+      "Yes, because an order granting an injunction is immediately appealable as of right by statute.",
+      "No, because the case has not yet reached a final judgment.",
+      "No, because the grant of a preliminary injunction is never subject to appellate review.",
+      "Yes, but only if the district court first certifies the order for appeal."
+    ],
+    correct: 0,
+    explanation: "<strong>28 U.S.C. §1292(a)(1)</strong> authorizes an immediate appeal as of right from interlocutory orders granting, continuing, modifying, refusing, or dissolving injunctions. (B) overstates the final judgment rule by ignoring this statutory exception. (C) is wrong. (D) confuses §1292(a) injunction appeals, which need no certification, with §1292(b) appeals of controlling legal questions, which do."
+  },
+  {
+    subject: "civpro",
+    topic: "Motions · Judgment as a Matter of Law (Rule 50(a))",
+    fact: "At a jury trial, the plaintiff finishes presenting all of her evidence. The defendant believes that no reasonable jury could find for the plaintiff, because she offered no proof at all of an essential element of her claim. The defendant wants the court to take the case away from the jury.",
+    call: "What is the defendant's proper motion at this point in the trial?",
+    choices: [
+      "A motion for judgment as a matter of law, because a party has been fully heard and lacks a legally sufficient evidentiary basis.",
+      "A motion for summary judgment, made in the middle of the trial.",
+      "A motion for a new trial.",
+      "A motion to dismiss for failure to state a claim."
+    ],
+    correct: 0,
+    explanation: "A <strong>motion for judgment as a matter of law</strong> under Rule 50(a), historically called a directed verdict, may be made once the opposing party has been fully heard on an issue, and is granted when no reasonable jury would have a legally sufficient basis to find for that party. (B) is wrong because summary judgment is a pretrial motion. (C) is wrong: a new trial motion follows a verdict. (D) is wrong: a 12(b)(6) motion tests the pleadings, not the trial evidence."
+  },
+  {
+    subject: "civpro",
+    topic: "Motions · Renewed Judgment as a Matter of Law (Rule 50(b))",
+    fact: "At trial, the defendant moved for judgment as a matter of law at the close of all the evidence, and the court denied the motion. The jury then returned a verdict for the plaintiff. The defendant still maintains that the evidence was legally insufficient and wants the court to override the verdict.",
+    call: "What is the defendant's proper post-verdict motion?",
+    choices: [
+      "A renewed motion for judgment as a matter of law, available because it moved for JMOL before the case went to the jury.",
+      "A renewed motion for judgment as a matter of law, even though it never raised the issue before the verdict.",
+      "A motion to dismiss the action for lack of subject matter jurisdiction.",
+      "An immediate appeal of the verdict, with no post-trial motion required."
+    ],
+    correct: 0,
+    explanation: "A <strong>renewed motion for judgment as a matter of law</strong> under Rule 50(b) is available after the verdict, but only if the party first made a Rule 50(a) motion before the case was submitted to the jury. The defendant did so. (B) is wrong because the pre-verdict motion is a strict prerequisite. (C) is unrelated to the sufficiency of the evidence. (D) is wrong: failing to renew the motion can forfeit the sufficiency challenge on appeal."
+  },
+  {
+    subject: "civpro",
+    topic: "Motions · New Trial (Rule 59)",
+    fact: "After a jury returns its verdict, the losing party does not contend that the evidence was legally insufficient. Instead, it shows that the jury received an erroneous and prejudicial instruction on the governing law, an error that likely affected the outcome. The party asks the court to have the case retried.",
+    call: "What is the party's proper motion?",
+    choices: [
+      "A motion for a new trial, because a serious legal error tainted the trial process.",
+      "A renewed motion for judgment as a matter of law.",
+      "A motion for summary judgment.",
+      "A motion for relief from judgment based on newly discovered fraud."
+    ],
+    correct: 0,
+    explanation: "A <strong>motion for a new trial</strong> under Rule 59 may be granted for errors in the trial process, such as an erroneous and prejudicial jury instruction, a verdict against the weight of the evidence, or an excessive award. Unlike JMOL, it does not require legally insufficient evidence and it results in a retrial rather than an outright judgment. (B) is wrong because JMOL targets evidentiary sufficiency, which is not at issue. (C) is a pretrial motion. (D) is wrong because no fraud is alleged."
+  },
+  {
+    subject: "civpro",
+    topic: "Motions · More Definite Statement and Motion to Strike",
+    fact: "A defendant is served with a complaint. One count is so vague and ambiguous that the defendant genuinely cannot frame a response to it. A separate paragraph of the complaint contains scandalous and irrelevant accusations that have no bearing on any claim.",
+    call: "Which motions properly address these two distinct problems?",
+    choices: [
+      "A motion for a more definite statement for the vague count, and a motion to strike the scandalous matter.",
+      "A single motion to dismiss for failure to state a claim, addressing both problems.",
+      "A motion for summary judgment, addressing both problems together.",
+      "A motion for judgment as a matter of law, addressing both problems together."
+    ],
+    correct: 0,
+    explanation: "Rule 12(e) permits a <strong>motion for a more definite statement</strong> when a pleading is so vague or ambiguous that a party cannot reasonably prepare a response, and Rule 12(f) permits a <strong>motion to strike</strong> redundant, immaterial, impertinent, or scandalous matter. (B) is wrong because a 12(b)(6) motion tests legal sufficiency, not vagueness or scandalous content. (C) tests evidence, not pleadings. (D) is a trial motion."
   },
 ];
 
