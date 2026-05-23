@@ -3486,6 +3486,90 @@ const questions = [
     correct: 1,
     explanation: "Under <strong>partial (modified) comparative negligence</strong>, the plaintiff recovers as long as her fault does not exceed the defendant's. Here, plaintiff is 45% at fault and defendant is 55% — plaintiff's fault is less, so she may recover. Damages are then reduced by her percentage of fault: $200,000 × (1 − 0.45) = $110,000. (A) ignores the reduction. (C) miscalculates by multiplying by plaintiff's share instead of defendant's. (D) would be correct only if plaintiff's fault exceeded (or in some states equaled) defendant's."
   },
+  {
+    subject: "torts",
+    topic: "Products Liability · Manufacturing Defect",
+    fact: "A consumer buys a sealed bottle of soda from a grocery store. As he twists off the cap, the bottle shatters in his hand because of a hairline flaw introduced during the bottling process. Other bottles from the same production run are properly made. The consumer is cut and sues the bottler.",
+    call: "Which type of product defect best describes this case?",
+    choices: [
+      "A design defect, because the bottle's design failed to prevent shattering.",
+      "A manufacturing defect, because this particular bottle departed from the product's intended design.",
+      "An information defect, because the bottle carried no warning about possible shattering.",
+      "No defect, because glass bottles inherently carry some risk."
+    ],
+    correct: 1,
+    explanation: "A <strong>manufacturing defect</strong> exists when a particular unit departs from its intended design and is more dangerous than ordinary consumers would expect. Here, the bottling process introduced a one-off flaw in this single bottle while other units in the same run were fine — the classic manufacturing-defect fact pattern. (A) is wrong because there is no allegation that the bottle's <em>design</em> is flawed; only this unit was. (C) does not fit because the issue is not a missing warning. (D) ignores that the bottle deviated from its design specification."
+  },
+  {
+    subject: "torts",
+    topic: "Products Liability · Design Defect",
+    fact: "A plaintiff is injured when a power saw's safety guard fails to retract properly, and his hand contacts the blade. He sues the manufacturer, alleging that the saw is defectively designed because a different guard mechanism — used by several competitors and adding only $4 per unit to the cost — would have prevented the injury. The plaintiff presents expert testimony establishing that the alternative design is safer and equally effective.",
+    call: "What is the plaintiff's strongest theory and what must he show?",
+    choices: [
+      "Manufacturing defect; he need only show this saw was more dangerous than expected.",
+      "Design defect; he must show that a reasonable, economically feasible alternative design existed.",
+      "Information defect; he must show the warnings on the saw were inadequate.",
+      "Breach of express warranty; he must show the saw failed to meet advertised claims."
+    ],
+    correct: 1,
+    explanation: "When the entire product line shares the dangerous feature, the theory is <strong>design defect</strong>. Under the prevailing risk-utility test, the plaintiff must show that a <strong>reasonable, economically feasible alternative design</strong> would have reduced the risk of harm without unduly compromising the product's utility. The $4-per-unit competitor mechanism with expert support fits squarely. (A) is wrong because the defect is in the design itself, not a deviation from it. (C) does not fit the facts. (D) requires a specific affirmation of fact that was breached, not at issue here."
+  },
+  {
+    subject: "torts",
+    topic: "Products Liability · Information/Warning Defect",
+    fact: "A pharmaceutical company sells an over-the-counter pain reliever. The label warns of common side effects but says nothing about a known risk of severe liver damage if the drug is taken with alcohol — a risk well documented in medical literature at the time of sale. A consumer who took the drug after a glass of wine suffers acute liver failure.",
+    call: "What is the consumer's best products liability theory?",
+    choices: [
+      "Manufacturing defect, because the consumer's particular tablet caused unexpected harm.",
+      "Design defect, because a less dangerous alternative formulation must exist.",
+      "Information (warning) defect, because the warning failed to disclose a known risk associated with foreseeable use.",
+      "No theory is available because consumers should not mix any drug with alcohol."
+    ],
+    correct: 2,
+    explanation: "An <strong>information or warning defect</strong> exists when the product's warnings, instructions, or information are inadequate, flawed, or missing — and adequate disclosure would have reduced the risk of foreseeable harm. The interaction with alcohol was known and not disclosed, and consuming alcohol while taking an over-the-counter pain reliever is plainly foreseeable. (A) is wrong because every tablet was identical. (B) is unsupported on these facts and not necessary when a warning alone would address the risk. (D) brushes off a recognized warning duty."
+  },
+  {
+    subject: "torts",
+    topic: "Products Liability · Foreseeable Misuse",
+    fact: "A consumer uses a sturdy aluminum kitchen chair as a step stool to reach a high shelf. The chair's back snaps under his weight when he steps on it, causing him to fall and break his wrist. The manufacturer's instructions describe the chair only as 'seating furniture' and contain no warning against standing on it. Industry data shows that consumers commonly use kitchen chairs to reach high places.",
+    call: "Can the consumer recover under a products liability theory despite using the chair in a way the manufacturer did not intend?",
+    choices: [
+      "No, because using a chair as a step stool is a misuse that bars recovery.",
+      "No, because the consumer assumed the risk by standing on the chair.",
+      "Yes, because misuse does not bar recovery if it was reasonably foreseeable to the manufacturer.",
+      "Yes, but only under a breach of express warranty theory."
+    ],
+    correct: 2,
+    explanation: "Products liability extends to harm caused by <strong>foreseeable misuse</strong> — uses that are not intended but that the manufacturer should reasonably anticipate. Standing on a kitchen chair to reach a high shelf is well documented and predictable, so the misuse does not bar recovery; the manufacturer should design and warn accordingly. (A) treats all misuse as a defense, which is wrong. (B) misapplies assumption of risk; the consumer was not aware of any specific structural defect. (D) wrongly limits the theory to express warranty."
+  },
+  {
+    subject: "torts",
+    topic: "Products Liability · Theories of Recovery",
+    fact: "A consumer is injured by an allegedly defective lawnmower and consults an attorney about possible theories of recovery against the manufacturer and seller.",
+    call: "Which of the following accurately describes the available theories?",
+    choices: [
+      "Only strict liability is available; negligence and warranty theories do not apply to product cases.",
+      "A products liability claim may be brought under tort theories (intent, negligence, strict liability) or under contract theories (express and implied warranty).",
+      "Only contract warranty theories apply, because the buyer-seller relationship is contractual.",
+      "Products liability is a single statutory cause of action that displaces all common-law theories."
+    ],
+    correct: 1,
+    explanation: "<strong>Products liability</strong> is an umbrella term, not a single cause of action. A plaintiff injured by a defective product may proceed under <em>tort theories</em> — intent, negligence, or strict liability — or under <em>contract theories</em> — express warranty, implied warranty of merchantability, and implied warranty of fitness for a particular purpose. The choice of theory affects who can sue, who can be sued, what defenses apply, and what damages are available. (A), (C), and (D) each wrongly limit the field to a single source of law."
+  },
+  {
+    subject: "torts",
+    topic: "Products Liability · Distinguishing Defect Types",
+    fact: "A homeowner is injured when a portable space heater she purchased ignites the curtains in her living room. Investigation reveals: (1) the unit she bought matches all other units off the assembly line, (2) the heater's heating element is positioned closer to the housing vents than the heaters of every competitor, (3) competing designs that move the element back by an inch are equally effective and add negligible cost, and (4) the heater's manual gives no clearance recommendation.",
+    call: "Which products liability theories best fit the facts?",
+    choices: [
+      "Manufacturing defect only, because the heater ignited curtains.",
+      "Design defect and information defect, because the element placement is shared across all units and the manual omits clearance guidance.",
+      "Manufacturing defect and information defect, because the unit was unsafe and lacked warnings.",
+      "Only an express warranty theory applies."
+    ],
+    correct: 1,
+    explanation: "Because the dangerous element placement is shared by every unit in the product line, the issue is not a one-off deviation — it is a <strong>design defect</strong>, and the available, low-cost competitor design satisfies the reasonable-alternative-design requirement. Separately, the absence of any clearance instruction supports an <strong>information (warning) defect</strong> claim, since adequate guidance would have reduced the risk of foreseeable use. (A) and (C) misclassify the case as a manufacturing defect, which requires a deviation from the intended design. (D) ignores the available tort theories."
+  },
 ];
 
 // ============ APP LOGIC ============
