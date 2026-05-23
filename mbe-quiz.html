@@ -4493,6 +4493,342 @@ const questions = [
     correct: 3,
     explanation: "The <strong>community-caretaker exception</strong> permits certain warrantless actions when police are performing functions unrelated to criminal investigation (e.g., aiding stranded motorists, inventorying impounded vehicles), but the Supreme Court has held it does <em>not</em> extend to warrantless entry into a home (<em>Caniglia v. Strom</em>). (A) and (B) overstate the doctrine. (C) is partially correct that probable cause issues matter, but the fundamental defect is that the exception itself does not reach the home — even with probable cause, officers would need a warrant or a separate exception."
   },
+  {
+    subject: "crimpro",
+    topic: "Terry Stop · Anonymous Tip",
+    fact: "An anonymous caller tells police that a young man wearing a plaid shirt standing at a specific bus stop is carrying a gun. Officers go to the bus stop and see a young man in a plaid shirt — exactly as described — but observe nothing unusual about his conduct. The officers immediately stop and frisk him and find a gun. He moves to suppress.",
+    call: "Should the court suppress the gun?",
+    choices: [
+      "Yes, because an anonymous tip predicting only a person's appearance and location — with no predictive information that police can independently corroborate as to criminality — does not by itself establish reasonable suspicion.",
+      "No, because the tip turned out to be accurate as to the description.",
+      "No, because the officer's frisk was for officer safety.",
+      "Yes, but only because the man was not actually a threat."
+    ],
+    correct: 0,
+    explanation: "Under <em>Florida v. J.L.</em>, an <strong>anonymous tip</strong> describing a person's clothing and location — without predictive information or other corroborated indicia of reliability — does <em>not</em> establish reasonable suspicion to stop and frisk, even if the description turns out to be accurate. Accuracy of innocent details (location, clothing) does not corroborate the criminal allegation. (B) confuses hindsight accuracy with prospective suspicion. (C) misuses the frisk doctrine — the frisk depends on the stop being lawful in the first place. (D) is wrong; suppression turns on the lawfulness of the stop, not the outcome."
+  },
+  {
+    subject: "crimpro",
+    topic: "Terry Stop · Flight in High-Crime Area",
+    fact: "Police on patrol enter an area known for heavy drug trafficking. A man on the sidewalk sees the marked police caravan approaching, makes immediate eye contact with the lead officer, and bolts in the opposite direction, running unprovoked. Officers chase him down, briefly detain him, and pat him down, finding a handgun.",
+    call: "Was the Terry stop supported by reasonable suspicion?",
+    choices: [
+      "No, because mere presence in a high-crime area is never enough to establish reasonable suspicion.",
+      "Yes, because unprovoked headlong flight upon noticing police, in a high-crime area, taken together supplies the articulable reasonable suspicion required for a Terry stop.",
+      "No, because innocent people sometimes run from police.",
+      "Yes, but only because a weapon was actually found."
+    ],
+    correct: 1,
+    explanation: "Under <em>Illinois v. Wardlow</em>, <strong>unprovoked headlong flight</strong> upon noticing police, combined with presence in a <strong>high-crime area</strong>, can supply the reasonable suspicion needed for a Terry stop. Either factor alone is not enough, but together they create the requisite articulable suspicion. (A) overstates by ignoring the flight component. (C) raises a fair policy concern but does not control the doctrinal rule. (D) confuses outcome with predicate — the stop's lawfulness depends on the facts at the moment of seizure, not on what was found."
+  },
+  {
+    subject: "crimpro",
+    topic: "Terry Frisk · Scope (No Opening Containers)",
+    fact: "An officer makes a lawful Terry stop and frisk on reasonable suspicion that the suspect is armed. During the pat-down, the officer feels a small, hard object in the suspect's jacket pocket. The officer believes it might be a knife, removes it, and finds a small, closed, opaque pill bottle. Now satisfied that the bottle is not a weapon, the officer opens it anyway and discovers pills he later identifies as illegal narcotics.",
+    call: "Was the seizure of the pills constitutional?",
+    choices: [
+      "Yes, because the Terry frisk gave the officer authority to inspect anything in the suspect's pockets.",
+      "Yes, because the pill bottle could have contained a weapon.",
+      "No, because once the officer determined the object was not a weapon, opening the closed pill bottle exceeded the permissible scope of a Terry frisk.",
+      "No, but only because the bottle was opaque rather than transparent."
+    ],
+    correct: 2,
+    explanation: "A Terry frisk is limited to a <strong>protective search for weapons</strong>. Once the officer determined the pill bottle was not itself a weapon and posed no danger, opening the closed container to investigate its contents was a search beyond Terry's scope. (A) overstates the frisk's authority. (B) might justify removing the object to confirm whether it was a weapon, but does not justify opening it once safety is established. (D) draws a transparency distinction the doctrine does not."
+  },
+  {
+    subject: "crimpro",
+    topic: "Search Incident to Arrest · Automobile (Gant Second Prong)",
+    fact: "An officer lawfully arrests a driver for driving on a suspended license after running her plates. The driver is handcuffed and placed in the back of the patrol car. The officer searches the passenger compartment of the driver's vehicle and finds a small bag of cocaine in the glove compartment.",
+    call: "Was the warrantless search of the vehicle constitutional?",
+    choices: [
+      "Yes, because the cocaine was within the driver's wingspan at the time of arrest.",
+      "Yes, because every car search incident to a driver's arrest is permitted.",
+      "No, but only because the cocaine was hidden in a closed compartment.",
+      "No, because the arrestee was secured and it was not reasonable to believe the vehicle contained evidence of the offense of arrest (driving on a suspended license)."
+    ],
+    correct: 3,
+    explanation: "Under <em>Arizona v. Gant</em>, vehicle SILA is permitted only when (1) the arrestee is <strong>unsecured</strong> and within reach of the vehicle, or (2) it is reasonable to believe the vehicle contains <strong>evidence of the offense of arrest</strong>. Neither applies here: the driver was handcuffed in the patrol car, and a suspended-license offense generates no expectation that evidence is in the vehicle. (A) describes the pre-<em>Gant</em> bright-line rule. (B) overstates. (C) draws a doctrinal distinction Gant does not."
+  },
+  {
+    subject: "crimpro",
+    topic: "Automobile Exception · Probable Cause Via Dog Alert",
+    fact: "An officer lawfully stops a vehicle for a broken taillight. While the officer is writing the ticket, a drug-detection dog already on scene with a second officer alerts to the presence of narcotics in the trunk. The traffic stop is not unreasonably prolonged by the sniff. Officers open the trunk and find marijuana.",
+    call: "Was the warrantless search of the trunk constitutional?",
+    choices: [
+      "Yes, because the dog alert provided probable cause to believe the vehicle contained contraband, allowing a search under the automobile exception.",
+      "No, because dog sniffs always require independent probable cause to be conducted in the first place.",
+      "No, because the broken taillight alone did not justify the search.",
+      "Yes, because traffic violations automatically authorize a full vehicle search."
+    ],
+    correct: 0,
+    explanation: "A dog alert by a properly trained narcotics-detection dog at a lawful traffic stop — conducted without unreasonably prolonging the stop (<em>Illinois v. Caballes</em>; <em>Rodriguez v. United States</em>) — supplies <strong>probable cause</strong> to believe the vehicle contains contraband. Once probable cause exists, the <strong>automobile exception</strong> permits a warrantless search of any area where the contraband might be found. (B) misstates dog-sniff doctrine — a sniff is not itself a search. (C) is correct that the taillight alone wouldn't justify the search, but the dog alert added the missing probable cause. (D) wildly overstates."
+  },
+  {
+    subject: "crimpro",
+    topic: "Automobile Exception · Locked Containers (Ross)",
+    fact: "Police develop probable cause to believe a vehicle's driver is transporting heroin in a locked metal briefcase in the trunk. Officers stop the vehicle, open the trunk, force open the locked briefcase, and find heroin inside.",
+    call: "Was the warrantless search of the locked briefcase constitutional?",
+    choices: [
+      "No, because locked containers always require a separate warrant.",
+      "Yes, because under the automobile exception, police with probable cause may search any container in the vehicle that could conceal the evidence sought — including locked containers.",
+      "No, unless the briefcase was associated with criminal activity independently of the car.",
+      "Yes, but only the trunk could be searched, not the briefcase inside it."
+    ],
+    correct: 1,
+    explanation: "Under <em>United States v. Ross</em>, the automobile exception extends to any container within the vehicle — including <strong>locked</strong> containers — that could conceal the object of the search, so long as officers have probable cause to believe contraband is in the vehicle. (A) and (D) draw doctrinal lines the Supreme Court rejected. (C) imposes a container-specific probable-cause requirement that <em>Ross</em> repudiated."
+  },
+  {
+    subject: "crimpro",
+    topic: "Consent · Withdrawal Mid-Search",
+    fact: "A homeowner verbally consents to a search of her home. Officers begin searching. About five minutes in, before officers have found anything, the homeowner says clearly, \"Stop — I changed my mind. I want you to leave.\" The officers ignore her and continue searching, ultimately finding drugs in a back bedroom. The homeowner moves to suppress.",
+    call: "How should the court rule on the motion?",
+    choices: [
+      "Deny it, because once consent is given it cannot be withdrawn.",
+      "Deny it, because the officers were already lawfully inside.",
+      "Grant it as to evidence found after the withdrawal, because consent may be withdrawn at any time and continued searching without consent or another exception is unconstitutional.",
+      "Grant it as to everything, because the original consent retroactively becomes invalid."
+    ],
+    correct: 2,
+    explanation: "<strong>Consent may be withdrawn</strong> at any time, even mid-search. Once consent is clearly withdrawn, officers must stop searching unless an independent exception (warrant, exigency) applies. Evidence obtained <em>after</em> withdrawal is subject to suppression. (A) is wrong as a matter of law. (B) ignores the withdrawal. (D) overstates the remedy — the original consent was valid until the moment of withdrawal, so evidence found before that is not suppressed on this ground."
+  },
+  {
+    subject: "crimpro",
+    topic: "Consent · Scope (Jimeno)",
+    fact: "A driver stopped for speeding consents when an officer asks, \"Can I look in your car for drugs?\" The officer searches the passenger area, finds nothing, then opens a sealed cardboard box on the back seat. Cocaine is inside. The driver later argues the search of the box exceeded the scope of his consent.",
+    call: "How should the court rule on a motion to suppress?",
+    choices: [
+      "Deny it, because consent to search a car always categorically includes consent to open every container inside.",
+      "Deny it, because cocaine is contraband.",
+      "Grant it, because the officer should have obtained a separate warrant for the sealed box.",
+      "Deny it, because a reasonable officer would understand consent to search \"for drugs\" as including containers within the car that might hold drugs."
+    ],
+    correct: 3,
+    explanation: "The <strong>scope of consent</strong> is measured by what a reasonable person would have understood the consent to include (<em>Florida v. Jimeno</em>). Consent to search a car \"for drugs\" is generally understood to include opening containers in the car that could plausibly conceal drugs. (A) is too broad — consent does not categorically authorize searching every container regardless of context. (B) confuses outcome with scope. (C) overstates the warrant requirement when consent and the automobile exception combine."
+  },
+  {
+    subject: "crimpro",
+    topic: "Consent · Co-Occupant Objection (Randolph)",
+    fact: "Police arrive at a home to investigate a domestic dispute. The wife answers the door and immediately invites the officers in, saying they may search anywhere. The husband, standing right beside her in the doorway, says clearly, \"No, I don't consent to any search. Get out.\" Officers enter anyway over the husband's objection and find evidence in a desk inside the shared home office.",
+    call: "Was the search constitutional?",
+    choices: [
+      "No, because under Georgia v. Randolph, when two co-occupants are physically present and one expressly objects, the consent of the other cannot authorize a warrantless search over the objector's objection.",
+      "Yes, because the wife had equal authority to consent.",
+      "Yes, because the husband's objection was outweighed by the wife's consent.",
+      "No, but only because the desk was the husband's personal property."
+    ],
+    correct: 0,
+    explanation: "Under <em>Georgia v. Randolph</em>, when two co-occupants are <strong>physically present</strong> at the entry and one expressly <strong>objects</strong>, the consent of the other is insufficient to authorize a warrantless search as to the objector. The objection must be contemporaneous — <em>Randolph</em> does not protect an absent co-occupant (<em>Fernandez v. California</em>). (B) and (C) state the pre-<em>Randolph</em> rule. (D) draws a personal-property distinction <em>Randolph</em> does not require."
+  },
+  {
+    subject: "crimpro",
+    topic: "Plain View · Manipulation (Hicks)",
+    fact: "Officers lawfully enter an apartment under exigent circumstances to investigate a shooting. While inside, an officer sees expensive stereo equipment that looks out of place in the modest apartment and suspects it may be stolen. To check, he slightly moves one of the speakers so he can read the serial number on its underside, calls dispatch, confirms the equipment was reported stolen, and seizes it.",
+    call: "Was the seizure constitutional under the plain-view doctrine?",
+    choices: [
+      "Yes, because the officers were lawfully present and the equipment was in plain view.",
+      "No, because moving the speaker — even slightly — to view the serial number was an additional search not justified by plain view, since the equipment's stolen status was not immediately apparent.",
+      "Yes, because the serial number proved the equipment was stolen.",
+      "No, but only because the officers should have obtained a separate warrant before entering."
+    ],
+    correct: 1,
+    explanation: "Under <em>Arizona v. Hicks</em>, the plain-view doctrine requires that an item's incriminating nature be <strong>immediately apparent</strong> — probable cause without any further searching. Moving the speaker to read its serial number was a <em>separate search</em> not justified by plain view (or by the shooting-related exigency). (A) ignores the \"immediately apparent\" requirement. (C) confuses the post-hoc result with the legality at the moment of the manipulation. (D) attacks the underlying entry, which the facts say was lawful."
+  },
+  {
+    subject: "crimpro",
+    topic: "Stop and Frisk · Plain Feel (Dickerson)",
+    fact: "An officer makes a lawful Terry frisk for weapons. While patting down the suspect's pants pocket, the officer immediately feels — without manipulation — what is unmistakably a glass crack pipe with a distinctive shape and texture he has encountered dozens of times in his career. The officer removes the pipe, which still contains crack cocaine residue.",
+    call: "Was the seizure constitutional?",
+    choices: [
+      "No, because pipes are not weapons.",
+      "No, because the frisk was for safety, not investigation.",
+      "Yes, because under the plain-feel doctrine, an officer conducting a lawful Terry frisk may seize an item if its identity as contraband is immediately apparent through touch alone, without further manipulation.",
+      "Yes, but only after first obtaining a warrant."
+    ],
+    correct: 2,
+    explanation: "Under <em>Minnesota v. Dickerson</em>, the <strong>plain-feel doctrine</strong> permits seizure of contraband detected during a lawful Terry frisk if its incriminating nature is <em>immediately apparent</em> from the pat-down alone, without further manipulation. The officer's immediate recognition of a distinctive contraband object satisfies that test. (A) and (B) overstate the limit on Terry frisks — once incriminating nature is plain by touch, seizure is permitted. (D) inverts the doctrine, which by definition allows warrantless seizure."
+  },
+  {
+    subject: "crimpro",
+    topic: "Hot Pursuit · Misdemeanor Limitation (Lange)",
+    fact: "Police observe a driver commit a minor noise-ordinance violation that is a misdemeanor under state law. The officer activates his lights to pull the driver over. The driver continues several blocks to his own driveway and walks into his attached garage. The officer follows him into the garage without a warrant, arrests him, and in the process observes evidence of unrelated minor offenses in plain view.",
+    call: "Was the warrantless entry into the garage constitutional under hot pursuit?",
+    choices: [
+      "Yes, because hot pursuit allows officers to enter homes whenever pursuing any fleeing suspect.",
+      "Yes, but only because the driver had ignored the officer's signal to pull over.",
+      "No, because every home entry by police requires a warrant regardless of circumstances.",
+      "No, because under Lange v. California, the pursuit of a fleeing misdemeanor suspect does not categorically justify warrantless home entry; a case-specific exigency must be shown."
+    ],
+    correct: 3,
+    explanation: "Under <em>Lange v. California</em>, the pursuit of a fleeing <strong>misdemeanor</strong> suspect does <em>not</em> categorically create exigent circumstances justifying warrantless home entry. Officers must instead show case-specific exigency (risk of escape, destruction of evidence, danger to others). Mere flight from a minor offense is not enough. (A) overstates. (B) describes the pre-<em>Lange</em> categorical rule. (C) overstates the warrant requirement — genuine exigencies still allow home entry."
+  },
+  {
+    subject: "crimpro",
+    topic: "Exigent Circumstances · Police-Created Exigency (King)",
+    fact: "Police following a controlled drug buy approach an apartment building and smell marijuana coming from one of the apartments. Officers knock loudly and announce, \"Police!\" From inside they hear what sounds like furniture moving and items being shuffled rapidly — consistent with destruction of evidence. They force the door without a warrant and find drugs.",
+    call: "Was the warrantless entry constitutional?",
+    choices: [
+      "Yes, because the imminent destruction of evidence creates exigent circumstances justifying warrantless entry, even when officers' lawful knocking is what prompts the destruction.",
+      "No, because officers cannot rely on an exigency that they themselves caused by knocking.",
+      "No, because the smell of marijuana alone is insufficient probable cause.",
+      "Yes, but only because the officers had a warrant for the controlled buy itself."
+    ],
+    correct: 0,
+    explanation: "Under <em>Kentucky v. King</em>, officers do not impermissibly \"create\" the exigency for Fourth Amendment purposes by engaging in <em>lawful</em> conduct — such as knocking and announcing — that prompts occupants to destroy evidence. The <strong>imminent destruction of evidence</strong> is a recognized exigent circumstance permitting warrantless entry. (B) states a theory the Supreme Court rejected. (C) misstates the cumulative analysis — the smell plus the sounds of destruction together establish probable cause and exigency. (D) is irrelevant; the controlled buy did not generate a warrant covering this entry."
+  },
+  {
+    subject: "crimpro",
+    topic: "Emergency Aid · Welfare Check",
+    fact: "A neighbor calls police to report that an elderly woman who lives alone has not been seen for three days. Her newspapers are piling up and her mailbox is overflowing. When officers arrive, they knock loudly and get no response. Through a window they see what appears to be a body slumped on the kitchen floor. They enter without a warrant. They find the woman alive but unconscious from a medical emergency, and in plain view on the kitchen counter they see what they immediately recognize as illegal drugs.",
+    call: "Was the warrantless entry constitutional?",
+    choices: [
+      "No, because the officers should have first obtained the woman's consent before entering.",
+      "Yes, because the emergency aid exception permits warrantless entry into a home when officers reasonably believe a person inside needs immediate medical aid.",
+      "Yes, but only because the drugs were ultimately seen in plain view.",
+      "No, because welfare checks always require a warrant."
+    ],
+    correct: 1,
+    explanation: "The <strong>emergency aid exception</strong> permits warrantless entry into a home when officers have an objectively reasonable basis to believe an occupant is in need of immediate aid or in danger of serious harm (<em>Brigham City v. Stuart</em>; <em>Caniglia v. Strom</em>). Once inside lawfully, plain view applies to the drugs. (A) is impossible on the facts — an unconscious occupant cannot give consent. (C) gets the result right but inverts the logic — entry is justified by emergency aid, not plain view. (D) overstates the warrant requirement."
+  },
+  {
+    subject: "crimpro",
+    topic: "Exclusionary Rule · Independent Source",
+    fact: "Police unlawfully enter a warehouse without a warrant and observe marijuana stacked inside. They leave without seizing anything. Completely separately and without using any information from the unlawful entry, they later obtain a tip from a confidential informant that establishes probable cause. They obtain a valid warrant based solely on that independent tip and re-enter the warehouse to seize the marijuana.",
+    call: "Should the marijuana be suppressed?",
+    choices: [
+      "Yes, because the officers' initial entry was unconstitutional.",
+      "Yes, because the warrant was inevitably tainted by the prior entry.",
+      "No, because the marijuana was ultimately obtained through an independent source untainted by the prior illegality.",
+      "No, because obtaining a warrant cured all prior defects."
+    ],
+    correct: 2,
+    explanation: "Under the <strong>independent source doctrine</strong> (<em>Murray v. United States</em>), evidence is not suppressed if the government can show it was obtained through a source <em>genuinely independent</em> of any constitutional violation. Here, the warrant rested entirely on the informant's tip — no information from the unlawful entry was used to obtain it. (A) ignores the exception. (B) confuses temporal sequence with derivation — the warrant must be independent in fact, which it was. (D) overstates — a warrant cannot cure derivative use of tainted information, but here there was no derivative use."
+  },
+  {
+    subject: "crimpro",
+    topic: "Exclusionary Rule · Inevitable Discovery",
+    fact: "Police unlawfully interrogate a suspect without Miranda warnings and the suspect tells them where he buried a victim's body. Meanwhile, an organized search team of dozens of volunteers was already systematically combing the area along a grid pattern that would have reached the burial site within hours. Officers go directly to the location based on the suspect's statement and recover the body.",
+    call: "Should the body be suppressed?",
+    choices: [
+      "Yes, because the body was found as a direct result of the unconstitutional interrogation.",
+      "Yes, because officers have an obligation to use only constitutionally obtained evidence.",
+      "No, because the suspect waived his rights by speaking.",
+      "No, because under the inevitable discovery doctrine, the body would have been found by the lawful search team in due course."
+    ],
+    correct: 3,
+    explanation: "Under the <strong>inevitable discovery doctrine</strong> (<em>Nix v. Williams</em>), evidence obtained as a result of a constitutional violation is nonetheless admissible if the government can show by a preponderance that the evidence <em>would have been discovered</em> through lawful means anyway. The systematic grid search would have reached the body within hours. (A) ignores the exception. (B) overstates the rule. (C) misstates Miranda waiver doctrine — speaking without warnings is not a waiver."
+  },
+  {
+    subject: "crimpro",
+    topic: "Exclusionary Rule · Attenuation (Strieff)",
+    fact: "Police unlawfully stop a man on the street without reasonable suspicion. They obtain his name and run a records check, which reveals an outstanding arrest warrant for unpaid traffic fines unrelated to anything about the unlawful stop. Officers arrest him on the warrant and, in a search incident to that arrest, find drugs in his pocket.",
+    call: "Should the drugs be suppressed?",
+    choices: [
+      "No, because under the attenuation doctrine, discovery of a valid pre-existing arrest warrant between the unlawful stop and the search may purge the taint of the initial illegality.",
+      "Yes, because the discovery flowed directly from the unlawful stop.",
+      "Yes, because attenuation never applies to warrantless police conduct.",
+      "No, because outstanding warrants automatically vacate any prior illegality."
+    ],
+    correct: 0,
+    explanation: "Under <em>Utah v. Strieff</em>, the discovery of a <strong>valid, pre-existing arrest warrant</strong> between an unlawful stop and a search may sufficiently <strong>attenuate</strong> the taint of the initial illegality, particularly where the officer's misconduct was not flagrant. The valid warrant is an intervening circumstance that breaks the causal chain. (B) ignores the attenuation exception. (C) misstates attenuation, which is a general fruit-of-the-poisonous-tree exception. (D) overstates — attenuation depends on three factors (temporal proximity, intervening circumstances, flagrancy), not an automatic rule."
+  },
+  {
+    subject: "crimpro",
+    topic: "Fourth Amendment Standing · Overnight Guest (Olson)",
+    fact: "A defendant spends the night as a guest at a friend's apartment. Police, without a warrant or any applicable exception, enter the apartment and find the defendant in a bedroom alongside drugs that belong to him. The defendant moves to suppress.",
+    call: "Does the defendant have standing to challenge the warrantless entry?",
+    choices: [
+      "No, because only the friend (the tenant) has standing.",
+      "Yes, because an overnight guest has a legitimate expectation of privacy in his host's home and may challenge a warrantless entry.",
+      "No, because guests have no expectation of privacy in others' homes.",
+      "Yes, but only if he was a long-term guest of at least 30 days."
+    ],
+    correct: 1,
+    explanation: "Under <em>Minnesota v. Olson</em>, an <strong>overnight guest</strong> has a legitimate expectation of privacy in his host's home sufficient to confer Fourth Amendment standing. (A) and (C) overstate the personal-rights requirement of standing — guests have legitimate expectations too. (D) invents a duration requirement the doctrine does not impose; overnight is sufficient."
+  },
+  {
+    subject: "crimpro",
+    topic: "Fourth Amendment Standing · Casual Visitor (Carter)",
+    fact: "A defendant goes to an acquaintance's apartment to bag cocaine for distribution. He has never been there before, has no personal belongings there, and is present for only a couple of hours doing nothing but the drug-packaging transaction. Police look through a gap in the window blinds from outside, observe the activity, and obtain a warrant. The defendant moves to suppress.",
+    call: "Does the defendant have standing to challenge the visual surveillance?",
+    choices: [
+      "Yes, because he was inside the apartment when observed.",
+      "Yes, because any defendant whose conduct is observed has standing.",
+      "No, because a casual, commercial visitor with no overnight stay and no personal connection to the premises lacks a legitimate expectation of privacy sufficient for standing.",
+      "No, but only because cocaine packaging is illegal."
+    ],
+    correct: 2,
+    explanation: "Under <em>Minnesota v. Carter</em>, a person who is in someone else's home for a brief, <strong>commercial</strong> purpose — and is not an overnight guest — generally has no legitimate expectation of privacy and therefore no Fourth Amendment standing. The visitor's status falls below the protection an overnight guest enjoys. (A) ignores the standing inquiry. (B) overstates standing. (D) misidentifies the basis — it is about the visitor's status, not the legality of the underlying conduct."
+  },
+  {
+    subject: "crimpro",
+    topic: "Reasonable Expectation of Privacy · Third-Party Records",
+    fact: "Federal agents, without a warrant or subpoena, ask the defendant's bank to turn over copies of his deposit slips, checks, and account statements. The bank complies. The records, which the defendant himself created in the normal course of banking, reveal payments that prove tax fraud. The defendant moves to suppress.",
+    call: "How should the court rule?",
+    choices: [
+      "Grant the motion, because the records contain his personal financial information.",
+      "Grant the motion, because banks have a fiduciary duty to protect customer records.",
+      "Deny the motion, but only if the bank's privacy policy permits disclosure.",
+      "Deny the motion, because a customer has no reasonable expectation of privacy in records voluntarily conveyed to a third party such as a bank."
+    ],
+    correct: 3,
+    explanation: "Under the <strong>third-party doctrine</strong> (<em>United States v. Miller</em>; <em>Smith v. Maryland</em>), a person has <strong>no reasonable expectation of privacy</strong> in records voluntarily conveyed to a third party — like banking records — because the customer assumes the risk that the third party will disclose them. (A) and (B) overstate the privacy interest. (C) makes the analysis depend on private agreements, which is not the constitutional test. Note: <em>Carpenter v. United States</em> carved out a narrow exception for historical cell-site location data; standard banking records remain unprotected."
+  },
+  {
+    subject: "crimpro",
+    topic: "Probable Cause · Anonymous Tip and Totality (Gates)",
+    fact: "An anonymous letter to police states that a named couple will drive to Florida on a specific date, the wife will fly down to drive back a car the husband has loaded with drugs, and the husband will fly back separately. Police corroborate the travel details by surveillance — the wife flies to Florida, meets her husband, and they begin driving back together as predicted. Officers obtain a search warrant for the car based on the tip plus the verified travel details and find drugs.",
+    call: "Was the warrant supported by probable cause?",
+    choices: [
+      "Yes, because under the totality-of-the-circumstances test, the anonymous tip's reliability was sufficiently established by detailed predictions about future conduct that police independently verified, supplying probable cause.",
+      "No, because anonymous tips can never establish probable cause.",
+      "No, because the tip lacked specific information about the tipster's basis of knowledge.",
+      "Yes, but only because the drugs were ultimately found."
+    ],
+    correct: 0,
+    explanation: "Under <em>Illinois v. Gates</em>, probable cause from an anonymous tip is judged under the <strong>totality of the circumstances</strong>. A tip becomes reliable when police independently corroborate detailed predictive information that an ordinary person would not know — suggesting the tipster has inside knowledge. (B) overstates the limit on anonymous tips. (C) describes the rigid <em>Aguilar-Spinelli</em> two-pronged test that <em>Gates</em> abandoned. (D) confuses outcome with predicate."
+  },
+  {
+    subject: "crimpro",
+    topic: "Search Warrants · Anticipatory Warrants (Grubbs)",
+    fact: "Federal agents learn that a package of drugs is being shipped to a defendant's home. They obtain an \"anticipatory\" search warrant authorizing a search of the residence only after the package has been delivered and accepted. The package is delivered and accepted; officers then execute the warrant and find the package along with additional drugs in the house.",
+    call: "Was the anticipatory warrant constitutional?",
+    choices: [
+      "No, because warrants must be based on probable cause that contraband is presently at the location at the moment the warrant is issued.",
+      "Yes, because anticipatory warrants are constitutional when supported by probable cause that a triggering condition (here, delivery and acceptance) will occur and will establish probable cause at that future moment.",
+      "No, because anticipatory warrants violate the particularity requirement.",
+      "Yes, but only after the package was opened."
+    ],
+    correct: 1,
+    explanation: "Under <em>United States v. Grubbs</em>, <strong>anticipatory warrants</strong> are constitutional when supported by probable cause that (1) a triggering condition will occur, and (2) the triggering condition, combined with the supporting facts, will establish probable cause to search at that point. They are common in controlled drug deliveries. (A) overstates the present-fact requirement; future probability is acceptable. (C) misstates particularity, which addresses describing the place and items, not timing. (D) draws a distinction not in the doctrine."
+  },
+  {
+    subject: "crimpro",
+    topic: "Arrest · In-Home Arrest Warrant (Payton)",
+    fact: "Police have probable cause that a man committed a felony but no warrant. They go to his home, knock, and when he opens the door, officers step inside and arrest him in his living room. The state argues the arrest was lawful because officers had probable cause and the arrest happened in the suspect's own home.",
+    call: "Was the warrantless in-home arrest constitutional?",
+    choices: [
+      "Yes, because probable cause is all that is required for any arrest.",
+      "Yes, because the suspect himself opened the door.",
+      "No, because under Payton v. New York, a routine warrantless arrest of a suspect inside his own home is unconstitutional absent exigent circumstances or consent.",
+      "No, because the officers needed a search warrant rather than an arrest warrant for the home."
+    ],
+    correct: 2,
+    explanation: "Under <em>Payton v. New York</em>, police may not make a routine warrantless arrest of a suspect inside his own home, even with probable cause. Absent <strong>exigent circumstances</strong> or <strong>consent</strong>, they need an <strong>arrest warrant</strong> (which carries with it limited authority to enter the suspect's home to execute it). (A) describes the rule for public arrests, not in-home arrests. (B) misreads the consent doctrine — merely opening a door is not consent to enter. (D) confuses warrants — an arrest warrant suffices for the suspect's own home; a search warrant is needed only for arresting the suspect inside a third party's home (Steagald)."
+  },
+  {
+    subject: "crimpro",
+    topic: "Arrest · Third Party's Home (Steagald)",
+    fact: "Police have a valid arrest warrant for a fugitive. They learn the fugitive may be staying at his sister's apartment. Without obtaining a search warrant for the sister's apartment, officers enter and search it. They find the fugitive, arrest him, and in plain view they observe drugs belonging to the sister. The sister is later charged with drug offenses and moves to suppress.",
+    call: "Should the sister's motion to suppress be granted?",
+    choices: [
+      "No, because the officers had a valid arrest warrant.",
+      "No, because the sister was harboring a fugitive.",
+      "No, because the arrest warrant authorized entry into any home where the fugitive might be found.",
+      "Yes, because under Steagald v. United States, to enter a third party's home to arrest a fugitive, police need a search warrant for that home in addition to the arrest warrant."
+    ],
+    correct: 3,
+    explanation: "Under <em>Steagald v. United States</em>, an arrest warrant alone authorizes entry only into the suspect's <em>own</em> home. To enter a <strong>third party's home</strong> to arrest the suspect, police must also obtain a <strong>search warrant</strong> for the third party's premises. The third-party homeowner's Fourth Amendment rights are not satisfied by an arrest warrant naming someone else. The sister has standing in her own home and can suppress evidence obtained through the unlawful entry. (A), (B), and (C) all overstate the reach of an arrest warrant. (B) also imports an unrelated criminal liability question that does not affect Fourth Amendment analysis."
+  },
 ];
 
 // ============ APP LOGIC ============
