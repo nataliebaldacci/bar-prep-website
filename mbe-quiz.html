@@ -3276,6 +3276,216 @@ const questions = [
     correct: 0,
     explanation: "Rule 12(e) permits a <strong>motion for a more definite statement</strong> when a pleading is so vague or ambiguous that a party cannot reasonably prepare a response, and Rule 12(f) permits a <strong>motion to strike</strong> redundant, immaterial, impertinent, or scandalous matter. (B) is wrong because a 12(b)(6) motion tests legal sufficiency, not vagueness or scandalous content. (C) tests evidence, not pleadings. (D) is a trial motion."
   },
+  {
+    subject: "torts",
+    topic: "Negligence · Duty · Reasonable Person Standard",
+    fact: "A man who is legally blind walks through a busy downtown sidewalk without using his cane, which he left at home because he was in a hurry. He bumps into and knocks over an elderly pedestrian, who suffers a broken hip. The pedestrian sues the blind man for negligence.",
+    call: "By what standard will the blind man's conduct be measured?",
+    choices: [
+      "The conduct of a reasonably prudent sighted person under the same circumstances.",
+      "The conduct of a reasonably prudent person who is blind under the same circumstances.",
+      "The conduct of a person doing his subjective best given his own limitations.",
+      "Strict liability, because he created an unreasonable risk by going out without his cane."
+    ],
+    correct: 1,
+    explanation: "The <strong>reasonable person standard</strong> is generally objective, but a defendant's relevant <strong>physical characteristics</strong> are incorporated. A blind defendant is held to the standard of a reasonably prudent blind person under the same circumstances — which here would almost certainly include using a cane on a busy sidewalk. (A) ignores his physical condition. (C) wrongly converts the standard to a subjective one; ordinary negligence is never measured by the defendant's own best efforts. (D) is wrong because negligence, not strict liability, governs ordinary activities."
+  },
+  {
+    subject: "torts",
+    topic: "Negligence · Duty · Foreseeable Plaintiff",
+    fact: "A railroad guard negligently pushes a passenger trying to board a moving train. The passenger drops a small, unmarked package wrapped in plain paper. Unknown to anyone, the package contains fireworks. It explodes when it hits the rails, and the shock causes a large scale at the far end of the platform to topple onto a woman standing there, injuring her. The woman sues the railroad.",
+    call: "What is the railroad's strongest argument against liability?",
+    choices: [
+      "The guard's conduct was not the but-for cause of the woman's injuries.",
+      "The woman was not a foreseeable plaintiff within the zone of danger created by the guard's negligence.",
+      "Fireworks are an abnormally dangerous activity, breaking the chain of causation.",
+      "The passenger's own negligence in carrying fireworks is a complete defense."
+    ],
+    correct: 1,
+    explanation: "Under the majority (Cardozo) view from <em>Palsgraf</em>, a defendant owes a duty only to <strong>foreseeable plaintiffs</strong> — those within the zone of danger created by the defendant's conduct. The woman standing far down the platform was not foreseeably endangered by jostling a passenger boarding a train, so the railroad owed her no duty. (A) is wrong because but-for cause is satisfied; the issue is duty/proximate cause. (C) misstates the doctrine — fireworks are not strict-liability dangerous. (D) is irrelevant; the passenger is not the defendant."
+  },
+  {
+    subject: "torts",
+    topic: "Negligence · Breach · Res Ipsa Loquitur",
+    fact: "A pedestrian walking past a downtown office building is struck on the head by a barrel of flour that falls from a second-story warehouse window. The pedestrian has no idea how or why the barrel fell. He sues the warehouse owner, who had exclusive control of the second floor that day. The pedestrian presents no direct evidence of any specific negligent act.",
+    call: "What is the most likely outcome at trial?",
+    choices: [
+      "The case will be dismissed because the pedestrian has no direct evidence of breach.",
+      "The court must direct a verdict for the pedestrian because the barrel obviously fell due to negligence.",
+      "The jury may, but need not, infer that the warehouse owner breached a duty of care.",
+      "The case must be dismissed because the pedestrian cannot identify the specific employee responsible."
+    ],
+    correct: 2,
+    explanation: "<strong>Res ipsa loquitur</strong> applies when (1) the accident is of a kind that does not ordinarily occur absent negligence, and (2) the instrumentality was in the defendant's exclusive control. A barrel falling from a warehouse window satisfies both. The effect is to permit — not require — the jury to <em>infer</em> breach. (A) is wrong because res ipsa supplies the circumstantial proof. (B) overstates the effect; the inference is permissive, not mandatory. (D) is wrong because the doctrine specifically dispenses with the need to identify the specific negligent act or actor."
+  },
+  {
+    subject: "torts",
+    topic: "Negligence · Breach · Res Ipsa Loquitur Elements",
+    fact: "A hospital patient wakes up after surgery with a severe burn on her thigh. The burn was not present before surgery. Multiple hospital employees — surgeons, anesthesiologists, nurses, and technicians — were in the operating room, and the patient was unconscious throughout. She cannot identify which person or instrument caused the burn. She sues the hospital.",
+    call: "Which doctrine offers her the best path to establishing breach?",
+    choices: [
+      "Negligence per se, because hospitals are heavily regulated.",
+      "Res ipsa loquitur, with the inference of breach extending to all defendants who had control over her care.",
+      "Strict liability, because surgery is an abnormally dangerous activity.",
+      "Transferred negligence, from the unknown employee to the hospital."
+    ],
+    correct: 1,
+    explanation: "Courts apply <strong>res ipsa loquitur</strong> in medical settings like this (the <em>Ybarra</em> approach), where the plaintiff was unconscious and an injury occurred that does not happen absent negligence, even though she cannot identify which staff member was responsible. The 'exclusive control' element is satisfied collectively by the medical team. (A) requires a specific statute defining the standard of care. (C) is wrong — surgery is not an abnormally dangerous activity. (D) is not a recognized doctrine."
+  },
+  {
+    subject: "torts",
+    topic: "Negligence · Causation · But-For Test",
+    fact: "A driver runs a red light at 45 mph and collides with a cyclist crossing the intersection lawfully. The cyclist suffers a broken leg. At trial, the driver concedes she was negligent but argues that the cyclist would have been struck even if she had stopped at the light because the cyclist was riding too far into the intersection.",
+    call: "On the issue of cause in fact, what must the cyclist show?",
+    choices: [
+      "That the driver's negligence was the sole cause of the injury.",
+      "That but for the driver's negligence, the injury would not have occurred.",
+      "That the driver's negligence was a substantial factor combining with other independent causes.",
+      "That all possible defendants were negligent and burden shifts to them."
+    ],
+    correct: 1,
+    explanation: "The default test for cause in fact is the <strong>but-for test</strong>: the plaintiff must show that, but for the defendant's negligent conduct, the injury would not have occurred. (A) overstates what is required — the defendant need not be the sole cause. (C) describes the <strong>substantial factor test</strong>, which applies only when multiple causes <em>each</em> could have independently produced the injury — not the case here, where there is one negligent driver and a question whether her negligence in fact caused the collision. (D) is the unascertainable-causes/Summers v. Tice approach, used when multiple defendants are negligent but only one caused the harm."
+  },
+  {
+    subject: "torts",
+    topic: "Negligence · Causation · Substantial Factor",
+    fact: "Two hunters in different parts of a forest each negligently start campfires and fail to extinguish them. The fires spread, merge, and together burn down a cabin. Expert testimony establishes that either fire alone, even without the other, would have been sufficient to destroy the cabin. The cabin owner sues both hunters.",
+    call: "Can the cabin owner establish cause in fact against either hunter?",
+    choices: [
+      "No, because neither fire was a but-for cause of the destruction.",
+      "Yes, because each fire was a substantial factor in bringing about the harm.",
+      "Yes, but only against the hunter whose fire reached the cabin first.",
+      "No, unless the hunters were acting in concert."
+    ],
+    correct: 1,
+    explanation: "When multiple negligent forces combine to cause a single indivisible harm and <em>each alone would have been sufficient</em>, the but-for test fails (each defendant can say 'the cabin would have burned anyway'). Courts therefore apply the <strong>substantial factor test</strong>: a defendant is a cause in fact if her conduct was a substantial factor in producing the injury. (A) is wrong because it ignores the substantial factor exception. (C) invents a 'first arrival' rule that does not exist. (D) confuses cause in fact with concert-of-action liability."
+  },
+  {
+    subject: "torts",
+    topic: "Negligence · Causation · Unascertainable Causes",
+    fact: "Three hunters are quail hunting together. Two of them, in violation of safety rules, fire their shotguns simultaneously in the direction of a third hunter, hitting him in the eye with a single pellet. Only one pellet caused the injury, and ballistics cannot determine which of the two shooters fired it. The injured hunter sues both shooters.",
+    call: "How should the court resolve the causation problem?",
+    choices: [
+      "The injured hunter loses because he cannot prove which defendant fired the harmful pellet.",
+      "The two defendants are jointly liable only if they acted in concert.",
+      "The burden of proof shifts to each defendant to prove that his shot did not cause the injury.",
+      "The injured hunter recovers only 50% from each, regardless of which actually caused the harm."
+    ],
+    correct: 2,
+    explanation: "Under the <strong>unascertainable causes approach</strong> (<em>Summers v. Tice</em>), when the plaintiff proves that two or more defendants were each negligent and that one of them caused the harm — but it is impossible to tell which — the burden of proof on causation <strong>shifts to the defendants</strong>. Each must show that his negligence was not the cause; failing that, both are liable. (A) reaches the opposite result and is wrong. (B) confuses this doctrine with concert-of-action. (D) describes a damages-apportionment rule, not the causation test."
+  },
+  {
+    subject: "torts",
+    topic: "Negligence · Proximate Cause · Foreseeable Intervening Force",
+    fact: "A driver negligently rear-ends a pedestrian in a crosswalk, breaking her leg. The pedestrian is taken to a hospital, where an attending physician negligently sets the break, causing permanent disability that would not have occurred with proper care. The pedestrian sues the original driver for the full extent of her injuries, including the disability.",
+    call: "Is the driver liable for the disability caused by the physician's malpractice?",
+    choices: [
+      "No, because the physician's negligence is a superseding cause.",
+      "No, because the driver's duty ended when the pedestrian reached the hospital.",
+      "Yes, because subsequent medical malpractice is a foreseeable intervening force.",
+      "Yes, but only if the driver and physician acted in concert."
+    ],
+    correct: 2,
+    explanation: "Subsequent <strong>medical malpractice</strong> in treating injuries caused by the defendant's negligence is one of the classic <strong>foreseeable intervening forces</strong>. It does not break the chain of proximate causation, and the original tortfeasor remains liable for the aggravated injuries. (A) wrongly labels it superseding; superseding causes are unforeseeable. (B) invents a duty cutoff that doesn't exist. (D) is irrelevant — concert of action isn't required."
+  },
+  {
+    subject: "torts",
+    topic: "Negligence · Proximate Cause · Superseding Force",
+    fact: "A delivery driver negligently leaves his van's keys in the ignition while making a delivery in a quiet rural neighborhood with no history of car theft. A thief steals the van, drives recklessly at high speed for two hours, and crashes into a pedestrian 50 miles away. The pedestrian sues the delivery company.",
+    call: "Is the delivery company liable for the pedestrian's injuries?",
+    choices: [
+      "Yes, because but for the driver's negligence in leaving the keys, the harm would not have occurred.",
+      "Yes, because leaving keys in a vehicle is negligence per se under most vehicle codes.",
+      "No, because the criminal act of an unforeseeable third party is a superseding cause that breaks the chain of proximate causation.",
+      "No, because the pedestrian was not within the zone of danger."
+    ],
+    correct: 2,
+    explanation: "Although but-for causation is satisfied, <strong>proximate cause</strong> is not. Criminal acts by third parties are generally treated as <strong>superseding causes</strong> that cut off liability — unless the defendant's negligence specifically and foreseeably increased the risk of that crime (e.g., leaving keys in a vehicle parked in a high-theft area, or where there's a history of theft). On these facts (quiet rural area, no history), the theft and reckless joyriding are unforeseeable. (A) confuses cause in fact with proximate cause. (B) overstates negligence per se. (D) is a duty argument, not the strongest one here."
+  },
+  {
+    subject: "torts",
+    topic: "Negligence · Proximate Cause · Eggshell-Skull Rule",
+    fact: "A defendant negligently bumps the plaintiff with a shopping cart in a grocery store, a contact that would cause an ordinary person at most a small bruise. Unknown to the defendant, the plaintiff has a rare blood disorder. The minor contact triggers severe internal bleeding requiring hospitalization and resulting in $200,000 in medical expenses.",
+    call: "What is the extent of the defendant's liability for damages?",
+    choices: [
+      "Limited to the damages a person of ordinary health would have suffered.",
+      "Limited to the damages a reasonable defendant could have foreseen.",
+      "The full $200,000, because the defendant takes the plaintiff as he finds her.",
+      "Zero, because the extent of harm was entirely unforeseeable."
+    ],
+    correct: 2,
+    explanation: "Under the <strong>eggshell-skull (or thin-skull) plaintiff rule</strong>, once the defendant's negligence proximately causes some foreseeable injury, the defendant is liable for the full extent of harm — even if the severity is dramatically greater than would have been expected because of the plaintiff's pre-existing condition. The defendant 'takes the plaintiff as he finds her.' (A) and (B) reject this rule. (D) is wrong because some injury (a bruise) was foreseeable; only the <em>extent</em> was unforeseeable, which does not defeat liability."
+  },
+  {
+    subject: "torts",
+    topic: "Negligence · Damages · Pure Economic Loss",
+    fact: "A contractor negligently severs an underground power line while digging on a public street. The outage causes a nearby factory to shut down for two days, resulting in $300,000 in lost profits and idle-worker payroll costs. The factory's equipment was not physically damaged, and no employee was injured. The factory sues the contractor for negligence.",
+    call: "What is the most likely result?",
+    choices: [
+      "The factory recovers the full $300,000.",
+      "The factory recovers nothing, because pure economic loss without personal injury or property damage is generally not recoverable in negligence.",
+      "The factory recovers only the lost profits but not the payroll costs.",
+      "The factory recovers under strict liability for an abnormally dangerous activity."
+    ],
+    correct: 1,
+    explanation: "The <strong>economic loss rule</strong> bars recovery in negligence for purely economic harm unaccompanied by personal injury or physical property damage. The factory's equipment was untouched and no one was hurt; the entire $300,000 is pure economic loss. (A) ignores the rule. (C) draws a distinction the doctrine does not recognize. (D) is wrong because routine excavation is not an abnormally dangerous activity."
+  },
+  {
+    subject: "torts",
+    topic: "Negligence · Damages · Collateral Source Rule",
+    fact: "A pedestrian is struck by a negligent driver and incurs $80,000 in medical bills. His health insurance pays $70,000 of the bills, and his employer provides paid sick leave that fully covers his lost wages of $10,000. At trial against the driver, the driver seeks to introduce evidence of the insurance and sick-leave payments to reduce the damages award.",
+    call: "How should the court rule on this evidence?",
+    choices: [
+      "Admit the evidence and reduce damages dollar-for-dollar by the collateral payments.",
+      "Admit the evidence but allow the jury to decide what reduction is fair.",
+      "Exclude the evidence under the collateral source rule.",
+      "Exclude the evidence only as to insurance payments, not sick leave."
+    ],
+    correct: 2,
+    explanation: "Under the traditional <strong>collateral source rule</strong>, payments to the plaintiff from sources independent of the tortfeasor (insurance, sick leave, gifts) do not reduce the plaintiff's recoverable damages, and evidence of such payments is generally inadmissible. The rationale is that the wrongdoer should not benefit from the plaintiff's foresight in obtaining insurance. (A) and (B) violate the rule. (D) draws a distinction the rule does not make."
+  },
+  {
+    subject: "torts",
+    topic: "Negligence · Damages · Duty to Mitigate",
+    fact: "A motorcyclist suffers a broken arm in an accident caused by a negligent driver. Her doctor strongly recommends a routine surgical procedure that would result in full recovery in six weeks at a cost of $5,000. The motorcyclist refuses the surgery for personal reasons unrelated to any medical concern. As a result, she suffers permanent limited mobility and an additional $50,000 in long-term care costs that the surgery would have avoided.",
+    call: "How will the motorcyclist's damages most likely be treated?",
+    choices: [
+      "Full recovery, because the collateral source rule prevents reduction.",
+      "Full recovery, because the defendant takes the plaintiff as she is.",
+      "Recovery reduced by the additional damages that reasonable mitigation would have avoided.",
+      "Complete bar to recovery because she failed to mitigate."
+    ],
+    correct: 2,
+    explanation: "A plaintiff has a <strong>duty to take reasonable steps to mitigate</strong> damages after the injury occurs. If she unreasonably refuses ordinary medical care, her recovery is reduced by the additional harm her unreasonable refusal caused — here, the extra $50,000. (A) confuses mitigation with the collateral source rule. (B) misapplies the eggshell-skull rule, which addresses the plaintiff's <em>pre-existing</em> condition, not her post-injury choices. (D) overstates the consequence; mitigation reduces, it does not bar."
+  },
+  {
+    subject: "torts",
+    topic: "Negligence · Defenses · Assumption of Risk",
+    fact: "A spectator buys a ticket to a professional baseball game and chooses a seat in an unscreened section along the third-base line, even though screened seats behind home plate are available. A printed warning on the back of the ticket states that foul balls may enter the stands. During the game, a foul ball strikes the spectator, injuring him. He sues the stadium for negligence.",
+    call: "What is the stadium's strongest defense?",
+    choices: [
+      "Contributory negligence, because the spectator should have ducked.",
+      "Assumption of risk, because the spectator knew of the risk of foul balls and voluntarily chose an unscreened seat.",
+      "Comparative negligence, requiring apportionment of fault.",
+      "Lack of duty, because stadiums owe no duty to spectators."
+    ],
+    correct: 1,
+    explanation: "<strong>Assumption of risk</strong> bars recovery when the plaintiff (1) knew of the risk and (2) voluntarily proceeded in the face of it. The risk of foul balls at a baseball game is universally known, the ticket warning made it explicit, and the spectator voluntarily chose an unscreened seat when screened ones were available. (A) is weaker because there is no evidence the spectator was inattentive. (C) might apply in some jurisdictions but is not as direct or complete as assumption of risk. (D) is wrong; stadiums do owe a duty of reasonable care to spectators."
+  },
+  {
+    subject: "torts",
+    topic: "Negligence · Defenses · Comparative Negligence Calculation",
+    fact: "A jury in a negligence action finds total damages of $200,000. It also finds the plaintiff 45% at fault and the defendant 55% at fault. The action is in a jurisdiction that has adopted a partial (modified) comparative negligence regime under which a plaintiff may not recover if her fault is greater than the defendant's.",
+    call: "How much will the plaintiff recover?",
+    choices: [
+      "$200,000.",
+      "$110,000.",
+      "$90,000.",
+      "Nothing."
+    ],
+    correct: 1,
+    explanation: "Under <strong>partial (modified) comparative negligence</strong>, the plaintiff recovers as long as her fault does not exceed the defendant's. Here, plaintiff is 45% at fault and defendant is 55% — plaintiff's fault is less, so she may recover. Damages are then reduced by her percentage of fault: $200,000 × (1 − 0.45) = $110,000. (A) ignores the reduction. (C) miscalculates by multiplying by plaintiff's share instead of defendant's. (D) would be correct only if plaintiff's fault exceeded (or in some states equaled) defendant's."
+  },
 ];
 
 // ============ APP LOGIC ============
