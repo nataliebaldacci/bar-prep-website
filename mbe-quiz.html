@@ -138,7 +138,7 @@
     color: var(--ink-soft); letter-spacing: 0.05em;
   }
   .count-options { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 24px; }
-  .count-option {
+  .count-option, .filter-option {
     flex: 1; min-width: 80px;
     background: var(--paper); border: 1px solid var(--rule);
     border-radius: 3px; padding: 12px 14px;
@@ -147,10 +147,33 @@
     font-size: 13px; font-weight: 500;
     text-align: center; color: var(--ink);
   }
-  .count-option:hover { border-color: var(--burgundy); }
-  .count-option.selected {
+  .count-option:hover, .filter-option:hover { border-color: var(--burgundy); }
+  .count-option.selected, .filter-option.selected {
     background: var(--burgundy); color: var(--paper);
     border-color: var(--burgundy);
+  }
+  .filter-options { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 16px; }
+  .progress-row {
+    display: flex; justify-content: space-between; align-items: center;
+    margin-bottom: 24px; gap: 12px; flex-wrap: wrap;
+    font-family: 'Inter', sans-serif; font-size: 12px;
+    color: var(--ink-soft); letter-spacing: 0.04em;
+  }
+  .reset-link {
+    background: none; border: none; padding: 0;
+    color: var(--burgundy); cursor: pointer;
+    font-family: 'Inter', sans-serif; font-size: 12px;
+    font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase;
+    text-decoration: underline; text-underline-offset: 3px;
+  }
+  .reset-link:hover { color: var(--burgundy-dark); }
+  .completed-badge {
+    display: inline-block;
+    font-family: 'Inter', sans-serif; font-size: 10px; font-weight: 600;
+    letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--forest); background: var(--correct-bg);
+    padding: 4px 10px; border-radius: 2px;
+    vertical-align: middle;
   }
   .start-btn {
     width: 100%; background: var(--burgundy); color: var(--paper);
@@ -192,13 +215,16 @@
     color: var(--gold); letter-spacing: 0.18em;
     text-transform: uppercase; margin-bottom: 16px;
   }
+  .topic-row {
+    display: flex; align-items: center; flex-wrap: wrap;
+    gap: 8px; margin-bottom: 20px;
+  }
   .question-topic {
     display: inline-block;
     font-family: 'Inter', sans-serif; font-size: 10px; font-weight: 500;
     color: var(--ink-soft); background: var(--paper-2);
     padding: 4px 10px; border-radius: 2px;
     letter-spacing: 0.1em; text-transform: uppercase;
-    margin-bottom: 20px;
   }
   .fact-pattern {
     font-family: 'Lora', Georgia, serif;
@@ -371,7 +397,7 @@
   <header>
     <div class="eyebrow">Bar Prep Practice — MBE</div>
     <h1>Multistate <em>Bar Exam</em></h1>
-    <div class="subtitle">Four subjects · 204 questions · Tap to select your set</div>
+    <div class="subtitle">Four subjects · <span id="headerQuestionCount"></span> questions · Tap to select your set</div>
   </header>
 
   <!-- START SCREEN -->
@@ -386,6 +412,18 @@
         <div class="count-option selected" data-count="25">25</div>
         <div class="count-option" data-count="50">50</div>
         <div class="count-option" data-count="all">All</div>
+      </div>
+
+      <div class="section-label">Show Questions</div>
+      <div class="filter-options" id="filterOptions">
+        <div class="filter-option selected" data-filter="both">Both</div>
+        <div class="filter-option" data-filter="incomplete">Incomplete only</div>
+        <div class="filter-option" data-filter="completed">Completed only</div>
+      </div>
+
+      <div class="progress-row">
+        <span id="progressSummary"></span>
+        <button class="reset-link" onclick="resetProgress()">Reset progress</button>
       </div>
 
       <button class="start-btn" id="startBtn" onclick="startQuiz()">Begin Quiz</button>
@@ -3787,6 +3825,58 @@ const questions = [
 
 let selectedSubjects = new Set(["torts", "civpro", "contracts", "property"]);
 let selectedCount = 25;
+let selectedFilter = "both";
+
+// === COMPLETION TRACKING ===
+const COMPLETED_KEY = "mbeQuizCompleted_v1";
+
+function questionId(q) {
+  const s = (q.subject || "") + "|" + (q.topic || "") + "|" + (q.fact || "");
+  let h = 0;
+  for (let i = 0; i < s.length; i++) {
+    h = ((h << 5) - h) + s.charCodeAt(i);
+    h |= 0;
+  }
+  return "q" + (h >>> 0).toString(36);
+}
+
+function loadCompleted() {
+  try {
+    const raw = localStorage.getItem(COMPLETED_KEY);
+    if (!raw) return new Set();
+    return new Set(JSON.parse(raw));
+  } catch (e) {
+    return new Set();
+  }
+}
+
+function saveCompleted(set) {
+  try {
+    localStorage.setItem(COMPLETED_KEY, JSON.stringify([...set]));
+  } catch (e) {}
+}
+
+let completedSet = loadCompleted();
+
+function markCompleted(q) {
+  completedSet.add(questionId(q));
+  saveCompleted(completedSet);
+}
+
+function resetProgress() {
+  if (!confirm("Reset all completion tracking? This clears the record of which questions you've answered so far.")) return;
+  completedSet = new Set();
+  saveCompleted(completedSet);
+  renderSubjectGrid();
+  renderProgressSummary();
+}
+
+function renderProgressSummary() {
+  const total = questions.length;
+  const done = questions.filter(q => completedSet.has(questionId(q))).length;
+  const el = document.getElementById("progressSummary");
+  if (el) el.textContent = `${done} / ${total} questions completed`;
+}
 let currentQuestions = [];
 let currentQ = 0;
 let score = 0;
@@ -3797,13 +3887,15 @@ function renderSubjectGrid() {
   const grid = document.getElementById('subjectGrid');
   grid.innerHTML = '';
   Object.entries(SUBJECTS).forEach(([key, info]) => {
-    const count = questions.filter(q => q.subject === key).length;
+    const subjectQs = questions.filter(q => q.subject === key);
+    const total = subjectQs.length;
+    const done = subjectQs.filter(q => completedSet.has(questionId(q))).length;
     const div = document.createElement('div');
     div.className = 'subject-option' + (selectedSubjects.has(key) ? ' selected' : '');
     div.innerHTML = `
       <div class="subject-checkbox"></div>
       <div class="subject-name">${info.name}</div>
-      <div class="subject-count">${count} questions</div>
+      <div class="subject-count">${done} / ${total} done</div>
     `;
     div.onclick = () => toggleSubject(key, div);
     grid.appendChild(div);
@@ -3830,6 +3922,14 @@ document.querySelectorAll('.count-option').forEach(opt => {
   };
 });
 
+document.querySelectorAll('.filter-option').forEach(opt => {
+  opt.onclick = () => {
+    document.querySelectorAll('.filter-option').forEach(o => o.classList.remove('selected'));
+    opt.classList.add('selected');
+    selectedFilter = opt.dataset.filter;
+  };
+});
+
 function shuffle(arr) {
   const a = arr.slice();
   for (let i = a.length - 1; i > 0; i--) {
@@ -3840,7 +3940,21 @@ function shuffle(arr) {
 }
 
 function startQuiz() {
-  const pool = questions.filter(q => selectedSubjects.has(q.subject));
+  let pool = questions.filter(q => selectedSubjects.has(q.subject));
+  if (selectedFilter === 'incomplete') {
+    pool = pool.filter(q => !completedSet.has(questionId(q)));
+  } else if (selectedFilter === 'completed') {
+    pool = pool.filter(q => completedSet.has(questionId(q)));
+  }
+  if (pool.length === 0) {
+    const reason = selectedFilter === 'incomplete'
+      ? "You've already completed every question in the selected subject(s). Switch to 'Both' or 'Completed only' to keep practicing."
+      : selectedFilter === 'completed'
+        ? "No completed questions yet in the selected subject(s). Try 'Both' or 'Incomplete only' to start a fresh set."
+        : 'No questions in the selected subject(s).';
+    alert(reason);
+    return;
+  }
   const shuffled = shuffle(pool);
   const limit = selectedCount === 'all' ? shuffled.length : Math.min(selectedCount, shuffled.length);
   currentQuestions = shuffled.slice(0, limit);
@@ -3870,10 +3984,13 @@ function renderQuestion() {
     </button>
   `).join('');
 
+  const wasCompleted = completedSet.has(questionId(q));
+  const badge = wasCompleted ? '<span class="completed-badge">Previously completed</span>' : '';
+
   document.getElementById('quizArea').innerHTML = `
     <div class="card">
       <div class="question-num">Question ${currentQ + 1}</div>
-      <div class="question-topic">${q.topic}</div>
+      <div class="topic-row"><span class="question-topic">${q.topic}</span>${badge}</div>
       <div class="fact-pattern">${q.fact}</div>
       <div class="call">${q.call}</div>
       <div class="choices">${choicesHTML}</div>
@@ -3907,6 +4024,7 @@ function selectAnswer(index) {
     score++;
     subjectScores[q.subject].correct++;
   }
+  markCompleted(q);
   document.getElementById('explanation').classList.add('show');
   document.getElementById('nextBtn').classList.add('show');
 }
@@ -3967,10 +4085,14 @@ function restart() {
   document.getElementById('progressWrap').style.display = 'none';
   document.getElementById('resultsArea').classList.remove('show');
   document.getElementById('startScreen').classList.remove('hidden');
+  renderSubjectGrid();
+  renderProgressSummary();
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
+document.getElementById('headerQuestionCount').textContent = questions.length;
 renderSubjectGrid();
+renderProgressSummary();
 </script>
 </body>
 </html>
