@@ -456,7 +456,8 @@ const SUBJECTS = {
   civpro: { name: "Civil Procedure", color: "forest" },
   contracts: { name: "Contracts", color: "gold" },
   property: { name: "Real Property", color: "burgundy" },
-  criminal: { name: "Criminal Law", color: "burgundy" }
+  criminal: { name: "Criminal Law", color: "burgundy" },
+  crimpro: { name: "Criminal Procedure", color: "forest" }
 };
 
 const questions = [
@@ -4100,11 +4101,403 @@ const questions = [
     correct: 3,
     explanation: "<strong>Factual impossibility</strong> — the circumstance that the crime could not have been completed because of a fact the defendant did not know — is <em>not</em> a defense to attempt or any other inchoate crime. As long as the defendant had the specific intent to commit a crime and performed an overt act beyond mere preparation, he is guilty of attempt. (A) and (B) misstate the rule. (C) reaches the right result for the wrong reason — the doctrinal issue is impossibility, not proximity."
   },
+  {
+    subject: "crimpro",
+    topic: "Fourth Amendment · Government Action",
+    fact: "A private security guard at a department store, acting on her own initiative and without any direction from law enforcement, secretly searches the bag of a shopper she suspects of shoplifting. She finds stolen merchandise inside and turns the merchandise over to the police. The shopper is charged with theft and moves to suppress the merchandise as the fruit of an unconstitutional search.",
+    call: "How should the court rule on the motion to suppress?",
+    choices: [
+      "Deny it, because the Fourth Amendment restricts government conduct, not searches conducted by private actors acting on their own.",
+      "Grant it, because any warrantless search violates the Fourth Amendment regardless of who performed it.",
+      "Grant it, because the security guard was performing a quasi-public function.",
+      "Deny it, but only if the police had independent probable cause to arrest the shopper."
+    ],
+    correct: 0,
+    explanation: "The Fourth Amendment applies only to <strong>government action</strong> — conduct by public officials or those acting on their behalf or under their direction. A private actor pursuing her own purposes, without government instigation or participation, is not bound by the Fourth Amendment, and evidence she obtains is generally admissible. (B) overstates the Fourth Amendment's reach; it does not regulate private actors. (C) misapplies the public-function doctrine, which is reserved for narrow categories of private conduct closely entwined with government. (D) is irrelevant — police probable cause has no bearing on the legality of a private search."
+  },
+  {
+    subject: "crimpro",
+    topic: "Selective Incorporation · State Application",
+    fact: "A state legislature passes a statute authorizing police to search any person's home without a warrant if officers have a \"reasonable hunch\" that contraband is inside. A homeowner whose house is searched under the statute moves to suppress on Fourth Amendment grounds. The state argues that the Fourth Amendment binds only the federal government and not the states.",
+    call: "How should the court rule?",
+    choices: [
+      "The state's argument is correct; by its terms the Fourth Amendment binds only federal officers.",
+      "The state's argument fails, because the Fourth Amendment is binding on the states through the Fourteenth Amendment's Due Process Clause under the doctrine of selective incorporation.",
+      "The state's argument is correct, but only because the state could not pass such a statute under its own constitution.",
+      "The state's argument fails, but only if the homeowner is a federal employee."
+    ],
+    correct: 1,
+    explanation: "Under the doctrine of <strong>selective incorporation</strong>, the Fourteenth Amendment's Due Process Clause makes most fundamental Bill of Rights protections — including the Fourth Amendment's protection against unreasonable searches and seizures — binding on the states. A state statute authorizing warrantless home searches on less than probable cause is unconstitutional regardless of whether state or federal officers carry it out. (A) misstates the modern doctrine. (C) may be partially true but does not explain why the federal Fourth Amendment applies. (D) is irrelevant — Fourth Amendment protection runs to everyone within state jurisdiction."
+  },
+  {
+    subject: "crimpro",
+    topic: "Exclusionary Rule · Purpose and Effect",
+    fact: "Police officers, without a warrant and without probable cause, break into a home and seize ledger books showing drug trafficking. The defendant moves to suppress the ledgers at his criminal trial.",
+    call: "What is the primary remedy and rationale of the exclusionary rule?",
+    choices: [
+      "The officers face criminal prosecution for the violation; the evidence is admitted.",
+      "The defendant receives money damages from the police department; the evidence is admitted.",
+      "The evidence is suppressed in the defendant's criminal trial, in order to deter future police misconduct.",
+      "The state legislature must pass a corrective statute before any evidence can be excluded."
+    ],
+    correct: 2,
+    explanation: "The <strong>exclusionary rule</strong> bars the prosecution from using, in its case-in-chief, evidence obtained in violation of the defendant's constitutional rights. The Supreme Court's stated rationale is <em>deterrence</em>: by stripping the government of the benefit of illegally seized evidence, the rule discourages future violations. (A) and (B) describe collateral remedies that may also exist but do not replace exclusion. (D) is wrong — exclusion is judicially enforced and does not depend on legislative action."
+  },
+  {
+    subject: "crimpro",
+    topic: "Fourth Amendment · Seizure of the Person",
+    fact: "A police officer approaches a man standing on a public sidewalk and asks if he has a moment to answer some questions about a recent incident. The officer does not display a weapon, raise her voice, block the man's path, or do anything else suggesting he is not free to leave. The man stops and answers questions. He later argues he was unlawfully seized when the officer first approached him.",
+    call: "Was the man seized within the meaning of the Fourth Amendment?",
+    choices: [
+      "Yes, because every encounter initiated by a police officer is a Fourth Amendment seizure.",
+      "Yes, because the man stopped and answered when asked.",
+      "No, because the man was not placed in handcuffs.",
+      "No, because under the totality of the circumstances a reasonable person would have felt free to decline the officer's request and terminate the encounter."
+    ],
+    correct: 3,
+    explanation: "A Fourth Amendment <strong>seizure of the person</strong> occurs only when, under the <em>totality of the circumstances</em>, a reasonable person would not feel free to decline the officer's request or terminate the encounter — or when there is an application of physical force or submission to a show of authority. Mere consensual questioning, without any coercive display, is not a seizure. (A) is wrong; routine police-citizen encounters are not seizures absent coercion. (B) confuses cooperation with submission to a show of authority. (C) sets the bar much higher than the law requires — handcuffs are not necessary to establish a seizure."
+  },
+  {
+    subject: "crimpro",
+    topic: "Fourth Amendment · Consensual Encounter vs Detention",
+    fact: "An officer on patrol gets a notification of a recent assault in the area. He sees a group of young adults walking down the sidewalk and has a hunch that they might know something about it. He pulls his patrol car alongside, gets out, and begins asking them several questions. He does not draw his weapon, raise his voice, block their path, or say anything suggesting they are not free to walk away. They answer and he eventually lets them go.",
+    call: "Did the officer's conduct constitute a Fourth Amendment seizure requiring reasonable suspicion?",
+    choices: [
+      "No, because the officer's conduct amounted to consensual questioning, not a detention; no seizure occurred.",
+      "Yes, because the officer had only an unparticularized hunch.",
+      "Yes, because driving up in a marked patrol car is inherently coercive.",
+      "Yes, because stopping to question a group of people is itself a show of force."
+    ],
+    correct: 0,
+    explanation: "A Fourth Amendment seizure requires either an application of physical force or a show of authority to which the person submits, such that a reasonable person would not feel free to terminate the encounter. <strong>Consensual questioning</strong> — without coercive displays, blocked paths, or commands — is not a seizure and requires no reasonable suspicion. The officer here did nothing to convert the encounter into a detention. (B) correctly identifies that a hunch would be insufficient for a detention, but no detention occurred. (C) and (D) overstate the inherent coercion of routine police questioning."
+  },
+  {
+    subject: "crimpro",
+    topic: "Fourth Amendment · Warrantless Felony Arrest",
+    fact: "A police officer is concealed behind a dumpster in an area known for drug trafficking. He watches a person openly sell what appears to be over 100 grams of marijuana to another person on the corner. Under state law, the sale of more than 50 grams of marijuana is a felony. The officer immediately sprints out and arrests the seller in the street, without a warrant.",
+    call: "Was the warrantless arrest constitutional?",
+    choices: [
+      "No, because every felony arrest requires a warrant.",
+      "Yes, because an officer may arrest a suspect in a public place without a warrant when he has probable cause to believe the suspect has committed a felony.",
+      "No, because the officer should first have obtained the buyer's testimony to corroborate his observation.",
+      "Yes, but only because the felony was completed in his presence — felony arrests, like misdemeanor arrests, require in-presence observation."
+    ],
+    correct: 1,
+    explanation: "Under the Fourth Amendment, a police officer may make a <strong>warrantless arrest in a public place</strong> if he has <strong>probable cause</strong> to believe the suspect has committed a felony. The officer's direct observation of the drug sale gave him ample probable cause. (A) is wrong — warrants are required for felony arrests in the home (absent exigency), not in public. (C) invents a corroboration requirement the law does not impose. (D) confuses felony arrest with misdemeanor arrest; only the latter requires in-presence observation."
+  },
+  {
+    subject: "crimpro",
+    topic: "Fourth Amendment · Warrantless Misdemeanor Arrest",
+    fact: "A police officer on her lunch break is shopping in a convenience store when she sees the clerk pocket cash from the register — a misdemeanor under state law. She immediately arrests the clerk without a warrant.",
+    call: "Was the warrantless misdemeanor arrest lawful?",
+    choices: [
+      "No, because all misdemeanor arrests require a warrant.",
+      "No, because the officer was off duty at the time.",
+      "Yes, because the misdemeanor was committed in the officer's presence.",
+      "Yes, because misdemeanor arrests require no specific legal justification."
+    ],
+    correct: 2,
+    explanation: "A warrantless arrest for a <strong>misdemeanor</strong> is generally permitted only when the offense is committed <strong>in the officer's presence</strong>. The officer's direct observation of the theft satisfies that requirement. (A) overstates the warrant requirement for misdemeanors. (B) is wrong — off-duty officers may still make lawful arrests. (D) wildly understates the legal standard."
+  },
+  {
+    subject: "crimpro",
+    topic: "Fourth Amendment · Investigatory Detention (Terry)",
+    fact: "A police officer sees a man walking briskly down a public sidewalk at midnight. The man is doing nothing overtly suspicious, but the officer has a vague feeling that he is \"up to something.\" The officer pulls his cruiser in front of the man, blocks the sidewalk, and commands him to stop and answer questions.",
+    call: "Was the officer's conduct lawful under the Fourth Amendment?",
+    choices: [
+      "Yes, because police may stop pedestrians for questioning whenever they choose.",
+      "Yes, because the officer's experience entitles him to investigative leeway.",
+      "No, because every stop requires a warrant.",
+      "No, because an investigatory detention requires articulable reasonable suspicion of criminal activity, and a vague hunch is not enough."
+    ],
+    correct: 3,
+    explanation: "An <strong>investigatory (Terry) detention</strong> is a Fourth Amendment seizure and requires <strong>reasonable suspicion</strong> based on <em>articulable facts</em> — not a mere unparticularized hunch. Blocking a pedestrian's path and commanding him to stop converts a consensual encounter into a detention, so absent reasonable suspicion the stop is unconstitutional. (A) and (B) ignore the constitutional standard. (C) overstates the warrant requirement — investigatory detentions do not require a warrant, but they do require reasonable suspicion."
+  },
+  {
+    subject: "crimpro",
+    topic: "Fourth Amendment · Reasonable Expectation of Privacy",
+    fact: "A department store experiences increasing shoplifting losses. At the store's request, police conceal a female detective at a vantage point above the women's fitting rooms, where she can see customers undressing and trying on clothes. The detective sees a woman stuff a dress into her purse, signals to other officers, and the woman is arrested as she leaves; the dress is recovered from her purse. The defendant moves to suppress the dress and the detective's observations.",
+    call: "How should the court rule?",
+    choices: [
+      "Grant the motion, because a customer trying on clothes in a closed fitting room has a reasonable expectation of privacy that the police violated.",
+      "Deny the motion, because the department store consented to the police's vantage point.",
+      "Deny the motion, because shoplifters have no privacy interest in stolen goods.",
+      "Grant the motion only if the detective was a private security guard rather than a police officer."
+    ],
+    correct: 0,
+    explanation: "A customer changing clothes in an enclosed fitting room has a <strong>reasonable expectation of privacy</strong>. By concealing an officer in a position to observe people undressing, the police conducted a Fourth Amendment search without a warrant or any applicable exception; any evidence obtained — including the observations of the theft — must be excluded. (B) is wrong; the store cannot consent to violate the customer's privacy. (C) overstates — a defendant retains privacy interests even while committing a crime. (D) inverts the issue: the problem is precisely that the detective <em>was</em> a state actor."
+  },
+  {
+    subject: "crimpro",
+    topic: "Fourth Amendment · No REP in Items Exposed to Public",
+    fact: "A homeowner places opaque garbage bags at the curb on collection day. Before the trash collector arrives, police officers walk over, open the bags, and discover drug paraphernalia. Using the paraphernalia as the basis for probable cause, they obtain a warrant to search the home. The homeowner moves to suppress.",
+    call: "How should the court rule?",
+    choices: [
+      "Grant the motion, because trash bags are inherently private regardless of where they are placed.",
+      "Deny the motion, because there is no reasonable expectation of privacy in garbage left out at the curb for collection.",
+      "Grant the motion, because the bags were opaque rather than transparent.",
+      "Deny the motion, but only after a separate warrant is obtained specifically for the trash."
+    ],
+    correct: 1,
+    explanation: "Items knowingly exposed to the public — including trash placed at the curb for collection — generally carry <strong>no reasonable expectation of privacy</strong> (<em>California v. Greenwood</em>). Once trash is set out for public pickup, the homeowner has effectively abandoned any privacy interest in its contents. (A) and (C) overstate the privacy interest. (D) inverts the rule: no warrant is required to search what is exposed to the public."
+  },
+  {
+    subject: "crimpro",
+    topic: "Fourth Amendment · Standing",
+    fact: "Police execute an unlawful warrantless search of the defendant's friend's apartment and find drugs that they trace back to the defendant. The defendant has never lived in the apartment, kept nothing there, was not present at the search, and did not have permission to come and go. At his trial, the defendant moves to suppress the drugs as the fruit of the unconstitutional search.",
+    call: "Does the defendant have standing to assert the Fourth Amendment claim?",
+    choices: [
+      "Yes, because the drugs ultimately incriminate him.",
+      "Yes, because Fourth Amendment violations may be raised by anyone harmed by the resulting prosecution.",
+      "No, because Fourth Amendment rights are personal and the defendant had no reasonable expectation of privacy in his friend's apartment.",
+      "No, because friends never have standing to challenge searches of each other's homes."
+    ],
+    correct: 2,
+    explanation: "Fourth Amendment rights are <strong>personal</strong>: a defendant has <em>standing</em> to challenge a search only if his own reasonable expectation of privacy was invaded. A defendant who was neither a resident nor an overnight guest in the searched premises generally lacks standing, even if he is the eventual target of the prosecution. (A) confuses the merits with standing. (B) overstates the doctrine. (D) over-narrows — friends who are overnight guests <em>do</em> have standing under <em>Minnesota v. Olson</em>."
+  },
+  {
+    subject: "crimpro",
+    topic: "Fourth Amendment · Valid Search Warrant",
+    fact: "A magistrate signs a warrant authorizing officers to search \"the suspect's home\" for \"items related to fraud.\" The supporting affidavit relies entirely on an anonymous, uncorroborated tip and does not specify the home's address. The defendant moves to suppress evidence seized under the warrant.",
+    call: "Which constitutional defects undermine the warrant?",
+    choices: [
+      "Only the lack of particularity in describing the place to be searched.",
+      "Only the lack of probable cause.",
+      "Only the lack of a neutral and detached magistrate.",
+      "Both the lack of probable cause and the lack of particularity in describing the place to be searched and the items to be seized."
+    ],
+    correct: 3,
+    explanation: "A valid search warrant requires three things: (1) issuance by a <strong>neutral and detached magistrate</strong>, (2) <strong>probable cause</strong> supported by oath or affirmation, and (3) <strong>particularity</strong> in describing the place to be searched and the items to be seized. An anonymous, uncorroborated tip generally does not establish probable cause, and \"the suspect's home\" without an address fails the particularity requirement. (A) and (B) each identify only one of the two defects. (C) misidentifies the third defect — the magistrate's neutrality is not at issue on these facts."
+  },
+  {
+    subject: "crimpro",
+    topic: "Fourth Amendment · Knock and Announce",
+    fact: "Police obtain a valid warrant to search a private residence for stolen electronics. Officers approach the front door, knock loudly, announce, \"Police — search warrant!\", wait approximately 20 seconds, hear no response, and then force open the door to execute the search.",
+    call: "Did the officers comply with the Fourth Amendment's knock-and-announce rule?",
+    choices: [
+      "Yes, because officers must knock, announce their authority and purpose, and wait a reasonable time before forcing entry — and 20 seconds with no response was reasonable here.",
+      "Yes, because knocking and announcing is required only for arrest warrants, not search warrants.",
+      "No, because officers must always obtain a separate \"no-knock\" warrant in advance.",
+      "No, because officers are required to wait at least five minutes before forcing entry."
+    ],
+    correct: 0,
+    explanation: "Officers executing a residential warrant must ordinarily <strong>knock, announce</strong> their authority and purpose, and wait a reasonable amount of time before forcing entry. There is no fixed waiting period, but courts have routinely upheld waits of 15 to 30 seconds where there is no response. The officers' conduct here complied. No-knock entry is permitted (without a separate warrant) when knocking would be dangerous, futile, or risk destruction of evidence. (B) misstates the rule — it applies to both arrest and search warrants. (C) and (D) overstate the requirements."
+  },
+  {
+    subject: "crimpro",
+    topic: "Exclusionary Rule · Good Faith Exception",
+    fact: "Officers obtain a search warrant from a magistrate based on what they reasonably believe is sufficient probable cause. They execute the warrant and seize evidence. On appeal, a reviewing court determines that the magistrate's probable cause determination was deficient, but it does not find that the officers misled the magistrate or that the warrant was facially invalid. The defendant moves to suppress.",
+    call: "Should the evidence be excluded?",
+    choices: [
+      "Yes, because any defect in the warrant requires exclusion of the evidence seized under it.",
+      "No, because officers who act in objectively reasonable reliance on a facially valid warrant are protected by the good-faith exception to the exclusionary rule.",
+      "Yes, but only if the defendant can show actual prejudice from the deficient warrant.",
+      "No, because the exclusionary rule applies only to warrantless searches."
+    ],
+    correct: 1,
+    explanation: "Under <em>United States v. Leon</em>, the <strong>good-faith exception</strong> to the exclusionary rule permits admission of evidence seized by officers acting in <em>objectively reasonable reliance</em> on a facially valid warrant later found to lack probable cause. The exception does <em>not</em> apply if (i) the officers misled the magistrate, (ii) the magistrate abandoned a neutral role, (iii) the affidavit was so lacking in probable cause that reliance was unreasonable, or (iv) the warrant was facially deficient. None of those apply here. (A) overstates the rule. (C) confuses Fourth Amendment exclusion with civil damages standards. (D) inverts the doctrine — the exclusionary rule reaches warrant-based searches too."
+  },
+  {
+    subject: "crimpro",
+    topic: "Exclusionary Rule · Fruit of the Poisonous Tree",
+    fact: "Police illegally enter a suspect's home without a warrant and find a hand-drawn map showing the location of a stash house. Officers then go to the stash house and, using only the map as their lead, discover drugs there. The defendant moves to suppress both the map and the drugs found at the stash house.",
+    call: "Which evidence, if any, must be excluded?",
+    choices: [
+      "Only the map; the drugs are too remote to be tainted.",
+      "Only the drugs; the map was simply a piece of paper of no independent value.",
+      "Both the map and the drugs, because evidence derived from an unconstitutional search is also subject to suppression as fruit of the poisonous tree.",
+      "Neither, because the drugs were ultimately discovered at a separate location not covered by the original illegality."
+    ],
+    correct: 2,
+    explanation: "Under the <strong>fruit of the poisonous tree</strong> doctrine, evidence <em>derivatively</em> obtained from a constitutional violation is itself subject to exclusion unless an exception applies (independent source, inevitable discovery, attenuation). Here, the map (primary fruit) and the drugs found because of the map (derivative fruit) are both tainted. (A) ignores the derivative-evidence rule. (B) understates the importance of suppressing the primary evidence. (D) misapplies the rule — the location of the secondary evidence does not insulate it from the taint of the original illegality."
+  },
+  {
+    subject: "crimpro",
+    topic: "Search Incident to Arrest · Scope (Chimel)",
+    fact: "Officers lawfully arrest a suspect inside his living room pursuant to a valid arrest warrant. After handcuffing him and placing him in a chair, they fan out and search the entire two-story house — including a locked attic on the upper floor — and find evidence of an unrelated crime in the attic. The defendant moves to suppress the attic evidence.",
+    call: "Should the attic evidence be suppressed?",
+    choices: [
+      "No, because police may always search the entire residence following any home arrest.",
+      "No, because the arrest warrant authorized the broader search.",
+      "Yes, but only the evidence found in locked rooms.",
+      "Yes, because a search incident to arrest is limited to the arrestee's person and the area within his immediate control (his \"wingspan\") at the time of arrest."
+    ],
+    correct: 3,
+    explanation: "A <strong>search incident to lawful arrest</strong> is limited to the arrestee's <em>person</em> and the <em>area within his immediate control</em> — the wingspan from which he could grab a weapon or destroy evidence (<em>Chimel v. California</em>). A two-story sweep is well outside the doctrine; police would need a separate warrant or a recognized exception (such as a limited protective sweep of immediately adjoining spaces). (A) and (B) overstate the scope. (C) draws a distinction the doctrine does not."
+  },
+  {
+    subject: "crimpro",
+    topic: "Search Incident to Arrest · Automobiles (Gant)",
+    fact: "An officer lawfully arrests a driver for an outstanding warrant on a routine traffic violation. The driver is handcuffed and placed in the back of the patrol car. The officer then searches the passenger compartment of the driver's vehicle and finds drugs in a backpack on the floor.",
+    call: "Was the warrantless vehicle search constitutional as a search incident to arrest?",
+    choices: [
+      "No, because under Arizona v. Gant, police may search a vehicle incident to arrest only if (1) the arrestee is unsecured and could access the vehicle, or (2) it is reasonable to believe the vehicle contains evidence of the offense of arrest.",
+      "Yes, because every arrest of a driver categorically permits a full search of the passenger compartment.",
+      "Yes, because the drugs were within the driver's wingspan before the arrest.",
+      "No, but only because the officer was not in uniform."
+    ],
+    correct: 0,
+    explanation: "Under <em>Arizona v. Gant</em>, the search-incident-to-arrest exception authorizes a vehicle search only when (1) the arrestee is <strong>unsecured</strong> and within reaching distance of the vehicle, or (2) it is reasonable to believe the vehicle contains <strong>evidence of the offense of arrest</strong>. A driver handcuffed in the back of a patrol car cannot reach the vehicle, and a traffic warrant gives no reason to expect evidence inside. (B) describes the pre-<em>Gant</em> bright-line rule, which is no longer the law. (C) confuses wingspan at the time of arrest with the current Gant standard. (D) is irrelevant — uniform status does not control."
+  },
+  {
+    subject: "crimpro",
+    topic: "Automobile Exception · Probable Cause Required",
+    fact: "A driver is stopped for speeding. Because of the speed and the driver's out-of-state license, the officer arrests her. After placing her in the patrol car, the officer searches the passenger area of the vehicle. Under the front seat, he finds a small package that he immediately recognizes as cocaine. There are no other facts suggesting drug involvement.",
+    call: "Was the warrantless search constitutional under the automobile exception?",
+    choices: [
+      "Yes, because all car searches incident to a lawful arrest are permitted.",
+      "No, because the automobile exception requires probable cause to believe the car contains seizable evidence, and the speeding stop did not generate any.",
+      "Yes, because cocaine is contraband and its discovery retroactively justifies the search.",
+      "No, but only because the search occurred after the arrest."
+    ],
+    correct: 1,
+    explanation: "The <strong>automobile exception</strong> permits a warrantless vehicle search only when officers have <strong>probable cause</strong> to believe the vehicle contains evidence of a crime. A speeding stop alone — without more — does not establish probable cause to search for drugs. (A) is wrong; under <em>Gant</em>, vehicle searches incident to arrest are now narrowly limited. (C) confuses the result of the search with its required predicate; the contraband nature of the cocaine cannot retroactively supply the missing probable cause. (D) misidentifies the problem — timing alone does not defeat the automobile exception when probable cause exists."
+  },
+  {
+    subject: "crimpro",
+    topic: "Automobile Exception · Scope and Passenger Containers",
+    fact: "Police lawfully stop a vehicle after seeing the driver toss what appears to be a bag of drugs out the window. Officers develop probable cause to believe additional drugs may be inside the vehicle. They search the entire vehicle, including a passenger's purse on the floor. The passenger objects, arguing the police needed separate probable cause as to her purse.",
+    call: "Was the search of the passenger's purse constitutional?",
+    choices: [
+      "No, because the passenger had not been arrested and could not be searched.",
+      "No, because the passenger had a separate reasonable expectation of privacy in her purse.",
+      "Yes, because under the automobile exception, police with probable cause may search any container in the vehicle that could conceal the evidence sought, regardless of who owns it.",
+      "Yes, but only if the passenger was herself a suspect in the underlying drug investigation."
+    ],
+    correct: 2,
+    explanation: "Under <em>Wyoming v. Houghton</em>, the <strong>automobile exception</strong> permits police with probable cause to believe a vehicle contains evidence of a crime to search any container in the vehicle that could conceal the object of the search — including containers belonging to passengers. (A) and (B) overstate the passenger's individual privacy interest in this context. (D) imposes a limitation the doctrine does not require."
+  },
+  {
+    subject: "crimpro",
+    topic: "Plain View · Requirements",
+    fact: "Officers lawfully enter an apartment with a valid warrant authorizing them to search for stolen jewelry. While searching a drawer where jewelry might be hidden, an officer notices on the open dresser top a clear baggie of white powder that, based on her training and experience, she immediately recognizes as cocaine. She seizes the cocaine without obtaining a separate warrant.",
+    call: "Was the seizure justified under the plain-view exception?",
+    choices: [
+      "No, because the warrant authorized only a jewelry search.",
+      "No, because the discovery was not inadvertent.",
+      "No, because no exigent circumstances existed.",
+      "Yes, because the officer was lawfully present, the cocaine was in plain view, and its incriminating nature was immediately apparent."
+    ],
+    correct: 3,
+    explanation: "The <strong>plain-view exception</strong> permits warrantless seizure when (1) the officer is <em>lawfully present</em> at the vantage point, (2) the item is <em>in plain view</em>, and (3) the item's incriminating nature is <em>immediately apparent</em> (i.e., probable cause without manipulation). The officer here satisfies all three. The Supreme Court has held that <em>inadvertent discovery is not required</em> (<em>Horton v. California</em>). (A) wrongly narrows the warrant — once lawfully inside, officers may seize plain-view contraband. (B) misstates current doctrine. (C) imports an exigency requirement plain view does not need."
+  },
+  {
+    subject: "crimpro",
+    topic: "Consent · Voluntariness After Arrest",
+    fact: "A defendant is lawfully arrested and placed in the back of a patrol car. The arresting officer then asks for permission to search the trunk of the defendant's vehicle. The defendant, somewhat resignedly, says, \"I guess there's nothing I can do to stop you. Go ahead.\" The officer searches the trunk and discovers evidence of a separate offense. The defendant later moves to suppress, arguing the consent was invalid.",
+    call: "Was the consent valid?",
+    choices: [
+      "Yes, because consent is voluntary if, under the totality of the circumstances, it was not the product of express or implied coercion — and being under arrest alone does not make consent involuntary.",
+      "No, because consent given by an arrested suspect is never voluntary as a matter of law.",
+      "No, because the officer was required to first inform the defendant of his right to refuse consent.",
+      "Yes, but only if the officer first read the defendant Miranda warnings."
+    ],
+    correct: 0,
+    explanation: "Consent to search is valid if it is <strong>voluntary</strong> under the totality of the circumstances. Arrest alone does not vitiate consent; the question is whether police used express or implied coercion. Under <em>Schneckloth v. Bustamonte</em>, the defendant need not be told of his right to refuse, and Miranda warnings are not a prerequisite to a valid search consent. The verbal consent here, though reluctant, was voluntary. (B) misstates the law. (C) is wrong post-<em>Schneckloth</em>. (D) confuses consent doctrine with the Miranda framework."
+  },
+  {
+    subject: "crimpro",
+    topic: "Consent · Third-Party Authority",
+    fact: "Police investigating a crime knock on the door of an apartment. The defendant's adult roommate answers and invites the officers in to search the common areas and the defendant's bedroom, in which the roommate keeps some of his clothes and uses a shared closet daily. The roommate signs a consent form. The defendant, who is not home, later argues he never consented and the search of his bedroom was unlawful.",
+    call: "Was the search of the bedroom valid?",
+    choices: [
+      "No, because only the defendant himself could consent to a search of his bedroom.",
+      "Yes, because a third party with actual or apparent authority over the area may consent, and shared daily use of the bedroom and closet supports that authority.",
+      "Yes, but only if the roommate is the named lessee of the apartment.",
+      "No, unless police separately obtained the defendant's consent or a warrant for the bedroom."
+    ],
+    correct: 1,
+    explanation: "A third party may consent to a search of areas over which she has <strong>actual or apparent authority</strong> — areas she uses in common with or has control over. A roommate who regularly uses a shared bedroom and closet has authority to consent to a search of that area. Even if the police were mistaken about actual authority, the search is valid if it was <em>objectively reasonable</em> for the officers to believe the third party had authority (<em>Illinois v. Rodriguez</em>). (A) ignores third-party consent. (C) over-narrows the doctrine. (D) ignores the apparent-authority rule."
+  },
+  {
+    subject: "crimpro",
+    topic: "Stop and Frisk · Scope of Frisk (Plain Feel)",
+    fact: "An officer makes a lawful Terry stop based on reasonable suspicion that a suspect may be armed. He conducts a pat-down of the suspect's outer clothing. During the pat-down, he feels a small, soft object in the suspect's pocket that does not feel like a weapon. The officer continues to squeeze and manipulate the object through the fabric until he concludes it is a baggie of drugs. He then removes the baggie.",
+    call: "Was the seizure of the baggie constitutional?",
+    choices: [
+      "Yes, because a lawful Terry stop authorizes a full search of the suspect's pockets.",
+      "Yes, because the suspect was already lawfully detained.",
+      "No, because a Terry frisk is limited to a pat-down for weapons; manipulating a soft object to identify it as drugs exceeded the permissible scope.",
+      "No, unless the officer first obtained the suspect's express consent to remove the object."
+    ],
+    correct: 2,
+    explanation: "A Terry <strong>frisk</strong> is limited to a pat-down of outer clothing for <em>weapons</em>. The \"plain feel\" doctrine permits seizure of contraband detected by touch — but only if its incriminating character is <em>immediately apparent</em> without further manipulation. Continuing to squeeze and manipulate a soft object to identify it as drugs is an unconstitutional search beyond the scope of Terry (<em>Minnesota v. Dickerson</em>). (A) and (B) overstate the frisk's scope. (D) confuses Terry with consent doctrine."
+  },
+  {
+    subject: "crimpro",
+    topic: "Stop and Frisk · Reasonable Suspicion Required",
+    fact: "An officer investigating a campus robbery randomly asks students whether they have any information. He sees a student walk out of a campus building with what he describes as a \"noticeable bulge\" under her jacket. Without any other particularized information linking the student to the robbery, the officer commands her to stop and conducts a pat-down of her outer clothing. He finds no weapon and lets her go.",
+    call: "Was the officer's stop and frisk lawful?",
+    choices: [
+      "Yes, because any noticeable bulge in a person's clothing always justifies a Terry frisk.",
+      "Yes, because the officer was investigating a serious violent crime.",
+      "No, but only because no weapon was actually found.",
+      "No, because the officer lacked articulable reasonable suspicion that the student was involved in criminal activity or was presently armed and dangerous."
+    ],
+    correct: 3,
+    explanation: "A Terry stop and frisk requires <strong>articulable reasonable suspicion</strong> — both of criminal activity (for the stop) and of present armed dangerousness (for the frisk). A \"noticeable bulge,\" with no particularized link to the campus robbery, is insufficient. (A) overstates; bulges have many innocent explanations. (B) ignores the requirement that suspicion be particularized to the person stopped. (C) confuses lawfulness of the stop with its outcome — whether a weapon is actually found does not retroactively validate or invalidate the stop."
+  },
+  {
+    subject: "crimpro",
+    topic: "Warrant Exceptions · Hot Pursuit",
+    fact: "Police are pursuing a felony robbery suspect on foot moments after the robbery. The suspect runs into what officers later learn is his home and slams the door behind him. Officers force entry without pausing to obtain a warrant. Inside they find the suspect hiding and arrest him, and they observe in plain view the gun used in the robbery.",
+    call: "Was the warrantless entry constitutional?",
+    choices: [
+      "Yes, because the hot-pursuit exception permits warrantless entry into a residence to pursue a fleeing felon.",
+      "No, because every home entry requires a warrant absent special circumstances not present here.",
+      "No, unless the suspect's identity was confirmed before officers crossed the threshold.",
+      "Yes, but only if officers obtain a warrant within 24 hours of entry."
+    ],
+    correct: 0,
+    explanation: "The <strong>hot-pursuit exception</strong> permits police pursuing a fleeing felon to follow him into a residence without first obtaining a warrant. The pursuit must be continuous and immediate, and the exception generally is not available for minor offenses (with rare emergency exceptions). (B) overstates the home-warrant requirement. (C) and (D) impose conditions the doctrine does not require."
+  },
+  {
+    subject: "crimpro",
+    topic: "Warrant Exceptions · Exigent Circumstances and Emergency Aid",
+    fact: "Officers in a neighborhood hear gunshots coming from a particular house. Witnesses tell them that they heard loud shouting from inside the house just before the shots. The officers enter without a warrant. Inside they find a woman shot and unconscious in the living room. One officer stays with her while the other sweeps the rest of the house looking for the shooter. In a bedroom during the sweep, the second officer sees in plain view baggies of what she immediately recognizes as cocaine and seizes them.",
+    call: "Which warrant exceptions best justify the entry and the seizure?",
+    choices: [
+      "Only the community-caretaker exception justifies the entry.",
+      "Both the emergency aid and the exigent circumstances exceptions justify the entry; the plain-view doctrine justifies the seizure of the cocaine.",
+      "Only the evanescent-evidence exception, because the cocaine might be destroyed.",
+      "None, because the officers should have obtained a telephonic warrant before entering."
+    ],
+    correct: 1,
+    explanation: "The <strong>emergency aid</strong> and <strong>exigent circumstances</strong> exceptions both permit warrantless entry into a home when officers reasonably believe someone inside is in imminent danger or that an emergency threatens life or safety. Both apply here. Once lawfully inside conducting a protective sweep for a shooter, the officer may seize contraband in <strong>plain view</strong>. (A) misuses the community-caretaker exception, which does not authorize warrantless home entry. (C) misapplies evanescent evidence, which addresses disappearing evidence, not personal safety. (D) overstates the warrant requirement in the face of a clear emergency."
+  },
+  {
+    subject: "crimpro",
+    topic: "Warrant Exceptions · Evanescent Evidence",
+    fact: "Police lawfully arrest a suspect for driving under the influence. They believe his blood alcohol level will fall measurably during the time it would take to obtain a warrant for a blood draw. Officers take the suspect to a hospital and have blood drawn over his objection, without a warrant. No other emergency or circumstance was shown.",
+    call: "Is the warrantless blood draw constitutional under the evanescent-evidence exception?",
+    choices: [
+      "Yes, in every DUI case, because alcohol always dissipates.",
+      "Yes, automatically, because obtaining a warrant always takes too long.",
+      "Not automatically; the natural dissipation of alcohol alone does not categorically justify a warrantless blood draw, and the totality of the circumstances must show a true exigency.",
+      "No, because blood draws categorically require warrants regardless of circumstances."
+    ],
+    correct: 2,
+    explanation: "Under <em>Missouri v. McNeely</em>, the natural dissipation of alcohol in the bloodstream does <em>not</em> automatically create an exigency justifying a warrantless blood draw — courts must instead apply the <strong>totality of the circumstances</strong> test for exigency. Routine DUI cases can usually be handled with a warrant, especially given modern telephonic warrant procedures. (A) and (B) overstate the exception. (D) overstates the warrant requirement; in genuine emergencies, evanescent-evidence exigency can apply."
+  },
+  {
+    subject: "crimpro",
+    topic: "Warrant Exceptions · Community Caretaker (No Home Entry)",
+    fact: "Police, performing community-caretaker functions, respond to a 911 call about a possibly disabled motorist near a residential block. While in the front yard of one of the homes investigating the call, the officers smell marijuana coming from the house. Without a warrant, they enter the home and find drugs inside.",
+    call: "Was the warrantless entry into the home constitutional under the community-caretaker exception?",
+    choices: [
+      "Yes, because the officers smelled contraband from a lawful vantage point.",
+      "Yes, because community-caretaker authority is broad and reaches incidental criminal investigation.",
+      "No, but only because the officers had no probable cause to believe contraband was inside.",
+      "No, because the community-caretaker exception does not authorize warrantless entry into a home."
+    ],
+    correct: 3,
+    explanation: "The <strong>community-caretaker exception</strong> permits certain warrantless actions when police are performing functions unrelated to criminal investigation (e.g., aiding stranded motorists, inventorying impounded vehicles), but the Supreme Court has held it does <em>not</em> extend to warrantless entry into a home (<em>Caniglia v. Strom</em>). (A) and (B) overstate the doctrine. (C) is partially correct that probable cause issues matter, but the fundamental defect is that the exception itself does not reach the home — even with probable cause, officers would need a warrant or a separate exception."
+  },
 ];
 
 // ============ APP LOGIC ============
 
-let selectedSubjects = new Set(["torts", "civpro", "contracts", "property", "criminal"]);
+let selectedSubjects = new Set(["torts", "civpro", "contracts", "property", "criminal", "crimpro"]);
 let selectedCount = 25;
 let selectedFilter = "both";
 
