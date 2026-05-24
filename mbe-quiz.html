@@ -4331,10 +4331,10 @@ const questions = [
     fact: "An officer lawfully arrests a driver for an outstanding warrant on a routine traffic violation. The driver is handcuffed and placed in the back of the patrol car. The officer then searches the passenger compartment of the driver's vehicle and finds drugs in a backpack on the floor.",
     call: "Was the warrantless vehicle search constitutional as a search incident to arrest?",
     choices: [
-      "No, because under Arizona v. Gant, police may search a vehicle incident to arrest only if (1) the arrestee is unsecured and could access the vehicle, or (2) it is reasonable to believe the vehicle contains evidence of the offense of arrest.",
-      "Yes, because every arrest of a driver categorically permits a full search of the passenger compartment.",
-      "Yes, because the drugs were within the driver's wingspan before the arrest.",
-      "No, but only because the officer was not in uniform."
+      "No, because the arrestee was secured and the offense yields no in-car evidence.",
+      "Yes, because any lawful driver arrest categorically permits a passenger-area search.",
+      "Yes, because the drugs were within the driver's wingspan before her arrest.",
+      "No, but only because the officer was not in uniform when she conducted the search."
     ],
     correct: 0,
     explanation: "Under <em>Arizona v. Gant</em>, the search-incident-to-arrest exception authorizes a vehicle search only when (1) the arrestee is <strong>unsecured</strong> and within reaching distance of the vehicle, or (2) it is reasonable to believe the vehicle contains <strong>evidence of the offense of arrest</strong>. A driver handcuffed in the back of a patrol car cannot reach the vehicle, and a traffic warrant gives no reason to expect evidence inside. (B) describes the pre-<em>Gant</em> bright-line rule, which is no longer the law. (C) confuses wingspan at the time of arrest with the current Gant standard. (D) is irrelevant — uniform status does not control."
@@ -4499,10 +4499,10 @@ const questions = [
     fact: "An anonymous caller tells police that a young man wearing a plaid shirt standing at a specific bus stop is carrying a gun. Officers go to the bus stop and see a young man in a plaid shirt — exactly as described — but observe nothing unusual about his conduct. The officers immediately stop and frisk him and find a gun. He moves to suppress.",
     call: "Should the court suppress the gun?",
     choices: [
-      "Yes, because an anonymous tip predicting only a person's appearance and location.",
-      "No, because the tip turned out to be accurate as to the description.",
-      "No, because the officer's frisk was for officer safety.",
-      "Yes, but only because the man was not actually a threat."
+      "Yes, because an uncorroborated anonymous tip cannot supply reasonable suspicion to frisk.",
+      "No, because the tip turned out to be accurate as to the description of the suspect.",
+      "No, because the frisk was conducted entirely for officer safety in the encounter.",
+      "Yes, but only because the man was not actually a threat to anyone present."
     ],
     correct: 0,
     explanation: "Under <em>Florida v. J.L.</em>, an <strong>anonymous tip</strong> describing a person's clothing and location — without predictive information or other corroborated indicia of reliability — does <em>not</em> establish reasonable suspicion to stop and frisk, even if the description turns out to be accurate. Accuracy of innocent details (location, clothing) does not corroborate the criminal allegation. (B) confuses hindsight accuracy with prospective suspicion. (C) misuses the frisk doctrine — the frisk depends on the stop being lawful in the first place. (D) is wrong; suppression turns on the lawfulness of the stop, not the outcome."
@@ -4611,10 +4611,10 @@ const questions = [
     fact: "Police arrive at a home to investigate a domestic dispute. The wife answers the door and immediately invites the officers in, saying they may search anywhere. The husband, standing right beside her in the doorway, says clearly, \"No, I don't consent to any search. Get out.\" Officers enter anyway over the husband's objection and find evidence in a desk inside the shared home office.",
     call: "Was the search constitutional?",
     choices: [
-      "No, because under Georgia v. Randolph, when two co-occupants are physically present and one expressly objects, the consent of the other cannot authorize a warrantless search over the objector's objection.",
-      "Yes, because the wife had equal authority to consent.",
-      "Yes, because the husband's objection was outweighed by the wife's consent.",
-      "No, but only because the desk was the husband's personal property."
+      "No, because under Randolph a present co-occupant's objection trumps the other's consent.",
+      "Yes, because the wife had equal authority to consent to a search of the home.",
+      "Yes, because the husband's objection was outweighed by the wife's clear consent.",
+      "No, but only because the desk was the husband's exclusive personal property."
     ],
     correct: 0,
     explanation: "Under <em>Georgia v. Randolph</em>, when two co-occupants are <strong>physically present</strong> at the entry and one expressly <strong>objects</strong>, the consent of the other is insufficient to authorize a warrantless search as to the objector. The objection must be contemporaneous — <em>Randolph</em> does not protect an absent co-occupant (<em>Fernandez v. California</em>). (B) and (C) state the pre-<em>Randolph</em> rule. (D) draws a personal-property distinction <em>Randolph</em> does not require."
@@ -4639,10 +4639,10 @@ const questions = [
     fact: "An officer makes a lawful Terry frisk for weapons. While patting down the suspect's pants pocket, the officer immediately feels — without manipulation — what is unmistakably a glass crack pipe with a distinctive shape and texture he has encountered dozens of times in his career. The officer removes the pipe, which still contains crack cocaine residue.",
     call: "Was the seizure constitutional?",
     choices: [
-      "No, because pipes are not weapons.",
-      "No, because the frisk was for safety, not investigation.",
-      "Yes, because under the plain-feel doctrine, an officer conducting a lawful Terry frisk may seize an item if its identity as contraband is immediately apparent through touch alone, without further manipulation.",
-      "Yes, but only after first obtaining a warrant."
+      "No, because pipes and similar objects are not weapons under any reading of Terry.",
+      "No, because Terry frisks are limited to officer safety and not investigation.",
+      "Yes, because the pipe's identity as contraband was immediately apparent by touch alone.",
+      "Yes, but only after the officer first obtained a warrant for the seizure."
     ],
     correct: 2,
     explanation: "Under <em>Minnesota v. Dickerson</em>, the <strong>plain-feel doctrine</strong> permits seizure of contraband detected during a lawful Terry frisk if its incriminating nature is <em>immediately apparent</em> from the pat-down alone, without further manipulation. The officer's immediate recognition of a distinctive contraband object satisfies that test. (A) and (B) overstate the limit on Terry frisks — once incriminating nature is plain by touch, seizure is permitted. (D) inverts the doctrine, which by definition allows warrantless seizure."
@@ -4779,10 +4779,10 @@ const questions = [
     fact: "An anonymous letter to police states that a named couple will drive to Florida on a specific date, the wife will fly down to drive back a car the husband has loaded with drugs, and the husband will fly back separately. Police corroborate the travel details by surveillance — the wife flies to Florida, meets her husband, and they begin driving back together as predicted. Officers obtain a search warrant for the car based on the tip plus the verified travel details and find drugs.",
     call: "Was the warrant supported by probable cause?",
     choices: [
-      "Yes, because under the totality-of-the-circumstances test, the anonymous tip's reliability was sufficiently established by detailed predictions about future conduct that police independently verified, supplying probable cause.",
-      "No, because anonymous tips can never establish probable cause.",
+      "Yes, because the tip's detailed predictions were independently corroborated by police.",
+      "No, because anonymous tips can never establish probable cause for any warrant.",
       "No, because the tip lacked specific information about the tipster's basis of knowledge.",
-      "Yes, but only because the drugs were ultimately found."
+      "Yes, but only because the search ultimately recovered drugs in the trunk."
     ],
     correct: 0,
     explanation: "Under <em>Illinois v. Gates</em>, probable cause from an anonymous tip is judged under the <strong>totality of the circumstances</strong>. A tip becomes reliable when police independently corroborate detailed predictive information that an ordinary person would not know — suggesting the tipster has inside knowledge. (B) overstates the limit on anonymous tips. (C) describes the rigid <em>Aguilar-Spinelli</em> two-pronged test that <em>Gates</em> abandoned. (D) confuses outcome with predicate."
@@ -4919,10 +4919,10 @@ const questions = [
     fact: "A defendant comes home unexpectedly and finds his wife in bed with another man. In a sudden rage, the defendant grabs a nearby lamp and beats both to death on the spot. He is charged with murder and argues for a reduction to voluntary manslaughter.",
     call: "What is the defendant's best chance to reduce the charge?",
     choices: [
-      "Insanity, because the discovery rendered him temporarily insane.",
-      "Self-defense, because he was protecting his marriage.",
-      "Voluntary manslaughter, because finding one's spouse in the act of adultery is the classic example of adequate provocation — provocation that would arouse sudden and intense passion in a reasonable person.",
-      "Involuntary manslaughter, because he did not premeditate the killing."
+      "Insanity, because the discovery rendered him temporarily insane at the moment.",
+      "Self-defense, because he was defending his marriage against unlawful invasion.",
+      "Voluntary manslaughter, because spouse-in-adultery is classic adequate provocation.",
+      "Involuntary manslaughter, because he did not premeditate or plan the killings."
     ],
     correct: 2,
     explanation: "<strong>Voluntary manslaughter</strong> is a killing that would otherwise be murder but for the existence of <strong>adequate provocation</strong>. Discovering one's spouse in the act of adultery is the classic example of provocation that would arouse sudden and intense passion in a reasonable person, causing loss of self-control. The defendant was actually provoked and acted before any cool-off period. (A) misuses insanity, which requires a mental disease or defect. (B) is wrong — defense of dignity is not self-defense. (D) misclassifies — the killing was intentional, not negligent."
@@ -4975,10 +4975,10 @@ const questions = [
     fact: "A defendant, angry at the victim, secretly puts a powerful laxative into the victim's coffee. The victim, unaware of the spike, drinks the coffee and becomes violently ill. The defendant is charged with battery.",
     call: "Can the defendant be convicted of battery?",
     choices: [
-      "No, because battery requires direct physical contact.",
-      "No, because the victim consumed the substance voluntarily.",
-      "Yes, because the unlawful application of force resulting in bodily injury does not require direct physical contact — causing the victim to consume something that injures him satisfies the element.",
-      "No, because the defendant never touched the victim."
+      "No, because battery requires direct physical contact between defendant and victim.",
+      "No, because the victim voluntarily consumed the substance offered to her.",
+      "Yes, because battery's force element reaches indirect contact like poisoning.",
+      "No, because the defendant never physically touched the victim with his body."
     ],
     correct: 2,
     explanation: "<strong>Battery</strong> is the unlawful application of force to another resulting in bodily injury or offensive touching. The force need <em>not</em> be applied directly — setting in motion a force that causes harm (poisoning food, releasing a dog, throwing an object) is sufficient. The defendant's surreptitious laxative satisfies indirect application. (A) and (D) misstate the rule. (B) ignores that consent was not informed — the victim did not knowingly consume a laxative."
@@ -5101,10 +5101,10 @@ const questions = [
     fact: "A defendant walks through the open front door of a closed commercial warehouse during the daytime, intending to steal a tool worth $50 (a misdemeanor under state law). He is charged under the state's modern burglary statute, which has eliminated the breaking, nighttime, dwelling, and felony-intent requirements of common-law burglary.",
     call: "Can the defendant be convicted of burglary under the modern statute?",
     choices: [
-      "No, because there was no breaking and no felony intent.",
-      "No, because warehouses are not dwellings.",
-      "No, because the entry was during the daytime.",
-      "Yes, because modern statutes typically eliminate the breaking, nighttime, dwelling, and felony-only requirements — burglary may now be committed by entering any structure with intent to commit a crime (often including misdemeanor theft)."
+      "No, because there was no breaking of any physical barrier on entry.",
+      "No, because warehouses are commercial structures and not dwellings.",
+      "No, because the entry occurred during the daytime, not at night.",
+      "Yes, because modern statutes reach daytime entries into commercial buildings for theft."
     ],
     correct: 3,
     explanation: "<strong>Modern burglary statutes</strong> have generally eliminated several common-law elements: (1) no breaking required; (2) no nighttime requirement; (3) structures need not be dwellings (commercial buildings and sometimes vehicles count); and (4) the intended crime often need not be a felony — intent to commit misdemeanor theft is frequently enough. (A), (B), and (C) each insist on a common-law element the modern statute abandons."
@@ -5129,10 +5129,10 @@ const questions = [
     fact: "A defendant approaches the victim from behind and snatches her purse out of her hand using a quick yank — too fast for her to react or resist. There is no threat and no other force, and no weapon is displayed. The defendant runs off. He is charged with robbery.",
     call: "Has the defendant committed robbery?",
     choices: [
-      "Yes, because any taking from the person is robbery.",
-      "No, because robbery requires force sufficient to overcome the victim's resistance (or a threat of imminent harm) — a quick snatch with no resistance is generally only larceny from the person, not robbery.",
-      "Yes, because the victim was present at the taking.",
-      "No, but only because the defendant did not display a weapon."
+      "Yes, because any taking of property from the victim's person constitutes robbery.",
+      "No, because the quick snatch did not involve force sufficient to overcome resistance.",
+      "Yes, because the victim was present and aware at the moment of the taking.",
+      "No, but only because the defendant did not display a weapon during the taking."
     ],
     correct: 1,
     explanation: "<strong>Robbery</strong> requires that the taking be accomplished by <strong>force sufficient to overcome the victim's resistance</strong> or by a threat of <strong>imminent</strong> death or physical injury. A purse-snatch executed so quickly that the victim has no chance to resist is generally <em>larceny from the person</em> (a form of larceny), not robbery — the force was not used to overcome resistance. (A) overstates robbery. (C) confuses presence with the force element. (D) misstates the rule — robbery does not require a weapon, only sufficient force or a qualifying threat."
@@ -5157,10 +5157,10 @@ const questions = [
     fact: "A defendant has a documented mental disorder. At the time of his crime, he understood that arson was illegal and wrong, but the mental disorder substantially impaired his ability to control his fire-setting compulsion. He raises an insanity defense in a jurisdiction following the MPC (ALI) test.",
     call: "Under the MPC test, is the defendant entitled to acquittal?",
     choices: [
-      "No, because he understood the wrongfulness of his conduct.",
-      "No, because the MPC test requires complete loss of capacity.",
-      "Yes, but only under the Durham product test.",
-      "Yes, because the MPC test acquits a defendant who, as a result of mental disease, lacked substantial capacity either to appreciate the criminality of his conduct or to conform his conduct to the requirements of law — the volitional prong is satisfied."
+      "No, because he understood that arson was illegal and wrong at the time.",
+      "No, because the MPC test requires complete loss of cognitive capacity.",
+      "Yes, but only under the Durham (product) test, not the MPC test.",
+      "Yes, because he lacked substantial capacity to conform his conduct to law."
     ],
     correct: 3,
     explanation: "The <strong>MPC (ALI) test</strong> combines a cognitive and volitional prong: the defendant is entitled to acquittal if, as a result of mental disease or defect, he lacked the <em>substantial capacity</em> either to (1) <em>appreciate the criminality of his conduct</em>, or (2) <em>conform his conduct to the requirements of law</em>. The defendant's documented inability to control his arson compulsion satisfies the volitional prong, even though he understood wrongfulness. (A) ignores the volitional prong. (B) overstates by demanding complete loss; <em>substantial</em> capacity is the test. (C) misidentifies the Durham test, which asks whether the crime was a product of mental disease."
@@ -5171,10 +5171,10 @@ const questions = [
     fact: "A defendant with a documented mental illness commits a violent act. He later admits he knew the act was wrong, but explains that he was unable to stop himself due to an overwhelming compulsion stemming from his illness. The jurisdiction follows the Irresistible Impulse Test.",
     call: "Is the defendant entitled to acquittal?",
     choices: [
-      "Yes, because under the Irresistible Impulse Test, a defendant who.",
-      "No, because he understood that his conduct was wrong.",
-      "No, because the test requires that the defendant be unable to distinguish right from wrong.",
-      "Yes, but only if his mental illness is recognized in the DSM."
+      "Yes, because the defendant could not control his actions due to mental illness.",
+      "No, because the defendant understood that his conduct was wrong at the time.",
+      "No, because the test requires that he be unable to distinguish right from wrong.",
+      "Yes, but only if his particular mental illness is recognized in the current DSM."
     ],
     correct: 0,
     explanation: "The <strong>Irresistible Impulse Test</strong> is a purely <em>volitional</em> test: the defendant is entitled to acquittal if, because of a mental illness, he was unable to control his actions or conform his conduct to the requirements of law. Cognitive understanding of wrongfulness is not required to be lost. (B) confuses this with the M'Naghten cognitive test. (C) misstates the test. (D) invents a diagnostic requirement."
@@ -5199,10 +5199,10 @@ const questions = [
     fact: "A defendant goes to a party where his drink is secretly spiked with a powerful hallucinogen by a stranger. Hours later, while severely impaired and unable to understand reality, he commits an offense that the jurisdiction defines as a strict-liability crime.",
     call: "Can he raise involuntary intoxication as a defense?",
     choices: [
-      "No, because intoxication is never a defense to strict-liability crimes.",
-      "No, because he chose to drink at the party.",
-      "Yes, because involuntary intoxication is treated like insanity and can be a defense to any crime — including strict-liability crimes — if it impairs the defendant so that he cannot understand the wrongfulness of his conduct or meet the jurisdiction's insanity test.",
-      "Yes, but only as to specific-intent crimes."
+      "No, because intoxication is never a defense to strict-liability crimes regardless of source.",
+      "No, because the defendant voluntarily attended a party where intoxicants were available.",
+      "Yes, because involuntary intoxication is a defense to any crime including strict liability.",
+      "Yes, but only as to specific-intent crimes where the intoxication negated intent."
     ],
     correct: 2,
     explanation: "<strong>Involuntary intoxication</strong> — caused by ingesting a substance without knowledge of its nature, under duress, or pursuant to medical advice while unaware of intoxicating effect — is treated like insanity. It can be a defense to <em>any</em> crime, including strict-liability and general-intent crimes, if it impairs the defendant such that he meets the jurisdiction's insanity test. (A) confuses voluntary and involuntary intoxication. (B) ignores that drinking a spiked drink without knowledge satisfies the \"without knowledge of its nature\" route to involuntary intoxication. (D) understates the scope."
@@ -5213,10 +5213,10 @@ const questions = [
     fact: "A defendant is walking down the street when a stranger suddenly steps in front of him, pulls out a gun, and points it at his chest. The defendant has played no role in provoking the encounter. The defendant draws his own lawfully carried firearm and shoots the stranger, killing him.",
     call: "What facts justify the defendant's use of deadly force in self-defense?",
     choices: [
-      "Only that the stranger was armed.",
-      "Only that the defendant was without fault.",
-      "Only that the defendant first attempted to retreat.",
-      "The defendant was without fault, was confronted with unlawful force."
+      "That the stranger was armed and angry — the rest is implied by the defense.",
+      "That the defendant was without fault and verbally warned the stranger first.",
+      "That the defendant first attempted to retreat before reaching for his weapon.",
+      "That he was without fault, confronted with unlawful force, and reasonably feared imminent harm."
     ],
     correct: 3,
     explanation: "A person may use <strong>deadly force in self-defense</strong> when he (1) is <em>without fault</em>, (2) is <em>confronted with unlawful force</em>, and (3) <em>reasonably believes</em> he is threatened with <em>imminent death or great bodily harm</em>. The majority rule imposes <em>no duty to retreat</em> before using deadly force when these conditions are met. All three elements are present here. (A), (B), and (C) each identify only one element — and (C) misstates the no-retreat majority rule."
@@ -5227,10 +5227,10 @@ const questions = [
     fact: "A defendant walks down the street and sees a man punching a woman repeatedly. He does not know either party. Reasonably believing the woman is being unlawfully attacked and that she would have the right to defend herself, the defendant intervenes and uses force to stop the attacker. It later turns out the attacker was an undercover police officer making a lawful arrest, but his clothing gave no indication of this.",
     call: "Can the defendant claim defense of others?",
     choices: [
-      "Yes, because under the majority rule a person may defend another if he reasonably believes the person assisted has a legal right to use force in their own defense — no special relationship is required, and a reasonable mistake about the situation does not defeat the defense.",
-      "No, because there was no special relationship between the defendant and the woman.",
-      "No, because the defendant turned out to be wrong about who was the aggressor.",
-      "Yes, but only if the defendant is a licensed bystander."
+      "Yes, because he reasonably believed the woman had the right to use force in self-defense.",
+      "No, because there was no special relationship between the defendant and the woman attacked.",
+      "No, because the defendant turned out to be wrong about who was the lawful aggressor.",
+      "Yes, but only because the defendant was licensed by the state as a private bystander."
     ],
     correct: 0,
     explanation: "Under the majority \"reasonable belief\" rule, a person may use force in <strong>defense of others</strong> if he reasonably believes the person assisted has the legal right to use force in self-defense. <strong>No special relationship</strong> between the defender and the defended is required, and a <em>reasonable mistake</em> about who is the aggressor does not defeat the defense. (B) describes a rejected minority \"alter ego\" rule. (C) ignores the reasonable-belief standard. (D) invents a credential the law does not require."
@@ -5241,10 +5241,10 @@ const questions = [
     fact: "A defendant is asleep in his home at night when he hears violent banging at his front door and a voice yelling that the intruders are coming inside to \"settle the score.\" He hears the door splinter open. As three armed intruders rush inside, he fires his shotgun and kills one of them.",
     call: "Was the defendant's use of deadly force justified under defense of dwelling?",
     choices: [
-      "No, because deadly force is never permitted to defend property.",
-      "Yes, because a person lawfully present in a home may use deadly force to prevent a violent entry when he reasonably believes deadly force is necessary to prevent either an attack on someone inside or the entry of someone who intends to commit a felony in the home.",
-      "Yes, but only if the defendant first attempted to call the police.",
-      "No, because the defendant had a duty to retreat through a back door."
+      "No, because deadly force may never be used to defend property or premises.",
+      "Yes, because deadly force may stop a violent entry threatening attack or felony inside.",
+      "Yes, but only if the defendant first attempted to call the police for help.",
+      "No, because the defendant had a duty to retreat through a back exit before firing."
     ],
     correct: 1,
     explanation: "<strong>Defense of dwelling</strong> is the recognized exception to the rule against using deadly force to defend property. A person lawfully present in a home may use <strong>deadly force</strong> to prevent a <em>violent entry</em> when he reasonably believes deadly force is necessary to prevent (1) an attack on someone in the house, or (2) the entry of someone who intends to commit a felony inside. The shotgun blast at three armed intruders rushing in plainly qualifies. (A) overstates the no-deadly-force rule and ignores the dwelling exception. (C) and (D) invent duties not imposed by the doctrine."
@@ -5255,10 +5255,10 @@ const questions = [
     fact: "A defendant takes an umbrella from a restaurant coat rack, sincerely believing it to be his own. The umbrella in fact belongs to another customer. The defendant's belief was based on a quick glance and was not particularly reasonable — there were three similar umbrellas and he did not check carefully. He is charged with larceny (a specific-intent crime requiring intent to permanently deprive).",
     call: "Can his mistake of fact serve as a defense?",
     choices: [
-      "No, because mistake of fact is never a defense to crime.",
-      "No, because his mistake was unreasonable.",
-      "Yes, because for specific-intent crimes the mistake need not be reasonable.",
-      "Yes, but only if his mistake was reasonable."
+      "No, because mistake of fact is never a defense to any criminal charge.",
+      "No, because his mistake about ownership was objectively unreasonable.",
+      "Yes, because an honest mistake negates the specific intent to permanently deprive.",
+      "Yes, but only if his mistake had been objectively reasonable in the circumstances."
     ],
     correct: 2,
     explanation: "<strong>Mistake of fact</strong> is a defense when it negates the mens rea required for the offense. For <strong>specific-intent</strong> crimes (like larceny), the mistake <em>need not be reasonable</em> — an honest mistake that negates the specific intent is enough. The defendant who honestly believes he is taking his own umbrella does not have the intent to permanently deprive <em>another</em> of property. (A) misstates the rule. (B) imposes a reasonableness requirement that applies only to general-intent crimes. (D) also imposes the wrong standard for a specific-intent crime."
@@ -5283,10 +5283,10 @@ const questions = [
     fact: "After being arrested for a serious crime, a defendant is questioned by police in an interview room. Officers do not threaten him, deprive him of food or sleep, or use any physical force. They calmly ask questions for two hours, during which the defendant confesses. He later moves to suppress, arguing the confession was involuntary because he was scared and sleep-deprived from his own anxiety over the arrest.",
     call: "How should the court rule on voluntariness under the 14th Amendment Due Process Clause?",
     choices: [
-      "Admit the confession, because Due Process voluntariness requires official compulsion.",
-      "Suppress the confession, because any post-arrest fear renders a confession involuntary.",
-      "Suppress the confession, because two hours of questioning is per se coercive.",
-      "Admit the confession, because Miranda warnings cure all voluntariness defects."
+      "Admit, because Due Process requires actual police coercion to find involuntariness.",
+      "Suppress, because any post-arrest fear renders a custodial confession involuntary.",
+      "Suppress, because two hours of stationhouse questioning is per se coercive.",
+      "Admit, because the Miranda warnings cured any voluntariness defects in the confession."
     ],
     correct: 0,
     explanation: "Under the <strong>Fourteenth Amendment Due Process Clause</strong>, a confession is involuntary only if it is the product of <em>official compulsion</em> — coercive police activity. Courts look at the totality of the circumstances, including the suspect's age, education, mental and physical condition, and the setting, duration, and manner of interrogation. A defendant's own subjective fear or anxiety, absent coercive police conduct, does not make a confession involuntary (<em>Colorado v. Connelly</em>). (B) and (C) overstate. (D) confuses Miranda compliance with voluntariness — they are separate inquiries."
@@ -5326,9 +5326,9 @@ const questions = [
     call: "Were the pre-charge statements obtained in violation of the Sixth Amendment right to counsel?",
     choices: [
       "Yes, because anyone questioned by police has a Sixth Amendment right to counsel.",
-      "Yes, because the questioning was about a future criminal charge.",
-      "No, but only because the questioning occurred at the defendant's home.",
-      "No, because the Sixth Amendment right to counsel attaches only after the initiation of adversary judicial proceedings — formal charge, indictment, arraignment, or preliminary hearing to determine probable cause to prosecute."
+      "Yes, because the questioning was specifically about a future criminal charge.",
+      "No, but only because the questioning occurred at the defendant's own home.",
+      "No, because the Sixth Amendment right attaches only after formal charges are filed."
     ],
     correct: 3,
     explanation: "The <strong>Sixth Amendment right to counsel</strong> attaches only when adversary judicial criminal proceedings have been initiated — by formal charge, preliminary hearing, indictment, information, or arraignment (<em>Massiah v. United States</em>; <em>Kirby v. Illinois</em>). Pre-charge investigative questioning does not implicate the Sixth Amendment (it may implicate Miranda/Fifth Amendment if custodial, but that is a separate inquiry). (A) overstates. (B) inverts the attachment rule. (C) draws an irrelevant distinction."
@@ -5395,10 +5395,10 @@ const questions = [
     fact: "After formal charges and appointment of counsel, police question a defendant without his counsel present. He makes statements. The prosecution does not introduce the statements in its case-in-chief. At trial, the defendant takes the stand and testifies in a way that directly contradicts the prior uncounseled statements. The prosecution seeks to use those statements on cross-examination for impeachment.",
     call: "May the statements be used for impeachment?",
     choices: [
-      "Yes, because statements obtained in violation of the Sixth Amendment right to counsel are inadmissible in the prosecution's case-in-chief but may be used to impeach the defendant if he testifies.",
-      "No, because all uncounseled statements are categorically barred.",
+      "Yes, because 6th Amendment-violation statements may impeach a testifying defendant.",
+      "No, because all uncounseled post-charge statements are categorically barred at trial.",
       "Yes, only if the defendant first asserted his innocence on direct examination.",
-      "No, because the Sixth Amendment violation taints all subsequent use."
+      "No, because the Sixth Amendment violation taints all subsequent prosecutorial use."
     ],
     correct: 0,
     explanation: "Statements obtained in violation of the Sixth Amendment right to counsel are inadmissible in the prosecution's <em>case-in-chief</em>, but they <strong>may be used to impeach</strong> the defendant if he chooses to testify (<em>Michigan v. Harvey</em>; <em>Kansas v. Ventris</em>). Case-in-chief exclusion provides deterrence while impeachment use preserves the trial's truth-seeking function. (B) and (D) overstate exclusion. (C) imposes a condition not in the doctrine."
@@ -5423,10 +5423,10 @@ const questions = [
     fact: "A suspect is in custody and about to be interrogated. An officer reads: \"You have the right to remain silent. You have the right to an attorney. Anything you say can be used against you in court.\" The officer does not say that an attorney will be provided if the suspect cannot afford one.",
     call: "Are the Miranda warnings adequate?",
     choices: [
-      "Yes, because the three warnings given are sufficient — the suspect can request indigent counsel later.",
-      "Yes, because Miranda only requires substantial compliance.",
-      "No, because Miranda requires four specific warnings: right to remain silent.",
-      "No, but only if the suspect was visibly indigent."
+      "Yes, because three warnings are sufficient — indigent counsel may be requested later.",
+      "Yes, because Miranda only demands substantial compliance with its warning script.",
+      "No, because Miranda requires all four warnings including the indigent-counsel right.",
+      "No, but only if the suspect appeared visibly indigent at the time of arrest."
     ],
     correct: 2,
     explanation: "<em>Miranda v. Arizona</em> requires four specific warnings: (1) the right to remain silent, (2) that anything the suspect says can be used against him in court, (3) the right to an attorney, and (4) that an attorney will be appointed if the suspect cannot afford one. Omitting any one defeats the warnings. (A) and (B) drop the bar below the rule. (D) makes the requirement depend on the suspect's apparent financial status, which the warnings cannot."
@@ -5437,10 +5437,10 @@ const questions = [
     fact: "Police leave a phone message asking a suspect in a hit-and-run case to come to the station to talk. He drives himself there voluntarily. He is told repeatedly he is free to leave at any time, sits in a normal interview room with the door unlocked, and is never handcuffed. After about an hour, he confesses. He later argues he was \"in custody\" for Miranda purposes.",
     call: "Was the suspect in custody requiring Miranda warnings?",
     choices: [
-      "Yes, because any police-station questioning is custodial.",
-      "Yes, because he subjectively felt he could not leave.",
-      "No, but only because he was not handcuffed.",
-      "No, because Miranda custody depends on whether, under the totality of the circumstances, a reasonable person in the suspect's position would feel he was not free to terminate the encounter — and the environment must present the same inherently coercive pressures as stationhouse interrogation."
+      "Yes, because any questioning conducted inside a police station is automatically custodial.",
+      "Yes, because the suspect subjectively believed he was not free to walk away.",
+      "No, because the suspect was never handcuffed during the questioning at the station.",
+      "No, because a reasonable person in his position would have felt free to leave."
     ],
     correct: 3,
     explanation: "<strong>Miranda custody</strong> turns on an <em>objective</em> test: whether a reasonable person in the suspect's position would feel he was not at liberty to terminate the encounter and leave, and whether the environment presents the inherently coercive pressures associated with stationhouse interrogation (<em>Oregon v. Mathiason</em>; <em>Howes v. Fields</em>; <em>J.D.B. v. North Carolina</em> [a minor's age is relevant]). A voluntary visit with unlocked doors and explicit assurances of freedom to leave is not custodial. (A) overstates. (B) imports a rejected subjective test. (C) cherry-picks a single factor."
@@ -5451,10 +5451,10 @@ const questions = [
     fact: "An officer arrests a suspect for DUI, handcuffs him, and places him in the back of her patrol car. She does not give Miranda warnings. As they drive to the station, the officer remarks out loud, \"You sure failed that sobriety test — you must have had at least ten drinks.\" From the back seat, the suspect blurts out, \"No way, I only had six.\"",
     call: "Was the suspect's statement obtained in violation of Miranda?",
     choices: [
-      "Yes, because interrogation under Miranda is any words or actions the police should know are reasonably likely to elicit an incriminating response — and the officer's deliberate comment qualifies.",
-      "No, because interrogation requires a direct question.",
-      "No, because the suspect was not actually questioned.",
-      "Yes, but only because the suspect was in handcuffs."
+      "Yes, because the officer's remark was likely to elicit an incriminating response.",
+      "No, because Miranda interrogation requires a direct question or formal command.",
+      "No, because the suspect was not actually asked any questions during the drive.",
+      "Yes, but only because the suspect was handcuffed in the back of the patrol car."
     ],
     correct: 0,
     explanation: "Under <em>Rhode Island v. Innis</em>, <strong>interrogation</strong> for Miranda purposes includes not only direct questions but any <em>words or actions on the part of the police that they should know are reasonably likely to elicit an incriminating response</em>. The officer's calculated remark about the failed sobriety test was the functional equivalent of a question and was reasonably likely to provoke the response it got. Combined with custody (handcuffed in the back of a patrol car), the encounter required Miranda warnings. (B) and (C) misstate the Innis standard. (D) isolates a single factor and ignores the interrogation analysis."
@@ -5479,10 +5479,10 @@ const questions = [
     fact: "A defendant is in jail awaiting trial on robbery charges. Police place an undercover officer posing as another inmate into the cell. Over the course of conversation, the undercover officer steers the discussion to an unrelated murder. The defendant, unaware he is speaking to an officer, brags about committing the murder. He is later charged with the murder and moves to suppress on Miranda grounds.",
     call: "How should the court rule?",
     choices: [
-      "Suppress, because the defendant was in custody and was questioned without warnings.",
-      "Suppress, because all jailhouse questioning of inmates requires Miranda.",
-      "Admit, because Miranda's coercion concern does not apply when the suspect does not know he is speaking to a police officer — so undercover questioning of a custodial suspect does not require Miranda warnings.",
-      "Admit, but only because the questioning concerned an unrelated offense."
+      "Suppress, because the defendant was in custody and questioned without warnings.",
+      "Suppress, because all jailhouse questioning of inmates requires Miranda warnings.",
+      "Admit, because Miranda's coercion concern fails when the suspect doesn't know it's police.",
+      "Admit, but only because the questioning concerned an unrelated, uncharged offense."
     ],
     correct: 2,
     explanation: "Under <em>Illinois v. Perkins</em>, <strong>Miranda warnings are not required</strong> when an undercover officer poses as a fellow inmate and questions a custodial suspect. The Court reasoned that Miranda's central concern — the coercive atmosphere of <em>known</em> police interrogation — is absent when the suspect believes he is talking to a peer. (A) and (B) overstate the Miranda trigger. (D) reaches the right outcome for the wrong reason; the unrelated nature of the offense does not control."
@@ -5493,10 +5493,10 @@ const questions = [
     fact: "A suspect in custody is read his Miranda rights and asked if he understands them. He says, \"Yes.\" He then speaks freely with police for an hour and eventually confesses. He never asked for an attorney, never said he wanted to remain silent, and never signed a written waiver form. He later argues that there was no valid Miranda waiver.",
     call: "Was there a valid Miranda waiver?",
     choices: [
-      "No, because Miranda requires a signed written waiver.",
-      "No, because a waiver must be expressly stated in words.",
-      "Yes, but only if the suspect first asked the officer questions.",
-      "Yes, because a waiver may be implied from the suspect's actions."
+      "No, because Miranda requires a signed written waiver before any questioning may proceed.",
+      "No, because a Miranda waiver must be expressly stated in clear words by the suspect.",
+      "Yes, but only because the suspect first asked the officer his own questions.",
+      "Yes, because waiver may be implied from understanding plus uncoerced speaking."
     ],
     correct: 3,
     explanation: "Under <em>Berghuis v. Thompkins</em>, a Miranda <strong>waiver</strong> can be <em>implied</em> from the suspect's conduct. The prosecution must show by a preponderance that the suspect knew his rights, understood them, and chose to speak. No signed or oral express waiver is required; uncoerced statements following acknowledgment of the warnings will generally suffice. (A) and (B) overstate the formality. (C) invents an irrelevant condition."
@@ -5550,7 +5550,7 @@ const questions = [
     call: "May police question him about the murder?",
     choices: [
       "Yes, because the Sixth Amendment right to counsel is offense-specific.",
-      "Yes, because invocation of either Fifth or Sixth Amendment counsel applies only to the charged offense.",
+      "Yes, because either right covers only the charged offense the suspect invoked.",
       "Yes, because Miranda applies only to questioning about charged offenses.",
       "No, because the Fifth Amendment right to counsel under Miranda is not offense-specific."
     ],
@@ -5563,10 +5563,10 @@ const questions = [
     fact: "Police conduct a custodial interrogation without giving Miranda warnings. The suspect's statements cannot be used in the prosecution's case-in-chief. The defendant takes the stand at trial and testifies to a story that directly contradicts his prior unwarned statements. The prosecution seeks to use those prior statements on cross-examination to impeach him.",
     call: "May the prosecution use the un-Mirandized statements for impeachment?",
     choices: [
-      "Yes, because statements obtained in violation of Miranda.",
-      "No, because all Miranda violations result in total exclusion at trial.",
-      "Yes, but only if the defendant first denied making the statements on direct examination.",
-      "No, because impeachment use chills the defendant's right to testify."
+      "Yes, because un-Mirandized non-coerced statements may be used to impeach a testifying D.",
+      "No, because all Miranda violations result in total exclusion of resulting statements.",
+      "Yes, only if the defendant first denied making the statements on direct examination.",
+      "No, because allowing impeachment use chills the defendant's right to take the stand."
     ],
     correct: 0,
     explanation: "Under <em>Harris v. New York</em>, statements obtained in violation of Miranda — so long as they were <em>not actually coerced</em> — are inadmissible in the prosecution's case-in-chief but may be used to <strong>impeach</strong> the defendant if he chooses to testify. Case-in-chief exclusion provides deterrence; impeachment use preserves trial truth-seeking. (B) overstates. (C) imposes a condition the rule does not. (D) raises a policy concern the Court has rejected. (Note: truly coerced statements — Due Process violations — cannot even be used for impeachment.)"
@@ -5577,10 +5577,10 @@ const questions = [
     fact: "Police chase an armed robbery suspect into a crowded supermarket. They catch him, handcuff him, and notice his shoulder holster is empty. Without giving Miranda warnings, an officer immediately asks, \"Where is the gun?\" The suspect nods toward an aisle and says, \"Over there.\" Officers recover the loaded gun from a shelf. The suspect moves to suppress both his statement and the gun.",
     call: "Are the statement and the gun admissible?",
     choices: [
-      "No, because no Miranda warnings were given before the suspect was questioned.",
-      "Yes, because under the public safety exception, Miranda warnings are not required when police questioning is prompted by an immediate concern for public safety — such as locating a loaded firearm abandoned in a public area.",
-      "Yes, only because the suspect volunteered where the gun was.",
-      "No, because the public safety exception applies only to terrorism investigations."
+      "No, because no Miranda warnings were given before any questioning of the suspect.",
+      "Yes, because public-safety questions about a hidden firearm fall outside Miranda.",
+      "Yes, only because the suspect spontaneously volunteered the gun's location.",
+      "No, because the public-safety exception applies only to terrorism investigations."
     ],
     correct: 1,
     explanation: "Under <em>New York v. Quarles</em>, the <strong>public safety exception</strong> to Miranda allows police to ask questions reasonably prompted by an objective concern for public safety — and to admit both the answers and any physical evidence obtained — without first giving Miranda warnings. Locating a loaded firearm discarded in a public space is the paradigmatic example. (A) ignores the exception. (C) misidentifies the basis for admissibility. (D) wrongly limits the exception."
@@ -5591,10 +5591,10 @@ const questions = [
     fact: "An officer arrests a suspect for shoplifting, places her in handcuffs in the back of the patrol car, and begins driving toward the station. The officer says nothing during the drive. Without any prompting, the suspect blurts out from the back seat, \"I only took the watch because I needed money for my kids.\" The officer never gave Miranda warnings.",
     call: "Is the statement admissible?",
     choices: [
-      "No, because the suspect was in custody when she spoke.",
-      "No, because Miranda applies anytime a person is in custody, regardless of whether they were questioned.",
-      "Yes, because Miranda warnings are required only before custodial interrogation.",
-      "Yes, but only if the suspect later signs a waiver form."
+      "No, because the suspect was in custody at the time she made the statement.",
+      "No, because Miranda applies anytime a person is in custody regardless of questioning.",
+      "Yes, because Miranda is only triggered by custodial interrogation, not spontaneity.",
+      "Yes, but only if the suspect later signs a Miranda waiver at the station."
     ],
     correct: 2,
     explanation: "Miranda warnings are triggered by <strong>custodial interrogation</strong> — <em>both</em> elements are required. A truly <strong>spontaneous, voluntary statement</strong> made by a custodial suspect without any police prompting, questioning, or functional-equivalent conduct is not the product of interrogation and is therefore admissible without warnings. (A) and (B) ignore the interrogation prong. (D) invents an unnecessary cure."
