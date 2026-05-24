@@ -4829,6 +4829,454 @@ const questions = [
     correct: 3,
     explanation: "Under <em>Steagald v. United States</em>, an arrest warrant alone authorizes entry only into the suspect's <em>own</em> home. To enter a <strong>third party's home</strong> to arrest the suspect, police must also obtain a <strong>search warrant</strong> for the third party's premises. The third-party homeowner's Fourth Amendment rights are not satisfied by an arrest warrant naming someone else. The sister has standing in her own home and can suppress evidence obtained through the unlawful entry. (A), (B), and (C) all overstate the reach of an arrest warrant. (B) also imports an unrelated criminal liability question that does not affect Fourth Amendment analysis."
   },
+  {
+    subject: "criminal",
+    topic: "Common Law Murder · Malice Aforethought",
+    fact: "A defendant gets into a bar fight. He swings a metal stool at the victim's head, intending to seriously injure (but not kill) him. The blow fractures the victim's skull and the victim dies in the hospital several hours later. The defendant testifies he meant only to hurt the victim badly. He is charged with common-law murder.",
+    call: "Can the defendant be convicted of common-law murder?",
+    choices: [
+      "Yes, because intent to inflict great bodily injury is one of the four mental states that satisfy malice aforethought for common-law murder.",
+      "No, because common-law murder requires a specific intent to kill.",
+      "No, because the death was unintentional.",
+      "Yes, but only under the felony-murder rule."
+    ],
+    correct: 0,
+    explanation: "Common-law murder requires <strong>malice aforethought</strong>, which can be established by any of four mental states: (1) <em>intent to kill</em>, (2) <em>intent to inflict great bodily injury</em>, (3) <em>reckless indifference to an unjustifiably high risk to human life</em> (depraved-heart murder), or (4) <em>intent to commit a felony</em> (felony murder). The defendant's intent to seriously injure the victim satisfies the second prong. (B) and (C) understate the doctrine — intent to kill is sufficient but not necessary. (D) misapplies felony murder, which requires an independent underlying felony, not present here."
+  },
+  {
+    subject: "criminal",
+    topic: "Common Law Murder · Depraved Heart",
+    fact: "A defendant fires a high-powered rifle into a crowded plaza in the middle of the day to celebrate a sports victory. He aims at no one in particular and tells himself the bullet \"probably won't hit anyone.\" The bullet strikes a pedestrian and kills her. The defendant is charged with common-law murder.",
+    call: "What basis best supports conviction for common-law murder?",
+    choices: [
+      "Felony murder, because firing a rifle is a felony.",
+      "Reckless indifference to an unjustifiably high risk to human life (depraved-heart murder) — the defendant exhibited \"abandoned and malignant heart\" by firing into a crowd.",
+      "Premeditation, because the defendant deliberately chose to fire.",
+      "Voluntary manslaughter, because there was no specific intent to kill."
+    ],
+    correct: 1,
+    explanation: "Firing a rifle into a crowd shows the kind of <strong>reckless indifference to an unjustifiably high risk to human life</strong> — sometimes called \"depraved heart\" or \"abandoned and malignant heart\" — that satisfies malice aforethought for common-law murder. (A) misapplies felony murder; firing a gun in public might violate firearm statutes but lacks the independent felonious purpose felony murder contemplates. (C) confuses premeditation (a first-degree element) with the underlying common-law mens rea. (D) understates the offense — manslaughter requires adequate provocation, which is absent here."
+  },
+  {
+    subject: "criminal",
+    topic: "Statutory Murder · First Degree · Premeditation",
+    fact: "A defendant has been planning for weeks to kill his business partner so he can take over the partnership. He buys a gun, scouts the partner's daily routine, lures him to a secluded location, and shoots him at close range. He is charged in a jurisdiction whose statute defines first-degree murder as \"any deliberate and premeditated killing\" or any killing committed in the perpetration of arson, robbery, burglary, or kidnapping.",
+    call: "Is the defendant guilty of first-degree murder?",
+    choices: [
+      "No, because depraved-heart murder is the maximum he can be convicted of.",
+      "No, because the murder did not occur in the commission of an enumerated felony.",
+      "Yes, because the prolonged planning establishes both deliberation and premeditation, satisfying the statutory definition of first-degree murder.",
+      "Yes, but only under the felony-murder branch of the statute."
+    ],
+    correct: 2,
+    explanation: "<strong>First-degree murder</strong> in most modern jurisdictions requires either (1) <em>deliberation and premeditation</em> or (2) a killing in the commission of an enumerated felony. Weeks of planning, weapon acquisition, and a calculated, lured execution show both deliberation (cool, reasoned reflection) and premeditation (formation of intent in advance). (A) ignores the planning. (B) ignores the deliberation/premeditation prong. (D) misapplies the felony-murder branch, which requires an enumerated underlying felony — not present here."
+  },
+  {
+    subject: "criminal",
+    topic: "Felony Murder · Accidental Death",
+    fact: "A defendant robs a convenience store at gunpoint. As he flees outside, he accidentally drops his loaded gun, which discharges and kills a bystander on the sidewalk. The defendant did not intend the bystander's death and the gun's discharge was completely unintentional. The jurisdiction's statute makes any killing committed in the perpetration of robbery first-degree felony murder.",
+    call: "Can the defendant be convicted of felony murder?",
+    choices: [
+      "No, because the killing was accidental and unintentional.",
+      "No, because the bystander was outside the store.",
+      "Yes, but only if the prosecution proves an actual intent to kill.",
+      "Yes, because malice is implied from the intent to commit the underlying felony, and accidental killings during the commission of an enumerated felony are felony murder."
+    ],
+    correct: 3,
+    explanation: "<strong>Felony murder</strong> imposes liability for any killing — even an accidental one — committed during the commission or attempted commission of a qualifying felony. Malice aforethought is <em>implied</em> from the intent to commit the underlying felony; no intent to kill is required. The bystander's location just outside the store is well within the temporal/spatial scope of the robbery. (A) and (C) misunderstand felony murder, which dispenses with intent-to-kill. (B) draws an arbitrary line not in the doctrine."
+  },
+  {
+    subject: "criminal",
+    topic: "Felony Murder · Merger / Independent Felony",
+    fact: "A defendant deliberately strikes the victim with intent to cause great bodily injury. The blow kills the victim. The prosecution charges the defendant with felony murder, arguing that the underlying felony is aggravated battery, which is a felony under state law.",
+    call: "Can the prosecution use aggravated battery as the predicate for felony murder?",
+    choices: [
+      "No, because the assault/battery that caused the killing merges with the homicide and cannot serve as the independent felony predicate for felony murder.",
+      "Yes, because aggravated battery is a felony in the jurisdiction.",
+      "Yes, because malice can be inferred from the intent to commit aggravated battery.",
+      "No, because felony murder applies only to enumerated felonies and battery is never enumerated."
+    ],
+    correct: 0,
+    explanation: "Under the <strong>merger rule</strong>, an underlying felony used as the predicate for felony murder must be <em>independent</em> of the killing itself. Assaults and batteries that directly cause the death generally <em>merge</em> with the homicide and cannot serve as the predicate felony — otherwise every intentional homicide would automatically be felony murder. The defendant might still be convicted of intent-to-cause-GBI murder, but not felony murder. (B) and (C) ignore the merger doctrine. (D) overstates — the merger problem is about the relationship to the homicide, not about the enumeration list."
+  },
+  {
+    subject: "criminal",
+    topic: "Statutory Murder · Second Degree · Default",
+    fact: "A defendant intentionally shoots and kills a romantic partner in a sudden rage after a heated argument. There was no planning, no enumerated felony in progress, and no adequate provocation that would reduce the killing to manslaughter (the rage came from a verbal argument). The jurisdiction defines first-degree murder as deliberate and premeditated killing or killing in the perpetration of arson, robbery, burglary, kidnapping, or rape, and second-degree murder as \"any other kind of murder.\"",
+    call: "What is the most serious offense the defendant can be charged with?",
+    choices: [
+      "First-degree murder, because all intentional killings are first-degree.",
+      "Second-degree murder, because the killing was intentional but neither premeditated nor in the commission of an enumerated felony.",
+      "Voluntary manslaughter, because the killing occurred during a heated argument.",
+      "Involuntary manslaughter, because the killing was unintended."
+    ],
+    correct: 1,
+    explanation: "<strong>Second-degree murder</strong> is the default category for intentional killings (and depraved-heart killings) that do not qualify as first-degree under the statute and lack the adequate provocation needed for voluntary manslaughter. An intentional killing without premeditation or an enumerated felony fits squarely. (A) ignores the premeditation requirement. (C) is wrong on the facts — a heated verbal argument is not adequate provocation; classic categories are serious battery, deadly threats, or finding a spouse in adultery, and \"words alone\" are insufficient. (D) misses that the killing was intentional."
+  },
+  {
+    subject: "criminal",
+    topic: "Voluntary Manslaughter · Adequate Provocation",
+    fact: "A defendant comes home unexpectedly and finds his wife in bed with another man. In a sudden rage, the defendant grabs a nearby lamp and beats both to death on the spot. He is charged with murder and argues for a reduction to voluntary manslaughter.",
+    call: "What is the defendant's best chance to reduce the charge?",
+    choices: [
+      "Insanity, because the discovery rendered him temporarily insane.",
+      "Self-defense, because he was protecting his marriage.",
+      "Voluntary manslaughter, because finding one's spouse in the act of adultery is the classic example of adequate provocation — provocation that would arouse sudden and intense passion in a reasonable person.",
+      "Involuntary manslaughter, because he did not premeditate the killing."
+    ],
+    correct: 2,
+    explanation: "<strong>Voluntary manslaughter</strong> is a killing that would otherwise be murder but for the existence of <strong>adequate provocation</strong>. Discovering one's spouse in the act of adultery is the classic example of provocation that would arouse sudden and intense passion in a reasonable person, causing loss of self-control. The defendant was actually provoked and acted before any cool-off period. (A) misuses insanity, which requires a mental disease or defect. (B) is wrong — defense of dignity is not self-defense. (D) misclassifies — the killing was intentional, not negligent."
+  },
+  {
+    subject: "criminal",
+    topic: "Voluntary Manslaughter · Words Alone",
+    fact: "After a verbal taunt — \"Your team is pathetic, and so are you\" — the defendant snaps and beats the taunter to death on the spot. He is charged with murder and argues the taunt was adequate provocation reducing the charge to voluntary manslaughter.",
+    call: "How should the court rule on the provocation argument?",
+    choices: [
+      "The argument succeeds, because the defendant was actually provoked.",
+      "The argument succeeds, but only if the words were racially or ethnically charged.",
+      "The argument fails, because the killing was intentional.",
+      "The argument fails, because words alone generally are not adequate provocation to reduce murder to voluntary manslaughter."
+    ],
+    correct: 3,
+    explanation: "At common law, <strong>words alone — no matter how insulting</strong> — generally do not constitute adequate provocation to reduce murder to voluntary manslaughter. Classic adequate provocation requires being threatened with deadly force, suffering serious battery, or finding a spouse in adultery. (A) misses the objective component; the defendant must show provocation that would arouse a reasonable person, not just himself. (B) invents an exception the doctrine does not recognize. (C) is true but does not answer the provocation question — voluntary manslaughter contemplates intentional killings."
+  },
+  {
+    subject: "criminal",
+    topic: "Voluntary Manslaughter · Cool-Off Period",
+    fact: "A defendant catches his wife in bed with her lover. He leaves the house, drives around alone for two hours stewing in his rage, then returns home and shoots both. He is charged with murder and argues for voluntary manslaughter based on adequate provocation.",
+    call: "Will the provocation defense reduce the murder charge?",
+    choices: [
+      "No, because the two-hour interval gave a reasonable person time to cool off — and the killing therefore was not committed in the heat of sudden passion required for voluntary manslaughter.",
+      "No, because finding a spouse in adultery is never adequate provocation.",
+      "Yes, because the defendant was still subjectively enraged when he pulled the trigger.",
+      "Yes, because adultery provocation has no time limit."
+    ],
+    correct: 0,
+    explanation: "Voluntary manslaughter requires that the killing occur <em>in the sudden heat of passion</em>, before a reasonable person would have had time to <strong>cool off</strong>. Two hours of stewing, driving around alone, and returning is more than enough cool-off time as a matter of law. (B) misstates the doctrine — adultery is the classic example of adequate provocation. (C) ignores the objective cool-off requirement. (D) is wrong; the cool-off rule applies to all provocation categories."
+  },
+  {
+    subject: "criminal",
+    topic: "Involuntary Manslaughter · Criminal Negligence",
+    fact: "A defendant is cleaning his hunting rifle in his living room. He fails to check whether the chamber is loaded. He casually waves the muzzle in the direction of a friend sitting across the room while joking around. The rifle discharges, killing the friend. The defendant did not subjectively realize there was a real risk of any harm.",
+    call: "What is the most likely homicide charge?",
+    choices: [
+      "Common-law murder under a depraved-heart theory.",
+      "Involuntary manslaughter, because the killing was committed with criminal negligence — a gross deviation from the standard of care of a reasonable person.",
+      "Voluntary manslaughter, because the friend's death provoked the defendant's grief.",
+      "No homicide liability at all, because the killing was unintentional."
+    ],
+    correct: 1,
+    explanation: "<strong>Involuntary manslaughter</strong> is a killing committed with <strong>criminal negligence</strong> (or recklessness under the MPC). Criminal negligence is a gross deviation from the standard of care of a reasonable person; failing to check whether a firearm is loaded before pointing it at a friend qualifies. (A) overstates — depraved-heart requires <em>conscious disregard</em> of the risk; the defendant here was simply unaware. (C) misuses provocation, which requires the victim or a third party to provoke the defendant <em>before</em> the killing. (D) ignores that unintentional killings can be criminally negligent homicide."
+  },
+  {
+    subject: "criminal",
+    topic: "Battery · Indirect Force",
+    fact: "A defendant, angry at the victim, secretly puts a powerful laxative into the victim's coffee. The victim, unaware of the spike, drinks the coffee and becomes violently ill. The defendant is charged with battery.",
+    call: "Can the defendant be convicted of battery?",
+    choices: [
+      "No, because battery requires direct physical contact.",
+      "No, because the victim consumed the substance voluntarily.",
+      "Yes, because the unlawful application of force resulting in bodily injury does not require direct physical contact — causing the victim to consume something that injures him satisfies the element.",
+      "No, because the defendant never touched the victim."
+    ],
+    correct: 2,
+    explanation: "<strong>Battery</strong> is the unlawful application of force to another resulting in bodily injury or offensive touching. The force need <em>not</em> be applied directly — setting in motion a force that causes harm (poisoning food, releasing a dog, throwing an object) is sufficient. The defendant's surreptitious laxative satisfies indirect application. (A) and (D) misstate the rule. (B) ignores that consent was not informed — the victim did not knowingly consume a laxative."
+  },
+  {
+    subject: "criminal",
+    topic: "Assault · Two Types",
+    fact: "A defendant, angry at the victim, raises his fist as if to strike but stops short of any contact. The victim sees the raised fist, believes he is about to be hit, and ducks. The defendant never makes physical contact. He is charged with assault.",
+    call: "Can the defendant be convicted of assault?",
+    choices: [
+      "No, because no physical contact occurred.",
+      "No, because assault requires a completed battery.",
+      "Yes, but only under a strict-liability theory.",
+      "Yes, because raising a fist at the victim intentionally created a reasonable apprehension of imminent bodily harm in the victim's mind."
+    ],
+    correct: 3,
+    explanation: "<strong>Assault</strong> has two forms: (1) an <em>attempt to commit battery</em>, or (2) the <em>intentional creation of a reasonable apprehension of imminent bodily harm</em> in the victim's mind by something other than mere words. Both are specific-intent crimes. The defendant's threatening fist intentionally created the apprehension in the victim, satisfying the second form. (A) and (B) confuse assault with battery — completed contact would make the crime battery, not assault. (C) misstates the mens rea; assault requires specific intent, not strict liability."
+  },
+  {
+    subject: "criminal",
+    topic: "False Imprisonment vs Kidnapping",
+    fact: "A defendant locks the victim in a small room inside the victim's own apartment for several hours. The defendant does not move the victim from the apartment, does not conceal the victim's whereabouts from anyone, and does not demand anything. The victim is eventually freed when a neighbor hears banging.",
+    call: "What crime, if any, has the defendant committed?",
+    choices: [
+      "False imprisonment, because he unlawfully confined the victim without consent — but not kidnapping, because there was no movement of the victim and no concealment in a secret place.",
+      "Kidnapping, because any confinement amounts to kidnapping.",
+      "Both false imprisonment and kidnapping, because the locked room functioned as a \"secret place.\"",
+      "Neither, because no actual physical force was used."
+    ],
+    correct: 0,
+    explanation: "<strong>False imprisonment</strong> is the unlawful confinement of a person without valid consent. <strong>Kidnapping</strong> adds either (1) <em>movement</em> of the victim or (2) <em>concealment in a secret place</em>. Locking the victim in his own apartment — a known location, no movement — is false imprisonment but not kidnapping. (B) overstates kidnapping. (C) misuses \"secret place,\" which refers to concealment from view, not merely a closed room in the victim's known residence. (D) ignores that confinement can be by physical barriers (the locked door), not just bodily force."
+  },
+  {
+    subject: "criminal",
+    topic: "Battery · Aggravation",
+    fact: "A defendant deliberately strikes a uniformed police officer with a baseball bat during an arrest, causing the officer to suffer a severe concussion. The defendant is charged with aggravated battery.",
+    call: "What facts support aggravation here?",
+    choices: [
+      "Only the use of a deadly weapon.",
+      "The use of a deadly weapon, the resulting serious bodily harm, and the victim's status as a police officer — any of which alone would justify aggravation.",
+      "None of the facts; aggravation requires intent to kill.",
+      "Only the serious bodily harm."
+    ],
+    correct: 1,
+    explanation: "A simple battery is <strong>aggravated</strong> if any of three factors is present: (1) use of a <strong>deadly weapon</strong>, (2) <strong>serious bodily harm</strong>, or (3) victim's <strong>protected status</strong> (child, woman, or police officer in many jurisdictions). All three are present here, but any one alone would suffice. (A) and (D) understate by limiting to a single factor. (C) misstates the mens rea — aggravation does not require intent to kill (that would be attempted murder)."
+  },
+  {
+    subject: "criminal",
+    topic: "Common Law Arson · Charring vs Scorching",
+    fact: "A defendant maliciously sets fire to the dwelling of another. The fire damages the paint on an exterior wall, leaving black discoloration, but the wood underneath remains structurally undamaged. The defendant is charged with common-law arson.",
+    call: "Has the \"burning\" requirement been satisfied?",
+    choices: [
+      "Yes, because any visible fire damage satisfies the requirement.",
+      "Yes, but only if the discoloration is severe.",
+      "No, because mere scorching (discoloration without damage to the structural fiber) is not sufficient — charring (actual damage to the wood fiber) is required.",
+      "No, because the entire dwelling must be destroyed."
+    ],
+    correct: 2,
+    explanation: "At common law, the <strong>burning requirement</strong> for arson requires <strong>charring</strong> — actual damage to the fiber of the wood or other combustible material of the dwelling. <strong>Scorching</strong> — mere blackening or discoloration without damage to the underlying structure — is insufficient. Total destruction is far more than required but not necessary. (A) and (B) understate the requirement. (D) overstates it."
+  },
+  {
+    subject: "criminal",
+    topic: "Common Law Arson · Of Another",
+    fact: "A defendant burns down his own house to collect insurance proceeds. No one else lives there and the house is on his own property. The jurisdiction follows the strict common-law definition of arson.",
+    call: "Has the defendant committed common-law arson?",
+    choices: [
+      "Yes, because malicious burning of any dwelling is arson at common law.",
+      "Yes, because insurance fraud aggravates the offense.",
+      "Yes, because the structure is a dwelling.",
+      "No, because common-law arson requires that the dwelling be \"of another,\" and a person cannot commit common-law arson by burning their own home."
+    ],
+    correct: 3,
+    explanation: "At common law, arson requires that the dwelling be <strong>\"of another\"</strong> — occupied by someone other than the defendant. A person could not commit common-law arson by burning their own home, regardless of motive. (A) misstates the rule. (B) confuses insurance fraud (a separate offense) with arson elements. (C) ignores the of-another element. Modern statutes have generally eliminated this element, but the question specifies strict common law."
+  },
+  {
+    subject: "criminal",
+    topic: "Common Law Burglary · Breaking",
+    fact: "A defendant approaches a stranger's home at night, intending to steal valuables inside. He finds the front door already wide open — apparently left open by the resident. He walks straight in, takes jewelry, and leaves. The jurisdiction follows the common-law definition of burglary.",
+    call: "Has the defendant committed common-law burglary?",
+    choices: [
+      "No, because walking through an already wide-open door does not satisfy the breaking requirement at common law.",
+      "Yes, because his entry was unlawful.",
+      "Yes, because he intended to commit a felony inside.",
+      "No, because the door was the only entry point."
+    ],
+    correct: 0,
+    explanation: "At common law, <strong>burglary</strong> requires a <strong>breaking</strong> — actual or constructive. Actual breaking requires at least minimal force (opening a closed or even slightly ajar door or window). <strong>Walking through an already wide-open door is not a breaking</strong>, and without a breaking there is no common-law burglary regardless of intent to commit a felony. (B) and (C) ignore the breaking requirement. (D) is irrelevant. The defendant may be guilty of larceny but not common-law burglary."
+  },
+  {
+    subject: "criminal",
+    topic: "Common Law Burglary · Constructive Breaking",
+    fact: "A defendant approaches a stranger's home at night. He knocks on the door and falsely tells the resident he is a police officer who needs to come in to investigate a reported gas leak. The resident, believing the story, opens the door and invites him in. Once inside, the defendant pulls out a knife and steals valuables. The jurisdiction follows the common-law definition of burglary.",
+    call: "Has the defendant committed common-law burglary?",
+    choices: [
+      "No, because the resident voluntarily admitted him.",
+      "Yes, because entry obtained by fraud or threat constitutes a constructive breaking, satisfying the breaking element of common-law burglary.",
+      "No, because there was no actual breaking of any physical barrier.",
+      "Yes, but only as a continuing trespass."
+    ],
+    correct: 1,
+    explanation: "At common law, a <strong>constructive breaking</strong> occurs when entry is obtained by <strong>fraud, threat, or intimidation</strong>. Fraudulently impersonating a police officer to gain entry satisfies the breaking element just as if the defendant had forced open a window. Combined with entry at night into a dwelling with intent to commit a felony, all elements are present. (A) ignores constructive breaking. (C) wrongly limits breaking to physical force. (D) invents a doctrine."
+  },
+  {
+    subject: "criminal",
+    topic: "Common Law Burglary · Specific Intent Timing",
+    fact: "A defendant, intoxicated and lost late at night, breaks the lock on a stranger's back door and stumbles inside. He had no plan to commit any crime — he was simply confused. After standing in the kitchen for a moment, he sees a wallet on the counter and decides to take it. He is charged with common-law burglary.",
+    call: "Can he be convicted of common-law burglary?",
+    choices: [
+      "Yes, because he in fact committed larceny inside.",
+      "Yes, because his general intent to enter was sufficient.",
+      "No, because he did not have the intent to commit a felony at the time of the breaking and entering.",
+      "No, because the wallet's value made the contemplated theft a misdemeanor."
+    ],
+    correct: 2,
+    explanation: "Common-law burglary is a <strong>specific intent</strong> crime: the defendant must have the intent to commit a felony <em>at the time of the breaking and entering</em>. Intent that arises only after entry does not satisfy the element. (A) confuses post-entry conduct with the requisite intent at entry. (B) misclassifies burglary as a general-intent crime. (D) is irrelevant on these facts — the defect is timing of intent formation, not which crime was contemplated."
+  },
+  {
+    subject: "criminal",
+    topic: "Modern Burglary · Statutory Expansion",
+    fact: "A defendant walks through the open front door of a closed commercial warehouse during the daytime, intending to steal a tool worth $50 (a misdemeanor under state law). He is charged under the state's modern burglary statute, which has eliminated the breaking, nighttime, dwelling, and felony-intent requirements of common-law burglary.",
+    call: "Can the defendant be convicted of burglary under the modern statute?",
+    choices: [
+      "No, because there was no breaking and no felony intent.",
+      "No, because warehouses are not dwellings.",
+      "No, because the entry was during the daytime.",
+      "Yes, because modern statutes typically eliminate the breaking, nighttime, dwelling, and felony-only requirements — burglary may now be committed by entering any structure with intent to commit a crime (often including misdemeanor theft)."
+    ],
+    correct: 3,
+    explanation: "<strong>Modern burglary statutes</strong> have generally eliminated several common-law elements: (1) no breaking required; (2) no nighttime requirement; (3) structures need not be dwellings (commercial buildings and sometimes vehicles count); and (4) the intended crime often need not be a felony — intent to commit misdemeanor theft is frequently enough. (A), (B), and (C) each insist on a common-law element the modern statute abandons."
+  },
+  {
+    subject: "criminal",
+    topic: "Larceny · Intent to Permanently Deprive",
+    fact: "A defendant takes a bicycle from a public rack, sincerely believing it belongs to his friend. He plans to ride it across town and return it later that evening. The bicycle in fact belongs to a stranger, not the friend. The defendant rides off but is stopped by police.",
+    call: "Has the defendant committed larceny?",
+    choices: [
+      "No, because he lacked the intent to permanently deprive the owner — he intended only a temporary borrowing.",
+      "Yes, because he took someone else's property.",
+      "Yes, because his mistake about ownership was unreasonable.",
+      "No, but only because the bicycle was eventually recovered."
+    ],
+    correct: 0,
+    explanation: "<strong>Larceny</strong> is a specific intent crime: the prosecution must prove the defendant intended to <strong>permanently deprive</strong> the owner of the property at the time of the taking. A defendant who takes property intending to return it has not committed larceny, regardless of whether the taking was wrongful. (B) ignores the specific-intent element. (C) misuses mistake-of-fact — for a specific-intent crime, the mistake need not be reasonable; here the relevant defect is the absence of intent to permanently deprive. (D) confuses outcome with elements."
+  },
+  {
+    subject: "criminal",
+    topic: "Robbery · Force/Threat Element",
+    fact: "A defendant approaches the victim from behind and snatches her purse out of her hand using a quick yank — too fast for her to react or resist. There is no threat and no other force, and no weapon is displayed. The defendant runs off. He is charged with robbery.",
+    call: "Has the defendant committed robbery?",
+    choices: [
+      "Yes, because any taking from the person is robbery.",
+      "No, because robbery requires force sufficient to overcome the victim's resistance (or a threat of imminent harm) — a quick snatch with no resistance is generally only larceny from the person, not robbery.",
+      "Yes, because the victim was present at the taking.",
+      "No, but only because the defendant did not display a weapon."
+    ],
+    correct: 1,
+    explanation: "<strong>Robbery</strong> requires that the taking be accomplished by <strong>force sufficient to overcome the victim's resistance</strong> or by a threat of <strong>imminent</strong> death or physical injury. A purse-snatch executed so quickly that the victim has no chance to resist is generally <em>larceny from the person</em> (a form of larceny), not robbery — the force was not used to overcome resistance. (A) overstates robbery. (C) confuses presence with the force element. (D) misstates the rule — robbery does not require a weapon, only sufficient force or a qualifying threat."
+  },
+  {
+    subject: "criminal",
+    topic: "Insanity · M'Naghten Rule",
+    fact: "A defendant suffers from severe schizophrenia. At the time he killed the victim, he believed the victim was an extraterrestrial demon planning to destroy the planet. He understood that killing a human is wrong, but believed the \"demon\" was not human. He raises an insanity defense in a jurisdiction that follows the M'Naghten Rule.",
+    call: "Under the M'Naghten Rule, is the defendant entitled to acquittal?",
+    choices: [
+      "No, because he knew that killing humans is wrong.",
+      "No, because M'Naghten requires only that the defendant lack the ability to control his actions.",
+      "Yes, because due to a mental disease he lacked the ability to understand the nature and quality of his act — he believed he was killing a demon, not a human.",
+      "Yes, but only under the irresistible impulse test."
+    ],
+    correct: 2,
+    explanation: "The <strong>M'Naghten Rule</strong> is a <em>cognitive</em> test: the defendant is entitled to acquittal if, due to a disease of the mind, he lacked the ability to (1) <em>know the wrongfulness of his actions</em>, or (2) <em>understand the nature and quality of his actions</em>. The defendant who believes he is killing a demon — not a human — lacks understanding of the nature and quality of his act. (A) misses the second M'Naghten prong. (B) describes the irresistible impulse test, not M'Naghten. (D) misidentifies the doctrine that acquits."
+  },
+  {
+    subject: "criminal",
+    topic: "Insanity · MPC / ALI Test",
+    fact: "A defendant has a documented mental disorder. At the time of his crime, he understood that arson was illegal and wrong, but the mental disorder substantially impaired his ability to control his fire-setting compulsion. He raises an insanity defense in a jurisdiction following the MPC (ALI) test.",
+    call: "Under the MPC test, is the defendant entitled to acquittal?",
+    choices: [
+      "No, because he understood the wrongfulness of his conduct.",
+      "No, because the MPC test requires complete loss of capacity.",
+      "Yes, but only under the Durham product test.",
+      "Yes, because the MPC test acquits a defendant who, as a result of mental disease, lacked substantial capacity either to appreciate the criminality of his conduct or to conform his conduct to the requirements of law — the volitional prong is satisfied."
+    ],
+    correct: 3,
+    explanation: "The <strong>MPC (ALI) test</strong> combines a cognitive and volitional prong: the defendant is entitled to acquittal if, as a result of mental disease or defect, he lacked the <em>substantial capacity</em> either to (1) <em>appreciate the criminality of his conduct</em>, or (2) <em>conform his conduct to the requirements of law</em>. The defendant's documented inability to control his arson compulsion satisfies the volitional prong, even though he understood wrongfulness. (A) ignores the volitional prong. (B) overstates by demanding complete loss; <em>substantial</em> capacity is the test. (C) misidentifies the Durham test, which asks whether the crime was a product of mental disease."
+  },
+  {
+    subject: "criminal",
+    topic: "Insanity · Irresistible Impulse",
+    fact: "A defendant with a documented mental illness commits a violent act. He later admits he knew the act was wrong, but explains that he was unable to stop himself due to an overwhelming compulsion stemming from his illness. The jurisdiction follows the Irresistible Impulse Test.",
+    call: "Is the defendant entitled to acquittal?",
+    choices: [
+      "Yes, because under the Irresistible Impulse Test, a defendant who, because of mental illness, was unable to control his actions or conform his conduct to the law is entitled to acquittal — even if he knew his conduct was wrong.",
+      "No, because he understood that his conduct was wrong.",
+      "No, because the test requires that the defendant be unable to distinguish right from wrong.",
+      "Yes, but only if his mental illness is recognized in the DSM."
+    ],
+    correct: 0,
+    explanation: "The <strong>Irresistible Impulse Test</strong> is a purely <em>volitional</em> test: the defendant is entitled to acquittal if, because of a mental illness, he was unable to control his actions or conform his conduct to the requirements of law. Cognitive understanding of wrongfulness is not required to be lost. (B) confuses this with the M'Naghten cognitive test. (C) misstates the test. (D) invents a diagnostic requirement."
+  },
+  {
+    subject: "criminal",
+    topic: "Voluntary Intoxication · Specific Intent Crimes",
+    fact: "A defendant becomes extremely drunk at a bar and, in his impaired state, breaks into a warehouse without any clear plan in mind. He is charged with common-law burglary (breaking and entering of a dwelling at night with intent to commit a felony therein). He argues that he was too intoxicated to form the specific intent to commit a felony.",
+    call: "Can voluntary intoxication serve as a defense?",
+    choices: [
+      "No, because intoxication is never a defense to any crime.",
+      "Yes, because voluntary intoxication can negate the specific intent required for a specific-intent crime, like burglary, if it actually prevented the defendant from forming that intent.",
+      "No, because voluntary intoxication can be a defense only to general-intent crimes.",
+      "Yes, because voluntary intoxication is a complete defense to all crimes."
+    ],
+    correct: 1,
+    explanation: "<strong>Voluntary intoxication</strong> may be a defense to a <strong>specific intent</strong> crime if the intoxication actually prevented the defendant from forming the required specific intent. Common-law burglary is a specific-intent crime (intent to commit a felony inside); severe intoxication that defeats that intent negates an element. (A) overstates. (C) inverts the rule — voluntary intoxication is <em>not</em> a defense to general-intent, recklessness, or negligence crimes, but it <em>can</em> be a defense to specific intent. (D) overstates the scope."
+  },
+  {
+    subject: "criminal",
+    topic: "Involuntary Intoxication · Defense to All Crimes",
+    fact: "A defendant goes to a party where his drink is secretly spiked with a powerful hallucinogen by a stranger. Hours later, while severely impaired and unable to understand reality, he commits an offense that the jurisdiction defines as a strict-liability crime.",
+    call: "Can he raise involuntary intoxication as a defense?",
+    choices: [
+      "No, because intoxication is never a defense to strict-liability crimes.",
+      "No, because he chose to drink at the party.",
+      "Yes, because involuntary intoxication is treated like insanity and can be a defense to any crime — including strict-liability crimes — if it impairs the defendant so that he cannot understand the wrongfulness of his conduct or meet the jurisdiction's insanity test.",
+      "Yes, but only as to specific-intent crimes."
+    ],
+    correct: 2,
+    explanation: "<strong>Involuntary intoxication</strong> — caused by ingesting a substance without knowledge of its nature, under duress, or pursuant to medical advice while unaware of intoxicating effect — is treated like insanity. It can be a defense to <em>any</em> crime, including strict-liability and general-intent crimes, if it impairs the defendant such that he meets the jurisdiction's insanity test. (A) confuses voluntary and involuntary intoxication. (B) ignores that drinking a spiked drink without knowledge satisfies the \"without knowledge of its nature\" route to involuntary intoxication. (D) understates the scope."
+  },
+  {
+    subject: "criminal",
+    topic: "Self-Defense · Deadly Force Requirements",
+    fact: "A defendant is walking down the street when a stranger suddenly steps in front of him, pulls out a gun, and points it at his chest. The defendant has played no role in provoking the encounter. The defendant draws his own lawfully carried firearm and shoots the stranger, killing him.",
+    call: "What facts justify the defendant's use of deadly force in self-defense?",
+    choices: [
+      "Only that the stranger was armed.",
+      "Only that the defendant was without fault.",
+      "Only that the defendant first attempted to retreat.",
+      "The defendant was without fault, was confronted with unlawful force, and reasonably believed he was threatened with imminent death or great bodily harm — and the majority rule imposes no duty to retreat before using deadly force in such circumstances."
+    ],
+    correct: 3,
+    explanation: "A person may use <strong>deadly force in self-defense</strong> when he (1) is <em>without fault</em>, (2) is <em>confronted with unlawful force</em>, and (3) <em>reasonably believes</em> he is threatened with <em>imminent death or great bodily harm</em>. The majority rule imposes <em>no duty to retreat</em> before using deadly force when these conditions are met. All three elements are present here. (A), (B), and (C) each identify only one element — and (C) misstates the no-retreat majority rule."
+  },
+  {
+    subject: "criminal",
+    topic: "Defense of Others · Reasonable Belief",
+    fact: "A defendant walks down the street and sees a man punching a woman repeatedly. He does not know either party. Reasonably believing the woman is being unlawfully attacked and that she would have the right to defend herself, the defendant intervenes and uses force to stop the attacker. It later turns out the attacker was an undercover police officer making a lawful arrest, but his clothing gave no indication of this.",
+    call: "Can the defendant claim defense of others?",
+    choices: [
+      "Yes, because under the majority rule a person may defend another if he reasonably believes the person assisted has a legal right to use force in their own defense — no special relationship is required, and a reasonable mistake about the situation does not defeat the defense.",
+      "No, because there was no special relationship between the defendant and the woman.",
+      "No, because the defendant turned out to be wrong about who was the aggressor.",
+      "Yes, but only if the defendant is a licensed bystander."
+    ],
+    correct: 0,
+    explanation: "Under the majority \"reasonable belief\" rule, a person may use force in <strong>defense of others</strong> if he reasonably believes the person assisted has the legal right to use force in self-defense. <strong>No special relationship</strong> between the defender and the defended is required, and a <em>reasonable mistake</em> about who is the aggressor does not defeat the defense. (B) describes a rejected minority \"alter ego\" rule. (C) ignores the reasonable-belief standard. (D) invents a credential the law does not require."
+  },
+  {
+    subject: "criminal",
+    topic: "Defense of Dwelling · Deadly Force",
+    fact: "A defendant is asleep in his home at night when he hears violent banging at his front door and a voice yelling that the intruders are coming inside to \"settle the score.\" He hears the door splinter open. As three armed intruders rush inside, he fires his shotgun and kills one of them.",
+    call: "Was the defendant's use of deadly force justified under defense of dwelling?",
+    choices: [
+      "No, because deadly force is never permitted to defend property.",
+      "Yes, because a person lawfully present in a home may use deadly force to prevent a violent entry when he reasonably believes deadly force is necessary to prevent either an attack on someone inside or the entry of someone who intends to commit a felony in the home.",
+      "Yes, but only if the defendant first attempted to call the police.",
+      "No, because the defendant had a duty to retreat through a back door."
+    ],
+    correct: 1,
+    explanation: "<strong>Defense of dwelling</strong> is the recognized exception to the rule against using deadly force to defend property. A person lawfully present in a home may use <strong>deadly force</strong> to prevent a <em>violent entry</em> when he reasonably believes deadly force is necessary to prevent (1) an attack on someone in the house, or (2) the entry of someone who intends to commit a felony inside. The shotgun blast at three armed intruders rushing in plainly qualifies. (A) overstates the no-deadly-force rule and ignores the dwelling exception. (C) and (D) invent duties not imposed by the doctrine."
+  },
+  {
+    subject: "criminal",
+    topic: "Mistake of Fact · Specific Intent Crimes",
+    fact: "A defendant takes an umbrella from a restaurant coat rack, sincerely believing it to be his own. The umbrella in fact belongs to another customer. The defendant's belief was based on a quick glance and was not particularly reasonable — there were three similar umbrellas and he did not check carefully. He is charged with larceny (a specific-intent crime requiring intent to permanently deprive).",
+    call: "Can his mistake of fact serve as a defense?",
+    choices: [
+      "No, because mistake of fact is never a defense to crime.",
+      "No, because his mistake was unreasonable.",
+      "Yes, because for specific-intent crimes the mistake need not be reasonable — any honest mistake that negates the required specific intent (here, intent to permanently deprive another of property) is a defense.",
+      "Yes, but only if his mistake was reasonable."
+    ],
+    correct: 2,
+    explanation: "<strong>Mistake of fact</strong> is a defense when it negates the mens rea required for the offense. For <strong>specific-intent</strong> crimes (like larceny), the mistake <em>need not be reasonable</em> — an honest mistake that negates the specific intent is enough. The defendant who honestly believes he is taking his own umbrella does not have the intent to permanently deprive <em>another</em> of property. (A) misstates the rule. (B) imposes a reasonableness requirement that applies only to general-intent crimes. (D) also imposes the wrong standard for a specific-intent crime."
+  },
+  {
+    subject: "criminal",
+    topic: "Mistake of Law · Generally Not a Defense",
+    fact: "A defendant, having recently moved to a new state, is unaware that the state requires a permit to carry a concealed firearm. He honestly believes that, just as in his previous state, no permit is required. He is arrested and charged with violating the concealed-carry permit statute.",
+    call: "Can he raise mistake of law as a defense?",
+    choices: [
+      "Yes, because his mistake was honest.",
+      "Yes, because his mistake was reasonable for a new resident.",
+      "No, but only because he should have read the statute.",
+      "No, because mistake of law — including ignorance that a statute exists — is generally not a defense to criminal charges."
+    ],
+    correct: 3,
+    explanation: "<strong>Mistake of law is generally not a defense</strong> to criminal charges — \"ignorance of the law is no excuse.\" Narrow exceptions exist (e.g., reasonable reliance on an official statement of law that is later overturned, or where the statute itself makes knowledge of the law an element), but garden-variety ignorance of an unfamiliar statute does not defeat liability. (A) and (B) overstate any defense for mistake of law. (C) reaches the right result for the wrong reason — the defense fails as a matter of law, not because of failure to read."
+  },
 ];
 
 // ============ APP LOGIC ============
