@@ -607,10 +607,10 @@ const questions = [
     fact: "A waiter at a fine restaurant becomes angry when a patron complains about the food. The waiter snatches the plate from the patron's hands, splashing food on the patron's shirt but causing no physical injury. The patron sues for battery.",
     call: "Will the patron prevail?",
     choices: [
-      "No, because the patron suffered no physical injury.",
-      "Yes, because the waiter intended to humiliate the patron.",
-      "No, because the waiter touched only the plate, not the patron.",
-      "Yes, because offensive contact with an object closely connected to the plaintiff's person satisfies battery's contact element."
+      "No, because the patron suffered no actual physical injury from the contact made.",
+      "Yes, because the waiter intended to humiliate the patron in front of other diners.",
+      "No, because the waiter touched only the plate, not the patron's body itself.",
+      "Yes, because offensive contact with an object closely connected to the person."
     ],
     correct: 3,
     explanation: "Battery requires intentional harmful or offensive contact with the plaintiff's person. <strong>Contact with objects closely connected to the plaintiff</strong> — clothing, a plate held in hand, a cane being used — counts as contact with the person. Physical injury is not required; offensive contact suffices. (B) is incomplete — humiliation alone isn't the element. (A) imports a wrong injury requirement. (C) misunderstands the contact rule."
@@ -635,10 +635,10 @@ const questions = [
     fact: "The defendant, knowing it is false, calls the plaintiff and falsely tells her that her son has been killed in a car crash. The defendant does so as a cruel prank. The plaintiff suffers severe emotional distress and is hospitalized for anxiety attacks. She sues for intentional infliction of emotional distress.",
     call: "Will the plaintiff prevail?",
     choices: [
-      "No, because emotional distress alone is not actionable.",
-      "Yes, because the defendant committed fraud.",
-      "No, because the plaintiff suffered no physical impact.",
-      "Yes, because the defendant's conduct was extreme and outrageous and intentionally caused severe emotional distress."
+      "No, because emotional distress alone is not actionable in tort without any contact.",
+      "Yes, because the defendant committed fraud against the plaintiff's interests here.",
+      "No, because the plaintiff suffered no physical impact at all from the conduct.",
+      "Yes, because the conduct was extreme and outrageous and caused severe distress."
     ],
     correct: 3,
     explanation: "IIED requires (1) extreme and outrageous conduct, (2) intent or recklessness, (3) causation, and (4) severe emotional distress. Knowingly telling a parent her child is dead is paradigmatic <strong>extreme and outrageous</strong> conduct. Physical impact is not required for IIED. (B) is wrong — fraud has different elements (reliance, pecuniary harm). (A) and (C) state the negligence-era rule, not IIED."
@@ -691,10 +691,10 @@ const questions = [
     fact: "A statute prohibits driving over 35 mph in school zones during school hours and is designed to protect children from being struck by vehicles. The defendant drives 50 mph through a school zone at dismissal and strikes a child crossing the street, causing serious injuries. The child sues.",
     call: "What is the effect of the statutory violation?",
     choices: [
-      "It establishes negligence per se because the plaintiff is in the protected class and the harm is the type the statute was designed to prevent.",
-      "It is irrelevant because tort liability requires a common-law breach.",
-      "It is admissible as evidence of negligence but not conclusive.",
-      "It establishes strict liability for the defendant."
+      "Negligence per se, because plaintiff is in the protected class and harm is the type.",
+      "It is irrelevant because tort liability requires a common-law breach of duty.",
+      "It is admissible as evidence of negligence but is never conclusive at trial.",
+      "It establishes strict liability against the defendant for the statutory violation."
     ],
     correct: 0,
     explanation: "<strong>Negligence per se</strong> applies when (1) the plaintiff is in the class the statute was designed to protect and (2) the harm is the type the statute was designed to prevent. Both apply — child, school zone, vehicle strike. Violation conclusively establishes breach (in most jurisdictions). (C) describes a minority approach. (B) is wrong. (D) confuses negligence per se with strict liability."
@@ -733,10 +733,10 @@ const questions = [
     fact: "The defendant lawfully keeps a Bengal tiger in a reinforced enclosure on his property. The defendant takes every reasonable precaution. A lightning strike damages the enclosure, the tiger escapes, and it mauls a passing hiker. The hiker sues.",
     call: "Is the defendant liable?",
     choices: [
-      "No, because the defendant exercised reasonable care.",
-      "Yes, because keeping a tiger is negligent.",
-      "No, because the lightning strike was an act of God.",
-      "Yes, because keepers of wild animals are strictly liable for harm caused by the animal's dangerous propensities."
+      "No, because the defendant exercised reasonable care in keeping the tiger secure.",
+      "Yes, because keeping a tiger at home is per se negligent under modern tort law.",
+      "No, because the lightning strike that freed the tiger was an unforeseeable act of God.",
+      "Yes, because keepers of wild animals are strictly liable for dangerous propensities."
     ],
     correct: 3,
     explanation: "Owners of <strong>wild animals</strong> (non-domesticated species) are strictly liable for harm caused by the animal's dangerous propensities, regardless of care taken. (B) confuses strict liability with negligence. (A) misses that fault is irrelevant. (C) is the trickiest wrong answer: an act of God can sometimes break causation, but courts generally hold that the strict liability extends to harms that occur once the animal is at large, regardless of how it escaped."
@@ -762,9 +762,9 @@ const questions = [
     call: "Under the modern (Dillon/Thing) approach, will she prevail?",
     choices: [
       "Yes, because the defendant was negligent and harm to the mother was foreseeable.",
-      "No, because emotional distress without physical impact is not actionable.",
-      "Yes, because she was a close family member who contemporaneously perceived the injury at the scene and suffered serious emotional distress.",
-      "No, because she was not in the zone of physical danger."
+      "No, because emotional distress without physical impact is generally not actionable.",
+      "Yes, because she was a close relative who perceived the injury at the scene firsthand.",
+      "No, because she was not within the zone of physical danger from the negligent driver."
     ],
     correct: 2,
     explanation: "Modern bystander NIED (the <em>Dillon v. Legg</em> / <em>Thing v. La Chusa</em> approach) requires (1) close family relationship, (2) contemporaneous sensory perception at the scene, and (3) serious emotional distress. All three are satisfied. (D) states the older zone-of-danger rule, which is now minority. (B) is the oldest impact rule, abandoned in most jurisdictions. (A) is too broad — bare foreseeability isn't enough."
@@ -817,10 +817,10 @@ const questions = [
     fact: "A surgeon performs an operation using a technique endorsed by a respectable minority of surgeons in her specialty but rejected by the majority. The patient suffers complications that would have been avoided under the majority technique. The patient sues for malpractice.",
     call: "Has the surgeon necessarily breached the standard of care?",
     choices: [
-      "No, because doctors are held only to the ordinary reasonable-person standard.",
-      "No, because following a technique endorsed by a respectable minority of practitioners generally satisfies the professional standard.",
-      "Yes, because surgeons are strictly liable for known adverse outcomes.",
-      "Yes, because she failed to follow the practice of the majority of her peers."
+      "No, because doctors are held only to the ordinary reasonable-person standard of care.",
+      "No, because following a technique used by a respectable minority satisfies the standard.",
+      "Yes, because surgeons are strictly liable for known adverse outcomes from procedures.",
+      "Yes, because she failed to follow the practice of the majority of her professional peers."
     ],
     correct: 1,
     explanation: "Professionals are held to the standard of a <strong>reasonably competent practitioner in good standing</strong> in the same specialty. A doctor who follows a technique endorsed by a respectable minority generally satisfies the standard of care, even if most peers would use a different approach (the \"two schools of thought\" doctrine). (D) misstates the rule. (C) overstates — medical practice is negligence, not strict liability. (A) wrongly imposes the ordinary, not the professional, standard."
@@ -929,10 +929,10 @@ const questions = [
     fact: "Without permission, the defendant takes the plaintiff's car for a five-day road trip totaling 2,000 miles. The defendant returns the car in essentially its prior condition; the plaintiff suffered loss of use during the period. The plaintiff sues.",
     call: "What is the proper claim?",
     choices: [
-      "No tort, because there was no permanent loss.",
-      "Trespass to chattels only, because the car was returned in essentially the same condition.",
-      "Theft, but no tort claim because the car was returned.",
-      "Conversion, because the defendant's interference was so substantial in extent and duration as to seriously deprive the plaintiff of her property."
+      "No tort at all, because there was no permanent loss to the plaintiff in this case.",
+      "Trespass to chattels only, because the car was returned in essentially the same shape.",
+      "Theft, but no tort claim because the car was eventually returned to the plaintiff.",
+      "Conversion, because the interference was so substantial as to seriously deprive use."
     ],
     correct: 3,
     explanation: "The line between <strong>trespass to chattels</strong> and <strong>conversion</strong> turns on the seriousness of the interference. Conversion exists when the deprivation is so substantial in extent and duration that the defendant should pay full value of the chattel. A five-day, 2,000-mile unauthorized use is far beyond trespass to chattels — it's conversion, and the plaintiff may recover the full value (with the defendant in effect \"buying\" the car). (B) understates. (C) and (A) miss the doctrine."
@@ -943,10 +943,10 @@ const questions = [
     fact: "The defendant operates a small chemical plant adjacent to the plaintiff's residential property. The plant emits a strong unpleasant odor that drifts onto the plaintiff's land daily, interfering with her enjoyment of her home and reducing its value. The emissions comply with all regulations but are nonetheless objectionable.",
     call: "What must the plaintiff prove for private nuisance?",
     choices: [
-      "That the defendant intended to cause her personal harm.",
-      "That the defendant violated a statute or zoning ordinance.",
-      "That she suffered physical injury or damage to the structure of her home.",
-      "That the defendant's conduct constitutes a substantial and unreasonable interference with her use and enjoyment of her land."
+      "That the defendant intended to cause her personal harm by his conduct.",
+      "That the defendant violated a specific statute or zoning ordinance in his activity.",
+      "That she suffered physical injury or actual damage to her home's structure.",
+      "That the defendant's conduct substantially and unreasonably interfered with her use."
     ],
     correct: 3,
     explanation: "<strong>Private nuisance</strong> is a substantial and unreasonable interference with the plaintiff's use and enjoyment of land. The interference must be substantial (more than minor annoyance) and unreasonable (judged by gravity of harm vs. utility of conduct). Regulatory compliance is relevant but not dispositive. (B) wrongly equates nuisance with regulatory violation. (A) imports intent that isn't required. (C) misstates: nuisance can be entirely intangible (smells, sounds, light)."
@@ -1027,10 +1027,10 @@ const questions = [
     fact: "WidgetCo is incorporated in Delaware and has its principal place of business in New York. It sells products nationwide. A plaintiff sues WidgetCo in California state court on a claim entirely unrelated to any California activity.",
     call: "Does California have general personal jurisdiction over WidgetCo?",
     choices: [
-      "No, because general jurisdiction over a corporation exists only where it is incorporated or has its principal place of business.",
-      "Yes, because WidgetCo has minimum contacts with California.",
-      "Yes, because WidgetCo sells products in California.",
-      "No, because the claim does not arise from California activity."
+      "No, because general jurisdiction over a corporation requires it be 'at home' there.",
+      "Yes, because WidgetCo has extensive minimum contacts with the state of California.",
+      "Yes, because WidgetCo regularly sells its products within California's borders.",
+      "No, because the claim does not arise from any California-based activity at issue."
     ],
     correct: 0,
     explanation: "Under <em>Daimler v. Bauman</em>, general (all-purpose) personal jurisdiction over a corporation exists only where the corporation is <strong>essentially at home</strong>: its state of incorporation and its principal place of business. WidgetCo is at home in Delaware and New York, not California. (C) and (B) describe specific jurisdiction predicates. (D) reaches the right outcome but states the test for specific jurisdiction, not general."
@@ -1055,10 +1055,10 @@ const questions = [
     fact: "A plaintiff sues a defendant in federal court alleging only state-law breach of contract. The plaintiff anticipates the defendant will raise a defense based on federal preemption.",
     call: "Does the federal court have subject matter jurisdiction?",
     choices: [
-      "Yes, because the case necessarily involves a federal preemption issue.",
-      "Yes, because the parties anticipate litigating federal law.",
-      "No, because under the well-pleaded complaint rule the federal issue must appear on the face of the plaintiff's complaint.",
-      "No, because federal courts cannot hear contract cases."
+      "Yes, because the case necessarily involves a federal preemption issue at its core.",
+      "Yes, because the parties anticipate they will be litigating federal law issues at trial.",
+      "No, because under the well-pleaded complaint rule federal issues must appear in P's claim.",
+      "No, because federal courts cannot hear contract cases under any circumstances at all."
     ],
     correct: 2,
     explanation: "Under the <strong>well-pleaded complaint rule</strong>, federal question jurisdiction requires the federal issue to appear on the face of the plaintiff's properly pleaded complaint. Anticipated federal defenses — including preemption — do not create jurisdiction. (A) and (B) miss this rule. (D) is plainly wrong."
@@ -1181,10 +1181,10 @@ const questions = [
     fact: "A defendant files a Rule 12 motion to dismiss for failure to state a claim. The motion does not raise lack of personal jurisdiction. After the motion is denied, the defendant answers and then moves to dismiss for lack of personal jurisdiction.",
     call: "What is the result of the second motion?",
     choices: [
-      "Held in abeyance pending discovery.",
-      "Denied, because the defendant answered before raising it.",
-      "Denied, because lack of personal jurisdiction was waived by failing to raise it in the first Rule 12 motion.",
-      "Granted, if the court lacks personal jurisdiction."
+      "Held in abeyance pending the completion of fact discovery in the case.",
+      "Denied, because the defendant answered before raising personal jurisdiction.",
+      "Denied, because lack of PJ was waived by failing to raise it in the first Rule 12.",
+      "Granted, if the court ultimately lacks personal jurisdiction over the defendant."
     ],
     correct: 2,
     explanation: "Under <strong>Rule 12(h)(1)</strong>, the disfavored defenses — lack of personal jurisdiction, improper venue, insufficient process, and insufficient service of process — are <em>waived</em> if not raised in the first Rule 12 motion or, if no motion is made, in the answer. The defendant raised 12(b)(6) without raising 12(b)(2), so PJ is waived. (D) misses the waiver. (B) is technically true but the better explanation is the omission from the first motion. (A) is invented."
@@ -1321,10 +1321,10 @@ const questions = [
     fact: "P sues D for breach of contract arising from a single failed transaction. P loses on the merits and judgment is entered for D. P then sues D for fraud arising from the same transaction.",
     call: "Is the second suit barred?",
     choices: [
-      "No, because P never had a chance to litigate fraud.",
-      "Yes, under claim preclusion, because both claims arise from the same transaction and could have been litigated in the first action.",
-      "No, because fraud and breach of contract are distinct legal theories.",
-      "Yes, under issue preclusion, because the same issue was decided."
+      "No, because P never had a chance to litigate fraud in the prior contract action.",
+      "Yes, because both claims arise from the same transaction under claim preclusion.",
+      "No, because fraud and breach of contract are distinct legal theories with separate elements.",
+      "Yes, because the same issue was decided under issue preclusion principles below."
     ],
     correct: 1,
     explanation: "<strong>Claim preclusion</strong> (res judicata) bars relitigation of any claim that was or could have been brought arising out of the same transaction or occurrence as a prior action that ended in a final judgment on the merits. Under the modern transactional approach, fraud and contract claims from the same transaction are the same \"claim.\" (D) misuses issue preclusion — no specific issue was litigated. (C) and (A) ignore the transactional rule."
@@ -1447,10 +1447,10 @@ const questions = [
     fact: "A general contractor is preparing a bid on a public works construction project. A subcontractor calls and quotes $75,000 for the masonry portion. The GC relies on that quote in calculating and submitting his own bid, which is awarded the project. The next morning, before the GC has formally accepted the sub's quote, the sub tries to withdraw, citing a clerical error.",
     call: "May the GC enforce the sub's quote?",
     choices: [
-      "No, because the GC never formally accepted before the sub withdrew.",
-      "Yes, because the sub made a firm offer under the UCC.",
-      "Yes, under promissory estoppel, because the GC reasonably and detrimentally relied on the sub's quote in calculating his own bid.",
-      "No, because clerical errors automatically excuse performance."
+      "No, because the GC never formally accepted before the sub withdrew his quote.",
+      "Yes, because the sub made a firm offer under the UCC's firm-offer rule.",
+      "Yes, because the GC reasonably and detrimentally relied on the sub's quote.",
+      "No, because clerical errors automatically excuse the performance of the offer."
     ],
     correct: 2,
     explanation: "This is the classic <em>Drennan v. Star Paving</em> fact pattern. A GC's <strong>reasonable, detrimental reliance</strong> on a subcontractor's bid — using it to calculate the GC's own committed bid to the owner — gives rise to a promissory estoppel claim that prevents the sub from revoking. (B) is wrong: UCC firm offers apply to sales of goods, not services. (A) misses promissory estoppel. (D) overstates: clerical mistake provides a defense only in narrow circumstances, not automatically."
@@ -1503,10 +1503,10 @@ const questions = [
     fact: "A buyer and seller sign a fully integrated written real estate purchase contract for a residential property. The contract contains a merger clause stating it represents the parties' entire agreement. The contract is silent about appliances. The buyer claims the parties orally agreed before signing that the refrigerator and washer/dryer would be included. The seller denies it. The buyer offers testimony of the alleged oral agreement.",
     call: "Is the testimony admissible?",
     choices: [
-      "No, because the parol evidence rule excludes prior or contemporaneous oral agreements that contradict or vary a fully integrated written contract.",
-      "Yes, because parol evidence is always admissible to clarify ambiguous contracts.",
-      "Yes, to show a separate collateral agreement.",
-      "No, because oral evidence is never admissible in real estate cases."
+      "No, because parol evidence excludes prior or contemporaneous talk contradicting writing.",
+      "Yes, because parol evidence is always admissible to clarify any contractual ambiguity.",
+      "Yes, to show a separate collateral agreement made outside the main contract terms.",
+      "No, because oral evidence is never admissible in real estate contract disputes."
     ],
     correct: 0,
     explanation: "The <strong>parol evidence rule</strong> excludes evidence of prior or contemporaneous oral agreements offered to contradict or vary the terms of a fully integrated written contract. A merger clause strongly indicates full integration. Whether appliances are included is exactly the kind of term that would naturally have been written into a comprehensive purchase agreement. (B) overstates — clarifying ambiguity is one exception, but the contract here is not ambiguous about appliances. (C) raises the collateral agreement exception, which doesn't apply where the side deal would naturally have been included. (D) overstates."
@@ -1545,12 +1545,12 @@ const questions = [
     fact: "A homeowner sells her property and represents to the buyer that there are no liens or encumbrances on the title. The homeowner knows this is false — she is aware of a recorded utility easement that runs across the middle of the lot and significantly restricts where any structure may be built. The buyer relies on the statement and closes; he discovers the easement only after construction begins.",
     call: "May the buyer rescind?",
     choices: [
-      "Yes, because the seller's fraudulent misrepresentation of a material fact, relied upon by the buyer, makes the contract voidable.",
-      "No, because the buyer should have ordered a title search before closing.",
-      "No, because the easement was a matter of public record and the buyer could have discovered it.",
-      "Yes, but only after returning the property in its exact original condition."
+      "Mutual mistake, because both parties were unaware that the basement floods regularly.",
+      "Fraudulent misrep, because the seller knowingly made a false material statement.",
+      "No relief, because the buyer should have personally inspected the basement first.",
+      "Frustration of purpose, because the buyer specifically wanted a dry usable basement."
     ],
-    correct: 0,
+    correct: 1,
     explanation: "A contract is voidable when one party made a <strong>fraudulent or material misrepresentation</strong> on which the other reasonably relied. A known existing encumbrance affecting buildability is plainly material. The buyer's failure to independently search the record does not excuse the seller's affirmative lie. (D) overstates restoration; reasonable use of the property pending discovery generally does not bar rescission. (C) and (B) excuse fraud through the victim's diligence — courts reject that."
   },
   {
@@ -1657,10 +1657,10 @@ const questions = [
     fact: "A homeowner hires a celebrated architectural firm specifically because of the lead architect's reputation for distinctive design. The contract names the lead architect personally and emphasizes her unique aesthetic judgment. Without consent, the lead architect delegates the design work to a junior associate at the firm — a competent designer but without the lead's distinctive style.",
     call: "May the homeowner refuse the delegated performance?",
     choices: [
-      "Yes, because contracts for personal services involving unique skill or judgment cannot be delegated without consent.",
-      "Yes, because all contract duties are personal and non-delegable.",
-      "No, because the lead architect remains liable on the contract.",
-      "No, because the associate is competent."
+      "Yes, because contracts for personal services with unique skill cannot be delegated.",
+      "Yes, because all contract duties are personal and non-delegable as a general rule.",
+      "No, because the lead architect remains liable on the contract regardless of delegation.",
+      "No, because the associate is fully competent to perform the contracted services."
     ],
     correct: 0,
     explanation: "Duties involving <strong>personal services with unique skill, judgment, or aesthetic discretion</strong> — bespoke architectural design by a specific named architect — may not be delegated without consent. (B) overstates: most duties are delegable. (D) misses that competence is irrelevant where the duty is personal. (C) is true (delegation does not relieve the delegator of liability) but irrelevant — the homeowner is entitled to the named architect's performance, not a competent substitute."
@@ -1867,10 +1867,10 @@ const questions = [
     fact: "Owner subdivides a large parcel into two lots. After subdivision, one lot is completely landlocked, with no access to any public road except across the other lot. The owner of the landlocked parcel seeks access.",
     call: "Is there an easement by necessity?",
     choices: [
-      "Yes, but only if the grantor expressly reserved one.",
-      "No, easements by necessity require 20 years of prior use.",
-      "Yes, an easement by necessity arises when subdivision leaves a parcel without access and the parcels share a common grantor.",
-      "No, the landlocked owner must negotiate or buy access."
+      "Yes, but only if the grantor expressly reserved an easement at the time of sale.",
+      "No, because easements by necessity require at least 20 years of prior use first.",
+      "Yes, because subdivision left the parcel without access and there's a common grantor.",
+      "No, because the landlocked owner must negotiate or buy access from the neighbor."
     ],
     correct: 2,
     explanation: "<strong>Easement by necessity</strong> arises when (1) a single owner subdivides a parcel and (2) the resulting subdivision leaves one parcel without access to a public road, requiring crossing of the other parcel. No express grant is needed; necessity creates the easement. (A) describes an express easement. (D) ignores the doctrine. (B) describes prescriptive easements."
@@ -2301,12 +2301,12 @@ const questions = [
     fact: "The owner of a large tract sells off the landlocked back portion to a buyer and keeps the front portion for himself. The only way to reach a public road from the landlocked parcel is across the front portion the seller retained. The deed says nothing about access.",
     call: "Does the buyer have a right to cross the seller's retained land?",
     choices: [
-      "No, because the deed contained no express grant of an easement.",
-      "Yes, but only if the buyer pays the seller an ongoing fee for crossing.",
-      "No, because the buyer should have negotiated for an access right before buying.",
-      "Yes, because an easement by necessity arises across the seller's retained land."
+      "Yes, but only if the grantor expressly reserved an easement at the time of sale.",
+      "No, because easements by necessity require at least 20 years of prior use first.",
+      "Yes, because subdivision left the parcel without access and there's a common grantor.",
+      "No, because the landlocked owner must negotiate or buy access from the neighbor."
     ],
-    correct: 3,
+    correct: 2,
     explanation: "An <strong>easement by necessity</strong> arises when an owner severs a parcel in a way that leaves one part landlocked; the law implies an easement over the retained land so the landlocked parcel has access to a public road. (A) is wrong because the easement is implied, not express. (C) is wrong: the law supplies the access. (B) is wrong because no fee is required for an easement by necessity."
   },
   {
@@ -2343,10 +2343,10 @@ const questions = [
     fact: "While negotiating the sale of a house, the seller knows the basement floods heavily every spring, but tells the buyer that the basement is \"completely dry and has never had any water issues.\" The buyer reasonably relies on the statement, buys the house, and discovers the flooding after the first spring rain.",
     call: "What is the buyer's strongest ground for relief?",
     choices: [
-      "Mutual mistake, because both parties were unaware that the basement floods.",
-      "Fraudulent misrepresentation, because the seller knowingly made a false statement of material fact that the buyer justifiably relied on.",
-      "No relief, because the buyer should have inspected the basement before buying.",
-      "Frustration of purpose, because the buyer wanted a dry basement."
+      "Mutual mistake, because both parties were unaware that the basement floods regularly.",
+      "Fraudulent misrep, because the seller knowingly made a false material statement.",
+      "No relief, because the buyer should have personally inspected the basement first.",
+      "Frustration of purpose, because the buyer specifically wanted a dry usable basement."
     ],
     correct: 1,
     explanation: "<strong>Fraudulent misrepresentation</strong> requires a false statement of material fact, made with knowledge of its falsity, intended to induce reliance, with justifiable reliance and resulting harm. The seller's knowing lie about flooding satisfies each element. (A) is wrong because the seller knew the truth, so the mistake was not mutual. (C) is wrong: justifiable reliance is not defeated by a failure to inspect when the seller affirmatively lied. (D) applies the wrong doctrine."
@@ -2553,12 +2553,12 @@ const questions = [
     fact: "A general contractor solicits bids from subcontractors in order to prepare its master bid for a public project. An electrical subcontractor submits a notably low bid. The general contractor reasonably relies on that bid in computing its master bid and is awarded the project. Before the general contractor formally accepts, the electrical subcontractor attempts to withdraw its bid.",
     call: "May the subcontractor withdraw its bid without liability?",
     choices: [
-      "No, because the general contractor reasonably and foreseeably relied on the bid.",
-      "Yes, because any bid is freely revocable until it is accepted.",
-      "No, because the submitted bid was already a fully formed bilateral contract.",
-      "Yes, because the general contractor had not yet formally accepted the bid."
+      "No, because the GC never formally accepted before the sub withdrew his quote.",
+      "Yes, because the sub made a firm offer under the UCC's firm-offer rule.",
+      "Yes, because the GC reasonably and detrimentally relied on the sub's quote.",
+      "No, because clerical errors automatically excuse the performance of the offer."
     ],
-    correct: 0,
+    correct: 2,
     explanation: "Under <strong>promissory estoppel</strong>, a subcontractor's bid becomes irrevocable for a reasonable time when the general contractor foreseeably and reasonably relies on it in submitting its master bid. (D) and (B) state the ordinary revocability rule but ignore the reliance that makes this bid binding. (C) is wrong: no contract was formed; the subcontractor is bound by estoppel, not by a completed bilateral contract."
   },
   {
@@ -2595,12 +2595,12 @@ const questions = [
     fact: "A buyer and seller sign a complete, fully integrated written contract for the sale of a commercial building. The writing says nothing about whether the seller will leave behind certain freestanding shelving units. The buyer later seeks to testify that, during negotiations before signing, the seller orally promised to leave the shelving.",
     call: "Will the parol evidence rule bar the buyer's testimony?",
     choices: [
-      "Yes, but only if the seller affirmatively objects to the buyer's testimony.",
-      "No, because oral testimony is always admissible to explain the meaning of a contract.",
-      "No, because the written contract did not expressly exclude the shelving.",
-      "Yes, because it offers a prior oral agreement that supplements a fully integrated writing."
+      "No, because parol evidence excludes prior or contemporaneous talk contradicting writing.",
+      "Yes, because parol evidence is always admissible to clarify any contractual ambiguity.",
+      "Yes, to show a separate collateral agreement made outside the main contract terms.",
+      "No, because oral evidence is never admissible in real estate contract disputes."
     ],
-    correct: 3,
+    correct: 0,
     explanation: "The <strong>parol evidence rule</strong> bars prior or contemporaneous oral agreements that contradict a final writing, and where the writing is fully integrated it also bars consistent additional terms. The prior oral shelving promise is excluded. (B) overstates the rule for interpretation. (C) is wrong: silence in a fully integrated writing does not open the door. (A) misstates the doctrine, which operates against the party offering the outside evidence."
   },
   {
@@ -2623,12 +2623,12 @@ const questions = [
     fact: "A corporation is incorporated in State X and has its headquarters and principal operations in State Y. A plaintiff sues the corporation in State Z on a claim that is entirely unrelated to anything the corporation did in State Z. The corporation makes only a small number of routine sales in State Z.",
     call: "May a State Z court exercise general personal jurisdiction over the corporation?",
     choices: [
-      "No, because the plaintiff's claim is unrelated to State Z.",
-      "Yes, because the corporation makes some sales in State Z.",
-      "Yes, because general jurisdiction exists wherever a corporation conducts any business.",
-      "No, because the corporation is not \"at home\" in State Z."
+      "No, because general jurisdiction over a corporation requires it be 'at home' there.",
+      "Yes, because WidgetCo has extensive minimum contacts with the state of California.",
+      "Yes, because WidgetCo regularly sells its products within California's borders.",
+      "No, because the claim does not arise from any California-based activity at issue."
     ],
-    correct: 3,
+    correct: 0,
     explanation: "<strong>General (all-purpose) jurisdiction</strong> over a corporation exists only where it is \"at home,\" paradigmatically its state of incorporation and its principal place of business. A handful of routine sales does not make State Z a home forum. (B) and (C) overstate the contacts needed. (A) reaches the right outcome for the wrong reason: the unrelated nature of the claim matters for specific jurisdiction, but general jurisdiction, if it existed, would reach unrelated claims."
   },
   {
@@ -2637,10 +2637,10 @@ const questions = [
     fact: "A plaintiff sues a defendant in federal court asserting only a single state-law breach of contract claim. Anticipating that the defendant will rely on a federal statute as a defense, the plaintiff adds a paragraph to the complaint arguing in advance that the federal defense will fail.",
     call: "Is there federal question jurisdiction?",
     choices: [
-      "Yes, because the complaint expressly discusses a federal statute.",
-      "Yes, because the plaintiff anticipates a federal defense.",
-      "No, because the federal issue does not appear in the plaintiff's well-pleaded claim.",
-      "No, because a contract claim can never present a federal question."
+      "Yes, because the case necessarily involves a federal preemption issue at its core.",
+      "Yes, because the parties anticipate they will be litigating federal law issues at trial.",
+      "No, because under the well-pleaded complaint rule federal issues must appear in P's claim.",
+      "No, because federal courts cannot hear contract cases under any circumstances at all."
     ],
     correct: 2,
     explanation: "Under the <strong>well-pleaded complaint rule</strong>, federal question jurisdiction depends on a federal issue appearing in the plaintiff's own statement of the claim, not in an anticipated defense. A plaintiff cannot manufacture jurisdiction by pleading around a federal defense. (A) and (B) are wrong for that reason. (D) overstates: some state-law claims embed a substantial federal question, but this purely state-law contract claim does not."
@@ -2735,12 +2735,12 @@ const questions = [
     fact: "A plaintiff sues a defendant for the property damage to her car caused by a single collision and obtains a final judgment on the merits. She then files a second lawsuit against the same defendant seeking damages for the personal injuries she suffered in that very same collision.",
     call: "What is the likely result of the second lawsuit?",
     choices: [
-      "It may proceed, because personal injury and property damage are entirely separate claims.",
-      "It may proceed, because the plaintiff prevailed in the first lawsuit.",
-      "It is barred by claim preclusion, because all damages from one transaction belong in a single action.",
-      "It is barred only if the defendant had asserted a counterclaim in the first suit."
+      "No, because P never had a chance to litigate fraud in the prior contract action.",
+      "Yes, because both claims arise from the same transaction under claim preclusion.",
+      "No, because fraud and breach of contract are distinct legal theories with separate elements.",
+      "Yes, because the same issue was decided under issue preclusion principles below."
     ],
-    correct: 2,
+    correct: 1,
     explanation: "<strong>Claim preclusion</strong> bars relitigation of the same claim between the same parties after a final judgment on the merits. Under the prevailing transactional approach, all damages arising from a single occurrence form one claim that must be brought together. (A) reflects an older theory rejected by the majority. (B) and (D) are irrelevant: winning the first suit and the absence of a counterclaim do not avoid preclusion."
   },
   {
@@ -2875,12 +2875,12 @@ const questions = [
     fact: "A defendant files a pre-answer motion under Rule 12 raising only the defense of failure to state a claim. The court denies the motion. The defendant then files an answer and, several months later, moves to dismiss for lack of personal jurisdiction.",
     call: "May the defendant pursue the personal jurisdiction defense now?",
     choices: [
-      "Yes, because the defense was preserved by inclusion in the answer.",
-      "Yes, because a lack of personal jurisdiction may be raised at any time.",
-      "No, because only subject matter jurisdiction may be raised after an answer is filed.",
-      "No, because the defense was waived by its omission from the first Rule 12 motion."
+      "Held in abeyance pending the completion of fact discovery in the case.",
+      "Denied, because the defendant answered before raising personal jurisdiction.",
+      "Denied, because lack of PJ was waived by failing to raise it in the first Rule 12.",
+      "Granted, if the court ultimately lacks personal jurisdiction over the defendant."
     ],
-    correct: 3,
+    correct: 2,
     explanation: "The waivable defenses (lack of personal jurisdiction, improper venue, and insufficient process or service) must be consolidated into a party's <strong>first Rule 12 motion</strong> or they are waived. Omitting personal jurisdiction from that motion waives it. (B) confuses personal jurisdiction with subject matter jurisdiction, which is never waived. (A) is wrong on the facts: the defense was not in the answer. (C) misstates the rule."
   },
   {
@@ -2903,12 +2903,12 @@ const questions = [
     fact: "Knowing that a customer recently lost a child, a debt collector telephones her late at night for two straight weeks, using vulgar language and falsely threatening to have her arrested unless she pays. She suffers severe emotional distress and is hospitalized for it. She sues the collection agency for intentional infliction of emotional distress.",
     call: "Will she prevail?",
     choices: [
-      "No, because she suffered no physical impact.",
-      "Yes, because the collector's conduct was extreme and outrageous and caused severe distress.",
-      "No, because the collector was attempting to collect a lawful debt.",
-      "Yes, because any harassing debt collection is automatically outrageous."
+      "No, because emotional distress alone is not actionable in tort without any contact.",
+      "Yes, because the defendant committed fraud against the plaintiff's interests here.",
+      "No, because the plaintiff suffered no physical impact at all from the conduct.",
+      "Yes, because the conduct was extreme and outrageous and caused severe distress."
     ],
-    correct: 1,
+    correct: 3,
     explanation: "IIED requires <strong>extreme and outrageous conduct</strong>, intent or recklessness, causation, and severe distress. Repeated abusive late-night calls, exploitation of a known vulnerability, and false arrest threats clear the outrageousness bar. (D) overstates: ordinary collection efforts are not outrageous. (A) is wrong because IIED, unlike older NIED tests, requires no physical impact. (C) is wrong: a lawful debt does not license outrageous collection methods."
   },
   {
@@ -2931,12 +2931,12 @@ const questions = [
     fact: "A statute requires drivers to come to a complete stop at all railroad crossings. A driver fails to stop at a crossing at a moment when no train is anywhere near. As he proceeds, his car is struck by another motorist who negligently runs a red light at an adjacent intersection. That motorist sues the driver, invoking the railroad-crossing statute as negligence per se.",
     call: "Does the statutory violation establish negligence per se for this collision?",
     choices: [
-      "No, because negligence per se applies only to violations of criminal statutes.",
-      "Yes, because any violation of a safety statute is negligence per se.",
-      "Yes, because the driver was breaking the law when the collision occurred.",
-      "No, because the injury was not the type of harm the statute was designed to prevent."
+      "Negligence per se, because plaintiff is in the protected class and harm is the type.",
+      "It is irrelevant because tort liability requires a common-law breach of duty.",
+      "It is admissible as evidence of negligence but is never conclusive at trial.",
+      "It establishes strict liability against the defendant for the statutory violation."
     ],
-    correct: 3,
+    correct: 0,
     explanation: "<strong>Negligence per se</strong> applies only where the plaintiff is within the class the statute protects and the harm is of the type the statute was meant to prevent. A railroad-crossing statute targets train collisions, not red-light intersection crashes. (B) and (C) ignore the type-of-harm requirement. (A) is wrong: negligence per se commonly rests on regulatory and traffic statutes."
   },
   {
@@ -2973,12 +2973,12 @@ const questions = [
     fact: "A mother stands on a sidewalk and watches as a negligently driven truck strikes and kills her young daughter a few feet away. The mother is never touched and is never in any physical danger herself, but she suffers severe emotional distress from witnessing the death. She sues the driver for negligent infliction of emotional distress.",
     call: "Under the modern majority bystander approach, may she recover?",
     choices: [
-      "Yes, because she was a close relative present at the scene who contemporaneously perceived the injury.",
-      "No, because a bystander may never recover for purely emotional harm.",
-      "No, because she was never within the zone of physical danger.",
-      "Yes, but only if she also suffered a physical impact."
+      "Yes, because the defendant was negligent and harm to the mother was foreseeable.",
+      "No, because emotional distress without physical impact is generally not actionable.",
+      "Yes, because she was a close relative who perceived the injury at the scene firsthand.",
+      "No, because she was not within the zone of physical danger from the negligent driver."
     ],
-    correct: 0,
+    correct: 2,
     explanation: "The modern <strong>bystander NIED</strong> rule allows recovery where the plaintiff is closely related to the victim, was present at the scene, and contemporaneously perceived the injury-causing event. The mother satisfies all three. (C) states the older zone-of-danger test, which the modern bystander rule supplements. (B) and (D) are contradicted by that rule."
   },
   {
@@ -3015,12 +3015,12 @@ const questions = [
     fact: "A homeowner operates a dog kennel on his land. The dogs bark loudly throughout the night, substantially interfering with a neighbor's ability to sleep and enjoy her home. The kennel complies fully with all local zoning ordinances. The neighbor sues for private nuisance.",
     call: "Does the kennel's compliance with zoning defeat the neighbor's claim?",
     choices: [
-      "No, because any persistent noise is a nuisance per se.",
-      "Yes, because the kennel is a lawful and permitted use of the land.",
-      "No, because compliance with zoning does not preclude a private nuisance claim.",
-      "Yes, because the neighbor is presumed to have come to the nuisance."
+      "That the defendant intended to cause her personal harm by his conduct.",
+      "That the defendant violated a specific statute or zoning ordinance in his activity.",
+      "That she suffered physical injury or actual damage to her home's structure.",
+      "That the defendant's conduct substantially and unreasonably interfered with her use."
     ],
-    correct: 2,
+    correct: 3,
     explanation: "A <strong>private nuisance</strong> is a substantial and unreasonable interference with another's use and enjoyment of land. Zoning compliance is relevant evidence but not a defense: a lawful, permitted use can still be a nuisance. (B) overstates the effect of zoning. (D) invokes a doctrine not supported by the facts, and even \"coming to the nuisance\" is only a factor. (A) overstates: noise is judged by substantiality and reasonableness, not treated as nuisance per se."
   },
   {
@@ -3155,12 +3155,12 @@ const questions = [
     fact: "As a practical joke, Greg pulls a chair out from under Helen just as she begins to sit down, intending only that she land on the floor and be embarrassed. Helen falls hard and fractures her tailbone. She sues Greg for battery.",
     call: "Will Helen prevail?",
     choices: [
-      "No, because Greg intended only a harmless joke, not an injury.",
-      "Yes, because Greg intended a contact and a harmful contact resulted.",
-      "No, because Greg never personally touched Helen.",
-      "No, because Helen consented to the contact by trying to sit down."
+      "No, because the patron suffered no actual physical injury from the contact made.",
+      "Yes, because the waiter intended to humiliate the patron in front of other diners.",
+      "No, because the waiter touched only the plate, not the patron's body itself.",
+      "Yes, because offensive contact with an object closely connected to the person."
     ],
-    correct: 1,
+    correct: 3,
     explanation: "Battery requires intent to cause a harmful or <strong>offensive</strong> contact; the defendant need not intend or foresee the resulting injury. Greg intended that Helen contact the floor, an offensive contact she did not consent to. Causing contact by removing the chair counts as causing the contact. (A) wrongly requires intent to injure. (C) ignores indirect contact. (D) is wrong: Helen consented to sitting in the chair, not to its removal."
   },
   {
@@ -3267,10 +3267,10 @@ const questions = [
     fact: "At a jury trial, the plaintiff finishes presenting all of her evidence. The defendant believes that no reasonable jury could find for the plaintiff, because she offered no proof at all of an essential element of her claim. The defendant wants the court to take the case away from the jury.",
     call: "What is the defendant's proper motion at this point in the trial?",
     choices: [
-      "A motion for a new trial.",
-      "A motion for judgment as a matter of law, because a party has been fully heard and lacks a legally sufficient evidentiary basis.",
-      "A motion for summary judgment, made in the middle of the trial.",
-      "A motion to dismiss for failure to state a claim."
+      "A motion for a new trial under Rule 59 of the federal rules of civil procedure.",
+      "A motion for judgment as a matter of law after the close of plaintiff's evidence.",
+      "A motion for summary judgment, made in the middle of an ongoing jury trial.",
+      "A motion to dismiss for failure to state a claim under Rule 12(b)(6) of the rules."
     ],
     correct: 1,
     explanation: "A <strong>motion for judgment as a matter of law</strong> under Rule 50(a), historically called a directed verdict, may be made once the opposing party has been fully heard on an issue, and is granted when no reasonable jury would have a legally sufficient basis to find for that party. (C) is wrong because summary judgment is a pretrial motion. (A) is wrong: a new trial motion follows a verdict. (D) is wrong: a 12(b)(6) motion tests the pleadings, not the trial evidence."
@@ -3463,10 +3463,10 @@ const questions = [
     fact: "A contractor negligently severs an underground power line while digging on a public street. The outage causes a nearby factory to shut down for two days, resulting in $300,000 in lost profits and idle-worker payroll costs. The factory's equipment was not physically damaged, and no employee was injured. The factory sues the contractor for negligence.",
     call: "What is the most likely result?",
     choices: [
-      "The factory recovers only the lost profits but not the payroll costs.",
+      "The factory recovers only the lost profits but not the payroll costs incurred.",
       "The factory recovers under strict liability for an abnormally dangerous activity.",
-      "The factory recovers the full $300,000.",
-      "The factory recovers nothing, because pure economic loss without personal injury or property damage is generally not recoverable in negligence."
+      "The factory recovers the full $300,000 in claimed damages without any limitation.",
+      "The factory recovers nothing — pure economic loss is not recoverable in negligence."
     ],
     correct: 3,
     explanation: "The <strong>economic loss rule</strong> bars recovery in negligence for purely economic harm unaccompanied by personal injury or physical property damage. The factory's equipment was untouched and no one was hurt; the entire $300,000 is pure economic loss. (C) ignores the rule. (A) draws a distinction the doctrine does not recognize. (B) is wrong because routine excavation is not an abnormally dangerous activity."
@@ -3617,10 +3617,10 @@ const questions = [
     fact: "A plaintiff's attorney files a complaint alleging breach of contract. Before filing, she did not contact the defendant or review the underlying contract — she relied solely on her client's brief verbal account. After discovery, it is clear that several factual allegations have no evidentiary support and could have been disproved by a basic inquiry. The defendant moves for Rule 11 sanctions.",
     call: "How should the court rule on the Rule 11 motion?",
     choices: [
-      "Sanctions may be imposed, because Rule 11 requires that factual contentions have evidentiary support after a reasonable inquiry under the circumstances.",
-      "Sanctions may not be imposed, because the attorney signed the pleading in subjective good faith.",
+      "Sanctions may be imposed — Rule 11 requires reasonable inquiry before filing factual claims.",
+      "Sanctions may not be imposed, because the attorney signed in subjective good faith.",
       "Sanctions may not be imposed unless the attorney knowingly made false statements.",
-      "Sanctions are limited to monetary penalties paid to the opposing party."
+      "Sanctions are limited to monetary penalties payable to the opposing party only."
     ],
     correct: 0,
     explanation: "Rule 11(b)(3) requires that an attorney's signature certifies factual contentions have evidentiary support — or, if specifically identified, will likely have support after a reasonable opportunity for further investigation — based on an inquiry <em>reasonable under the circumstances</em>. The standard is objective, not subjective. (B) wrongly relies on subjective good faith. (C) sets the bar too high; the rule reaches negligent factual contentions, not just knowing falsehoods. (D) misstates remedies — sanctions may include nonmonetary directives, monetary sanctions paid into court, or, only when warranted, payments to the opposing party."
@@ -3687,10 +3687,10 @@ const questions = [
     fact: "A landlord sues a tenant in federal court (proper diversity jurisdiction) for failure to pay rent on a commercial lease. The tenant has a separate, unrelated breach-of-contract claim against the landlord arising from a different transaction involving the sale of office equipment six months earlier. The two transactions share no common operative facts. The tenant's office-equipment claim, standing alone, would satisfy diversity and the amount-in-controversy requirement.",
     call: "How may the tenant assert the office-equipment claim in the federal action?",
     choices: [
-      "The tenant must assert the claim in this action or waive it.",
-      "The tenant must move the court for leave to assert the claim because it is unrelated.",
-      "The tenant may assert the claim only if it is for less than $75,000.",
-      "The tenant may, but need not, assert the claim as a permissive counterclaim, provided there is an independent basis for subject-matter jurisdiction."
+      "The tenant must assert the claim in this action or it will be waived forever.",
+      "The tenant must move the court for leave to assert the unrelated claim here.",
+      "The tenant may assert the claim only if it is for less than $75,000 in dispute.",
+      "The tenant may assert it as a permissive counterclaim with independent jurisdiction."
     ],
     correct: 3,
     explanation: "Rule 13(b) permits a defendant to bring a <strong>permissive counterclaim</strong> — one that does <em>not</em> arise from the same transaction or occurrence as the plaintiff's claim. Permissive counterclaims are not waived if omitted from the action. Because they do not share a common nucleus of operative fact with the original claim, they require an independent basis for subject-matter jurisdiction (here, diversity satisfies that). (A) describes a compulsory counterclaim. (B) wrongly requires leave of court. (C) inverts the amount-in-controversy rule, which sets a floor of more than $75,000 for diversity claims."
@@ -3953,10 +3953,10 @@ const questions = [
     fact: "A driver fails to notice that the brake-warning light on her dashboard has been illuminated for several days. A reasonable driver would have had the brakes inspected. The brakes ultimately fail, and the driver strikes and kills a pedestrian. The driver simply was not paying attention to the dashboard and was unaware that anything was wrong with the vehicle.",
     call: "Under the MPC, which mental state best describes the driver's conduct?",
     choices: [
-      "Purposely, because she made a conscious decision not to service the brakes.",
-      "Negligently, because she failed to be aware of a substantial and unjustifiable risk that a reasonable driver would have perceived.",
-      "Recklessly, because she consciously disregarded a known risk.",
-      "Strict liability, because operating a vehicle is a heavily regulated activity."
+      "Purposely, because she made a conscious decision not to service the brakes promptly.",
+      "Negligently, because she failed to be aware of a substantial unjustifiable risk.",
+      "Recklessly, because she consciously disregarded the brake-warning risk on the dash.",
+      "Strict liability, because operating a vehicle is a heavily regulated public activity."
     ],
     correct: 1,
     explanation: "<strong>Negligence</strong> under the MPC is the <em>failure to be aware</em> of a substantial and unjustifiable risk where that failure constitutes a substantial deviation from the standard of care of a reasonable person. The driver did not consciously disregard a known risk — she simply failed to notice the warning light. (A) is wrong because there was no conscious objective to harm anyone. (C) confuses negligence with recklessness: recklessness requires <em>conscious disregard</em> of a known risk; the driver was unaware. (D) misapplies strict liability."
@@ -3967,9 +3967,9 @@ const questions = [
     fact: "A defendant lends his friend a crowbar, knowing the friend plans to use it to pry open a locked warehouse door and steal merchandise inside. The defendant has no personal interest in the warehouse's contents and does not care whether the friend succeeds, but he provides the tool anyway. The friend uses the crowbar to commit the burglary.",
     call: "What must the prosecution prove to convict the defendant as an accomplice to the burglary?",
     choices: [
-      "That the defendant was physically present at the warehouse when the burglary was committed.",
-      "That the defendant directly performed an element of the burglary himself.",
-      "That the defendant intended to assist the friend in committing the crime and intended that the friend commit the substantive offense of burglary.",
+      "That the defendant was physically present at the warehouse during the burglary itself.",
+      "That the defendant directly performed an element of the burglary himself in person.",
+      "That he intended to assist the friend AND that the friend commit the substantive offense.",
       "That the defendant agreed in advance to share in any proceeds from the burglary."
     ],
     correct: 2,
@@ -3981,10 +3981,10 @@ const questions = [
     fact: "A defendant agrees to drive the getaway car for a friend who plans to rob a bank at gunpoint. The defendant knows the friend will be armed. During the robbery, a bank guard tries to intervene, and the friend shoots and kills the guard. The defendant remains in the car outside the entire time and never sees or hears the killing.",
     call: "For what crimes may the defendant be convicted as an accomplice?",
     choices: [
-      "Robbery only, because he did not intend or know of the killing.",
-      "The killing only, because it occurred during the planned crime.",
-      "Neither, because he was not present inside the bank.",
-      "Both the robbery and the killing, because the killing was a foreseeable consequence of the armed robbery he agreed to aid."
+      "Robbery only, because he did not personally intend or know of the killing inside.",
+      "The killing only, because that crime occurred during the planned bank robbery.",
+      "Neither, because he was not personally present inside the bank during the robbery.",
+      "Both robbery and the killing — the killing was foreseeable from the armed robbery."
     ],
     correct: 3,
     explanation: "An accomplice is liable for the crimes he intentionally aided, advised, or encouraged — and also for <strong>other crimes committed by the principal in the course of the planned crime so long as those other crimes were probable or foreseeable</strong>. Armed robbery foreseeably risks the use of deadly force against resistance, so the killing falls within the accomplice's scope of liability. (A) ignores the foreseeable-additional-crime rule. (B) ignores liability for the underlying robbery. (C) wrongly requires physical presence inside the bank."
@@ -4009,10 +4009,10 @@ const questions = [
     fact: "A defendant agrees to drive the getaway car for a planned bank robbery scheduled for the following week. Two days before the robbery, while the principal is still purchasing supplies and finalizing the route, the defendant has a change of heart. She clearly tells the principal, \"I'm out — find someone else,\" repudiates her prior encouragement, and refuses to provide the car. The principal eventually carries out the robbery using a different driver.",
     call: "Is the defendant liable as an accomplice to the robbery?",
     choices: [
-      "Yes, because she initially agreed and the robbery in fact occurred.",
-      "No, because she effectively withdrew before the crime became unstoppable by repudiating her encouragement and neutralizing her assistance.",
-      "No, but only if she also notified the police.",
-      "Yes, because accomplice liability cannot be undone once incurred."
+      "Yes, because she initially agreed and the robbery in fact took place as planned.",
+      "No, because she effectively withdrew by repudiating before the crime was committed.",
+      "No, but only if she also notified police about the planned robbery in advance.",
+      "Yes, because accomplice liability cannot be undone once it has been incurred."
     ],
     correct: 1,
     explanation: "A person who <strong>effectively withdraws</strong> from a crime before it is committed cannot be convicted as an accomplice. Effective withdrawal requires action proportionate to the assistance previously given: repudiating encouragement, neutralizing assistance already provided, or — when nothing else will work — notifying the police. The withdrawal must come before the crime becomes unstoppable. The defendant's clear repudiation and refusal to supply the car well before the robbery is sufficient. (A) ignores the withdrawal doctrine. (C) overstates the requirement — police notification is one route, not the only one. (D) is incorrect."
@@ -4121,10 +4121,10 @@ const questions = [
     fact: "A state legislature passes a statute authorizing police to search any person's home without a warrant if officers have a \"reasonable hunch\" that contraband is inside. A homeowner whose house is searched under the statute moves to suppress on Fourth Amendment grounds. The state argues that the Fourth Amendment binds only the federal government and not the states.",
     call: "How should the court rule?",
     choices: [
-      "The state's argument is correct; by its terms the Fourth Amendment binds only federal officers.",
-      "The state's argument fails, because the Fourth Amendment is binding on the states through the Fourteenth Amendment's Due Process Clause under the doctrine of selective incorporation.",
-      "The state's argument is correct, but only because the state could not pass such a statute under its own constitution.",
-      "The state's argument fails, but only if the homeowner is a federal employee."
+      "The state's argument is correct — by its terms the 4th Amendment binds only federal officers.",
+      "The state's argument fails, because the 4th Amendment is incorporated against the states.",
+      "The state's argument is correct, but the statute would also be invalid under state law.",
+      "The state's argument fails, but only if the homeowner happens to be a federal employee."
     ],
     correct: 1,
     explanation: "Under the doctrine of <strong>selective incorporation</strong>, the Fourteenth Amendment's Due Process Clause makes most fundamental Bill of Rights protections — including the Fourth Amendment's protection against unreasonable searches and seizures — binding on the states. A state statute authorizing warrantless home searches on less than probable cause is unconstitutional regardless of whether state or federal officers carry it out. (A) misstates the modern doctrine. (C) may be partially true but does not explain why the federal Fourth Amendment applies. (D) is irrelevant — Fourth Amendment protection runs to everyone within state jurisdiction."
@@ -4149,10 +4149,10 @@ const questions = [
     fact: "A police officer approaches a man standing on a public sidewalk and asks if he has a moment to answer some questions about a recent incident. The officer does not display a weapon, raise her voice, block the man's path, or do anything else suggesting he is not free to leave. The man stops and answers questions. He later argues he was unlawfully seized when the officer first approached him.",
     call: "Was the man seized within the meaning of the Fourth Amendment?",
     choices: [
-      "Yes, because every encounter initiated by a police officer is a Fourth Amendment seizure.",
-      "Yes, because the man stopped and answered when asked.",
-      "No, because the man was not placed in handcuffs.",
-      "No, because under the totality of the circumstances a reasonable person would have felt free to decline the officer's request and terminate the encounter."
+      "Yes, because every encounter initiated by a police officer is a 4th Amendment seizure.",
+      "Yes, because the man stopped and answered the officer's questions cooperatively.",
+      "No, because the man was not placed in handcuffs during the entire encounter.",
+      "No, because under the totality a reasonable person would have felt free to leave."
     ],
     correct: 3,
     explanation: "A Fourth Amendment <strong>seizure of the person</strong> occurs only when, under the <em>totality of the circumstances</em>, a reasonable person would not feel free to decline the officer's request or terminate the encounter — or when there is an application of physical force or submission to a show of authority. Mere consensual questioning, without any coercive display, is not a seizure. (A) is wrong; routine police-citizen encounters are not seizures absent coercion. (B) confuses cooperation with submission to a show of authority. (C) sets the bar much higher than the law requires — handcuffs are not necessary to establish a seizure."
@@ -4261,10 +4261,10 @@ const questions = [
     fact: "A magistrate signs a warrant authorizing officers to search \"the suspect's home\" for \"items related to fraud.\" The supporting affidavit relies entirely on an anonymous, uncorroborated tip and does not specify the home's address. The defendant moves to suppress evidence seized under the warrant.",
     call: "Which constitutional defects undermine the warrant?",
     choices: [
-      "Only the lack of particularity in describing the place to be searched.",
-      "Only the lack of probable cause.",
-      "Only the lack of a neutral and detached magistrate.",
-      "Both the lack of probable cause and the lack of particularity in describing the place to be searched and the items to be seized."
+      "Only the lack of particularity in describing the place to be searched and items.",
+      "Only the lack of probable cause to support the warrant's issuance by the magistrate.",
+      "Only the lack of a neutral and detached magistrate to issue the search warrant here.",
+      "Both the lack of probable cause and the lack of particularity in the warrant's terms."
     ],
     correct: 3,
     explanation: "A valid search warrant requires three things: (1) issuance by a <strong>neutral and detached magistrate</strong>, (2) <strong>probable cause</strong> supported by oath or affirmation, and (3) <strong>particularity</strong> in describing the place to be searched and the items to be seized. An anonymous, uncorroborated tip generally does not establish probable cause, and \"the suspect's home\" without an address fails the particularity requirement. (A) and (B) each identify only one of the two defects. (C) misidentifies the third defect — the magistrate's neutrality is not at issue on these facts."
@@ -4289,10 +4289,10 @@ const questions = [
     fact: "Officers obtain a search warrant from a magistrate based on what they reasonably believe is sufficient probable cause. They execute the warrant and seize evidence. On appeal, a reviewing court determines that the magistrate's probable cause determination was deficient, but it does not find that the officers misled the magistrate or that the warrant was facially invalid. The defendant moves to suppress.",
     call: "Should the evidence be excluded?",
     choices: [
-      "Yes, because any defect in the warrant requires exclusion of the evidence seized under it.",
-      "No, because officers who act in objectively reasonable reliance on a facially valid warrant are protected by the good-faith exception to the exclusionary rule.",
-      "Yes, but only if the defendant can show actual prejudice from the deficient warrant.",
-      "No, because the exclusionary rule applies only to warrantless searches."
+      "Yes, because any defect in the warrant requires exclusion of the evidence seized.",
+      "No, because officers' objectively reasonable reliance on a warrant invokes good faith.",
+      "Yes, but only if the defendant can show actual prejudice from the warrant's defects.",
+      "No, because the exclusionary rule applies only to warrantless police searches."
     ],
     correct: 1,
     explanation: "Under <em>United States v. Leon</em>, the <strong>good-faith exception</strong> to the exclusionary rule permits admission of evidence seized by officers acting in <em>objectively reasonable reliance</em> on a facially valid warrant later found to lack probable cause. The exception does <em>not</em> apply if (i) the officers misled the magistrate, (ii) the magistrate abandoned a neutral role, (iii) the affidavit was so lacking in probable cause that reliance was unreasonable, or (iv) the warrant was facially deficient. None of those apply here. (A) overstates the rule. (C) confuses Fourth Amendment exclusion with civil damages standards. (D) inverts the doctrine — the exclusionary rule reaches warrant-based searches too."
@@ -4318,9 +4318,9 @@ const questions = [
     call: "Should the attic evidence be suppressed?",
     choices: [
       "No, because police may always search the entire residence following any home arrest.",
-      "No, because the arrest warrant authorized the broader search.",
-      "Yes, but only the evidence found in locked rooms.",
-      "Yes, because a search incident to arrest is limited to the arrestee's person and the area within his immediate control (his \"wingspan\") at the time of arrest."
+      "No, because the arrest warrant itself authorized the broader two-story search.",
+      "Yes, but only the evidence found inside locked rooms is subject to suppression.",
+      "Yes, because SILA is limited to the arrestee's person and his immediate-control area."
     ],
     correct: 3,
     explanation: "A <strong>search incident to lawful arrest</strong> is limited to the arrestee's <em>person</em> and the <em>area within his immediate control</em> — the wingspan from which he could grab a weapon or destroy evidence (<em>Chimel v. California</em>). A two-story sweep is well outside the doctrine; police would need a separate warrant or a recognized exception (such as a limited protective sweep of immediately adjoining spaces). (A) and (B) overstate the scope. (C) draws a distinction the doctrine does not."
@@ -4430,9 +4430,9 @@ const questions = [
     call: "Was the officer's stop and frisk lawful?",
     choices: [
       "Yes, because any noticeable bulge in a person's clothing always justifies a Terry frisk.",
-      "Yes, because the officer was investigating a serious violent crime.",
-      "No, but only because no weapon was actually found.",
-      "No, because the officer lacked articulable reasonable suspicion that the student was involved in criminal activity or was presently armed and dangerous."
+      "Yes, because the officer was investigating a serious violent crime on the campus.",
+      "No, but only because no actual weapon was discovered during the frisk itself.",
+      "No, because the officer lacked articulable reasonable suspicion of criminal activity."
     ],
     correct: 3,
     explanation: "A Terry stop and frisk requires <strong>articulable reasonable suspicion</strong> — both of criminal activity (for the stop) and of present armed dangerousness (for the frisk). A \"noticeable bulge,\" with no particularized link to the campus robbery, is insufficient. (A) overstates; bulges have many innocent explanations. (B) ignores the requirement that suspicion be particularized to the person stopped. (C) confuses lawfulness of the stop with its outcome — whether a weapon is actually found does not retroactively validate or invalidate the stop."
@@ -4513,10 +4513,10 @@ const questions = [
     fact: "Police on patrol enter an area known for heavy drug trafficking. A man on the sidewalk sees the marked police caravan approaching, makes immediate eye contact with the lead officer, and bolts in the opposite direction, running unprovoked. Officers chase him down, briefly detain him, and pat him down, finding a handgun.",
     call: "Was the Terry stop supported by reasonable suspicion?",
     choices: [
-      "No, because mere presence in a high-crime area is never enough to establish reasonable suspicion.",
-      "Yes, because unprovoked headlong flight upon noticing police, in a high-crime area, taken together supplies the articulable reasonable suspicion required for a Terry stop.",
-      "No, because innocent people sometimes run from police.",
-      "Yes, but only because a weapon was actually found."
+      "No, because mere presence in a high-crime area is never enough to establish suspicion.",
+      "Yes, because unprovoked flight in a high-crime area supplies reasonable suspicion.",
+      "No, because innocent people sometimes run from police without any criminal motive.",
+      "Yes, but only because a weapon was actually found during the resulting frisk."
     ],
     correct: 1,
     explanation: "Under <em>Illinois v. Wardlow</em>, <strong>unprovoked headlong flight</strong> upon noticing police, combined with presence in a <strong>high-crime area</strong>, can supply the reasonable suspicion needed for a Terry stop. Either factor alone is not enough, but together they create the requisite articulable suspicion. (A) overstates by ignoring the flight component. (C) raises a fair policy concern but does not control the doctrinal rule. (D) confuses outcome with predicate — the stop's lawfulness depends on the facts at the moment of seizure, not on what was found."
@@ -4681,10 +4681,10 @@ const questions = [
     fact: "A neighbor calls police to report that an elderly woman who lives alone has not been seen for three days. Her newspapers are piling up and her mailbox is overflowing. When officers arrive, they knock loudly and get no response. Through a window they see what appears to be a body slumped on the kitchen floor. They enter without a warrant. They find the woman alive but unconscious from a medical emergency, and in plain view on the kitchen counter they see what they immediately recognize as illegal drugs.",
     call: "Was the warrantless entry constitutional?",
     choices: [
-      "No, because the officers should have first obtained the woman's consent before entering.",
-      "Yes, because the emergency aid exception permits warrantless entry into a home when officers reasonably believe a person inside needs immediate medical aid.",
-      "Yes, but only because the drugs were ultimately seen in plain view.",
-      "No, because welfare checks always require a warrant."
+      "No, because the officers should have first obtained the woman's consent before entry.",
+      "Yes, because emergency aid permits warrantless entry when someone inside needs help.",
+      "Yes, but only because the drugs were ultimately observed in plain view on a counter.",
+      "No, because welfare checks always require a warrant absent express consent first."
     ],
     correct: 1,
     explanation: "The <strong>emergency aid exception</strong> permits warrantless entry into a home when officers have an objectively reasonable basis to believe an occupant is in need of immediate aid or in danger of serious harm (<em>Brigham City v. Stuart</em>; <em>Caniglia v. Strom</em>). Once inside lawfully, plain view applies to the drugs. (A) is impossible on the facts — an unconscious occupant cannot give consent. (C) gets the result right but inverts the logic — entry is justified by emergency aid, not plain view. (D) overstates the warrant requirement."
@@ -4737,10 +4737,10 @@ const questions = [
     fact: "A defendant spends the night as a guest at a friend's apartment. Police, without a warrant or any applicable exception, enter the apartment and find the defendant in a bedroom alongside drugs that belong to him. The defendant moves to suppress.",
     call: "Does the defendant have standing to challenge the warrantless entry?",
     choices: [
-      "No, because only the friend (the tenant) has standing.",
-      "Yes, because an overnight guest has a legitimate expectation of privacy in his host's home and may challenge a warrantless entry.",
-      "No, because guests have no expectation of privacy in others' homes.",
-      "Yes, but only if he was a long-term guest of at least 30 days."
+      "No, because only the friend (the tenant of record) has standing to challenge.",
+      "Yes, because an overnight guest has a legitimate expectation of privacy at host's home.",
+      "No, because mere guests have no expectation of privacy in others' homes generally.",
+      "Yes, but only if he was a long-term overnight guest of at least 30 consecutive days."
     ],
     correct: 1,
     explanation: "Under <em>Minnesota v. Olson</em>, an <strong>overnight guest</strong> has a legitimate expectation of privacy in his host's home sufficient to confer Fourth Amendment standing. (A) and (C) overstate the personal-rights requirement of standing — guests have legitimate expectations too. (D) invents a duration requirement the doctrine does not impose; overnight is sufficient."
@@ -4765,10 +4765,10 @@ const questions = [
     fact: "Federal agents, without a warrant or subpoena, ask the defendant's bank to turn over copies of his deposit slips, checks, and account statements. The bank complies. The records, which the defendant himself created in the normal course of banking, reveal payments that prove tax fraud. The defendant moves to suppress.",
     call: "How should the court rule?",
     choices: [
-      "Grant the motion, because the records contain his personal financial information.",
-      "Grant the motion, because banks have a fiduciary duty to protect customer records.",
-      "Deny the motion, but only if the bank's privacy policy permits disclosure.",
-      "Deny the motion, because a customer has no reasonable expectation of privacy in records voluntarily conveyed to a third party such as a bank."
+      "Grant the motion, because the records contain his most personal financial information.",
+      "Grant the motion, because banks owe a fiduciary duty to protect customer records.",
+      "Deny the motion, but only if the bank's privacy policy permits the disclosure.",
+      "Deny — there is no privacy expectation in records voluntarily given to a third party."
     ],
     correct: 3,
     explanation: "Under the <strong>third-party doctrine</strong> (<em>United States v. Miller</em>; <em>Smith v. Maryland</em>), a person has <strong>no reasonable expectation of privacy</strong> in records voluntarily conveyed to a third party — like banking records — because the customer assumes the risk that the third party will disclose them. (A) and (B) overstate the privacy interest. (C) makes the analysis depend on private agreements, which is not the constitutional test. Note: <em>Carpenter v. United States</em> carved out a narrow exception for historical cell-site location data; standard banking records remain unprotected."
@@ -4807,10 +4807,10 @@ const questions = [
     fact: "Police have probable cause that a man committed a felony but no warrant. They go to his home, knock, and when he opens the door, officers step inside and arrest him in his living room. The state argues the arrest was lawful because officers had probable cause and the arrest happened in the suspect's own home.",
     call: "Was the warrantless in-home arrest constitutional?",
     choices: [
-      "Yes, because probable cause is all that is required for any arrest.",
-      "Yes, because the suspect himself opened the door.",
-      "No, because under Payton v. New York, a routine warrantless arrest of a suspect inside his own home is unconstitutional absent exigent circumstances or consent.",
-      "No, because the officers needed a search warrant rather than an arrest warrant for the home."
+      "Yes, because probable cause is all that is required for any kind of arrest.",
+      "Yes, because the suspect himself voluntarily opened his front door for them.",
+      "No, because under Payton a warrantless home arrest is unconstitutional absent exigency.",
+      "No, because officers needed a search warrant rather than an arrest warrant for entry."
     ],
     correct: 2,
     explanation: "Under <em>Payton v. New York</em>, police may not make a routine warrantless arrest of a suspect inside his own home, even with probable cause. Absent <strong>exigent circumstances</strong> or <strong>consent</strong>, they need an <strong>arrest warrant</strong> (which carries with it limited authority to enter the suspect's home to execute it). (A) describes the rule for public arrests, not in-home arrests. (B) misreads the consent doctrine — merely opening a door is not consent to enter. (D) confuses warrants — an arrest warrant suffices for the suspect's own home; a search warrant is needed only for arresting the suspect inside a third party's home (Steagald)."
@@ -4835,10 +4835,10 @@ const questions = [
     fact: "A defendant gets into a bar fight. He swings a metal stool at the victim's head, intending to seriously injure (but not kill) him. The blow fractures the victim's skull and the victim dies in the hospital several hours later. The defendant testifies he meant only to hurt the victim badly. He is charged with common-law murder.",
     call: "Can the defendant be convicted of common-law murder?",
     choices: [
-      "Yes, because intent to inflict great bodily injury is one of the four mental states that satisfy malice aforethought for common-law murder.",
-      "No, because common-law murder requires a specific intent to kill.",
-      "No, because the death was unintentional.",
-      "Yes, but only under the felony-murder rule."
+      "Yes, because intent to inflict great bodily injury satisfies malice aforethought.",
+      "No, because common-law murder requires the specific intent to kill the victim.",
+      "No, because the death of the victim was entirely unintentional and accidental.",
+      "Yes, but only under the felony-murder rule applying to enumerated felonies."
     ],
     correct: 0,
     explanation: "Common-law murder requires <strong>malice aforethought</strong>, which can be established by any of four mental states: (1) <em>intent to kill</em>, (2) <em>intent to inflict great bodily injury</em>, (3) <em>reckless indifference to an unjustifiably high risk to human life</em> (depraved-heart murder), or (4) <em>intent to commit a felony</em> (felony murder). The defendant's intent to seriously injure the victim satisfies the second prong. (B) and (C) understate the doctrine — intent to kill is sufficient but not necessary. (D) misapplies felony murder, which requires an independent underlying felony, not present here."
@@ -4863,10 +4863,10 @@ const questions = [
     fact: "A defendant has been planning for weeks to kill his business partner so he can take over the partnership. He buys a gun, scouts the partner's daily routine, lures him to a secluded location, and shoots him at close range. He is charged in a jurisdiction whose statute defines first-degree murder as \"any deliberate and premeditated killing\" or any killing committed in the perpetration of arson, robbery, burglary, or kidnapping.",
     call: "Is the defendant guilty of first-degree murder?",
     choices: [
-      "No, because depraved-heart murder is the maximum he can be convicted of.",
+      "No, because depraved-heart murder is the maximum charge he can be convicted of.",
       "No, because the murder did not occur in the commission of an enumerated felony.",
-      "Yes, because the prolonged planning establishes both deliberation and premeditation, satisfying the statutory definition of first-degree murder.",
-      "Yes, but only under the felony-murder branch of the statute."
+      "Yes, because the prolonged planning establishes both deliberation and premeditation.",
+      "Yes, but only under the felony-murder branch of the murder statute applied here."
     ],
     correct: 2,
     explanation: "<strong>First-degree murder</strong> in most modern jurisdictions requires either (1) <em>deliberation and premeditation</em> or (2) a killing in the commission of an enumerated felony. Weeks of planning, weapon acquisition, and a calculated, lured execution show both deliberation (cool, reasoned reflection) and premeditation (formation of intent in advance). (A) ignores the planning. (B) ignores the deliberation/premeditation prong. (D) misapplies the felony-murder branch, which requires an enumerated underlying felony — not present here."
@@ -4891,10 +4891,10 @@ const questions = [
     fact: "A defendant deliberately strikes the victim with intent to cause great bodily injury. The blow kills the victim. The prosecution charges the defendant with felony murder, arguing that the underlying felony is aggravated battery, which is a felony under state law.",
     call: "Can the prosecution use aggravated battery as the predicate for felony murder?",
     choices: [
-      "No, because the assault/battery that caused the killing merges with the homicide and cannot serve as the independent felony predicate for felony murder.",
-      "Yes, because aggravated battery is a felony in the jurisdiction.",
+      "No, because the assault/battery merges with the homicide it caused and cannot predicate.",
+      "Yes, because aggravated battery is a felony in the jurisdiction under the statute.",
       "Yes, because malice can be inferred from the intent to commit aggravated battery.",
-      "No, because felony murder applies only to enumerated felonies and battery is never enumerated."
+      "No, because felony murder applies only to enumerated felonies and battery isn't enumerated."
     ],
     correct: 0,
     explanation: "Under the <strong>merger rule</strong>, an underlying felony used as the predicate for felony murder must be <em>independent</em> of the killing itself. Assaults and batteries that directly cause the death generally <em>merge</em> with the homicide and cannot serve as the predicate felony — otherwise every intentional homicide would automatically be felony murder. The defendant might still be convicted of intent-to-cause-GBI murder, but not felony murder. (B) and (C) ignore the merger doctrine. (D) overstates — the merger problem is about the relationship to the homicide, not about the enumeration list."
@@ -4905,10 +4905,10 @@ const questions = [
     fact: "A defendant intentionally shoots and kills a romantic partner in a sudden rage after a heated argument. There was no planning, no enumerated felony in progress, and no adequate provocation that would reduce the killing to manslaughter (the rage came from a verbal argument). The jurisdiction defines first-degree murder as deliberate and premeditated killing or killing in the perpetration of arson, robbery, burglary, kidnapping, or rape, and second-degree murder as \"any other kind of murder.\"",
     call: "What is the most serious offense the defendant can be charged with?",
     choices: [
-      "First-degree murder, because all intentional killings are first-degree.",
-      "Second-degree murder, because the killing was intentional but neither premeditated nor in the commission of an enumerated felony.",
-      "Voluntary manslaughter, because the killing occurred during a heated argument.",
-      "Involuntary manslaughter, because the killing was unintended."
+      "First-degree murder, because all intentional killings are first-degree under the law.",
+      "Second-degree murder, intentional but neither premeditated nor felony-involved here.",
+      "Voluntary manslaughter, because the killing occurred during a heated verbal argument.",
+      "Involuntary manslaughter, because the killing was unintended despite the intent shown."
     ],
     correct: 1,
     explanation: "<strong>Second-degree murder</strong> is the default category for intentional killings (and depraved-heart killings) that do not qualify as first-degree under the statute and lack the adequate provocation needed for voluntary manslaughter. An intentional killing without premeditation or an enumerated felony fits squarely. (A) ignores the premeditation requirement. (C) is wrong on the facts — a heated verbal argument is not adequate provocation; classic categories are serious battery, deadly threats, or finding a spouse in adultery, and \"words alone\" are insufficient. (D) misses that the killing was intentional."
@@ -5045,10 +5045,10 @@ const questions = [
     fact: "A defendant burns down his own house to collect insurance proceeds. No one else lives there and the house is on his own property. The jurisdiction follows the strict common-law definition of arson.",
     call: "Has the defendant committed common-law arson?",
     choices: [
-      "Yes, because malicious burning of any dwelling is arson at common law.",
-      "Yes, because insurance fraud aggravates the offense.",
-      "Yes, because the structure is a dwelling.",
-      "No, because common-law arson requires that the dwelling be \"of another,\" and a person cannot commit common-law arson by burning their own home."
+      "Yes, because malicious burning of any dwelling counts as arson at common law.",
+      "Yes, because the burning was motivated by insurance fraud aggravation.",
+      "Yes, because the structure burned was indeed a residential dwelling at the time.",
+      "No, because common-law arson requires that the dwelling burned be that of another."
     ],
     correct: 3,
     explanation: "At common law, arson requires that the dwelling be <strong>\"of another\"</strong> — occupied by someone other than the defendant. A person could not commit common-law arson by burning their own home, regardless of motive. (A) misstates the rule. (B) confuses insurance fraud (a separate offense) with arson elements. (C) ignores the of-another element. Modern statutes have generally eliminated this element, but the question specifies strict common law."
@@ -5059,10 +5059,10 @@ const questions = [
     fact: "A defendant approaches a stranger's home at night, intending to steal valuables inside. He finds the front door already wide open — apparently left open by the resident. He walks straight in, takes jewelry, and leaves. The jurisdiction follows the common-law definition of burglary.",
     call: "Has the defendant committed common-law burglary?",
     choices: [
-      "No, because walking through an already wide-open door does not satisfy the breaking requirement at common law.",
-      "Yes, because his entry was unlawful.",
-      "Yes, because he intended to commit a felony inside.",
-      "No, because the door was the only entry point."
+      "No, because walking through an already wide-open door is not a breaking at common law.",
+      "Yes, because his unauthorized entry was unlawful under any reading of burglary.",
+      "Yes, because he intended to commit a felony inside the dwelling at the time of entry.",
+      "No, because the front door was the only available entry point to the home."
     ],
     correct: 0,
     explanation: "At common law, <strong>burglary</strong> requires a <strong>breaking</strong> — actual or constructive. Actual breaking requires at least minimal force (opening a closed or even slightly ajar door or window). <strong>Walking through an already wide-open door is not a breaking</strong>, and without a breaking there is no common-law burglary regardless of intent to commit a felony. (B) and (C) ignore the breaking requirement. (D) is irrelevant. The defendant may be guilty of larceny but not common-law burglary."
@@ -5073,10 +5073,10 @@ const questions = [
     fact: "A defendant approaches a stranger's home at night. He knocks on the door and falsely tells the resident he is a police officer who needs to come in to investigate a reported gas leak. The resident, believing the story, opens the door and invites him in. Once inside, the defendant pulls out a knife and steals valuables. The jurisdiction follows the common-law definition of burglary.",
     call: "Has the defendant committed common-law burglary?",
     choices: [
-      "No, because the resident voluntarily admitted him.",
-      "Yes, because entry obtained by fraud or threat constitutes a constructive breaking, satisfying the breaking element of common-law burglary.",
-      "No, because there was no actual breaking of any physical barrier.",
-      "Yes, but only as a continuing trespass."
+      "No, because the resident voluntarily admitted him through the front door.",
+      "Yes, because entry by fraud is a constructive breaking under common-law burglary.",
+      "No, because there was no actual breaking of any physical barrier on entry.",
+      "Yes, but only as a continuing trespass following the lawful initial admission."
     ],
     correct: 1,
     explanation: "At common law, a <strong>constructive breaking</strong> occurs when entry is obtained by <strong>fraud, threat, or intimidation</strong>. Fraudulently impersonating a police officer to gain entry satisfies the breaking element just as if the defendant had forced open a window. Combined with entry at night into a dwelling with intent to commit a felony, all elements are present. (A) ignores constructive breaking. (C) wrongly limits breaking to physical force. (D) invents a doctrine."
@@ -5297,10 +5297,10 @@ const questions = [
     fact: "A defendant suffering from severe schizophrenia walks into a police station unprompted and tells officers he has committed a murder. The officers question him politely; he gives a detailed confession. There is no coercion, no threats, and no overreach by police. The defendant later argues that his confession was involuntary because his psychiatric condition made him incapable of free will.",
     call: "How should the court rule on voluntariness?",
     choices: [
-      "Suppress, because mental illness automatically renders confessions involuntary.",
-      "Admit, because absent coercive police conduct, a defendant's mental condition alone does not render a confession involuntary under the Due Process Clause.",
-      "Admit, but only if a psychiatrist has cleared him as competent.",
-      "Suppress, because Miranda warnings were not given."
+      "Suppress, because mental illness automatically renders all confessions involuntary.",
+      "Admit, because without coercive police conduct mental illness alone is not involuntary.",
+      "Admit, but only if a psychiatrist has cleared the defendant as competent first.",
+      "Suppress, because Miranda warnings were never given during the entire encounter."
     ],
     correct: 1,
     explanation: "Under <em>Colorado v. Connelly</em>, a defendant's mental condition — even severe mental illness — does not by itself render a confession involuntary under the Due Process Clause. <strong>Coercive police activity is a necessary predicate</strong> to a finding of involuntariness. Absent such coercion, the confession is admissible regardless of the defendant's psychiatric state. (A) overstates. (C) invents a requirement not in the doctrine. (D) is a Miranda question separate from voluntariness; on these facts the defendant volunteered the statement before any interrogation."
@@ -5367,10 +5367,10 @@ const questions = [
     fact: "After being arrested and formally charged with DUI, a defendant is taken to a hospital for a court-ordered blood draw. His attorney was not notified and was not present. The defendant later moves to suppress the blood-alcohol result on Sixth Amendment grounds.",
     call: "How should the court rule?",
     choices: [
-      "Suppress, because all post-charge procedures require counsel's presence.",
-      "Suppress, because the blood draw is a critical stage.",
-      "Admit, because blood sampling and similar physical-evidence procedures are not \"critical stages\" triggering the Sixth Amendment right to counsel.",
-      "Admit, but only if the defendant consented to the draw."
+      "Suppress, because all post-charge procedures require defense counsel's presence.",
+      "Suppress, because the warrantless blood draw is itself a critical stage of trial.",
+      "Admit, because blood draws are not critical stages for Sixth Amendment purposes.",
+      "Admit, but only if the defendant himself consented to the blood draw at the time."
     ],
     correct: 2,
     explanation: "The Supreme Court has held that <strong>blood sampling, fingerprinting, handwriting exemplars, and similar physical-evidence procedures are not critical stages</strong> for Sixth Amendment purposes — even when conducted after formal charges (<em>Schmerber v. California</em>; <em>Gilbert v. California</em>). Counsel's presence is therefore not constitutionally required. (A) overstates. (B) misclassifies the procedure. (D) imports a Fourth Amendment consent issue irrelevant to the Sixth Amendment question."
@@ -5381,10 +5381,10 @@ const questions = [
     fact: "A defendant has been indicted for burglary and is represented by counsel on that charge. While he is in custody on the burglary indictment, police want to question him about a completely unrelated murder for which no charges have yet been filed. They do not contact his burglary attorney. He waives Miranda and makes incriminating statements about the murder.",
     call: "Does the Sixth Amendment bar use of the murder statements?",
     choices: [
-      "Yes, because once a defendant has counsel on any charge, the Sixth Amendment bars all uncounseled police questioning.",
-      "Yes, because the questioning is presumptively coercive.",
-      "Yes, but only if Miranda warnings were not given before the murder questioning.",
-      "No, because the Sixth Amendment right to counsel is offense-specific, so its invocation on the burglary charge does not bar questioning about the unrelated, uncharged murder."
+      "Yes, because once a defendant has counsel on any charge, 6th Am bars all questioning.",
+      "Yes, because the murder questioning is presumptively coercive in this custodial context.",
+      "Yes, but only if Miranda warnings were not given before the murder questioning began.",
+      "No, because the Sixth Amendment right to counsel is offense-specific by its terms."
     ],
     correct: 3,
     explanation: "The <strong>Sixth Amendment right to counsel is offense-specific</strong> (<em>McNeil v. Wisconsin</em>; <em>Texas v. Cobb</em>). Invocation on one charge does not bar police from questioning the defendant about unrelated, uncharged offenses. (Note: if the defendant had invoked his Fifth Amendment right to counsel under Miranda, that protection is <em>not</em> offense-specific — but the question here is specifically about the Sixth Amendment.) (A) misstates Sixth Amendment doctrine. (B) overstates. (C) conflates Miranda with the Sixth Amendment; the Sixth Amendment does not attach at all to the uncharged murder."
@@ -5465,10 +5465,10 @@ const questions = [
     fact: "A suspect is taken to a police station after his arrest for assault. Before any Miranda warnings, a booking officer asks him standard intake questions: name, date of birth, address, employment, and emergency contact. When asked about employment, the suspect's answer inadvertently reveals he was at the scene of the assault. The prosecution seeks to introduce the employment answer at trial.",
     call: "Should the answer be suppressed under Miranda?",
     choices: [
-      "Yes, because any pre-Miranda statement made in custody must be suppressed.",
-      "No, because routine booking questions for biographical information are not \"interrogation\" for Miranda purposes, even when asked of a custodial suspect.",
+      "Yes, because any pre-Miranda statement made in custody must be fully suppressed.",
+      "No, because routine biographical booking questions are not Miranda interrogation.",
       "Yes, but only if the officer should have known the answer would be incriminating.",
-      "No, because Miranda applies only to formal post-booking questioning."
+      "No, because Miranda applies only to formal post-booking station-house questioning."
     ],
     correct: 1,
     explanation: "Under the <strong>routine booking question exception</strong> recognized in <em>Pennsylvania v. Muniz</em>, biographical questions reasonably related to police administrative concerns (name, address, DOB, employment) are not \"interrogation\" for Miranda purposes — even when asked of a custodial suspect without warnings. (A) overstates Miranda's scope. (C) describes a narrower limitation that does not control on these facts. (D) misstates Miranda."
@@ -5535,10 +5535,10 @@ const questions = [
     fact: "A suspect in custody is read his Miranda rights and clearly invokes his right to counsel. Police stop questioning. He is then released from custody. Sixteen days later, police re-arrest him on the same charges, give him fresh Miranda warnings, and question him again. He waives his rights and confesses.",
     call: "Is the second confession admissible?",
     choices: [
-      "No, because once a suspect invokes his right to counsel under Miranda, police can never re-initiate questioning.",
-      "No, because the second waiver is tainted by the prior invocation.",
-      "Yes, because under Maryland v. Shatzer, the Edwards bar on police-initiated re-interrogation expires once the suspect has been out of Miranda custody for at least 14 days.",
-      "Yes, only if counsel was present at the second interrogation."
+      "No, because once a suspect invokes counsel under Miranda police may never reinitiate.",
+      "No, because the second waiver is tainted by the prior counsel invocation.",
+      "Yes, because the Edwards bar expires after 14 days of being out of Miranda custody.",
+      "Yes, only if counsel was present in the room during the second interrogation."
     ],
     correct: 2,
     explanation: "Under <em>Edwards v. Arizona</em>, once a custodial suspect invokes his Fifth Amendment right to counsel, police may not re-initiate interrogation until counsel is present. But <em>Maryland v. Shatzer</em> created an <strong>expiration rule</strong>: the Edwards bar dissolves once the suspect has been out of Miranda custody for <strong>14 days</strong>. After that break, police may re-initiate questioning, give fresh warnings, and obtain a valid waiver. Sixteen days satisfies the rule. (A) overstates Edwards. (B) ignores Shatzer. (D) overstates the protection."
