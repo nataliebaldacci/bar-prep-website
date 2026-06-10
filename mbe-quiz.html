@@ -397,7 +397,7 @@
   <header>
     <div class="eyebrow">Bar Prep Practice — MBE</div>
     <h1>Multistate <em>Bar Exam</em></h1>
-    <div class="subtitle">Four subjects · <span id="headerQuestionCount"></span> questions · Tap to select your set</div>
+    <div class="subtitle">Seven subjects · <span id="headerQuestionCount"></span> questions · Tap to select your set</div>
   </header>
 
   <!-- START SCREEN -->
@@ -457,7 +457,8 @@ const SUBJECTS = {
   contracts: { name: "Contracts", color: "gold" },
   property: { name: "Real Property", color: "burgundy" },
   criminal: { name: "Criminal Law", color: "burgundy" },
-  crimpro: { name: "Criminal Procedure", color: "forest" }
+  crimpro: { name: "Criminal Procedure", color: "forest" },
+  conlaw: { name: "Constitutional Law", color: "gold" }
 };
 
 const questions = [
@@ -5613,11 +5614,165 @@ const questions = [
     correct: 3,
     explanation: "<em>Edwards v. Arizona</em> bars <strong>police-initiated</strong> re-interrogation after a Fifth Amendment right-to-counsel invocation. It does <em>not</em> prevent a suspect from <strong>voluntarily re-initiating</strong> the conversation. When the suspect himself reopens dialogue and gives a fresh, knowing, and voluntary waiver, the resulting statements are admissible (<em>Oregon v. Bradshaw</em>). (A) overstates Edwards. (B) invents a duty police don't have. (C) confuses the Shatzer 14-day break (which applies to release from custody) with the Edwards re-initiation rule."
   },
+  {
+    subject: "conlaw",
+    topic: "Judicial Power · Standing",
+    fact: "A state passes a law providing that no one may fly the flag of any country other than the United States outside a residential dwelling. A homeowner is outraged. She flies only decorative flags adorned with bunnies and kittens outside her home and has no intention of ever flying a national flag, but she is sure the law is unconstitutional and is tired of the state limiting people's rights.",
+    call: "May she bring suit as a citizen alleging the law violates the First Amendment?",
+    choices: [
+      "Yes, because federal courts routinely decide whether state laws violate the Constitution.",
+      "Yes, because the law theoretically reaches the kind of flags she chooses to display.",
+      "No, because she has no concrete stake and therefore lacks standing to sue here.",
+      "No, because her claim is moot now that the decorative flag law already passed."
+    ],
+    correct: 2,
+    explanation: "Standing requires a personal, concrete <strong>injury</strong> caused by the defendant and redressable by the court. The homeowner flies only compliant decorative flags and has no intention of flying a noncompliant one, so she has no real stake in the outcome. Being an outraged citizen is not enough. (A) is true as a general matter but ignores that she still needs standing. (B) fails because a theoretical possibility that the law could one day touch her is not a concrete injury. (D) misuses mootness, which applies when a once-live dispute is resolved before the court can rule, not where there was never a live dispute."
+  },
+  {
+    subject: "conlaw",
+    topic: "Judicial Power · Advisory Opinions",
+    fact: "A new President has limited government experience. An issue arises with an important trade partner. The President has read the relevant treaty and trade agreement but is unsure how they apply to a new technology, so she files an action in federal court asking the court to interpret the treaty and agreement.",
+    call: "May the federal district court hear the case?",
+    choices: [
+      "No, because she seeks an advisory opinion with no actual case or controversy.",
+      "Yes, because the dispute is ripe for pre-enforcement review by the district court.",
+      "No, because federal courts may never issue any ruling that binds the President.",
+      "Yes, because interpreting treaties is a core function of the federal judiciary."
+    ],
+    correct: 0,
+    explanation: "Federal courts may decide only actual <strong>cases or controversies</strong> and may not issue <strong>advisory opinions</strong>. The President wants an abstract interpretation with no binding effect on adverse parties, so no justiciable dispute exists. (B) states the pre-enforcement ripeness test, but ripeness still requires an actual dispute, and there is none. (C) states the right result for the wrong reason: courts can issue rulings the President must obey, so that is not why the case fails. (D) ignores the absence of a live controversy."
+  },
+  {
+    subject: "conlaw",
+    topic: "Judicial Power · Mootness",
+    fact: "A city ordinance bars anyone who owns real property outside city limits from running for or serving as mayor. A lifelong resident owns an out-of-state condo bought so her twin sons would have housing during college. She files a declaratory judgment action to invalidate the law and run for mayor. While the case is pending, her sons graduate and she sells the condo. She is now eligible to run but still believes the ordinance is unconstitutional and wishes to press on.",
+    call: "If the city moves to dismiss, should the court grant the motion?",
+    choices: [
+      "No, because she still sincerely believes the challenged ordinance is unconstitutional.",
+      "No, because the issue is capable of repetition yet evading review in her case.",
+      "Yes, because the suit was never ripe for the court to hear in the first place.",
+      "Yes, because she is now eligible and the controversy has become moot."
+    ],
+    correct: 3,
+    explanation: "A federal court needs a live case or controversy at <strong>every stage</strong>. The plaintiff had a live claim, but it disappeared when she sold the condo and became eligible, so the case is <strong>moot</strong>. (A) fails because a sincere belief that a law is unconstitutional is not a live dispute. (C) misstates the problem: ripeness concerns suits brought too early, while this claim was live and then resolved too late. (B) misapplies the capable-of-repetition-yet-evading-review exception, which needs a reasonable expectation the same party will face the same short-lived injury again; nothing suggests she will buy other outside property or that any future suit would evade review."
+  },
+  {
+    subject: "conlaw",
+    topic: "Legislative Power · Commerce Clause",
+    fact: "Alarmed by a sharp rise in vape pen use among teens, a member of Congress introduces a bill barring the sale of vape pens to anyone under 18 and requiring sellers to check photo identification. The bill becomes law and is immediately challenged by a grocery store chain that sells vape pens in several states.",
+    call: "Which is the strongest ground supporting the law's constitutionality?",
+    choices: [
+      "The Necessary and Proper Clause independently authorizes Congress to pass it.",
+      "The Commerce Clause reaches sales whose aggregate affects interstate commerce.",
+      "The federal police power lets Congress protect the health and safety of minors.",
+      "The Take Care Clause empowers Congress to see that vaping laws are executed."
+    ],
+    correct: 1,
+    explanation: "The <strong>Commerce Clause</strong> lets Congress regulate activities that, in the <strong>aggregate</strong>, substantially affect interstate commerce, including intrastate economic activity, so long as there is a rational basis for that conclusion. Vape pen sales by retailers nationwide easily qualify, whether the goods cross state lines or buyers travel between states to find lax ID rules. (A) is wrong because the Necessary and Proper Clause is not a freestanding power; it must attach to another enumerated power. (C) is wrong because there is no federal police power. (D) is wrong because the Take Care Clause is an executive power, not a source of legislative authority."
+  },
+  {
+    subject: "conlaw",
+    topic: "Legislative Power · Necessary and Proper",
+    fact: "The Constitution empowers Congress to establish post offices and post roads. After finding that consumers increasingly use private shippers with more convenient hours and that this threatens the Postal Service's finances, Congress passes a law requiring all post offices to stay open until at least 7 P.M. A coalition of post offices in a rural state sues, arguing the law is unconstitutional as applied because extended hours would cause financial loss. Assume the coalition has standing.",
+    call: "Is the court likely to find the law constitutional?",
+    choices: [
+      "No, because the Constitution does not specifically mention post office hours.",
+      "No, because the Necessary and Proper Clause alone cannot support this statute.",
+      "Yes, because the law is a rational means of executing the postal power.",
+      "No, because the rule is unreasonable as applied to the rural state coalition."
+    ],
+    correct: 2,
+    explanation: "The <strong>Necessary and Proper Clause</strong> lets Congress enact any law that is rational, that is, appropriate, for carrying out an enumerated power, even a foolish one. Tied to the <strong>postal power</strong>, the hours law is a rational response to congressional findings about the Postal Service's finances. (D) fails because the national findings make the law rational, and an as-applied financial complaint does not defeat that. (A) fails because the postal power plus the Necessary and Proper Clause supplies the authority even though hours are unmentioned. (B) is a true statement of the clause's dependence on another power, but here the postal power supplies exactly that support."
+  },
+  {
+    subject: "conlaw",
+    topic: "Executive Power · Take Care Clause",
+    fact: "Over the President's veto, Congress passes a measure dedicating $200 million to abstinence-only sexual education programs for high school students in areas where more than 75% of the population lives below the federal poverty line. The President believes comprehensive sex education is the better approach and directs the funds to a group that provides that programming instead.",
+    call: "Is the President's action constitutional?",
+    choices: [
+      "No, because the President must faithfully execute the spending law as enacted.",
+      "Yes, because Congress lacks police power to fund such education programs.",
+      "Yes, because the President may redirect funds toward the more effective approach.",
+      "No, because only the courts may decide which education program receives funding."
+    ],
+    correct: 0,
+    explanation: "The <strong>Take Care Clause</strong> obligates the President to execute the laws faithfully even when she disagrees with them, and she may not refuse to spend funds in the manner Congress expressly mandated. Congress validly used its <strong>tax and spend</strong> power to provide for the general welfare, so redirecting the money is improper. (B) is wrong because the spending power, not a police power, supports the law, and the law is valid. (C) is wrong because policy disagreement does not excuse the duty to execute. (D) invents a rule giving courts the spending choice, which does not exist."
+  },
+  {
+    subject: "conlaw",
+    topic: "Federalism · Supremacy and Preemption",
+    fact: "Last year Congress passed a law requiring any parking lot with more than 100 spaces to provide at least one electric vehicle charging station for every 50 spaces. Last month a state with vast oil reserves passed a law providing that lots with fewer than 500 spaces need no charging stations, and larger lots need only one station per 250 spaces. A nationwide retailer owns several stores in the state, all with lots holding 200 to 300 spaces, and asks whether it must provide charging stations.",
+    call: "What is the best answer?",
+    choices: [
+      "No, because a national retailer is governed by the more recent state statute.",
+      "No, because requiring the stations would unlawfully commandeer the state itself.",
+      "No, because the law is an invalid exercise of the federal police power.",
+      "Yes, because the conflicting state law is preempted and federal law applies."
+    ],
+    correct: 3,
+    explanation: "Under the <strong>Supremacy Clause</strong>, a state law that conflicts with federal law or obstructs a federal objective is <strong>preempted</strong>. The federal rule requires stations for these lots while the state rule would excuse them, so the state law is preempted and the retailer must comply with federal law. (A) is wrong because timing is irrelevant to a state-versus-federal conflict and the retailer's national reach does not change which law governs. (B) is wrong because anti-commandeering does not stop the federal government from enforcing its own laws. (C) is wrong because nothing suggests the law rests on a police power."
+  },
+  {
+    subject: "conlaw",
+    topic: "Federalism · Spending Power Coercion",
+    fact: "A congressional committee concluded that requiring high school students to pass a basic home economics course would significantly reduce consumer debt. Congress then declared that any state not making the course a graduation requirement loses one-half of its federal education funding. A state that prefers local control declines and loses funding. Federal funds make up 80% of the state's education budget, so the cut causes severe problems. The state sues, and the governor notes that losing means the state must adopt the course.",
+    call: "Which side is most likely to prevail?",
+    choices: [
+      "Congress, because it may directly order states to adopt curriculum requirements.",
+      "The state, because the funding condition is unduly coercive on these facts.",
+      "Congress, because its power to attach conditions to federal grants is unlimited.",
+      "The state, because the condition fails the rational basis standard of review."
+    ],
+    correct: 1,
+    explanation: "Congress may attach <strong>strings</strong> to grants if they are clearly stated, relate to the program's purpose, are not unduly coercive, and do not otherwise violate the Constitution. This condition is clear and germane to education, but threatening 80% of the state's education budget is a <strong>gun to the head</strong>, as the governor's comment confirms, so it is <strong>unduly coercive</strong>. (A) is wrong because Congress cannot directly command states to legislate. (C) is wrong because the spending power is limited, and Congress exceeded it. (D) is wrong because rational basis is not the test applied to spending conditions."
+  },
+  {
+    subject: "conlaw",
+    topic: "Federalism · Intergovernmental Immunity",
+    fact: "A state has detailed laws ensuring that people with physical disabilities can access public accommodations and government facilities. A woman who uses a wheelchair cannot access a store run by the National Park Service on the grounds of a federal park located entirely within the state. The store complies with all federal regulations but not the stricter state law. Congress has passed no law authorizing states to impose tougher access rules on federal facilities. She sues the Park Service under the state law.",
+    call: "Is the woman likely to prevail?",
+    choices: [
+      "No, because the federal store is immune from the stricter state standards.",
+      "Yes, because a state may set access rules stricter than the federal floor.",
+      "Yes, because the state has a compelling interest in access within its borders.",
+      "No, because the park happens to sit on land located inside the state."
+    ],
+    correct: 0,
+    explanation: "Under the Supremacy Clause and the doctrine of <strong>intergovernmental immunity</strong>, a state cannot regulate the activities of the federal government or its instrumentalities without congressional consent. The Park Service store performing a federal function is immune from the stricter state access law. (B) is wrong because, although states often set stricter standards than federal law, they may not impose them on the federal government. (C) is wrong because even a compelling state interest cannot override federal immunity. (D) reaches the right result for the wrong reason: federal immunity applies even on state-owned land, so the location is not the point."
+  },
+  {
+    subject: "conlaw",
+    topic: "Federalism · Privileges and Immunities",
+    fact: "A bar examinee is comparing the Article IV Privileges and Immunities Clause with related constitutional provisions and wants to identify which statement accurately describes its scope and protections.",
+    call: "Which statement is true under the Privileges and Immunities Clause of Article IV?",
+    choices: [
+      "It protects corporations against state laws that favor in-state competitors.",
+      "It guarantees a state's own citizens the fundamental right to interstate travel.",
+      "It bars discrimination against nonresidents in important commercial activities.",
+      "It shields resident aliens from state discrimination in earning a livelihood."
+    ],
+    correct: 2,
+    explanation: "The Article IV <strong>Privileges and Immunities Clause</strong> bars a state from discriminating against nonresidents as to fundamental rights, such as important commercial activities like pursuing a livelihood, unless the discrimination serves an important noneconomic interest with no reasonable nondiscriminatory alternative. (A) is wrong because the clause protects only natural persons, not corporations. (B) describes the <strong>Fourteenth Amendment</strong> Privileges or Immunities Clause and the right to interstate travel, a different provision. (D) is wrong because the clause protects only citizens, not noncitizens."
+  },
+  {
+    subject: "conlaw",
+    topic: "Federalism · Dormant Commerce Clause",
+    fact: "A city passes an ordinance requiring that at least half the employees of every city contractor be city residents. An out-of-state U.S. citizen who wants contracting work sues, raising both the Dormant Commerce Clause and the Article IV Privileges and Immunities Clause.",
+    call: "Which best describes the likely result?",
+    choices: [
+      "He wins under the Commerce Clause but loses his Privileges and Immunities claim.",
+      "He loses under the Commerce Clause but wins under Privileges and Immunities.",
+      "He wins under both clauses because the residency rule plainly discriminates.",
+      "He loses under both clauses because the city is funding its own project here."
+    ],
+    correct: 1,
+    explanation: "The residency rule discriminates, but the city is spending its own money, so the <strong>market participant</strong> exception defeats the <strong>Dormant Commerce Clause</strong> claim. The <strong>Privileges and Immunities</strong> claim survives: the plaintiff is a citizen of another state, the clause protects the right to earn a living, and the market participant exception does not apply to it. With no important noneconomic interest and no showing that less discriminatory means are unavailable, he likely wins on that ground. (A) reverses the two outcomes. (C) ignores the market participant exception. (D) ignores that the exception does not reach the Privileges and Immunities Clause."
+  },
 ];
 
 // ============ APP LOGIC ============
 
-let selectedSubjects = new Set(["torts", "civpro", "contracts", "property", "criminal", "crimpro"]);
+let selectedSubjects = new Set(["torts", "civpro", "contracts", "property", "criminal", "crimpro", "conlaw"]);
 let selectedCount = 25;
 let selectedFilter = "both";
 
