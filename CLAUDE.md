@@ -7,6 +7,10 @@ A personal, static MBE (Multistate Bar Exam) practice site Natalie uses while st
 - **`mbe-quiz.html`** — the entire quiz app: all questions, styles, and JS live inline in this one file. This is the file you edit ~every session.
 - The `.md` (CONTRACTS.md, CRIMINAL PROCEDURE.md, …) and `.pdf` files in the repo are Natalie's study source material — reference, not site code.
 
+## Audience & theming
+
+These questions are written so Natalie's **dad** can read them aloud to her and she can guess and practice with him — it's a shared, out-loud study activity, not just a screen quiz. Her dad is a **general contractor and real estate developer**, so wherever a hypo can naturally be set in **real estate, construction, contracting, land development, or property** without distorting the doctrine being tested, lean into that framing. It keeps him engaged across every subject (a Civ Pro venue question can involve a developer; a Con Law takings question is naturally property; a Crim Law question can involve a job site). Don't force it where it would misrepresent the law — but treat construction/real-estate framing as the default flavor whenever the topic allows.
+
 ## The daily workflow
 
 This is the recurring loop, and it's almost the only thing we do here:
