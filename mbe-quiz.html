@@ -6370,6 +6370,958 @@ const questions = [
     correct: 2,
     explanation: "<strong>Past consideration</strong> — performance already rendered before a promise — is not consideration, because it was not bargained for in exchange for the promise. (A) is wrong because conferring a benefit does not satisfy the bargained-for requirement. (B) is wrong because sincerity and clarity do not supply consideration. (D) is wrong because the defect is the lack of bargained-for exchange, not the absence of a writing."
   },
+  {
+    subject: "property",
+    topic: "Concurrent Estates · Joint Tenancy",
+    fact: "A developer and his business partner take title to a vacant building lot as joint tenants with right of survivorship. The developer's duly executed will leaves all of his property to his daughter. After ten years of co-owning the lot, the developer dies in an accident.",
+    call: "Who owns the lot?",
+    choices: [
+      "The daughter, because the developer's will controls his half share.",
+      "The partner, because the survivor takes the whole by survivorship.",
+      "The daughter and partner, now holding the lot as tenants in common.",
+      "The partner's estate, because the lot left the developer's hands."
+    ],
+    correct: 1,
+    explanation: "Joint tenancy carries a <strong>right of survivorship</strong>: a deceased joint tenant's interest passes automatically to the surviving joint tenant and is not devisable by will. (A) is wrong because survivorship overrides the will as to the lot. (C) is wrong because no tenancy in common arises; the partner takes the whole. (D) is wrong because nothing passes through the developer's estate."
+  },
+  {
+    subject: "property",
+    topic: "Concurrent Estates · Tenancy in Common",
+    fact: "A married couple, both contractors, buy a duplex together. At closing the deed states that the property passes \"to the two of them as tenants in common.\" Their state presumes that a conveyance to married partners creates a tenancy by the entirety.",
+    call: "How do they hold title to the duplex?",
+    choices: [
+      "As tenants by the entirety, because the marital presumption applies.",
+      "As joint tenants, because married co-owners share a survivorship right.",
+      "As tenants in common, because the deed's express language controls.",
+      "As a tenancy at will, because the form of co-ownership is left unclear."
+    ],
+    correct: 2,
+    explanation: "The marital presumption of tenancy by the entirety yields to <strong>express deed language</strong>, and this deed says tenancy in common. (A) is wrong because the presumption is rebutted by the deed. (B) is wrong because a joint tenancy needs a clear survivorship expression, absent here. (D) is wrong because the form of ownership is stated, not unclear."
+  },
+  {
+    subject: "property",
+    topic: "Concurrent Estates · Severance",
+    fact: "Two builders buy a warehouse together and take title as joint tenants with right of survivorship. Years later they fall in love and marry each other. Several years after that, one spouse sells her share in the warehouse to an outside investor.",
+    call: "How do the investor and the remaining builder hold title?",
+    choices: [
+      "As joint tenants, because the original survivorship right still governs.",
+      "As tenants by the entirety, because the co-owners had since married.",
+      "The investor takes nothing, because survivorship blocked the sale.",
+      "As tenants in common, because the sale severed the joint tenancy."
+    ],
+    correct: 3,
+    explanation: "A joint tenant's conveyance <strong>severs</strong> the joint tenancy as to that share, so the investor takes as a tenant in common. (A) is wrong because the sale destroyed the survivorship unity. (B) is wrong because tenancy by the entirety requires marriage at the time of the original conveyance. (C) is wrong because a joint tenant may freely sell her share."
+  },
+  {
+    subject: "property",
+    topic: "Leaseholds · Tenancy for Years",
+    fact: "A contractor leases office space under a written lease stating it \"begins July 1 and ends December 1,\" with rent paid monthly. On November 30 he emails the landlord that he is leaving and drops the keys off the next morning. The landlord, claiming inadequate notice, later sues him for December rent.",
+    call: "Who will prevail?",
+    choices: [
+      "The contractor, because a tenancy for years ends without any notice.",
+      "The landlord, because the contractor failed to give a month's notice.",
+      "The landlord, because monthly rent created an ongoing periodic tenancy.",
+      "The contractor, because the landlord accepted the keys he returned."
+    ],
+    correct: 0,
+    explanation: "A <strong>tenancy for years</strong> runs for a fixed period and terminates automatically on the stated end date with no notice required, so the contractor owes nothing after December 1. (B) is wrong because no notice was needed. (C) is wrong because a fixed start and end date make this a tenancy for years, not periodic. (D) is wrong because acceptance of the keys is irrelevant when the term simply expired."
+  },
+  {
+    subject: "property",
+    topic: "Leaseholds · Periodic Tenancy",
+    fact: "A tenant rents a unit under a lease stating only a start date of January 1, with no end date, and pays rent on the first of each month. On May 5, having found a nicer building, she hands the landlord a letter stating she will vacate effective June 1.",
+    call: "Has the tenant given proper notice of termination?",
+    choices: [
+      "Yes, because a fixed-term lease ends on the date the tenant designates.",
+      "No, because a month-to-month tenancy requires a full month's notice.",
+      "Yes, because notice in a periodic tenancy may be given at any time.",
+      "No, because a periodic tenancy can be ended only by the landlord."
+    ],
+    correct: 1,
+    explanation: "A lease with a start date but no end date, paid monthly, is an implied <strong>month-to-month periodic tenancy</strong> requiring at least one month's notice; May 5 notice to leave June 1 is too short. (A) is wrong because this is not a tenancy for years. (C) is wrong because periodic tenancies require timely notice measured by the period. (D) is wrong because a tenant may also terminate."
+  },
+  {
+    subject: "property",
+    topic: "Leaseholds · Sublease",
+    fact: "A tenant on a one-year lease transfers the unit to a friend for six months, leaving three months on the original term, with the friend paying rent to the tenant each month. The tenant forwards only one payment to the landlord, then stops and becomes unreachable.",
+    call: "From whom can the landlord recover the unpaid rent?",
+    choices: [
+      "From the friend, who is in privity of estate with the landlord.",
+      "From either the tenant or the friend, at the landlord's election.",
+      "From the tenant only, because the transfer was a sublease.",
+      "From neither, because the original lease term has not yet ended."
+    ],
+    correct: 2,
+    explanation: "Transferring less than the entire remaining term is a <strong>sublease</strong>, so the sublessee is in neither privity of estate nor privity of contract with the landlord and owes the landlord nothing. (A) is wrong because a sublessee has no privity of estate. (B) is wrong for the same reason. (D) is wrong because the tenant remains liable on the lease throughout the term."
+  },
+  {
+    subject: "property",
+    topic: "Landlord Duties · Warranty of Habitability",
+    fact: "A tenant on a one-year residential lease loses heat in the middle of winter. She notifies the landlord that day, but a week later, with the heat still out, the landlord says he will wait until next winter to fix it. The lease says nothing about heating.",
+    call: "Has the landlord breached a duty, and if so, which?",
+    choices: [
+      "No, because the lease is silent on any duty to provide heating.",
+      "Yes, the covenant of quiet enjoyment, by disturbing her use of the unit.",
+      "No, because routine repairs are the tenant's responsibility, not his.",
+      "Yes, the implied warranty of habitability, by leaving the unit unheated."
+    ],
+    correct: 3,
+    explanation: "The <strong>implied warranty of habitability</strong> requires residential premises fit for basic human habitation, and no heat in winter is a classic breach — implied into every residential lease regardless of silence. (A) is wrong because the warranty is implied despite the lease's silence. (B) is wrong because quiet enjoyment concerns interference with use, not unfit conditions. (C) is wrong because heat is a habitability matter, not routine upkeep."
+  },
+  {
+    subject: "property",
+    topic: "Landlord Liability · Tort",
+    fact: "A tenant rents a house with a yard. Overnight, a small sinkhole suddenly opens near the garden. The next morning the tenant, not seeing it, walks out to pick vegetables, falls in, and twists her ankle.",
+    call: "Under the modern trend, is the landlord liable for her injury?",
+    choices: [
+      "No, because he had no notice of the hazard or chance to repair it.",
+      "Yes, because a landlord strictly insures tenants against all hazards.",
+      "No, because a landlord never owes tenants any duty of reasonable care.",
+      "Yes, because the dangerous condition arose on the leased premises."
+    ],
+    correct: 0,
+    explanation: "Under the modern trend a landlord owes a duty of <strong>reasonable care</strong> and is liable for negligence only where he had notice of the defect and an opportunity to repair it; an overnight sinkhole gave him neither. (B) is wrong because liability is for negligence, not strict. (C) is wrong because the modern trend does impose a care duty. (D) is wrong because the mere location of the hazard does not establish fault."
+  },
+  {
+    subject: "property",
+    topic: "Easements · Appurtenant",
+    fact: "A developer owns a beachfront lot. Her neighbor behind her, tired of the long drive to public parking, asks to walk across her lot to reach the beach. She agrees and hands him a signed deed granting a right to use the path across her land to access his own property.",
+    call: "What interest does the neighbor hold?",
+    choices: [
+      "An easement in gross, because the right is personal to the neighbor.",
+      "An easement appurtenant, because it benefits his adjoining parcel.",
+      "An easement by prescription, because of his long use of the path.",
+      "A license, because the developer may revoke the permission at will."
+    ],
+    correct: 1,
+    explanation: "A written grant letting one parcel's owner cross a neighboring parcel benefits the holder's land and burdens the other, creating an <strong>easement appurtenant</strong>. (A) is wrong because two parcels are involved, so the easement is appurtenant, not in gross. (C) is wrong because the use is by express grant, not long adverse use. (D) is wrong because a signed deed creates an easement, not a revocable license."
+  },
+  {
+    subject: "property",
+    topic: "Easements · Necessity",
+    fact: "A developer splits her 30-acre parcel, selling the back 10 acres with a cabin and keeping the front 20 with her driveway. The buyer begins using her driveway, claiming an easement by necessity because the only other route to the main road is a potholed dirt road on his own lot.",
+    call: "Is the buyer correct?",
+    choices: [
+      "Yes, because the driveway is the most convenient route to the road.",
+      "Yes, because the developer once owned both parcels as one tract.",
+      "No, because his own dirt road already provides a way out.",
+      "No, because an easement by necessity must always be put in writing."
+    ],
+    correct: 2,
+    explanation: "An <strong>easement by necessity</strong> arises only when the conveyed parcel has no other access except over the grantor's remaining land; an existing route, even a poor one, defeats the claim. (A) is wrong because convenience is not necessity. (B) is wrong because prior common ownership alone confers no easement. (D) is wrong because easements by necessity arise by operation of law, not writing."
+  },
+  {
+    subject: "property",
+    topic: "Zoning · Permitted Uses",
+    fact: "A builder buys a lot intending to put up a two-story building with her apartment upstairs and a retail bakery storefront downstairs. The lot sits in an area zoned for single-family residences only.",
+    call: "Is her proposed use permitted under the zoning ordinance?",
+    choices: [
+      "Yes, because she will personally live in the upstairs apartment.",
+      "Yes, because zoning cannot bar an owner from her own business.",
+      "No, because all new construction requires a fresh zoning variance.",
+      "No, because mixed residential-commercial use violates the zoning."
+    ],
+    correct: 3,
+    explanation: "A zone limited to <strong>single-family residences</strong> bars mixed residential-commercial use, so the apartment-plus-storefront plan is not permitted. (A) is wrong because the residential portion does not cure the commercial use. (B) is wrong because zoning may restrict commercial uses. (C) is wrong because the use is flatly disallowed, not merely awaiting a variance."
+  },
+  {
+    subject: "property",
+    topic: "Covenants · Benefit Running with Land",
+    fact: "Two neighbors share a boundary fence the man built. The woman promises in writing that she and her successors will maintain the fence. The man later sells his house to a friend who knew of the promise. The fence falls into disrepair, and the friend wants money damages from the woman.",
+    call: "What must the friend establish to recover damages?",
+    choices: [
+      "That the benefit of the covenant runs with the land to him.",
+      "That the burden of the covenant runs with the land to him.",
+      "That an equitable servitude binds the woman to keep the fence up.",
+      "That he and the woman share privity of contract over the fence."
+    ],
+    correct: 0,
+    explanation: "The friend succeeded to the <strong>benefited</strong> land and seeks damages, so he must show the benefit runs with the land (writing, intent, touch and concern, privity). (B) is wrong because the burdened land has not changed hands; the woman still holds it. (C) is wrong because damages are sought as a real covenant, not an injunction. (D) is wrong because privity of contract exists only between the original promisors."
+  },
+  {
+    subject: "property",
+    topic: "Covenants · Equitable Servitude",
+    fact: "A man promises his neighbor in writing that neither he nor his successors will build any structure higher than two stories. He then sells his land to a developer who plans to demolish the house and put up a ten-story apartment building. The neighbor seeks an injunction to stop the project.",
+    call: "Is privity required for the neighbor to enforce the promise?",
+    choices: [
+      "Yes, because every land-use promise demands horizontal privity.",
+      "No, because an injunction enforces it as an equitable servitude.",
+      "Yes, because the developer never personally made the promise.",
+      "No, because building-height limits are categorically unenforceable."
+    ],
+    correct: 1,
+    explanation: "A party seeking an <strong>injunction</strong> enforces the promise as an equitable servitude, which requires writing, intent, touch and concern, and notice — but not privity. (A) is wrong because privity is a real-covenant requirement, not an equitable-servitude one. (C) is wrong because a successor with notice is bound. (D) is wrong because height restrictions are commonly enforceable servitudes."
+  },
+  {
+    subject: "property",
+    topic: "Land Sale Contracts · Statute of Frauds",
+    fact: "A developer agrees to buy a parcel from a landowner. The landowner drafts a contract listing both names, a description of the land, and the price, signs it, and sends it over. The developer reads it and approves but forgets to sign. A week before closing, the developer breaches. The landowner wants to enforce.",
+    call: "Can the landowner enforce the contract against the developer?",
+    choices: [
+      "Yes, because the developer read and approved every material term.",
+      "Yes, because the landowner's own signature satisfies the writing.",
+      "No, because the party to be charged never signed the contract.",
+      "No, because land contracts require both parties' notarized signatures."
+    ],
+    correct: 2,
+    explanation: "The Statute of Frauds requires the writing to be signed by the <strong>party to be charged</strong> — here the developer, who never signed — so the landowner cannot enforce it against him. (A) is wrong because reading and approving is not signing. (B) is wrong because the signature of the party seeking to enforce does not bind the other. (D) is wrong because notarization is not required."
+  },
+  {
+    subject: "property",
+    topic: "Land Sale Contracts · Equitable Conversion",
+    fact: "A developer signs a valid contract to buy a house, with closing set for one month later. Two weeks before closing, a wildfire destroys the house through no fault of either party.",
+    call: "Under the majority view, who bears the risk of loss?",
+    choices: [
+      "The seller, because legal title has not yet passed to the buyer.",
+      "Both parties equally, because neither one caused the wildfire.",
+      "The seller, because she still holds possession of the property.",
+      "The buyer, because equitable conversion treats him as the owner."
+    ],
+    correct: 3,
+    explanation: "Under <strong>equitable conversion</strong>, once a land sale contract is signed equity treats the buyer as the owner, so the majority places the risk of loss on the buyer before closing. (A) is wrong because risk of loss follows equitable ownership, not legal title. (B) is wrong because the loss is not split. (C) is wrong because possession does not control risk of loss under the majority rule."
+  },
+  {
+    subject: "property",
+    topic: "Land Sale Contracts · Marketable Title",
+    fact: "On April 1 a developer contracts to buy a large parcel, with closing set for June 1. On May 15 she discovers that a squatter has openly lived in a cabin on the land for at least 20 years. She immediately tells the seller he has already breached the implied covenant of marketable title.",
+    call: "Is the developer correct?",
+    choices: [
+      "No, because the duty is to deliver marketable title at closing.",
+      "Yes, because the squatter's long possession clouds the title now.",
+      "No, because adverse possession claims never affect marketability.",
+      "Yes, because any title defect voids the contract immediately."
+    ],
+    correct: 0,
+    explanation: "The seller's implied promise is to furnish <strong>marketable title at closing</strong>, not before, so he may cure the squatter problem by June 1 and has not yet breached. (B) is wrong because a defect before closing is not yet a breach. (C) is wrong because long adverse possession can in fact render title unmarketable. (D) is wrong because a curable defect does not automatically void the contract."
+  },
+  {
+    subject: "property",
+    topic: "Deeds · Delivery",
+    fact: "A woman executes a deed conveying her house to her nephew, hands it to him, and says, \"This is yours, but I want to live here and keep it in my name until I die, so just hold the deed until then.\" The nephew takes the deed and puts it in his desk drawer.",
+    call: "Who owns the house?",
+    choices: [
+      "The nephew, because the signed deed was physically handed to him.",
+      "The woman, because she lacked intent to pass title immediately.",
+      "The nephew, because a deed once handed over takes effect at once.",
+      "The woman, because a deed to a relative is always revocable."
+    ],
+    correct: 1,
+    explanation: "Valid <strong>delivery</strong> requires the grantor's intent that title pass presently; her statement that she would keep the house until death negates that intent despite the physical handover, so she still owns it. (A) and (C) are wrong because physical transfer without present intent is not delivery. (D) is wrong because the result turns on intent, not on the parties' relationship."
+  },
+  {
+    subject: "property",
+    topic: "Deeds · Covenants for Title",
+    fact: "On March 1 a woman mortgages her property. On May 1 she contracts to sell it to a builder. At the July 1 closing she gives him a general warranty deed, but the mortgage remains in place; she stays current on payments and the bank makes no claim against the builder.",
+    call: "Has a covenant for title been breached, and if so, when?",
+    choices: [
+      "No, because she stayed current and the bank claimed nothing.",
+      "Yes, but only if and when the bank later disturbs his possession.",
+      "Yes, the covenant against encumbrances was breached at closing.",
+      "No, because the mortgage predates the land sale contract entirely."
+    ],
+    correct: 2,
+    explanation: "A general warranty deed's covenant against encumbrances is a <strong>present covenant</strong> breached, if at all, at closing; an outstanding mortgage is an encumbrance, so the breach occurred at the July 1 closing. (A) is wrong because the encumbrance itself breaches the covenant regardless of payment status. (B) describes future-covenant timing, not this present covenant. (D) is wrong because the covenant lives in the deed delivered at closing."
+  },
+  {
+    subject: "property",
+    topic: "Recording Acts · Notice Jurisdiction",
+    fact: "A woman sells her property to a builder, who forgets to record his deed. A week later she changes her mind and gifts the same property to her nephew by deed; he has no idea about the earlier sale. Neither the builder nor the nephew records.",
+    call: "In a notice jurisdiction, who owns the property?",
+    choices: [
+      "The nephew, because he took without notice of the earlier sale.",
+      "The nephew, because the builder failed to record his deed first.",
+      "They share title, because neither party recorded the deed at all.",
+      "The builder, because the nephew is a donee, not a purchaser."
+    ],
+    correct: 3,
+    explanation: "Recording acts protect only <strong>bona fide purchasers for value</strong>; a donee like the nephew is not protected even without notice, so the earlier buyer prevails. (A) is wrong because lack of notice alone does not help a non-purchaser. (B) is wrong because the builder's failure to record cannot be exploited by a donee. (C) is wrong because title does not split; one taker prevails."
+  },
+  {
+    subject: "property",
+    topic: "Adverse Possession · Hostility",
+    fact: "A woman asks her neighbor whether she may build garden beds in his unused backyard. He agrees, on the condition that she remove them whenever he sells. She gardens there nearly every day for 20 years while he never enters the yard. The jurisdiction's statutory period is 15 years.",
+    call: "Has the woman gained title by adverse possession?",
+    choices: [
+      "No, because her use was permissive and therefore not hostile.",
+      "Yes, because her daily gardening was open and continuous for 20 years.",
+      "No, because growing vegetables is not a use a true owner would make.",
+      "Yes, because the neighbor abandoned the yard by never entering it."
+    ],
+    correct: 0,
+    explanation: "Adverse possession requires <strong>hostile</strong> possession — entry without the owner's permission; because the neighbor granted permission, the hostility element fails even though the other elements are met. (B) is wrong because openness and duration cannot cure the lack of hostility. (C) is wrong because regular gardening is a fitting use of a yard. (D) is wrong because the owner's nonuse does not supply hostility."
+  },
+  {
+    subject: "criminal",
+    topic: "Jurisdiction · Result in the State",
+    fact: "A demolition contractor standing on a site in State A sets off a controlled blast that hurls debris across the property line into State B, where a surveyor is struck and killed. The contractor never physically enters State B.",
+    call: "Which state or states may exercise criminal jurisdiction over the homicide?",
+    choices: [
+      "Only State A, where the contractor performed the triggering act.",
+      "Only State B, where the deadly result actually took place.",
+      "Neither state, since the contractor never crossed the border.",
+      "Both State A and State B, under act and result jurisdiction."
+    ],
+    correct: 3,
+    explanation: "A state has jurisdiction if an <strong>act</strong> constituting an element of the offense occurs there, or if an out-of-state act causes a prohibited <strong>result</strong> inside it. State A had the act; State B had the death, so <strong>both</strong> may prosecute — (D). (A) and (B) are each half right but ignore the other basis for jurisdiction. (C) is wrong because physical presence in the result-state is unnecessary when an out-of-state act causes an in-state harm."
+  },
+  {
+    subject: "criminal",
+    topic: "Merger · Solicitation and Conspiracy",
+    fact: "A developer urges his foreman to burn down a rival's model home so a competing subdivision will stall. The foreman agrees, and the two later set the fire together, damaging the home.",
+    call: "Of solicitation, conspiracy, and arson, for which offenses may the developer be convicted?",
+    choices: [
+      "Solicitation, conspiracy, and arson, as three separate offenses.",
+      "Solicitation and arson, but not conspiracy, which merges away.",
+      "Conspiracy and arson, but not solicitation, which merges away.",
+      "Arson alone, because the inchoate crimes all merge into it."
+    ],
+    correct: 2,
+    explanation: "<strong>Solicitation merges</strong> into the completed crime, so the developer cannot be convicted of both solicitation and arson — eliminating (A) and (B). But <strong>conspiracy does not merge</strong> with the completed offense; a defendant may be convicted of both conspiracy and the target crime, so (D) is wrong. He is properly convicted of <strong>conspiracy and arson</strong> — (C)."
+  },
+  {
+    subject: "criminal",
+    topic: "Omission · Legal Duty by Contract",
+    fact: "A site-safety officer is hired under contract to monitor a trench and pull workers clear if the walls begin to give way. He watches a wall start to collapse around a laborer but does nothing, and the laborer is crushed and dies.",
+    call: "Can the safety officer be held criminally liable for the death based on his failure to act?",
+    choices: [
+      "Yes, because his contract created a legal duty to act.",
+      "No, because criminal liability requires an affirmative act.",
+      "No, because a mere bystander has no duty to rescue.",
+      "Yes, because everyone owes a duty to prevent a death."
+    ],
+    correct: 0,
+    explanation: "An omission is criminal only where a <strong>legal duty to act</strong> exists, the defendant knows the facts giving rise to it, and performance is possible. A <strong>contract</strong> is a recognized source of that duty — (A). (B) is wrong because a failure to act does count when a duty exists. (C) states the general no-duty-to-rescue rule but ignores the contractual duty. (D) overstates the law — there is no general duty owed by everyone."
+  },
+  {
+    subject: "criminal",
+    topic: "Omission · Voluntary Assumption of Care",
+    fact: "A general contractor sees a subcontractor collapse from heatstroke on the jobsite. He announces, \"I've got him — back to work, everyone,\" starts driving him toward the hospital, then changes his mind and leaves him unconscious in a remote lot, where he dies.",
+    call: "On what basis is the contractor most likely criminally liable for the death?",
+    choices: [
+      "He is not liable, because he had no duty to help at all.",
+      "He is liable, because he assumed care and then abandoned it.",
+      "He is liable, because he owed a duty as the man's employer.",
+      "He is not liable, because his choice to help was voluntary."
+    ],
+    correct: 1,
+    explanation: "One who <strong>voluntarily assumes care</strong> of a helpless person — and thereby dissuades others from helping — takes on a legal duty and may be liable for abandoning that care — (B). (A) is wrong because the voluntary undertaking created a duty where none existed. (C) misidentifies the source: the duty springs from the <strong>assumption of care</strong>, not the employment relationship. (D) is wrong because the voluntariness of the help is what creates the duty, not what excuses the abandonment."
+  },
+  {
+    subject: "criminal",
+    topic: "Omission · Creation of the Peril",
+    fact: "While clearing a lot, an excavator operator carelessly knocks a visitor into a deep, water-filled foundation pit. The visitor cannot swim. The operator, who could easily lower a ladder, instead stands by and watches him drown.",
+    call: "Can the operator be criminally liable for the drowning death?",
+    choices: [
+      "No, because he did not intend for the visitor to fall in.",
+      "No, because failing to rescue is never itself a crime.",
+      "Yes, because he created the peril and then failed to act.",
+      "Yes, because he had a duty to rescue any endangered person."
+    ],
+    correct: 2,
+    explanation: "A legal duty to act arises when the defendant <strong>created the peril</strong> facing the victim; having placed the visitor in danger, the operator must take reasonable steps to help — (C). (A) is wrong because the duty rests on his creation of the risk, not his intent that the man fall. (B) overstates the rule — omissions are criminal where a duty exists. (D) is too broad; there is no general duty to rescue anyone in danger, only one tied to a recognized source such as creating the danger."
+  },
+  {
+    subject: "criminal",
+    topic: "Transferred Intent · Scope",
+    fact: "Furious over a boundary dispute, a landowner fires a rifle at his neighbor standing on the disputed line. The shot misses the neighbor but strikes and kills a surveyor working just behind him.",
+    call: "For what crimes may the landowner properly be convicted as to the two people?",
+    choices: [
+      "Murder of the surveyor only, since intent can't transfer to attempt.",
+      "Attempted murder of the neighbor only, as no target actually died.",
+      "Neither crime, because he killed a person he never meant to harm.",
+      "Murder of the surveyor and attempted murder of the neighbor."
+    ],
+    correct: 3,
+    explanation: "Under <strong>transferred intent</strong>, the intent to kill the neighbor transfers to the surveyor actually killed, making it <strong>murder</strong>; and because the doctrine does not defeat liability toward the intended victim, the landowner is also guilty of <strong>attempted murder</strong> of the neighbor — (D). (A) is wrong: transferred intent isn't needed for the attempt, since the actual intent to kill the neighbor supports it. (B) ignores the completed homicide. (C) is wrong because transferred intent supplies the mens rea for the death."
+  },
+  {
+    subject: "criminal",
+    topic: "Causation · Intervening Medical Negligence",
+    fact: "During a brawl at a construction site, a foreman stabs a laborer, who survives the wound but dies days later when a hospital physician negligently administers the wrong medication.",
+    call: "Is the foreman criminally responsible for the laborer's death?",
+    choices: [
+      "Yes, because negligent medical care is a foreseeable intervening cause.",
+      "No, because the physician's error was the sole cause of the death.",
+      "No, because the stab wound alone would not have killed the laborer.",
+      "Yes, because any later event leaves the original attacker liable."
+    ],
+    correct: 0,
+    explanation: "A defendant remains the <strong>proximate cause</strong> of death where the intervening act is foreseeable, and <strong>ordinary negligent medical treatment</strong> of the injury he inflicted is deemed foreseeable — (A). (B) is wrong because the negligent care does not supersede; it lies within the risk the foreman created. (C) is irrelevant — hastening or contributing to a death still satisfies causation. (D) overstates the rule; only non-superseding intervening acts leave liability intact, not any later event."
+  },
+  {
+    subject: "criminal",
+    topic: "Causation · Eggshell Victim",
+    fact: "A tile-setter shoves a co-worker during an argument. The co-worker, who has an unusually thin skull the setter knew nothing about, strikes his head on a stack of pavers and dies from an injury that would not have killed an ordinary person.",
+    call: "Does the victim's hidden fragility break the chain of causation?",
+    choices: [
+      "Yes, because the setter could not foresee the thin skull.",
+      "No, because a preexisting weakness does not break causation.",
+      "Yes, because an ordinary person would have survived the fall.",
+      "No, because the setter intended this exact fatal head injury."
+    ],
+    correct: 1,
+    explanation: "Under the <strong>eggshell-victim rule</strong>, a defendant takes his victim as he finds him; a <strong>preexisting weakness or fragility, even if unforeseeable</strong>, does not break the chain of causation — (B). (A) and (C) both wrongly treat foreseeability of the specific frailty as decisive — it is not. (D) misstates the facts and the law: the setter did not intend the death, and causation does not turn on that intent."
+  },
+  {
+    subject: "criminal",
+    topic: "Conspiracy · Wharton Rule",
+    fact: "A state statute makes commercial bribery a crime that by definition requires both a payer and a payee. A developer pays a building inspector to approve faulty work; only those two are involved in the deal.",
+    call: "Can the developer and inspector be convicted of conspiracy to commit bribery?",
+    choices: [
+      "Yes, because every completed crime also supports a conspiracy.",
+      "No, because bribery can never be the object of a conspiracy.",
+      "No, because only the two parties the crime itself requires took part.",
+      "Yes, because each acted with intent that the bribe be completed."
+    ],
+    correct: 2,
+    explanation: "Under the <strong>Wharton Rule</strong>, where an offense by definition requires two participants (here, payer and payee), there is <strong>no conspiracy unless more parties join than the crime necessarily requires</strong>. With only the two essential parties, conspiracy will not lie — (C). (A) is too broad and ignores Wharton. (B) is wrong — bribery can be a conspiracy object if a third participant joins. (D) recites conspiracy intent but overlooks the Wharton bar."
+  },
+  {
+    subject: "criminal",
+    topic: "Conspiracy · Unilateral Approach",
+    fact: "A contractor agrees with a man he believes is a fellow crook to rig demolition bids, but the \"crook\" is an undercover officer who never intends to go through with anything. The jurisdiction follows the Model Penal Code.",
+    call: "Can the contractor be convicted of conspiracy?",
+    choices: [
+      "No, because a conspiracy always requires two guilty minds.",
+      "No, because the officer's feigned agreement was not genuine.",
+      "Yes, but only if a second real conspirator can be identified.",
+      "Yes, because the MPC's unilateral approach needs one guilty mind."
+    ],
+    correct: 3,
+    explanation: "The MPC follows the <strong>unilateral approach</strong>, under which only <strong>one</strong> party need have genuine criminal intent; a defendant can be convicted of conspiring with a feigning undercover officer — (D). (A) and (B) both describe the common-law <strong>bilateral</strong> rule, which the MPC rejects. (C) is wrong because the unilateral approach does not require a second bona fide conspirator."
+  },
+  {
+    subject: "criminal",
+    topic: "Conspiracy · Acquittal of Co-Conspirators",
+    fact: "Two partners are tried together in a common-law jurisdiction for conspiring to defraud a lender on a construction loan. They were the only two alleged conspirators. The jury acquits one partner but convicts the other.",
+    call: "Under the traditional rule, can the conviction of the remaining partner stand?",
+    choices: [
+      "No, because acquitting the only alleged co-conspirator bars it.",
+      "No, because fraud can never be the object of a conspiracy.",
+      "Yes, because each conspirator is judged on his own conduct.",
+      "Yes, because an overt act by either satisfies the agreement."
+    ],
+    correct: 0,
+    explanation: "Under the <strong>traditional (bilateral) rule</strong>, conspiracy requires two guilty parties; the <strong>acquittal of all other alleged conspirators</strong> in the same trial precludes convicting the lone remaining defendant — (A). (B) is wrong — fraud is a proper conspiracy object. (C) states the unilateral view, not the traditional rule the question invokes. (D) is irrelevant; the overt act cannot cure the loss of the second guilty mind."
+  },
+  {
+    subject: "criminal",
+    topic: "Attempt · Abandonment at Common Law",
+    fact: "Intending to torch a competitor's warehouse, an arsonist douses its loading dock with gasoline and lights a match, but a wave of guilt washes over him and he stamps out the flame before any damage occurs. The jurisdiction follows the common law.",
+    call: "Is the arsonist guilty of attempted arson?",
+    choices: [
+      "No, because he voluntarily and completely gave up the plan.",
+      "Yes, because abandonment is not a defense at common law.",
+      "No, because no charring or burning of the structure occurred.",
+      "Yes, because arson is a strict liability offense once begun."
+    ],
+    correct: 1,
+    explanation: "At <strong>common law, abandonment is not a defense</strong> to attempt; once the defendant has the intent and takes an act beyond mere preparation, a later change of heart does not undo the completed attempt — (B). (A) states the <strong>MPC</strong> rule (voluntary, complete renunciation), which the common law rejects. (C) confuses attempt with the completed crime — no burning is needed for the attempt. (D) misstates arson's mens rea, which is malice, not strict liability."
+  },
+  {
+    subject: "criminal",
+    topic: "Attempt · Legal Impossibility",
+    fact: "Believing it is a crime to remove sand from a public beach, a man hauls off a truckload at night to sell as fill. In fact a local ordinance expressly permits taking sand from that beach, so his conduct is entirely lawful.",
+    call: "Can he be convicted of attempted theft?",
+    choices: [
+      "Yes, because he intended to steal and took a substantial step.",
+      "Yes, because factual impossibility is never a defense to attempt.",
+      "No, because completing his plan would have been no crime at all.",
+      "No, because he made a reasonable mistake about the ordinance."
+    ],
+    correct: 2,
+    explanation: "This is <strong>legal impossibility</strong>, which <strong>is a defense</strong>: had the man done everything he set out to do, he still would have committed <strong>no crime</strong> — the sand was free for the taking, so there was no property of another to steal — (C). (A) ignores that intent plus an act cannot make a crime out of lawful conduct. (B) correctly states the factual-impossibility rule, but this is legal, not factual, impossibility. (D) misframes it as mistake about a defense; the point is that his completed conduct simply was not criminal."
+  },
+  {
+    subject: "criminal",
+    topic: "Embezzlement · Lawful Possession",
+    fact: "A property manager is entrusted by an owner with full authority to collect rents, hold them, and remit them monthly. Instead, the manager wires a month's rent receipts into his own account to cover personal debts.",
+    call: "Which crime has the manager most clearly committed?",
+    choices: [
+      "Larceny, because he carried away money belonging to another.",
+      "False pretenses, because he obtained the rents by deception.",
+      "Robbery, because he took the owner's property for himself.",
+      "Embezzlement, because he converted property lawfully in his hands."
+    ],
+    correct: 3,
+    explanation: "<strong>Embezzlement</strong> is the fraudulent conversion of another's property by one already in <strong>lawful possession</strong> of it; the manager held the rents with the owner's authority and then converted them — (D). (A) is wrong because larceny requires a trespassory taking from another's possession, but the manager already had lawful possession. (B) fails because he obtained the money honestly, not by misrepresentation. (C) is wrong — robbery requires force or threat against a person."
+  },
+  {
+    subject: "criminal",
+    topic: "False Pretenses · Passing of Title",
+    fact: "A con artist tells a landowner he is a licensed contractor and, on that false claim, persuades the owner to sign over full ownership of a skid-steer loader as a \"deposit.\" The owner intends to transfer title, not merely lend the machine.",
+    call: "What crime has the con artist committed?",
+    choices: [
+      "False pretenses, because the owner was deceived into passing title.",
+      "Larceny by trick, because he lied to obtain the loader.",
+      "Embezzlement, because he was entrusted with the machine.",
+      "No property crime, because the owner voluntarily handed it over."
+    ],
+    correct: 0,
+    explanation: "The line turns on <strong>what passes</strong>: where the victim is deceived into giving up <strong>title</strong>, the crime is <strong>false pretenses</strong> — (A). (B) is wrong because larceny by trick applies only where the victim parts with mere <strong>custody or possession</strong>, not title. (C) fails because the con artist obtained the machine by fraud, not as a trusted possessor. (D) is wrong — consent induced by fraud does not defeat the crime."
+  },
+  {
+    subject: "criminal",
+    topic: "Larceny · Continuing Trespass",
+    fact: "Without asking, a laborer wrongfully takes a co-worker's expensive nail gun off a truck, meaning only to use it for the afternoon and return it. By day's end he decides he likes it and keeps it for good.",
+    call: "Is the laborer guilty of larceny?",
+    choices: [
+      "No, because he lacked intent to steal when he first took it.",
+      "Yes, because his wrongful taking plus later intent is larceny.",
+      "No, because he originally planned to give the tool back.",
+      "Yes, because borrowing any tool without asking is larceny."
+    ],
+    correct: 1,
+    explanation: "Under the <strong>continuing-trespass</strong> doctrine, when the original taking is <strong>wrongful</strong> but without intent to permanently deprive, and the defendant <strong>later</strong> forms that intent, the trespass is deemed to continue and larceny is complete when he resolves to keep the item — (B). (A) and (C) are wrong because the initial lack of intent is cured by the continuing trespass. (D) overstates the law — had the original taking been innocent (e.g., a good-faith mistake), later retention would not be larceny."
+  },
+  {
+    subject: "criminal",
+    topic: "Extortion · Future Threats",
+    fact: "A building inspector tells a developer, \"Pay me $10,000 by the end of the month, or next week I'll report code violations that will shut down your whole project.\" The developer is frightened but faces no immediate danger.",
+    call: "The inspector's conduct is best charged as which crime?",
+    choices: [
+      "Robbery, because he used a threat to obtain the developer's money.",
+      "Larceny, because he intends to take money belonging to another.",
+      "Extortion, because he threatened future harm to obtain property.",
+      "No crime yet, because he has not actually collected any money."
+    ],
+    correct: 2,
+    explanation: "<strong>Extortion (blackmail)</strong> is obtaining property through threats of <strong>future</strong> harm, including threats to take official action or expose information — (C). (A) is wrong because robbery requires a threat of <strong>imminent</strong> harm to the person; this is a threat of future economic harm. (B) ignores the coercive threat that distinguishes this from simple larceny. (D) is wrong because under many statutes extortion is complete when the threat is made with intent to obtain property."
+  },
+  {
+    subject: "criminal",
+    topic: "Robbery · Simulated Weapon",
+    fact: "On a dim jobsite, a man jams his coat pocket into a payroll clerk's back and says, \"I've got a gun — hand over the cash bag or I'll shoot.\" Terrified, the clerk complies. In fact the man had only his finger in his pocket.",
+    call: "Is the man guilty of armed robbery?",
+    choices: [
+      "No, because he was never actually armed with any weapon.",
+      "No, because the clerk was mistaken about the real danger.",
+      "Yes, but only of simple robbery, not the armed offense.",
+      "Yes, because a simulated deadly weapon supports armed robbery."
+    ],
+    correct: 3,
+    explanation: "A robbery accomplished by a <strong>simulated deadly weapon</strong> is sufficient for <strong>armed robbery</strong> where the victim reasonably believes the threat — the taking by force or intimidation is complete — (D). (A) and (B) wrongly treat the actual absence of a gun as decisive; the victim's reasonable apprehension is what matters. (C) understates the offense — the simulated weapon elevates it beyond simple robbery."
+  },
+  {
+    subject: "criminal",
+    topic: "Receipt of Stolen Property · Stolen at Receipt",
+    fact: "Police recover a load of stolen marble slabs, then—with the owner's cooperation—use them in a sting. A dishonest builder buys the slabs believing they are stolen, planning to install them cheaply.",
+    call: "Can the builder be convicted of receiving stolen property?",
+    choices: [
+      "No, because the slabs were no longer stolen when he received them.",
+      "No, because he never took actual physical possession of them.",
+      "Yes, because he believed the marble slabs were in fact stolen.",
+      "Yes, because he intended to permanently deprive the true owner."
+    ],
+    correct: 0,
+    explanation: "The property must actually be <strong>stolen at the moment the defendant receives it</strong>; once police recovered the slabs with the owner's help, they lost their stolen character, so this element fails — (A). (B) is wrong because possession can be constructive; manual control is not required. (C) and (D) describe his intent, but intent cannot substitute for the missing element that the goods be stolen when received. (He might face an attempt charge, but not the completed offense.)"
+  },
+  {
+    subject: "criminal",
+    topic: "Forgery · Writing of Legal Significance",
+    fact: "To secure a construction draw, a subcontractor fabricates a lien waiver and signs the general contractor's name to it without authority, intending the bank to rely on it as genuine.",
+    call: "Has the subcontractor committed forgery?",
+    choices: [
+      "No, because a lien waiver carries no real legal significance.",
+      "Yes, because he made a false writing with legal effect to defraud.",
+      "No, because the bank was not actually deceived by the document.",
+      "Yes, because he physically altered an authentic existing document."
+    ],
+    correct: 1,
+    explanation: "<strong>Forgery</strong> is the making or altering of a <strong>false writing with apparent legal significance</strong>, with <strong>intent to defraud</strong>; a fabricated lien waiver bearing a forged signature fits precisely — (B). (A) is wrong because a lien waiver plainly has legal significance. (C) is wrong because no one need actually be defrauded — intent suffices. (D) misstates the facts; forgery covers making a false document, not only altering a genuine one."
+  },
+  {
+    subject: "criminal",
+    topic: "Duress · Not a Defense to Homicide",
+    fact: "A crew boss threatens to kill a young laborer's family unless the laborer helps him beat a rival developer to death. Terrified, the laborer participates in the beating, and the developer dies.",
+    call: "Can the laborer raise duress as a defense to the intentional killing?",
+    choices: [
+      "Yes, because he reasonably feared for his family's lives.",
+      "Yes, because the threat came from a person, not from nature.",
+      "No, because duress is no defense to intentional homicide.",
+      "No, because threats to family can never establish duress."
+    ],
+    correct: 2,
+    explanation: "Duress excuses crimes committed under threat of imminent death or serious harm — but it is <strong>not a defense to intentional homicide</strong>; one may not take an innocent life to save himself or his family — (C). (A) is wrong because even a genuine, reasonable fear cannot excuse an intentional killing. (B) correctly distinguishes duress from necessity but does not overcome the homicide bar. (D) misstates the law — threats to a third person, including family, <strong>can</strong> support duress for non-homicide crimes."
+  },
+  {
+    subject: "criminal",
+    topic: "Necessity · Fault in Creating the Emergency",
+    fact: "A contractor illegally bulldozes part of a neighbor's fence to divert a flash flood away from an occupied house—but the flood was caused by his own earlier, reckless grading that blocked the natural drainage.",
+    call: "Can the contractor invoke the defense of necessity?",
+    choices: [
+      "Yes, because he reasonably chose the lesser of two evils.",
+      "Yes, because protecting an occupied home outweighs a fence.",
+      "No, because necessity never justifies damaging another's property.",
+      "No, because he was at fault in creating the emergency himself."
+    ],
+    correct: 3,
+    explanation: "Necessity is unavailable where the <strong>defendant is at fault in creating</strong> the situation forcing the choice of evils; his reckless grading caused the flood, so he cannot claim the defense — (D). (A) and (B) describe the general balancing necessity requires, but the fault limitation defeats the defense here. (C) overstates the law — necessity <strong>can</strong> justify property damage to avoid a greater harm; it is his own fault, not the property damage, that bars it."
+  },
+  {
+    subject: "criminal",
+    topic: "Entrapment · Predisposition",
+    fact: "An undercover agent, posing as a client, repeatedly and aggressively pressures an otherwise honest building inspector—who has never taken a bribe—until the inspector finally accepts a payment to overlook a violation.",
+    call: "Does the inspector have a valid entrapment defense?",
+    choices: [
+      "Yes, because the design was the police's and he was not predisposed.",
+      "No, because accepting the bribe was ultimately his own free choice.",
+      "No, because a public official can never be entrapped into bribery.",
+      "Yes, because the agent supplied the money used to commit the crime."
+    ],
+    correct: 0,
+    explanation: "Entrapment requires that the <strong>criminal design originate with law enforcement</strong> and that the defendant was <strong>not predisposed</strong> to commit the crime; an honest inspector worn down by aggressive government inducement satisfies both prongs — (A). (B) is wrong because the very point of entrapment is that the government implanted the intent. (C) invents a nonexistent bar. (D) misstates the basis — merely providing means or opportunity is not itself entrapment; the lack of predisposition is what controls."
+  },
+  {
+    subject: "criminal",
+    topic: "Defense of Property · Deadly Force",
+    fact: "Worried about break-ins at a vacant house he is building, an owner rigs a loaded spring gun to the front door to fire at anyone who forces it open. A trespassing scrapper pries the door and is shot dead by the device.",
+    call: "Can the owner rely on defense of property to justify the killing?",
+    choices: [
+      "Yes, because the scrapper was committing an unlawful entry.",
+      "No, because deadly force may never be used to protect property.",
+      "Yes, because a spring gun only fires on a violent break-in.",
+      "No, because he failed to post a warning about the spring gun."
+    ],
+    correct: 1,
+    explanation: "<strong>Deadly force may never be used solely to defend property</strong>, and a mechanical device like a spring gun cannot do what its owner could not lawfully do in person — (B). (A) is wrong because an unlawful entry alone does not license deadly force absent a threat to persons. (C) is wrong because the automatic nature of the device does not supply the personal-safety justification deadly force requires. (D) misstates the law — the defect is the use of deadly force itself, not the absence of a warning."
+  },
+  {
+    subject: "crimpro",
+    topic: "Pretrial Identification · Due Process Suggestiveness",
+    fact: "A jobsite burglary victim tells police the thief was a bald white man. At the stationhouse lineup, police present eight men, but the defendant—a bald white contractor—is the only white man and the only bald man in the group. The victim picks him.",
+    call: "What is the strongest argument that this identification must be suppressed?",
+    choices: [
+      "The lineup was conducted without the defendant's lawyer present.",
+      "Eyewitness identifications are inherently unreliable as evidence.",
+      "The lineup was so suggestive it risked a misidentification.",
+      "The victim's original description was too vague to be useful."
+    ],
+    correct: 2,
+    explanation: "An out-of-court identification violates <strong>due process</strong> when the procedure is <strong>unnecessarily suggestive</strong> and creates a <strong>substantial likelihood of misidentification</strong>; a lineup singling the defendant out as the only person matching the description does exactly that — (C). (A) may raise a separate Sixth Amendment issue but is not the strongest ground here and isn't the due-process defect. (B) is not a legal basis for suppression. (D) misdirects — it is the suggestive staging, not the vague description, that taints the lineup."
+  },
+  {
+    subject: "crimpro",
+    topic: "Pretrial Identification · Independent Source",
+    fact: "A developer is identified in an impermissibly suggestive showup after a fraud arrest. At trial the prosecution offers the victim's in-court identification; the victim had negotiated face-to-face with the developer across a table for over an hour during the fraud.",
+    call: "May the victim still identify the defendant in court?",
+    choices: [
+      "Yes, if the in-court identification has an independent source.",
+      "No, because the tainted showup poisons any later identification.",
+      "Yes, because in-court identifications can never be excluded.",
+      "No, unless defense counsel was present at the earlier showup."
+    ],
+    correct: 0,
+    explanation: "Even after an unconstitutional pretrial identification, a witness may identify the defendant in court if that identification rests on an <strong>independent source</strong> — most commonly a strong <strong>opportunity to observe</strong> at the time of the crime, like the hour-long dealing here — (A). (B) is wrong because the independent source cures the taint. (C) overstates the law — an in-court identification wholly derived from a tainted procedure can be excluded. (D) misstates the remedy; counsel's presence is a distinct issue, not the in-court identification test."
+  },
+  {
+    subject: "crimpro",
+    topic: "Exclusionary Rule · Grand Jury Proceedings",
+    fact: "Police illegally search a builder's office and seize his ledgers. A grand jury, shown the ledgers, questions the builder about them and returns an indictment. He moves to quash the indictment as based on illegally seized evidence.",
+    call: "Will the motion to quash succeed?",
+    choices: [
+      "Yes, because illegally seized evidence taints the whole indictment.",
+      "Yes, because the exclusionary rule bars the ledgers everywhere.",
+      "No, but only if the officers acted in objective good faith.",
+      "No, because the exclusionary rule does not reach grand juries."
+    ],
+    correct: 3,
+    explanation: "The <strong>exclusionary rule does not apply to grand jury proceedings</strong>; a witness may be questioned on, and an indictment may rest on, illegally obtained evidence, and the indictment cannot be quashed on that ground — (D). (A) and (B) wrongly extend the trial-based exclusionary rule to the grand jury. (C) invokes good faith, which is beside the point — the rule simply does not reach the grand jury at all."
+  },
+  {
+    subject: "crimpro",
+    topic: "Exclusionary Rule · Impeachment Use",
+    fact: "Officers illegally search a contractor's truck and find a stolen survey drone, which is suppressed from the prosecution's case-in-chief. The contractor then takes the stand and testifies he has never possessed any stolen equipment.",
+    call: "May the prosecution use the suppressed drone to challenge that testimony?",
+    choices: [
+      "No, because suppressed evidence is barred for every purpose.",
+      "Yes, illegally seized evidence may impeach the defendant.",
+      "No, unless the officers reasonably believed the search legal.",
+      "Yes, because taking the stand waives all Fourth Amendment claims."
+    ],
+    correct: 1,
+    explanation: "Evidence from an <strong>illegal search</strong>, though inadmissible in the prosecution's case-in-chief, <strong>may be used to impeach the defendant's own testimony</strong> — (B). (A) overstates the rule; impeachment is a recognized exception. (C) confuses this with the good-faith warrant exception, which is not the basis here. (D) is wrong — testifying does not forfeit the suppression ruling for the case-in-chief; it only opens the door to impeachment."
+  },
+  {
+    subject: "crimpro",
+    topic: "Exclusionary Rule · Attenuation by Free Will",
+    fact: "A developer is arrested without probable cause on Friday and released on bail Saturday. On Monday he consults a lawyer, and on Tuesday he returns to the station on his own and gives a full confession.",
+    call: "Is the Tuesday confession admissible despite the illegal arrest?",
+    choices: [
+      "No, because it is the direct fruit of the unlawful Friday arrest.",
+      "No, because the taint of an illegal arrest can never be purged.",
+      "Yes, because his voluntary return attenuated the illegal arrest.",
+      "Yes, because an unlawful arrest never affects a later confession."
+    ],
+    correct: 2,
+    explanation: "Under the <strong>attenuation</strong> exception, the link between the illegal arrest and the confession is broken by <strong>intervening acts of free will</strong> — release on bail, consulting counsel, and voluntarily returning days later — so the confession is admissible — (C). (A) ignores those attenuating events. (B) misstates the law; taint can be purged. (D) is too broad — an illegal arrest can taint a confession flowing directly from it; here it is the attenuation, not a blanket rule, that saves the statement."
+  },
+  {
+    subject: "crimpro",
+    topic: "Exclusionary Rule · Bare-Bones Affidavit",
+    fact: "An officer gets a warrant to search a landowner's barn using an affidavit stating only that he \"has it on good information and does believe\" that stolen tools are inside, with nothing more. The magistrate signs it and tools are found.",
+    call: "Can the officer invoke the good-faith exception to admit the tools?",
+    choices: [
+      "No, because the affidavit was too bare for any reasonable reliance.",
+      "Yes, because a magistrate's signature always shows good faith.",
+      "Yes, because the officer subjectively believed the warrant valid.",
+      "No, because good faith can never save an invalid warrant."
+    ],
+    correct: 0,
+    explanation: "The good-faith exception does <strong>not</strong> apply where the affidavit is <strong>so lacking in probable cause that no reasonable officer would rely on it</strong> — a conclusory \"good information and belief\" is exactly such a bare-bones affidavit — (A). (B) is wrong because a signature does not guarantee reasonable reliance. (C) applies the wrong standard — good faith is judged objectively, not by subjective belief. (D) overstates the law — good faith often does save defective warrants; it just fails on these facts."
+  },
+  {
+    subject: "crimpro",
+    topic: "Pretrial Procedure · Gerstein Probable Cause Hearing",
+    fact: "Police arrest a subcontractor without a warrant during a jobsite raid and jail him. No magistrate has yet found probable cause, and he remains locked up awaiting charges.",
+    call: "What does the Fourth Amendment require here?",
+    choices: [
+      "A full adversarial trial on the charges within ten days of arrest.",
+      "Nothing more, because a warrantless public arrest needs no review.",
+      "Release on his own recognizance until a grand jury indicts him.",
+      "A prompt magistrate finding of probable cause, generally in 48 hours."
+    ],
+    correct: 3,
+    explanation: "When a suspect is arrested without a warrant and his liberty is significantly restrained, the Fourth Amendment requires a <strong>prompt judicial determination of probable cause</strong> — presumptively <strong>within 48 hours</strong> (a <em>Gerstein</em> hearing) — (D). (A) is wrong because this informal, nonadversarial hearing is not a trial. (B) is wrong because although no warrant is needed to arrest, a post-arrest probable-cause review is required for a detained arrestee. (C) is not constitutionally compelled; the remedy is the hearing, not automatic release."
+  },
+  {
+    subject: "crimpro",
+    topic: "Grand Jury · No Right to Counsel or Warnings",
+    fact: "A developer is subpoenaed to testify before a grand jury investigating bid-rigging. He is not told he is a potential defendant, is given no Miranda warnings, and his lawyer is barred from the grand jury room.",
+    call: "Do these facts violate the developer's constitutional rights?",
+    choices: [
+      "Yes, because any potential defendant must receive Miranda warnings.",
+      "No, because a grand jury witness has no such rights in the room.",
+      "Yes, because counsel must be allowed at every stage of a case.",
+      "No, but only because he was never formally named a target."
+    ],
+    correct: 1,
+    explanation: "A grand jury witness has <strong>no right to Miranda warnings, no right to be told he is a potential defendant, and no right to have counsel present</strong> in the grand jury room — (B). (A) is wrong because Miranda governs custodial interrogation, not grand jury testimony. (C) overstates the right to counsel, which does not attach inside the grand jury. (D) reaches the right result for the wrong reason — these rights don't turn on whether he was labeled a target."
+  },
+  {
+    subject: "crimpro",
+    topic: "Speedy Trial · Attachment and Remedy",
+    fact: "A contractor is arrested and charged with fraud, then the prosecution lets the case sit untouched for three years for no good reason while he suffers anxiety and lost business. He asserts his speedy-trial right and moves to dismiss.",
+    call: "How are his speedy-trial claim and its remedy properly analyzed?",
+    choices: [
+      "The right runs from the crime, and the remedy is a new trial.",
+      "The right attaches at indictment, and delay is never a defense.",
+      "Courts weigh several factors, and dismissal is with prejudice.",
+      "A fixed statutory clock controls, and dismissal is without prejudice."
+    ],
+    correct: 2,
+    explanation: "A speedy-trial violation is judged on the <strong>totality of the circumstances</strong> — length of and reason for delay, assertion of the right, and prejudice — and the remedy is <strong>dismissal with prejudice</strong> — (C). (A) is wrong because the right attaches at arrest or charge, not commission, and dismissal (not retrial) is the remedy. (B) is wrong because delay can bar prosecution and the right also attaches at arrest. (D) is wrong — there is no single constitutional clock, and dismissal is with prejudice."
+  },
+  {
+    subject: "crimpro",
+    topic: "Prosecutorial Disclosure · Brady Material",
+    fact: "After a builder is convicted of arson, it emerges the prosecutor never turned over a fire marshal's report concluding the blaze was an electrical accident—evidence that likely would have changed the verdict.",
+    call: "What is the builder's strongest constitutional claim?",
+    choices: [
+      "A due process violation for withholding material exculpatory evidence.",
+      "A Sixth Amendment violation of his right to confront the marshal.",
+      "A Fifth Amendment violation of his privilege against self-incrimination.",
+      "A Fourth Amendment violation arising from the fire investigation."
+    ],
+    correct: 0,
+    explanation: "Under <em>Brady</em>, the prosecution's suppression of <strong>material, favorable (exculpatory or impeaching) evidence</strong> violates <strong>due process</strong> where there is a reasonable probability the result would have differed — (A). (B) is wrong because confrontation concerns cross-examining witnesses, not disclosing a report. (C) is inapposite; nothing compelled the builder to incriminate himself. (D) is wrong because the investigation's legality is not the issue — the nondisclosure is."
+  },
+  {
+    subject: "crimpro",
+    topic: "Competency to Stand Trial · Dusky Standard",
+    fact: "On the eve of trial, a developer charged with money laundering suffers a mental breakdown and can no longer understand the proceedings or help his lawyer prepare, though he was lucid when the alleged crimes occurred.",
+    call: "How should the court treat his condition?",
+    choices: [
+      "Acquit him, because his mental illness is a complete defense.",
+      "Proceed to trial, since he was sane when the crimes occurred.",
+      "Dismiss the charges permanently on due process grounds.",
+      "Halt the trial until he regains competency to proceed."
+    ],
+    correct: 3,
+    explanation: "<strong>Competency</strong> turns on the defendant's mental state <strong>at the time of trial</strong>: he may not be tried if he cannot understand the proceedings or assist his lawyer, and the trial must be <strong>suspended until competency is restored</strong> — (D). (A) and (B) confuse competency with the <strong>insanity</strong> defense, which concerns the mental state at the time of the crime. (C) is wrong because incompetency bars trial only temporarily; the charges are not permanently dismissed."
+  },
+  {
+    subject: "crimpro",
+    topic: "Right to Jury Trial · Serious Offenses",
+    fact: "A contractor is charged with an offense punishable by a maximum of five months in jail for violating a building-safety ordinance. He demands a jury trial; the state offers only a bench trial.",
+    call: "Is the contractor constitutionally entitled to a jury?",
+    choices: [
+      "Yes, because any offense carrying possible jail time needs a jury.",
+      "No, because the authorized sentence does not exceed six months.",
+      "Yes, because building-safety crimes are serious by their nature.",
+      "No, because there is no jury-trial right in any misdemeanor case."
+    ],
+    correct: 1,
+    explanation: "The jury-trial right attaches only to <strong>serious offenses</strong> — those for which imprisonment of <strong>more than six months</strong> is authorized; a five-month maximum is a petty offense with no jury right — (B). (A) is wrong because the line is drawn at six months, not any jail exposure. (C) misstates the test, which looks to the authorized penalty, not the subject matter. (D) is too broad — a misdemeanor punishable by more than six months does carry a jury right."
+  },
+  {
+    subject: "crimpro",
+    topic: "Trial by Jury · Size and Unanimity",
+    fact: "A developer is tried for fraud before a six-person jury, which convicts him by a vote of five to one. He challenges both the size of the jury and the split verdict.",
+    call: "How should the court rule on his two challenges?",
+    choices: [
+      "Both are valid, because juries must have twelve unanimous members.",
+      "Both fail, because six jurors and a majority verdict are permitted.",
+      "Size is fine, but the nonunanimous verdict is unconstitutional.",
+      "Size is invalid, but the five-to-one verdict may still stand."
+    ],
+    correct: 2,
+    explanation: "A criminal jury may have as few as <strong>six</strong> members, so the size is permissible — but a six-person jury <strong>must be unanimous</strong>, and indeed all criminal jury verdicts must be unanimous, so the five-to-one conviction cannot stand — (C). (A) is wrong because twelve jurors are not required. (B) is wrong because nonunanimous verdicts are not allowed. (D) inverts the rule — the size is valid and the split verdict is the defect."
+  },
+  {
+    subject: "crimpro",
+    topic: "Jury Selection · Batson Challenge",
+    fact: "At a Black developer's fraud trial, the prosecutor uses peremptory strikes to remove every Black member of the venire. Defense counsel objects, pointing to the pattern of strikes.",
+    call: "What must happen next under the Equal Protection Clause?",
+    choices: [
+      "The prosecutor must offer a race-neutral reason for the strikes.",
+      "The struck jurors must automatically be seated on the jury.",
+      "The objection fails, since peremptories need no justification.",
+      "A mistrial must be declared because of the tainted jury pool."
+    ],
+    correct: 0,
+    explanation: "Under <em>Batson</em>, once the defendant shows facts raising an <strong>inference of race-based striking</strong>, the burden shifts to the prosecutor to give a <strong>race-neutral explanation</strong>, and the judge then decides whether that reason is genuine or a pretext — (A). (B) is wrong because the remedy is not automatic seating of the jurors. (C) states the general peremptory rule but ignores the equal-protection limit. (D) is premature — the process is the three-step Batson inquiry, not an immediate mistrial."
+  },
+  {
+    subject: "crimpro",
+    topic: "Sentencing · Apprendi Rule",
+    fact: "A jury convicts a contractor of an offense carrying a ten-year maximum. At sentencing, the judge alone finds that the fraud exceeded $1 million—a fact that by statute raises the maximum to twenty years—and sentences him to fifteen.",
+    call: "Is the fifteen-year sentence constitutional?",
+    choices: [
+      "Yes, because sentencing facts are for the judge, not the jury.",
+      "Yes, because the judge used a preponderance-of-evidence standard.",
+      "No, because any fact raising the maximum requires a warrant.",
+      "No, because that fact needed a jury finding beyond a reasonable doubt."
+    ],
+    correct: 3,
+    explanation: "Under <em>Apprendi</em>, any fact (other than a prior conviction) that <strong>increases the penalty beyond the statutory maximum</strong> must be <strong>submitted to the jury and proved beyond a reasonable doubt</strong> — (D). (A) is wrong because such penalty-raising facts are for the jury, not the judge. (B) applies the wrong burden — preponderance is insufficient. (C) is nonsense here; a warrant has nothing to do with sentencing findings."
+  },
+  {
+    subject: "crimpro",
+    topic: "Right to Counsel · Misdemeanor Imprisonment",
+    fact: "An indigent handyman is charged with a misdemeanor. Without appointing him a lawyer, the court convicts him and sentences him to 30 days in jail.",
+    call: "Was his right to counsel violated?",
+    choices: [
+      "No, because the right to appointed counsel applies only to felonies.",
+      "Yes, because no jail term may be imposed on an unrepresented indigent.",
+      "No, because misdemeanor defendants must retain their own attorneys.",
+      "Yes, because every defendant is entitled to both a jury and counsel."
+    ],
+    correct: 1,
+    explanation: "An indigent defendant may <strong>not be sentenced to any incarceration</strong> — even for a misdemeanor — unless he was <strong>afforded appointed counsel</strong> — (B). (A) is wrong because the right extends to any case, felony or misdemeanor, that results in imprisonment. (C) is wrong because indigent misdemeanor defendants facing jail get appointed counsel. (D) overstates the law by adding a jury right not triggered by a petty offense."
+  },
+  {
+    subject: "crimpro",
+    topic: "Right to Counsel · Self-Representation",
+    fact: "A developer charged with fraud tells the court he wants to fire his appointed lawyer and represent himself. The judge finds his waiver of counsel knowing, intelligent, and voluntary, and that he is competent to proceed.",
+    call: "May the court require him to keep a lawyer anyway?",
+    choices: [
+      "Yes, because self-representation is barred in all felony trials.",
+      "Yes, because a layperson can never knowingly waive counsel.",
+      "No, because he has a right to represent himself at trial.",
+      "No, because he may also represent himself on any appeal."
+    ],
+    correct: 2,
+    explanation: "Under <em>Faretta</em>, a defendant has a constitutional right to <strong>represent himself at trial</strong> once the court finds a <strong>knowing, intelligent, and voluntary</strong> waiver and competence to proceed — (C). (A) is wrong because self-representation is permitted, including in felony cases. (B) is wrong because a layperson can validly waive counsel. (D) misstates the scope — there is no right to self-representation on appeal, only at trial."
+  },
+  {
+    subject: "crimpro",
+    topic: "Effective Assistance · Strickland Standard",
+    fact: "A contractor convicted of manslaughter claims ineffective assistance because his lawyer was fresh out of law school and this was her first trial. He points to her inexperience but identifies no specific error that changed the outcome.",
+    call: "Has he made out an ineffective-assistance claim?",
+    choices: [
+      "No, because he shows neither deficient performance nor prejudice.",
+      "Yes, because a first-time lawyer is presumptively ineffective.",
+      "Yes, because inexperience alone denies effective representation.",
+      "No, unless he also proves his lawyer had a conflict of interest."
+    ],
+    correct: 0,
+    explanation: "Under <em>Strickland</em>, a defendant must show both <strong>deficient performance</strong> and <strong>prejudice</strong> — a reasonable probability the result would have differed; counsel's <strong>inexperience alone is not enough</strong> — (A). (B) and (C) are wrong because youth or a first trial does not establish deficiency; competence is presumed. (D) misstates the test — a conflict of interest is a separate theory, not a required element of an ordinary ineffective-assistance claim."
+  },
+  {
+    subject: "crimpro",
+    topic: "Confrontation · Co-Defendant's Confession",
+    fact: "Two contractors are tried together for a kickback scheme. One gave police a confession naming the other as the mastermind, but that contractor will not take the stand. The prosecution wants to admit the confession against the confessor.",
+    call: "What does the Confrontation Clause require as to the non-confessing co-defendant?",
+    choices: [
+      "The confession is fully admissible against both defendants alike.",
+      "The confession must be excluded from the entire joint trial.",
+      "The jury may weigh it against both with a limiting instruction.",
+      "Its references to the co-defendant must be redacted or trials severed."
+    ],
+    correct: 3,
+    explanation: "Under <em>Bruton</em>, admitting a non-testifying co-defendant's confession that <strong>implicates the other defendant</strong> violates the latter's confrontation right; the cure is to <strong>redact all references to him or hold separate trials</strong> (or have the confessor testify) — (D). (A) is wrong because it cannot be used against the non-confessing defendant. (B) overcorrects — the statement is admissible against the confessor. (C) is wrong because a limiting instruction is deemed insufficient to protect the implicated defendant."
+  },
+  {
+    subject: "crimpro",
+    topic: "Confrontation · Testimonial Statements",
+    fact: "A 911 caller, while a burglary is still in progress at a construction office, tells the dispatcher, \"He's breaking in right now—it's the foreman we just fired!\" The caller later becomes unavailable, and the prosecution offers the recording.",
+    call: "Does the Confrontation Clause bar admitting the 911 statement?",
+    choices: [
+      "Yes, because the caller is unavailable and was never cross-examined.",
+      "No, because it was made to address an ongoing emergency.",
+      "Yes, because all statements made to police are testimonial.",
+      "No, because the Confrontation Clause applies only at grand jury."
+    ],
+    correct: 1,
+    explanation: "Under <em>Crawford</em> and <em>Davis</em>, only <strong>testimonial</strong> statements trigger the Confrontation Clause; statements made to help police respond to an <strong>ongoing emergency</strong> — like a 911 call describing a crime in progress — are <strong>nontestimonial</strong> and admissible — (B). (A) is wrong because the testimonial threshold isn't met, so unavailability and lack of cross-examination don't bar it. (C) overstates the rule — not all statements to police are testimonial. (D) misstates the Clause's scope, which centers on trial."
+  },
+  {
+    subject: "crimpro",
+    topic: "Guilty Pleas · Voluntary and Intelligent",
+    fact: "A developer pleads guilty to fraud. Before accepting the plea, the judge addresses him personally on the record to be sure he understands what he is giving up.",
+    call: "Which showing is constitutionally required for a valid plea?",
+    choices: [
+      "That the defendant privately confessed his factual guilt to the judge.",
+      "That the defendant first exhausted all pretrial suppression motions.",
+      "That he knows the charge, the possible penalty, and rights waived.",
+      "That the prosecutor recommends the specific sentence to be imposed."
+    ],
+    correct: 2,
+    explanation: "A guilty plea must be <strong>voluntary and intelligent</strong>, so the record must show the defendant understands <strong>the nature of the charge, the maximum penalty and any mandatory minimum, and the trial rights he is waiving</strong> — (C). (A) is wrong because a personal confession of guilt to the judge is not required. (B) invents a nonexistent prerequisite. (D) is wrong because a prosecutor's sentence recommendation is not a condition of a valid plea."
+  },
+  {
+    subject: "crimpro",
+    topic: "Double Jeopardy · When Jeopardy Attaches",
+    fact: "A contractor's fraud case goes before a jury. The jurors are selected, empaneled, and sworn. Before any witness testifies, the prosecutor realizes her key document is weak and asks to dismiss so she can refile later.",
+    call: "Has jeopardy attached so as to bar a later reprosecution?",
+    choices: [
+      "Yes, because jeopardy attaches when the jury is sworn.",
+      "No, because jeopardy attaches only when the first witness testifies.",
+      "No, because jeopardy attaches only upon a final verdict.",
+      "Yes, because jeopardy attached the moment he was indicted."
+    ],
+    correct: 0,
+    explanation: "In a <strong>jury trial, jeopardy attaches when the jury is empaneled and sworn</strong> — which had already happened here — so the protection is triggered — (A). (B) states the rule for <strong>bench</strong> trials (first witness sworn), not jury trials. (C) is wrong because attachment does not wait for a verdict. (D) is wrong because indictment alone does not attach jeopardy."
+  },
+  {
+    subject: "crimpro",
+    topic: "Double Jeopardy · Same Offense (Blockburger)",
+    fact: "A driver falls asleep at the wheel, kills two people, and flees the scene. The state prosecutes him in separate trials for manslaughter and for hit-and-run arising from the single crash.",
+    call: "Does double jeopardy bar prosecuting both offenses?",
+    choices: [
+      "Yes, because both charges arise from the same criminal incident.",
+      "Yes, because the two trials punish him twice for one act.",
+      "No, because a state may always split a single act into charges.",
+      "No, because each offense requires proof of a distinct element."
+    ],
+    correct: 3,
+    explanation: "Under the <em>Blockburger</em> test, two crimes are <strong>not</strong> the same offense if <strong>each requires proof of an element the other does not</strong>; manslaughter requires a killing and hit-and-run requires leaving the scene, so they are distinct and both may be tried — (D). (A) and (B) are wrong because arising from one incident or act is not the test — the elements are. (C) overstates the law in the opposite direction; the elements test, not unlimited prosecutorial power, controls."
+  },
+  {
+    subject: "crimpro",
+    topic: "Self-Incrimination · Testimonial vs. Physical",
+    fact: "A developer arrested for forgery is ordered to provide a handwriting sample so investigators can compare it to a forged lien release. He refuses, invoking his Fifth Amendment privilege.",
+    call: "Does the privilege against self-incrimination let him refuse?",
+    choices: [
+      "Yes, because the sample could directly incriminate him in forgery.",
+      "No, because a handwriting sample is physical, not testimonial, evidence.",
+      "Yes, because compelling the sample forces him to aid his prosecution.",
+      "No, because the privilege is waived once a suspect is under arrest."
+    ],
+    correct: 1,
+    explanation: "The Fifth Amendment privilege protects only <strong>testimonial or communicative</strong> evidence, not <strong>real or physical</strong> evidence; handwriting exemplars — like blood, voice, and hair samples — are physical and may be compelled — (B). (A) and (C) are wrong because incrimination alone does not trigger the privilege unless the evidence is testimonial. (D) misstates the law — arrest does not waive the privilege; the sample simply falls outside its scope."
+  },
 ];
 
 // ============ APP LOGIC ============
